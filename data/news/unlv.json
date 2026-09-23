@@ -1,0 +1,77 @@
+{
+  "slug": "unlv",
+  "school": "UNLV",
+  "fetched_at": "2026-09-23T17:32:09Z",
+  "queries": [
+    "\"UNLV\" football (NIL OR collective OR \"revenue share\" OR budget OR financing OR bond OR debt OR \"media rights\" OR broadcast OR \"TV deal\" OR streaming OR sponsorship OR \"jersey patch\" OR \"naming rights\" OR stadium OR renovation OR construction OR \"ticket revenue\" OR \"premium seating\" OR \"athletic director\" OR buyout OR \"contract extension\" OR salary OR realignment OR \"grant of rights\" OR \"exit fee\")",
+    "site:frontofficesports.com \"UNLV\" football",
+    "site:on3.com \"UNLV\" football",
+    "site:sportico.com \"UNLV\" football",
+    "site:collegead.com \"UNLV\" football",
+    "site:sportsbusinessjournal.com \"UNLV\" football"
+  ],
+  "items": [
+    {
+      "title": "UNLV AD: Non-Power 4 schools won\u2019t approach $20.5M rev-sharing cap",
+      "source": "Sports Business Journal",
+      "published_at": "2026-04-10",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNbVFkUzc4NVlxOTBvVGJNNDFpME4xdlA5S1FkaWNqYjBYXzJmWWZHNjI2T3hKOFhRSEdaS0ZzVWp3Y3RKQUpXUlFTbGlqUVMwaW5nUlRseDVSOFhpT2JOR3ZJYTFITEl4NVlDVXZEYjlkeEQ4akpISEtHdEEwcnVuUHUyNkNYU29QVGxRWWpWMFFxekxqcS0xc3ZFT1luSWFmYzRNWGQ3ZnNHb3dfU2JlZEZGeUQ3RzlaYW5LOE9R?oc=5"
+    },
+    {
+      "title": "UNLV athletics starts new revenue-sharing program",
+      "source": "Las Vegas Review-Journal",
+      "published_at": "2026-04-09",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPb3dQMEFDUWx3RktDUno1WXEyUkV2b0dlUkttNEoyT1JReS00a3l1YnNKT1ZSRlh3NnZ5VnRISHZXdXZNdGtBdWdXV3MtTnRtN3lSMDVxemVEcXk5X05Qa3RleEJBNTQ1azllS05kNjgtMG9aM1N6bWh0ZUFYZXd5WFBEX2lTSG0zTzZKSG9GVkw3di1vZ0QxaDFlMjRmSWhLRTZZazhiVnRNQ0doWnBGX2l3NU9MSl8wS055LVhTeGgwZw?oc=5"
+    },
+    {
+      "title": "Former UNLV coach Bobby Hauck retires, cites stress of NIL, transfer portal",
+      "source": "Las Vegas Review-Journal",
+      "published_at": "2026-02-08",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPcXVlZGEzcHc3MjF4SldtS3o1SUtqRmk5MC0yUjdVMUJpSU9kb1poYVJXNW4tNjVoNDMyVVN0cGY4RkpJSDVsUWtGVk9ON1BuY21MLUNHTGM2bDlqZG5MV3U3Um85YkpMc1l3U053WHduc3JWdktvdXdmbzN6Y3N5NTIwQzZGVkxxal9aYy1ZQ003MnI0VmZad3F4anRnOTQwMDJhODhfY1JYN3FmcEgzdmZvY0ZzeWpFel9yWlNRa2RUZmhZSnN2TEVkQXJIUUN6UTdMWg?oc=5"
+    },
+    {
+      "title": "How UNLV athletes are using NIL to build brands beyond college sports",
+      "source": "ktnv.com",
+      "published_at": "2026-01-13",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPdGFJM09sbUpsMlNpem9XRVRtQ0lWbEdPdmRGa2ZzaHY1Q2RlNU5MUHJKWGNFZmRaYTQ0eXNmT0swbXd6TG9RSkV1Ukx1V0JSWWRscy14UVE5dDdmU01FVEcxY0FkcmFaUUs1SEV3b0lpWnI4WkdyQWZCdjRpdUFiN2JSWUI1TGRzSTNzcFRSWk9HQzZtYWdEUl8tRUtvSFJGOVVLN2MxTW9hZkV4WUE?oc=5"
+    },
+    {
+      "title": "UNLV\u2019s Cox Pavilion left without naming sponsor as deal ends",
+      "source": "Sports Business Journal",
+      "published_at": "2025-12-21",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOb292ZndvVnZvMkJrSFRFa3RVMHVLeElEVFRvRnYxUFVGS01kaXZLeFVISmk5b2g3MWJPb1ptN0Fhb0hJTU4yLXhoZmgtTW5yUGNXOUhFY2hUdlYtTEc2aERfQVgyVjNFZFlwRHg0TWZqUWVjYkxiZTlMQ212LUU2U2poOHBad0V0eEVhUHg1UGdCY0ItaWhiQkJzZGRuQWNnOXB1QlFqZHhEazlBZnEtSHY4ejZ1aGZGZ2c?oc=5"
+    },
+    {
+      "title": "College firsts as Utah ink private equity deal and UNLV land jersey patch",
+      "source": "Sportcal",
+      "published_at": "2025-12-10",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQXRxZ3BRU0czZXlIVWxPZnllenFUaUV4MjFBbmc0MjdqbWlGVUVONXRfa240WGhJUVJLOFAwQXpxYUZESzItZTl2VDdxLTRfTlBvM3V0M1pjNUlRV2ZyeUsxV2ZNeE9Udk1rcTc2ZGlEejg0amtNT1FNanlvMDczRE9RaWVvSGZyOGVEeTNjcGRVbDRGWVU0ZXh6MV96UVhFVzAzZDRfWQ?oc=5"
+    },
+    {
+      "title": "UNLV Athletics And Learfield Name Acesso Biologics As First Official Jersey Patch Partner",
+      "source": "University of Nevada Las Vegas Athletics",
+      "published_at": "2025-12-08",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQcTNTamt5emp6QUFpSWVoZ2VNZHVVTHVnSUEycm5ISTU0cEtDWnU1V0Z0ZFAzQ0Rfc2hvY1FWZDNlV3c2ZFZtZGVad3dmSThTaUM4b1lrMEJSUWdzaWxjc0x4NWM0Vkhta3UtbXdUUFQ4X3lReDR6VDJ0LUJjVnNHT1RDZjZwRHFJUm9aMXZnTEZYcHp5NkUyaVRHVi1OajJtQVNkLU9sRE1GbXhqNHFOdUUyZm0yMWtrQTlMUUVEeUtKRHVIc0llSVF6UzRGeENtVlZpSWRQdw?oc=5"
+    },
+    {
+      "title": "In a college first, UNLV details 5-year, $11 million jersey-patch sponsor deal - The Athletic",
+      "source": "nytimes.com",
+      "published_at": "2025-12-08",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNMVhwV3VlTWVwWDNiM0VnZ09BSmhqb2RkWUplbDR0NjBWRXFvajZfakJFVGxFYmNLa0dkMVN3V2NobGVaRDdqRFpBTFdnTjNBZ3BvdVpBOXUwMTVEaElZaEhtZ2I4ME9EdmE2Y1NKT3BKd19YWjZLekl1dDdXS3dQUHBEeDAzczZNR0ZSWEJ6RmlMbTlpNlFsbEZn?oc=5"
+    },
+    {
+      "title": "UNLV names Acesso Biologics jersey patch partner",
+      "source": "Sports Business Journal",
+      "published_at": "2025-12-08",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNTDcxU1pFcExKbW5waEM1dW5mNExTa0daLTN1SWIweWxyNk5tenkyY1NaRVpxVHBxNHliU3FoTnV2X3hvRG9aR25CbnhQeGhONDRSckl2Qm90SkRBbjI4c28wc0JsT1EyRWxLTFJGbWtJR2t5UnczVmpYTV9aNTlLSWRaMUJpci1TMnR6R3ZhYWdqVXQ0R0RQZ3BQQmFZQk9tbG1pSGRZTGJkUjA?oc=5"
+    },
+    {
+      "title": "UNLV Makes College Sports Marketing History With Five-Year, $11M Corporate Jersey Patch Deal With Las Vegas-Based Acesso Biologics",
+      "source": "LVSportsBiz",
+      "published_at": "2025-12-08",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPVHEzSHMxcEJkQnVCQ1pkS1hxYk5DbFVpQ3MxRDliVGNKb050cG9WR0RZXzVPd09CUm9HM3ZWMnV2Qi1BcEFiazRwVjhza0RxbDF5cTQ0MlNMMWw4ckZ6N00xSnFIelhoX3JHZ3o3SWVPMXB0V1haVnRGZHVIXzNIS0ZmeXJ4YTFQUWdXMURKNWFNU3l2cVcxMndFWVMzeGtreGRTa2ZaMXNrSG5MdE1vRi1JOFVULXBYa2Z6ZWRxQS00LVJrMWRRbndKSkxGSkN6Nl9LbmZLcE9vcU9tZW5iY0JIaFPSAeoBQVVfeXFMTXAyY0h5V0dTRDRwSjc4N2JDVkZkZWF6TW5VY25PUlZZbGJsMUpvZE5FOVNTS1FDaFR6cHY1bDFOakh0UTFhakxzSm5WZ2FnOGlSYUY4dFZBVFRPMHRreVNES1hjZXRJQkZCYjJibGp2VzVVdmJTSXJZdmI3dy1NSjUyelRSNDB4T2tueU1VVzBtcktYYndmaTN2V2dhOUZGREIyYU53T2VuSWtncHV5WVdDSUxQcXhObnEtSG5VcVFLNUZUNTZqa3R5Zk5wempkM3VxZ3VxeDBKQlpBR1ZYV2FjekpWaTk4Yk53?oc=5"
+    }
+  ],
+  "attribution": "Headlines, publisher, and date only, with a link to the original story. This portfolio app aggregates public feeds and does not copy article text. Google News RSS is a prototype source, not a commercial redistribution license.",
+  "note": null
+}

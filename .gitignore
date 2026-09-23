@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+
+# Local ingest leftovers. Season snapshots in data/live/ are committed
+# so the public site runs without a CFBD API key.
+data/raw/
+data/quota_log.jsonl
+data/ingest.log

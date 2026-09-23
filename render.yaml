@@ -1,0 +1,15 @@
+# Render Blueprint: one free Python web service.
+# Dashboard: New → Blueprint → select this GitHub repo → Apply.
+services:
+  - type: web
+    name: attendee-stats
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m attendee_tracker.serve
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: SEASON_YEAR
+        value: "2025"

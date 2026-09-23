@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attendee Tracker</title>
+  <meta name="description" content="FBS college football home attendance by conference, record, and AP rank.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,650&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <a class="skip" href="#view">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#/">Attendee Tracker</a>
+    <p class="header-season" id="season-label">FBS home crowds</p>
+    <nav class="header-nav" aria-label="Primary">
+      <a href="#/" data-nav="home">Schools</a>
+      <a href="#/analysis" data-nav="analysis">Analysis</a>
+    </nav>
+  </header>
+  <div id="banner" class="banner" hidden></div>
+  <main id="view" tabindex="-1">
+    <p class="loading">Loading the season…</p>
+  </main>
+  <footer class="site-footer">
+    <p>Phase 1 tracks attendance, stadium capacity, records, and the AP Top 25. Ticket prices are not part of this version.</p>
+    <p id="footer-logo">School logos, when shown, are the URLs published by College Football Data. Those terms do not grant display rights for school marks.</p>
+  </footer>
+  <noscript>
+    <p class="noscript">Attendee Tracker needs JavaScript to render the season. Attendance figures are not embedded in this page.</p>
+  </noscript>
+  <script src="/assets/vendor/chart.umd.min.js"></script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

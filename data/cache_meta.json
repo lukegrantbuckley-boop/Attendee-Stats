@@ -1,0 +1,71 @@
+{
+  "seasons": {
+    "2026": {
+      "teams_fetched_at": "2026-09-23T02:33:36Z",
+      "games_fetched_at": "2026-09-23T02:33:36Z",
+      "records_fetched_at": "2026-09-23T02:33:36Z",
+      "rankings_fetched_at": "2026-09-23T02:33:36Z"
+    },
+    "2025": {
+      "teams_fetched_at": "2026-09-23T02:36:51Z",
+      "games_fetched_at": "2026-09-23T02:36:51Z",
+      "records_fetched_at": "2026-09-23T02:36:51Z",
+      "rankings_fetched_at": "2026-09-23T02:36:51Z"
+    },
+    "2024": {
+      "teams_fetched_at": "2026-09-23T11:14:46Z",
+      "games_fetched_at": "2026-09-23T11:14:46Z",
+      "records_fetched_at": "2026-09-23T11:14:46Z",
+      "rankings_fetched_at": "2026-09-23T11:14:46Z"
+    },
+    "2023": {
+      "teams_fetched_at": "2026-09-23T11:14:48Z",
+      "games_fetched_at": "2026-09-23T11:14:48Z",
+      "records_fetched_at": "2026-09-23T11:14:48Z",
+      "rankings_fetched_at": "2026-09-23T11:14:48Z"
+    },
+    "2022": {
+      "teams_fetched_at": "2026-09-23T11:14:50Z",
+      "games_fetched_at": "2026-09-23T11:14:50Z",
+      "records_fetched_at": "2026-09-23T11:14:50Z",
+      "rankings_fetched_at": "2026-09-23T11:14:50Z"
+    },
+    "2021": {
+      "teams_fetched_at": "2026-09-23T11:14:51Z",
+      "games_fetched_at": "2026-09-23T11:14:51Z",
+      "records_fetched_at": "2026-09-23T11:14:51Z",
+      "rankings_fetched_at": "2026-09-23T11:14:51Z"
+    },
+    "2020": {
+      "teams_fetched_at": "2026-09-23T11:14:53Z",
+      "games_fetched_at": "2026-09-23T11:14:53Z",
+      "records_fetched_at": "2026-09-23T11:14:53Z",
+      "rankings_fetched_at": "2026-09-23T11:14:53Z"
+    },
+    "2019": {
+      "teams_fetched_at": "2026-09-23T11:14:55Z",
+      "games_fetched_at": "2026-09-23T11:14:55Z",
+      "records_fetched_at": "2026-09-23T11:14:55Z",
+      "rankings_fetched_at": "2026-09-23T11:14:55Z"
+    },
+    "2018": {
+      "teams_fetched_at": "2026-09-23T11:14:56Z",
+      "games_fetched_at": "2026-09-23T11:14:56Z",
+      "records_fetched_at": "2026-09-23T11:14:56Z",
+      "rankings_fetched_at": "2026-09-23T11:14:56Z"
+    },
+    "2017": {
+      "teams_fetched_at": "2026-09-23T11:14:58Z",
+      "games_fetched_at": "2026-09-23T11:14:58Z",
+      "records_fetched_at": "2026-09-23T11:14:58Z",
+      "rankings_fetched_at": "2026-09-23T11:14:58Z"
+    },
+    "2016": {
+      "teams_fetched_at": "2026-09-23T11:15:00Z",
+      "games_fetched_at": "2026-09-23T11:15:00Z",
+      "records_fetched_at": "2026-09-23T11:15:00Z",
+      "rankings_fetched_at": "2026-09-23T11:15:00Z"
+    }
+  },
+  "venues_fetched_at": "2026-09-23T11:15:00Z"
+}
