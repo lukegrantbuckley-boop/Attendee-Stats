@@ -14,6 +14,7 @@ from attendee_tracker.business_news import load_business_news, safe_slug
 from attendee_tracker.config import load_dotenv, season_year
 from attendee_tracker.history import HistoryWindowError, assemble_history, find_school, validate_window
 from attendee_tracker.store import live_path, load_live, load_sample, sample_path
+from attendee_tracker.valuations import ValuationsError, list_valuations
 
 WEB = Path(__file__).resolve().parent.parent / "web"
 
@@ -161,6 +162,18 @@ def school_business_news(slug: str):
         school.get("mascot"),
         school.get("city"),
     )
+
+
+@app.get("/api/valuations")
+def valuations(sort: str = Query("valuation")):
+    """Power program values from the committed file. No API key, no invented dollars."""
+    try:
+        return list_valuations(sort)
+    except ValuationsError as exc:
+        return JSONResponse(
+            {"error": exc.code, "message": exc.message},
+            status_code=exc.status,
+        )
 
 
 @app.get("/")
