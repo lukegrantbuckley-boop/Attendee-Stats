@@ -320,6 +320,7 @@ def _rank_loyalty(rows: list[dict], *, highest_fill_first: bool, limit: int) -> 
                 "avg_capacity_pct": _round(row["avg_capacity_pct"], 4),
                 "avg_home_attendance": _round(row.get("avg_home_attendance"), 1),
                 "reported_home_games": row.get("reported_home_games"),
+                "games_played": row.get("decided_games"),
                 "logo": row.get("logo"),
                 "color": row.get("color") or "#1e3a5f",
                 "abbreviation": row.get("abbreviation"),

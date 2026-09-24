@@ -46,6 +46,18 @@ def test_sample_is_labeled_and_keeps_null_attendance():
     iron = by_name["Iron Range"]
     assert all(game["venue"] != "Demo Neutral Field" for game in iron["home_games"])
     assert any(game["attendance_status"] == "not_played" for game in iron["home_games"])
+    assert view["meta"]["season_partial"] is True
+
+
+def test_a_finished_season_is_not_partial():
+    raw = build_sample_raw()
+    for game in raw["games"]:
+        game["completed"] = True
+    view = assemble(raw)
+    assert view["meta"]["season_partial"] is False
+    listed = view["analysis"]["loyalty"]["most_loyal"] + view["analysis"]["loyalty"]["softest_support"]
+    assert listed
+    assert all(row["games_played"] >= 2 for row in listed)
 
 
 def test_ap_sort_puts_unranked_after_ranked_and_record_sorts_by_wins():

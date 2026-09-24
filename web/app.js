@@ -753,21 +753,7 @@ function renderAnalysis() {
     h("p", { class: "muted", text: analysis.raw_attendance_pearson_r == null
       ? "Raw attendance correlation is not estimated."
       : `Secondary check against raw crowd size: Pearson r ${formatStat(analysis.raw_attendance_pearson_r)} across ${analysis.raw_attendance_n} teams. Stadium size dominates that number, so capacity percentage stays the primary measure.` }),
-    loyaltyIntro(analysis.loyalty),
-    h("div", { class: "loyalty-grid" }, [
-      loyaltyPanel(
-        "most-loyal",
-        "Most loyal fans",
-        "A record at or below the median, and the stadium is still full. Ordered from the highest share of seats filled.",
-        analysis.loyalty.most_loyal
-      ),
-      loyaltyPanel(
-        "soft-support",
-        "Softest home support",
-        "The same below-median records, ordered from the lowest share of seats filled. Empty here means empty relative to that stadium, not a smaller headcount.",
-        analysis.loyalty.softest_support
-      ),
-    ]),
+    loyaltySection(),
     proStadiumSection(analysis),
     growthSection(meta.season),
     h("section", { class: "panel" }, [
@@ -797,34 +783,141 @@ function renderAnalysis() {
     ])
   );
   drawScatter(analysis);
+  paintLoyalty();
 }
 
-function loyaltyIntro(loyalty) {
-  if (!loyalty || loyalty.win_pct_median == null) {
-    return h("p", { class: "sublede", text: "Most loyal fans and softest home support need the same teams as the fit: two reported home crowds with a capacity percentage, and two decided games. None qualify in this cache." });
-  }
-  return h("p", { class: "sublede", text: `A bad record is a win percentage at or below ${formatPct(loyalty.win_pct_median)}, the median of the ${loyalty.n_qualifying} teams in the fit. ${loyalty.n_bad_record} teams are in that group. Both lists rank them by average home capacity filled, never by raw attendance.` });
-}
+let loyaltyRange = "this";
+let loyaltyToken = 0;
 
-function loyaltyPanel(id, title, blurb, rows) {
-  return h("section", { class: "panel", id }, [
-    h("h3", { text: title }),
-    h("p", { class: "muted", text: blurb }),
-    rows && rows.length
-      ? h("div", { class: "loyal-list" }, rows.map(loyaltyRow))
-      : h("p", { text: "No qualifying team has a below-median record in this cache." }),
+function loyaltySection() {
+  const endYear = Number(payload.meta.season);
+  return h("div", { id: "loyalty-section" }, [
+    h("div", { class: "range-bar loyalty-range" }, [
+      segment("Loyalty lists", [
+        ["this", "This season"],
+        [RANGE_LAST, "Last season"],
+      ], loyaltyRange, (value) => {
+        loyaltyRange = value;
+        document.querySelectorAll("#loyalty-section .segment button").forEach((button) => {
+          const selected = value === RANGE_LAST ? "Last season" : "This season";
+          button.setAttribute("aria-pressed", button.textContent.trim() === selected ? "true" : "false");
+        });
+        paintLoyalty();
+      }),
+      h("p", { class: "muted range-hint", id: "loyalty-hint", text: loyaltyHint(endYear, payload) }),
+    ]),
+    h("div", { id: "loyalty-body", "aria-live": "polite" }),
   ]);
 }
 
-function loyaltyRow(row) {
+function paintLoyalty() {
+  const token = ++loyaltyToken;
+  const endYear = Number(payload.meta.season);
+  const node = document.getElementById("loyalty-body");
+  if (!node) return;
+  if (loyaltyRange !== RANGE_LAST) {
+    renderLoyalty(node, payload, endYear);
+    return;
+  }
+  const year = previousSeasonYear(endYear);
+  const hint = document.getElementById("loyalty-hint");
+  if (hint) hint.textContent = `Loading ${year}…`;
+  node.replaceChildren(h("p", { class: "loading", text: `Loading ${year} loyalty lists…` }));
+  loadSeasonPayload(year).then((seasonBody) => {
+    if (token !== loyaltyToken) return;
+    const current = document.getElementById("loyalty-body");
+    if (current) renderLoyalty(current, seasonBody, year);
+  }).catch((error) => {
+    if (token !== loyaltyToken) return;
+    const current = document.getElementById("loyalty-body");
+    if (!current) return;
+    const hintNode = document.getElementById("loyalty-hint");
+    if (hintNode) hintNode.textContent = `${year} is not in the cache.`;
+    current.replaceChildren(h("div", { class: "error" }, [
+      h("h2", { text: "That season is not available" }),
+      h("p", { text: error.message || `${year} could not be loaded.` }),
+    ]));
+  });
+}
+
+function renderLoyalty(node, seasonBody, year) {
+  const hint = document.getElementById("loyalty-hint");
+  if (hint) hint.textContent = loyaltyHint(year, seasonBody);
+  const covid = seasonIsCovid(year, seasonBody);
+  const loyalty = seasonBody.analysis ? seasonBody.analysis.loyalty : null;
+  const partial = !covid && Boolean(seasonBody.meta && seasonBody.meta.season_partial);
+  node.replaceChildren(
+    loyaltyIntro(loyalty, year, covid),
+    h("div", { class: "loyalty-grid" }, [
+      loyaltyPanel(
+        "most-loyal",
+        "Most loyal fans",
+        "A record at or below the median, and the stadium is still full. Ordered from the highest share of seats filled.",
+        covid ? null : (loyalty && loyalty.most_loyal),
+        covid,
+        partial
+      ),
+      loyaltyPanel(
+        "soft-support",
+        "Softest home support",
+        "The same below-median records, ordered from the lowest share of seats filled. Empty here means empty relative to that stadium, not a smaller headcount.",
+        covid ? null : (loyalty && loyalty.softest_support),
+        covid,
+        partial
+      ),
+    ])
+  );
+}
+
+function seasonIsCovid(year, seasonBody) {
+  if (Number(year) === 2020) return true;
+  return Boolean(seasonBody && seasonBody.meta && seasonBody.meta.attendance_omitted === "covid");
+}
+
+function loyaltyHint(year, seasonBody) {
+  if (seasonIsCovid(year, seasonBody)) {
+    return "2020 is omitted as the COVID season. These lists are not ranked from that year's crowds.";
+  }
+  if (seasonBody && seasonBody.meta && seasonBody.meta.season_partial) {
+    return `${year} is still in progress. The count beside each school is games played.`;
+  }
+  return `${year} season. Both lists use that year only.`;
+}
+
+function loyaltyIntro(loyalty, year, covid) {
+  if (covid) {
+    return h("p", { class: "sublede", text: "2020 is omitted as the COVID season. Crowds from that year stay in the cache and are not used in these lists." });
+  }
+  if (!loyalty || loyalty.win_pct_median == null) {
+    return h("p", { class: "sublede", text: "Most loyal fans and softest home support need the same teams as the fit: two reported home crowds with a capacity percentage, and two decided games. None qualify in this cache." });
+  }
+  return h("p", { class: "sublede", text: `A bad record is a win percentage at or below ${formatPct(loyalty.win_pct_median)}, the median of the ${loyalty.n_qualifying} teams in the ${year} fit. ${loyalty.n_bad_record} teams are in that group. Both lists rank them by average home capacity filled, never by raw attendance.` });
+}
+
+function loyaltyPanel(id, title, blurb, rows, covid, partial) {
+  let body;
+  if (covid) body = h("p", { text: "Omitted · COVID" });
+  else if (rows && rows.length) body = h("div", { class: "loyal-list" }, rows.map((row) => loyaltyRow(row, partial)));
+  else body = h("p", { text: "No qualifying team has a below-median record in this cache." });
+  return h("section", { class: "panel", id }, [
+    h("h3", { text: title }),
+    h("p", { class: "muted", text: blurb }),
+    body,
+  ]);
+}
+
+function loyaltyRow(row, partial) {
   const games = row.reported_home_games == null ? "" : `${row.reported_home_games} reported`;
   const meta = [row.record || "Record unavailable", `${formatPct(row.win_pct)} wins`, games].filter(Boolean).join(" · ");
   const crowd = row.avg_home_attendance == null ? null : `Avg crowd ${formatMaybeInt(row.avg_home_attendance)}`;
+  const played = partial && row.games_played != null
+    ? h("span", { class: "loyal-played", text: `${row.games_played} played` })
+    : null;
   return h("a", { class: "loyal-row", href: `#/schools/${encodeURIComponent(row.slug)}` }, [
     h("span", { class: "loyal-rank", text: String(row.rank) }),
     mark(row, 42),
     h("div", { class: "loyal-name" }, [
-      h("strong", { text: row.school }),
+      h("strong", {}, [document.createTextNode(row.school), played]),
       h("p", { text: meta }),
     ]),
     h("div", { class: "loyal-fill" }, [

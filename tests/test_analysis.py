@@ -53,8 +53,10 @@ def test_loyalty_lists_rank_below_median_records_by_capacity_not_headcount():
     assert "Blank" not in loyal_names + soft_names
     assert loyalty["most_loyal"][0]["avg_home_attendance"] == 12000
     assert loyalty["most_loyal"][0]["avg_capacity_pct"] == pytest.approx(0.95)
+    assert loyalty["most_loyal"][0]["games_played"] == 2
     assert loyalty["softest_support"][0]["avg_home_attendance"] == 88000
     assert all(row["avg_capacity_pct"] is not None for row in loyalty["most_loyal"])
+    assert all(row["games_played"] == 2 for row in loyalty["most_loyal"] + loyalty["softest_support"])
 
 
 def test_loyalty_ties_break_by_name_not_crowd_size():
