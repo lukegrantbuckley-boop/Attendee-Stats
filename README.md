@@ -6,7 +6,7 @@ This repository is a portfolio site. Season snapshots in `data/live/` (2016 thro
 
 **2020 is omitted from averages as the COVID season.** The 2020 cache stays in the repo, but that year's crowds are not used in season averages, multi-year windows, or growth rates.
 
-`CFBD_API_KEY` is optional. Leave it unset to run and host the site from the committed caches. Set it only for a future live ingest (`python -m attendee_tracker.ingest`). Never commit the key, `.env`, or quota logs.
+`CFBD_API_KEY` is optional. Leave it unset to run and host the site from the committed caches. Set it only to refresh a cache (`python -m attendee_tracker.ingest`, or `python -m attendee_tracker.refresh_current` for the current season). Never commit the key, `.env`, or quota logs.
 
 School logos are the image URLs College Football Data publishes. That is fine for this portfolio. Revisit the trademark and CFBD terms before any commercial use. See [Logos](#logos).
 
@@ -17,6 +17,7 @@ If a requested season has no `data/live/{year}.json`, the site falls back to the
 | Piece | Where it runs | Role |
 | --- | --- | --- |
 | `python -m attendee_tracker.ingest` | Your machine, or a daily cron | Calls CFBD, writes a JSON cache under `data/` |
+| `python -m attendee_tracker.refresh_current` | Your machine, or the current-season cron | Re-pulls the current season from CFBD, then fills null attendance from ESPN summaries |
 | `attendee_tracker` (FastAPI) | Local Python process, or the free Render web service | Reads that cache, builds conference lists, charts data, and the analysis |
 | `web/` | Browser | HTML, CSS, and JavaScript. Chart.js draws the graphs. No frontend build step |
 
@@ -73,6 +74,20 @@ Raw responses land in `data/raw/` (gitignored). The site reads `data/live/{year}
 
 Without a key, ingest exits with a clear error and writes nothing. It will not fabricate attendance.
 
+### Current season refresh
+
+Ingest stores a crowd only when CFBD has one. For 2026, CFBD has returned games, records, and rankings with null attendance on completed home games. This command re-pulls that CFBD snapshot, then fills only the nulls from ESPN:
+
+```bash
+python -m attendee_tracker.refresh_current
+python -m attendee_tracker.refresh_current --year 2026
+python -m attendee_tracker.refresh_current --force
+```
+
+It uses the same 18-hour freshness window as ingest unless you pass `--force`. ESPN is consulted only for completed non-neutral home games whose CFBD attendance is null: the FBS scoreboard, then each summary's `gameInfo.attendance`. A number CFBD already has is kept. If ESPN has no figure, the game stays null. Nothing is invented. A filled game records `attendance_source` of `espn_summary`. A CFBD crowd is recorded as `cfbd`. The command requires `CFBD_API_KEY`, writes `data/live/{year}.json`, and will not commit `.env` or the key.
+
+2020 remains in the cache and remains omitted from averages, growth, Last 5, Last 10, and the loyal and soft lists.
+
 ### Daily refresh at 10:00 America/New_York
 
 This repo does not install cron for you. On the machine that should refresh the cache, a typical crontab entry is:
@@ -83,6 +98,8 @@ CRON_TZ=America/New_York
 ```
 
 `CRON_TZ` is supported by many cron daemons (including Vixie cron). If the host is already set to `America/New_York`, the `CRON_TZ` line can be dropped. If the host cron is UTC and does not support `CRON_TZ`, schedule 14:00 UTC during EDT and 15:00 UTC during EST instead of guessing one UTC hour year-round.
+
+For the current season, the same cron line can call `python -m attendee_tracker.refresh_current` instead of ingest. That still pulls CFBD first, then fills null attendance from ESPN. Keep a year range off the cron.
 
 ## Run the site
 
@@ -149,10 +166,10 @@ The Blueprint sets:
 | Install | `pip install -r requirements.txt` |
 | Start | `python -m attendee_tracker.serve` |
 | Bind | `0.0.0.0` and Render's `$PORT` |
-| `SEASON_YEAR` | `2025` |
+| `SEASON_YEAR` | `2026` |
 | Python | `3.12.7` |
 
-Do not put `CFBD_API_KEY` in the repo or in `render.yaml`. The free site uses the committed `data/live` caches, including 2025. To refresh from CFBD later, add `CFBD_API_KEY` as a secret environment variable in the Render dashboard only. This Blueprint does not run ingest.
+Do not put `CFBD_API_KEY` in the repo or in `render.yaml`. The free site uses the committed `data/live` caches. The default season is 2026. To refresh from CFBD later, add `CFBD_API_KEY` as a secret environment variable in the Render dashboard only. This Blueprint does not run ingest or the ESPN fill.
 
 Free web services on Render sleep after a period with no traffic. The first request after sleep can take a minute while the process starts.
 
@@ -169,7 +186,7 @@ pytest
 
 ## Known gaps
 
-- Attendance is often null, and CFBD does not promise when it will be filled in. The daily games pull is there so late numbers can show up later. The UI leaves blanks blank.
+- Attendance is often null, and CFBD does not promise when it will be filled in. The daily games pull is there so late numbers can show up later. `python -m attendee_tracker.refresh_current` fills nulls on completed non-neutral home games from ESPN summaries when ESPN has a figure. The UI leaves blanks blank.
 - "Attendance" in the feed is the figure CFBD publishes (often tickets distributed / reported), not a turnstile count.
 - Conference names follow that season's `/teams/fbs` response. Realignment years should be re-checked; the Power 4 set is the four conferences named above. The multi-year chart keeps each season's conference on its own row.
 - History charts only include seasons that have been ingested. Until you backfill, Last 5 and Last 10 will show the years you have and name the rest as missing.

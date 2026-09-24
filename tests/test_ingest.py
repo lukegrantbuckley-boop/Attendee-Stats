@@ -217,6 +217,35 @@ def test_main_passes_a_shared_venue_cache_for_a_range(monkeypatch):
     assert seen[0]["venue_cache"] is None
 
 
+def test_finalize_runs_before_the_live_snapshot_is_written(monkeypatch, tmp_path):
+    monkeypatch.setenv("ATTENDEE_DATA_DIR", str(tmp_path))
+
+    def finalize(snapshot):
+        snapshot["games"][0]["attendance"] = 43210
+        snapshot["games"][0]["attendance_source"] = "espn_summary"
+        return snapshot
+
+    calls = run_ingest(year=2026, force=True, min_interval_hours=18, client=FakeClient(), finalize=finalize)
+    assert calls == 5
+    live = json.loads((tmp_path / "live" / "2026.json").read_text(encoding="utf-8"))
+    assert live["games"][0]["attendance"] == 43210
+    assert live["games"][0]["attendance_source"] == "espn_summary"
+
+
+def test_finalize_error_leaves_the_previous_snapshot(monkeypatch, tmp_path):
+    monkeypatch.setenv("ATTENDEE_DATA_DIR", str(tmp_path))
+    live = tmp_path / "live"
+    live.mkdir()
+    (live / "2026.json").write_text('{"keep": true}\n', encoding="utf-8")
+
+    def finalize(_snapshot):
+        raise CfbdError("ESPN fill failed")
+
+    with pytest.raises(CfbdError):
+        run_ingest(year=2026, force=True, min_interval_hours=18, client=FakeClient(), finalize=finalize)
+    assert json.loads((live / "2026.json").read_text(encoding="utf-8")) == {"keep": True}
+
+
 def test_failed_fetch_does_not_create_a_live_snapshot(monkeypatch, tmp_path):
     monkeypatch.setenv("ATTENDEE_DATA_DIR", str(tmp_path))
 

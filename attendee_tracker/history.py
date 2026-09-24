@@ -215,6 +215,7 @@ def _lean_game(game: dict) -> dict:
         "opponent": game.get("opponent"),
         "attendance": game.get("attendance"),
         "attendance_status": game.get("attendance_status"),
+        "attendance_source": game.get("attendance_source"),
         "result": game.get("result"),
         "label": game.get("label"),
     }

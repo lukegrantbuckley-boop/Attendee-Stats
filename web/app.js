@@ -1062,6 +1062,8 @@ function drawScatter(analysis) {
       tension: 0,
     });
   }
+  const yScale = scatterDomain(scatterPercents(analysis.points, "avg_capacity_pct"), 20, 110);
+  const xScale = scatterDomain(scatterPercents(analysis.points, "win_pct"), 0, 100);
   const chart = new Chart(canvas, {
     type: "scatter",
     data: { datasets },
@@ -1085,12 +1087,33 @@ function drawScatter(analysis) {
         },
       },
       scales: {
-        x: { title: { display: true, text: "Season win percentage" }, min: 0, max: 100, ticks: { callback: (value) => `${value}%` } },
-        y: { title: { display: true, text: "Average capacity filled" }, min: 0, max: 100, ticks: { callback: (value) => `${value}%` } },
+        x: { title: { display: true, text: "Season win percentage" }, min: xScale.min, max: xScale.max, ticks: { callback: (value) => `${value}%` } },
+        y: { title: { display: true, text: "Average capacity filled" }, min: yScale.min, max: yScale.max, ticks: { callback: (value) => `${value}%` } },
       },
     },
   });
   charts.push(chart);
+}
+
+function scatterPercents(points, key) {
+  return points
+    .map((point) => point[key])
+    .filter((value) => Number.isFinite(value))
+    .map((value) => value * 100);
+}
+
+function scatterDomain(values, floor, ceiling) {
+  // Default window, extended when a point plus marker padding would be clipped.
+  const pad = 3;
+  let min = floor;
+  let max = ceiling;
+  const finite = values.filter((value) => Number.isFinite(value));
+  if (!finite.length) return { min, max };
+  const low = Math.min(...finite);
+  const high = Math.max(...finite);
+  if (low - pad < min) min = low - pad;
+  if (high + pad > max) max = high + pad;
+  return { min, max };
 }
 
 function scatterSet(label, points, color) {
