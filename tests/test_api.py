@@ -185,7 +185,8 @@ def test_2020_stays_in_the_cache_and_is_left_out_of_averages(monkeypatch, tmp_pa
 def test_analysis_lists_rank_capacity_fill_for_below_median_records(monkeypatch, tmp_path):
     monkeypatch.setenv("ATTENDEE_DATA_DIR", str(tmp_path))
     client = TestClient(app)
-    analysis = client.get("/api/season").json()["analysis"]
+    season = client.get("/api/season").json()
+    analysis = season["analysis"]
     loyalty = analysis["loyalty"]
     assert loyalty["n_qualifying"] == analysis["n_teams"]
     assert loyalty["win_pct_median"] is not None
@@ -206,6 +207,8 @@ def test_analysis_lists_rank_capacity_fill_for_below_median_records(monkeypatch,
     assert loyalty["softest_support"][0]["school"] == "Canal"
     assert "logo" in loyalty["most_loyal"][0]
     assert loyalty["most_loyal"][0]["reported_home_games"] >= 2
+    assert loyalty["most_loyal"][0]["games_played"] >= 2
+    assert season["meta"]["season_partial"] is True
 
 
 def test_index_html():

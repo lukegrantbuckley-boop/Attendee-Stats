@@ -12,10 +12,13 @@ let historyToken = 0;
 let newsToken = 0;
 let growthToken = 0;
 const businessNewsBySlug = new Map();
+const seasonPayloads = new Map();
 const filters = { query: "", tier: "all", sort: "ap", span: 1 };
 
+const RANGE_LAST = "last";
 const RANGE_OPTIONS = [
   [1, "This season"],
+  [RANGE_LAST, "Last season"],
   [5, "Last 5 seasons"],
   [10, "Last 10 seasons"],
 ];
@@ -293,12 +296,14 @@ function renderSchool(slug) {
         school.pro_shared_stadium
           ? h("p", { class: "pro-note", text: school.pro_stadium_note || "NFL stadium. Official capacity fill is not compared with on-campus stadiums." })
           : null,
-        attendancePins(school),
+        h("div", { id: "season-pins" }, [
+          filters.span === RANGE_LAST ? null : attendancePins(school),
+        ]),
       ]),
     ]),
     h("div", { class: "range-bar" }, [
       segment("Attendance range", RANGE_OPTIONS, filters.span, (value) => {
-        filters.span = Number(value);
+        filters.span = value === RANGE_LAST ? RANGE_LAST : Number(value);
         render();
       }),
       h("p", { class: "muted range-hint", text: rangeHint(endYear, filters.span) }),
@@ -307,7 +312,14 @@ function renderSchool(slug) {
     businessNewsSection(slug)
   );
   if (filters.span === 1) {
-    fillSeasonBody(school);
+    fillSeasonBody(school, endYear);
+    return;
+  }
+  if (filters.span === RANGE_LAST) {
+    const year = previousSeasonYear(endYear);
+    const body = document.getElementById("school-body");
+    body.replaceChildren(h("p", { class: "loading", text: `Loading ${year} home attendance…` }));
+    loadPriorSeason(school, year, token);
     return;
   }
   const bounds = historyBounds(filters.span, endYear);
@@ -316,12 +328,16 @@ function renderSchool(slug) {
   loadHistory(slug, school, bounds, token);
 }
 
+function previousSeasonYear(endYear) {
+  return Number(endYear) - 1;
+}
+
 function rangeHint(endYear, span) {
+  if (span === RANGE_LAST) {
+    return singleSeasonHint(previousSeasonYear(endYear));
+  }
   if (span === 1) {
-    if (Number(endYear) === 2020) {
-      return "2020 is omitted as the COVID season. The season average is not shown. Individual games stay in the cache and are not averaged.";
-    }
-    return `${endYear} home games, one bar or point per opponent. Gaps are unreported or not yet played.`;
+    return singleSeasonHint(endYear);
   }
   const start = endYear - span + 1;
   const base = `${start}–${endYear}: average reported home attendance by season. Missing years stay blank.`;
@@ -329,6 +345,13 @@ function rangeHint(endYear, span) {
     return `${base} 2020 is omitted as the COVID season, so this window uses the other seasons only.`;
   }
   return base;
+}
+
+function singleSeasonHint(year) {
+  if (Number(year) === 2020) {
+    return "2020 is omitted as the COVID season. The season average is not shown. Individual games stay in the cache and are not averaged.";
+  }
+  return `${year} home games, one bar or point per opponent. Gaps are unreported or not yet played.`;
 }
 
 function windowIncludesCovid(start, end) {
@@ -422,15 +445,55 @@ function formatNewsDate(value) {
   return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric" }).format(date);
 }
 
-function fillSeasonBody(school) {
+async function loadPriorSeason(school, year, token) {
+  let seasonBody;
+  try {
+    seasonBody = await loadSeasonPayload(year);
+  } catch (error) {
+    if (token !== historyToken) return;
+    renderHistoryError(error.message || `${year} could not be loaded.`);
+    return;
+  }
+  if (token !== historyToken) return;
+  const prior = findPriorSchool(seasonBody, school);
+  if (!prior) {
+    renderHistoryError(`${school.school} is not in the ${year} cache. Attendance was not fabricated.`);
+    return;
+  }
+  const pins = document.getElementById("season-pins");
+  if (pins) pins.replaceChildren(attendancePins(prior));
+  fillSeasonBody(prior, year);
+}
+
+async function loadSeasonPayload(year) {
+  if (seasonPayloads.has(year)) return seasonPayloads.get(year);
+  const response = await fetch(`/api/season?year=${encodeURIComponent(year)}`);
+  const body = await response.json();
+  if (!response.ok || body.error) {
+    throw new Error(body.message || "That season could not be loaded.");
+  }
+  seasonPayloads.set(year, body);
+  return body;
+}
+
+function findPriorSchool(seasonBody, school) {
+  const schools = seasonBody.schools || [];
+  return schools.find((row) => row.id != null && row.id === school.id)
+    || schools.find((row) => row.slug === school.slug)
+    || null;
+}
+
+function fillSeasonBody(school, seasonYear) {
+  const year = seasonYear == null ? Number(payload.meta.season) : Number(seasonYear);
   const games = school.home_games || [];
   const gaps = games.filter((game) => game.attendance_status !== "reported");
   const body = document.getElementById("school-body");
   if (!body) return;
+  const covid = isCovidOmitted(school) || year === 2020;
   body.replaceChildren(
     h("section", { class: "panel" }, [
       h("h3", { text: "Home attendance by opponent" }),
-      h("p", { class: "muted", text: isCovidOmitted(school) || Number(payload.meta.season) === 2020
+      h("p", { class: "muted", text: covid
         ? "2020 is omitted as the COVID season. The season average is not shown. Game rows stay in the cache and are not averaged. Missing values are not drawn as zero."
         : "Non-neutral home games only. A gap is a game with no reported attendance, or a game that has not been played. Missing values are not drawn as zero." }),
       h("div", { class: "chart-wrap" }, [h("canvas", { id: "attendance-chart" })]),
@@ -690,28 +753,10 @@ function renderAnalysis() {
     h("p", { class: "muted", text: analysis.raw_attendance_pearson_r == null
       ? "Raw attendance correlation is not estimated."
       : `Secondary check against raw crowd size: Pearson r ${formatStat(analysis.raw_attendance_pearson_r)} across ${analysis.raw_attendance_n} teams. Stadium size dominates that number, so capacity percentage stays the primary measure.` }),
-    loyaltyIntro(analysis.loyalty),
-    h("div", { class: "loyalty-grid" }, [
-      loyaltyPanel(
-        "most-loyal",
-        "Most loyal fans",
-        "A record at or below the median, and the stadium is still full. Ordered from the highest share of seats filled.",
-        analysis.loyalty.most_loyal
-      ),
-      loyaltyPanel(
-        "soft-support",
-        "Softest home support",
-        "The same below-median records, ordered from the lowest share of seats filled. Empty here means empty relative to that stadium, not a smaller headcount.",
-        analysis.loyalty.softest_support
-      ),
-    ]),
+    loyaltySection(),
     proStadiumSection(analysis),
     growthSection(meta.season),
-    h("section", { class: "panel" }, [
-      h("h3", { text: "Capacity filled vs season record" }),
-      h("div", { class: "chart-wrap" }, [h("canvas", { id: "scatter-chart" })]),
-      h("p", { class: "muted", text: analysis.outlier_note }),
-    ]),
+    scatterSection(),
     h("section", { class: "panel" }, [
       h("h3", { text: "Outliers" }),
       analysis.outliers.length
@@ -733,35 +778,235 @@ function renderAnalysis() {
         : null,
     ])
   );
-  drawScatter(analysis);
+  paintLoyalty();
+  paintScatter();
 }
 
-function loyaltyIntro(loyalty) {
-  if (!loyalty || loyalty.win_pct_median == null) {
-    return h("p", { class: "sublede", text: "Most loyal fans and softest home support need the same teams as the fit: two reported home crowds with a capacity percentage, and two decided games. None qualify in this cache." });
-  }
-  return h("p", { class: "sublede", text: `A bad record is a win percentage at or below ${formatPct(loyalty.win_pct_median)}, the median of the ${loyalty.n_qualifying} teams in the fit. ${loyalty.n_bad_record} teams are in that group. Both lists rank them by average home capacity filled, never by raw attendance.` });
-}
+let scatterRange = "this";
+let scatterToken = 0;
 
-function loyaltyPanel(id, title, blurb, rows) {
-  return h("section", { class: "panel", id }, [
-    h("h3", { text: title }),
-    h("p", { class: "muted", text: blurb }),
-    rows && rows.length
-      ? h("div", { class: "loyal-list" }, rows.map(loyaltyRow))
-      : h("p", { text: "No qualifying team has a below-median record in this cache." }),
+function scatterSection() {
+  const endYear = Number(payload.meta.season);
+  return h("section", { class: "panel", id: "scatter-section" }, [
+    h("div", { class: "range-bar" }, [
+      segment("Scatter season", [
+        ["this", "This season"],
+        [RANGE_LAST, "Last season"],
+      ], scatterRange, (value) => {
+        scatterRange = value;
+        document.querySelectorAll("#scatter-section .segment button").forEach((button) => {
+          const selected = value === RANGE_LAST ? "Last season" : "This season";
+          button.setAttribute("aria-pressed", button.textContent.trim() === selected ? "true" : "false");
+        });
+        paintScatter();
+      }),
+      h("p", { class: "muted range-hint", id: "scatter-hint", text: scatterHint(endYear, payload) }),
+    ]),
+    h("h3", { text: "Capacity filled vs season record" }),
+    h("div", { id: "scatter-body", "aria-live": "polite" }, [
+      h("div", { class: "chart-wrap" }, [h("canvas", { id: "scatter-chart" })]),
+    ]),
+    h("p", { class: "muted", id: "scatter-note", text: payload.analysis.outlier_note }),
   ]);
 }
 
-function loyaltyRow(row) {
+function paintScatter() {
+  const token = ++scatterToken;
+  const endYear = Number(payload.meta.season);
+  if (scatterRange !== RANGE_LAST) {
+    renderScatter(payload, endYear);
+    return;
+  }
+  const year = previousSeasonYear(endYear);
+  const hint = document.getElementById("scatter-hint");
+  if (hint) hint.textContent = `Loading ${year}…`;
+  loadSeasonPayload(year).then((seasonBody) => {
+    if (token !== scatterToken) return;
+    renderScatter(seasonBody, year);
+  }).catch((error) => {
+    if (token !== scatterToken) return;
+    const hintNode = document.getElementById("scatter-hint");
+    if (hintNode) hintNode.textContent = `${year} is not in the cache.`;
+    destroyScatter();
+    const body = document.getElementById("scatter-body");
+    if (!body) return;
+    body.replaceChildren(h("div", { class: "error" }, [
+      h("h2", { text: "That season is not available" }),
+      h("p", { text: error.message || `${year} could not be loaded.` }),
+    ]));
+  });
+}
+
+function renderScatter(seasonBody, year) {
+  const hint = document.getElementById("scatter-hint");
+  if (hint) hint.textContent = scatterHint(year, seasonBody);
+  const note = document.getElementById("scatter-note");
+  const analysis = (seasonBody && seasonBody.analysis) || { points: [], outlier_note: "" };
+  const covid = seasonIsCovid(year, seasonBody);
+  if (note) {
+    note.textContent = covid
+      ? "2020 is omitted as the COVID season. This chart is not drawn from that year's crowds."
+      : (analysis.outlier_note || "");
+  }
+  destroyScatter();
+  const body = document.getElementById("scatter-body");
+  if (!body) return;
+  if (covid) {
+    body.replaceChildren(h("p", { text: "Omitted · COVID" }));
+    return;
+  }
+  body.replaceChildren(h("div", { class: "chart-wrap" }, [h("canvas", { id: "scatter-chart" })]));
+  drawScatter(analysis);
+}
+
+function scatterHint(year, seasonBody) {
+  if (seasonIsCovid(year, seasonBody)) {
+    return "2020 is omitted as the COVID season. This chart is not drawn from that year's crowds.";
+  }
+  return `${year} season. The fit uses this year only.`;
+}
+
+function destroyScatter() {
+  const kept = [];
+  charts.forEach((chart) => {
+    if (chart.canvas && chart.canvas.id === "scatter-chart") chart.destroy();
+    else kept.push(chart);
+  });
+  charts = kept;
+}
+
+let loyaltyRange = "this";
+let loyaltyToken = 0;
+
+function loyaltySection() {
+  const endYear = Number(payload.meta.season);
+  return h("div", { id: "loyalty-section" }, [
+    h("div", { class: "range-bar loyalty-range" }, [
+      segment("Loyalty lists", [
+        ["this", "This season"],
+        [RANGE_LAST, "Last season"],
+      ], loyaltyRange, (value) => {
+        loyaltyRange = value;
+        document.querySelectorAll("#loyalty-section .segment button").forEach((button) => {
+          const selected = value === RANGE_LAST ? "Last season" : "This season";
+          button.setAttribute("aria-pressed", button.textContent.trim() === selected ? "true" : "false");
+        });
+        paintLoyalty();
+      }),
+      h("p", { class: "muted range-hint", id: "loyalty-hint", text: loyaltyHint(endYear, payload) }),
+    ]),
+    h("div", { id: "loyalty-body", "aria-live": "polite" }),
+  ]);
+}
+
+function paintLoyalty() {
+  const token = ++loyaltyToken;
+  const endYear = Number(payload.meta.season);
+  const node = document.getElementById("loyalty-body");
+  if (!node) return;
+  if (loyaltyRange !== RANGE_LAST) {
+    renderLoyalty(node, payload, endYear);
+    return;
+  }
+  const year = previousSeasonYear(endYear);
+  const hint = document.getElementById("loyalty-hint");
+  if (hint) hint.textContent = `Loading ${year}…`;
+  node.replaceChildren(h("p", { class: "loading", text: `Loading ${year} loyalty lists…` }));
+  loadSeasonPayload(year).then((seasonBody) => {
+    if (token !== loyaltyToken) return;
+    const current = document.getElementById("loyalty-body");
+    if (current) renderLoyalty(current, seasonBody, year);
+  }).catch((error) => {
+    if (token !== loyaltyToken) return;
+    const current = document.getElementById("loyalty-body");
+    if (!current) return;
+    const hintNode = document.getElementById("loyalty-hint");
+    if (hintNode) hintNode.textContent = `${year} is not in the cache.`;
+    current.replaceChildren(h("div", { class: "error" }, [
+      h("h2", { text: "That season is not available" }),
+      h("p", { text: error.message || `${year} could not be loaded.` }),
+    ]));
+  });
+}
+
+function renderLoyalty(node, seasonBody, year) {
+  const hint = document.getElementById("loyalty-hint");
+  if (hint) hint.textContent = loyaltyHint(year, seasonBody);
+  const covid = seasonIsCovid(year, seasonBody);
+  const loyalty = seasonBody.analysis ? seasonBody.analysis.loyalty : null;
+  const partial = !covid && Boolean(seasonBody.meta && seasonBody.meta.season_partial);
+  node.replaceChildren(
+    loyaltyIntro(loyalty, year, covid),
+    h("div", { class: "loyalty-grid" }, [
+      loyaltyPanel(
+        "most-loyal",
+        "Most loyal fans",
+        "A record at or below the median, and the stadium is still full. Ordered from the highest share of seats filled.",
+        covid ? null : (loyalty && loyalty.most_loyal),
+        covid,
+        partial
+      ),
+      loyaltyPanel(
+        "soft-support",
+        "Softest home support",
+        "The same below-median records, ordered from the lowest share of seats filled. Empty here means empty relative to that stadium, not a smaller headcount.",
+        covid ? null : (loyalty && loyalty.softest_support),
+        covid,
+        partial
+      ),
+    ])
+  );
+}
+
+function seasonIsCovid(year, seasonBody) {
+  if (Number(year) === 2020) return true;
+  return Boolean(seasonBody && seasonBody.meta && seasonBody.meta.attendance_omitted === "covid");
+}
+
+function loyaltyHint(year, seasonBody) {
+  if (seasonIsCovid(year, seasonBody)) {
+    return "2020 is omitted as the COVID season. These lists are not ranked from that year's crowds.";
+  }
+  if (seasonBody && seasonBody.meta && seasonBody.meta.season_partial) {
+    return `${year} is still in progress. The count beside each school is games played.`;
+  }
+  return `${year} season. Both lists use that year only.`;
+}
+
+function loyaltyIntro(loyalty, year, covid) {
+  if (covid) {
+    return h("p", { class: "sublede", text: "2020 is omitted as the COVID season. Crowds from that year stay in the cache and are not used in these lists." });
+  }
+  if (!loyalty || loyalty.win_pct_median == null) {
+    return h("p", { class: "sublede", text: "Most loyal fans and softest home support need the same teams as the fit: two reported home crowds with a capacity percentage, and two decided games. None qualify in this cache." });
+  }
+  return h("p", { class: "sublede", text: `A bad record is a win percentage at or below ${formatPct(loyalty.win_pct_median)}, the median of the ${loyalty.n_qualifying} teams in the ${year} fit. ${loyalty.n_bad_record} teams are in that group. Both lists rank them by average home capacity filled, never by raw attendance.` });
+}
+
+function loyaltyPanel(id, title, blurb, rows, covid, partial) {
+  let body;
+  if (covid) body = h("p", { text: "Omitted · COVID" });
+  else if (rows && rows.length) body = h("div", { class: "loyal-list" }, rows.map((row) => loyaltyRow(row, partial)));
+  else body = h("p", { text: "No qualifying team has a below-median record in this cache." });
+  return h("section", { class: "panel", id }, [
+    h("h3", { text: title }),
+    h("p", { class: "muted", text: blurb }),
+    body,
+  ]);
+}
+
+function loyaltyRow(row, partial) {
   const games = row.reported_home_games == null ? "" : `${row.reported_home_games} reported`;
   const meta = [row.record || "Record unavailable", `${formatPct(row.win_pct)} wins`, games].filter(Boolean).join(" · ");
   const crowd = row.avg_home_attendance == null ? null : `Avg crowd ${formatMaybeInt(row.avg_home_attendance)}`;
+  const played = partial && row.games_played != null
+    ? h("span", { class: "loyal-played", text: `${row.games_played} played` })
+    : null;
   return h("a", { class: "loyal-row", href: `#/schools/${encodeURIComponent(row.slug)}` }, [
     h("span", { class: "loyal-rank", text: String(row.rank) }),
     mark(row, 42),
     h("div", { class: "loyal-name" }, [
-      h("strong", { text: row.school }),
+      h("strong", {}, [document.createTextNode(row.school), played]),
       h("p", { text: meta }),
     ]),
     h("div", { class: "loyal-fill" }, [

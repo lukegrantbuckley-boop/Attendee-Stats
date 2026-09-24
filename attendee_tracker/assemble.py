@@ -127,6 +127,11 @@ def assemble(raw: dict) -> dict:
         "ap": _grouped(schools, "ap"),
         "record": _grouped(schools, "record"),
     }
+    season_partial = any(
+        game.get("attendance_status") == "not_played"
+        for school in schools
+        for game in school.get("home_games") or []
+    )
     analysis_rows = [_analysis_row(school) for school in schools]
     synthetic = bool(raw.get("synthetic") or raw.get("source") != "cfbd")
     notice = raw.get("notice")
@@ -147,6 +152,7 @@ def assemble(raw: dict) -> dict:
             "ap_poll": "AP Top 25" if ap_week else None,
             "team_count": len(schools),
             "game_count": len(games),
+            "season_partial": season_partial,
             "logo_note": (
                 "Logos are the URLs CFBD publishes on each team. "
                 "CFBD's terms do not grant the right to display school marks."
