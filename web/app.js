@@ -1597,9 +1597,10 @@ function movementNode(spots) {
   if (spots === 0) {
     return h("span", {
       class: "val-move flat",
-      text: "—",
       "aria-label": "No change from the 2025 valuation ranking",
-    });
+    }, [
+      h("span", { class: "val-dash" }),
+    ]);
   }
   const up = spots > 0;
   const spotsMoved = Math.abs(spots);
