@@ -756,11 +756,7 @@ function renderAnalysis() {
     loyaltySection(),
     proStadiumSection(analysis),
     growthSection(meta.season),
-    h("section", { class: "panel" }, [
-      h("h3", { text: "Capacity filled vs season record" }),
-      h("div", { class: "chart-wrap" }, [h("canvas", { id: "scatter-chart" })]),
-      h("p", { class: "muted", text: analysis.outlier_note }),
-    ]),
+    scatterSection(),
     h("section", { class: "panel" }, [
       h("h3", { text: "Outliers" }),
       analysis.outliers.length
@@ -782,8 +778,101 @@ function renderAnalysis() {
         : null,
     ])
   );
-  drawScatter(analysis);
   paintLoyalty();
+  paintScatter();
+}
+
+let scatterRange = "this";
+let scatterToken = 0;
+
+function scatterSection() {
+  const endYear = Number(payload.meta.season);
+  return h("section", { class: "panel", id: "scatter-section" }, [
+    h("div", { class: "range-bar" }, [
+      segment("Scatter season", [
+        ["this", "This season"],
+        [RANGE_LAST, "Last season"],
+      ], scatterRange, (value) => {
+        scatterRange = value;
+        document.querySelectorAll("#scatter-section .segment button").forEach((button) => {
+          const selected = value === RANGE_LAST ? "Last season" : "This season";
+          button.setAttribute("aria-pressed", button.textContent.trim() === selected ? "true" : "false");
+        });
+        paintScatter();
+      }),
+      h("p", { class: "muted range-hint", id: "scatter-hint", text: scatterHint(endYear, payload) }),
+    ]),
+    h("h3", { text: "Capacity filled vs season record" }),
+    h("div", { id: "scatter-body", "aria-live": "polite" }, [
+      h("div", { class: "chart-wrap" }, [h("canvas", { id: "scatter-chart" })]),
+    ]),
+    h("p", { class: "muted", id: "scatter-note", text: payload.analysis.outlier_note }),
+  ]);
+}
+
+function paintScatter() {
+  const token = ++scatterToken;
+  const endYear = Number(payload.meta.season);
+  if (scatterRange !== RANGE_LAST) {
+    renderScatter(payload, endYear);
+    return;
+  }
+  const year = previousSeasonYear(endYear);
+  const hint = document.getElementById("scatter-hint");
+  if (hint) hint.textContent = `Loading ${year}…`;
+  loadSeasonPayload(year).then((seasonBody) => {
+    if (token !== scatterToken) return;
+    renderScatter(seasonBody, year);
+  }).catch((error) => {
+    if (token !== scatterToken) return;
+    const hintNode = document.getElementById("scatter-hint");
+    if (hintNode) hintNode.textContent = `${year} is not in the cache.`;
+    destroyScatter();
+    const body = document.getElementById("scatter-body");
+    if (!body) return;
+    body.replaceChildren(h("div", { class: "error" }, [
+      h("h2", { text: "That season is not available" }),
+      h("p", { text: error.message || `${year} could not be loaded.` }),
+    ]));
+  });
+}
+
+function renderScatter(seasonBody, year) {
+  const hint = document.getElementById("scatter-hint");
+  if (hint) hint.textContent = scatterHint(year, seasonBody);
+  const note = document.getElementById("scatter-note");
+  const analysis = (seasonBody && seasonBody.analysis) || { points: [], outlier_note: "" };
+  const covid = seasonIsCovid(year, seasonBody);
+  if (note) {
+    note.textContent = covid
+      ? "2020 is omitted as the COVID season. This chart is not drawn from that year's crowds."
+      : (analysis.outlier_note || "");
+  }
+  destroyScatter();
+  const body = document.getElementById("scatter-body");
+  if (!body) return;
+  if (covid) {
+    body.replaceChildren(h("p", { text: "Omitted · COVID" }));
+    return;
+  }
+  body.replaceChildren(h("div", { class: "chart-wrap" }, [h("canvas", { id: "scatter-chart" })]));
+  drawScatter(analysis);
+}
+
+function scatterHint(year, seasonBody) {
+  if (seasonIsCovid(year, seasonBody)) {
+    return "2020 is omitted as the COVID season. This chart is not drawn from that year's crowds.";
+  }
+  return `${year} season. The fit uses this year only.`;
+}
+
+function destroyScatter() {
+  const kept = [];
+  charts.forEach((chart) => {
+    if (chart.canvas && chart.canvas.id === "scatter-chart") chart.destroy();
+    else kept.push(chart);
+  });
+  charts = kept;
 }
 
 let loyaltyRange = "this";
