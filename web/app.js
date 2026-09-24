@@ -1,5 +1,6 @@
 /* Attendee Tracker UI. Attendance comes from /api/season and /api/school.
-   Business headlines load separately from /api/school/{slug}/business-news. */
+   Business headlines load separately from /api/school/{slug}/business-news.
+   Power valuations load from /api/valuations. */
 
 const view = document.querySelector("#view");
 const banner = document.querySelector("#banner");
@@ -14,6 +15,18 @@ let growthToken = 0;
 const businessNewsBySlug = new Map();
 const seasonPayloads = new Map();
 const filters = { query: "", tier: "all", sort: "ap", span: 1 };
+const valuationView = { sort: "valuation", conference: "all" };
+let valuationsPayload = null;
+let valuationsToken = 0;
+
+const VALUATION_CONFERENCES = [
+  ["all", "All"],
+  ["SEC", "SEC"],
+  ["Big Ten", "Big Ten"],
+  ["Big 12", "Big 12"],
+  ["ACC", "ACC"],
+  ["Independent", "Independent"],
+];
 
 const RANGE_LAST = "last";
 const RANGE_OPTIONS = [
@@ -69,6 +82,7 @@ function render() {
   const route = currentRoute();
   setNav(route.name === "school" ? "home" : route.name);
   if (route.name === "analysis") renderAnalysis();
+  else if (route.name === "valuations") renderValuations();
   else if (route.name === "school") renderSchool(route.slug);
   else renderHome();
   view.focus({ preventScroll: true });
@@ -77,6 +91,7 @@ function render() {
 function currentRoute() {
   const hash = decodeURIComponent((location.hash || "#/").replace(/^#/, ""));
   if (hash === "/analysis") return { name: "analysis" };
+  if (hash === "/valuations") return { name: "valuations" };
   const match = hash.match(/^\/schools\/([^/]+)/);
   if (match) return { name: "school", slug: match[1] };
   return { name: "home" };
@@ -1379,6 +1394,287 @@ function pointToXY(point) {
     slug: point.slug,
     record: point.record,
   };
+}
+
+function renderValuations() {
+  if (valuationsPayload) {
+    paintValuations();
+    return;
+  }
+  const token = ++valuationsToken;
+  view.replaceChildren(
+    h("p", { class: "lede", text: "What each Power football program is worth." }),
+    h("p", { class: "loading", text: "Loading valuations…" })
+  );
+  loadValuations(token);
+}
+
+async function loadValuations(token) {
+  let body;
+  try {
+    const response = await fetch("/api/valuations");
+    body = await response.json();
+    if (token !== valuationsToken || currentRoute().name !== "valuations") return;
+    if (!response.ok || body.error) {
+      view.replaceChildren(h("div", { class: "error" }, [
+        h("h2", { text: "No valuations to show" }),
+        h("p", { text: body.message || "Valuations could not be loaded. Figures were not filled in." }),
+      ]));
+      return;
+    }
+  } catch (_error) {
+    if (token !== valuationsToken || currentRoute().name !== "valuations") return;
+    view.replaceChildren(h("div", { class: "error" }, [
+      h("h2", { text: "No valuations to show" }),
+      h("p", { text: "Valuations could not be loaded. Figures were not filled in." }),
+    ]));
+    return;
+  }
+  valuationsPayload = body;
+  if (currentRoute().name === "valuations") paintValuations();
+}
+
+function paintValuations() {
+  const data = valuationsPayload;
+  const schools = Array.isArray(data.schools) ? data.schools : [];
+  const sort = valuationView.sort === "nil" ? "nil" : "valuation";
+  const conference = valuationView.conference;
+  const ordered = sortedValuations(schools, sort)
+    .filter((row) => conference === "all" || row.conference === conference);
+  const sublede = sort === "nil"
+    ? "Sorted by estimated football roster cost. Movement arrows stay with the valuation sort, where they compare The Athletic's July 2025 ranks."
+    : "Sorted by The Athletic's July 2026 valuation. Arrows show how many spots a school moved from their July 2025 ranking.";
+
+  view.replaceChildren(
+    h("p", { class: "lede", text: "What each Power football program is worth." }),
+    h("p", { class: "sublede", text: sublede }),
+    h("div", { class: "toolbar val-toolbar" }, [
+      segment("Sort", [
+        ["valuation", "Valuation"],
+        ["nil", "NIL budget"],
+      ], sort, (value) => {
+        valuationView.sort = value;
+        paintValuations();
+      }),
+      chips("Conference", VALUATION_CONFERENCES, conference, (value) => {
+        valuationView.conference = value;
+        paintValuations();
+      }),
+    ]),
+    h("p", { class: "muted val-count", "aria-live": "polite", text: valuationCount(ordered, conference) }),
+    ordered.length
+      ? h("div", { class: "val-board", "data-sort": sort }, [
+          valuationHead(),
+          ...ordered.map((row, index) => valuationRow(row, index, sort)),
+        ])
+      : h("p", { class: "empty", text: "No schools in that conference." }),
+    valuationFootnote(data.sources || {})
+  );
+}
+
+function valuationHead() {
+  return h("div", { class: "val-head" }, [
+    h("span", { text: "Rank" }),
+    h("span", { text: "" }),
+    h("span", { text: "School" }),
+    h("span", { text: "Valuation" }),
+    h("span", { text: "NIL budget" }),
+  ]);
+}
+
+function valuationRow(row, index, sort) {
+  const known = lookupSchool(row.school);
+  const logoSchool = {
+    school: row.school,
+    logo: known && known.logo,
+    color: (known && known.color) || "#1e3a5f",
+    abbreviation: known && known.abbreviation,
+  };
+  const rankText = sort === "valuation" && Number.isFinite(row.valuation_rank)
+    ? String(row.valuation_rank)
+    : String(index + 1);
+  const showMove = sort === "valuation";
+  const inner = [
+    h("div", { class: "val-rank" }, [
+      h("span", { class: "val-rank-num", text: rankText }),
+      showMove ? movementNode(rankChangeSpots(row)) : null,
+    ]),
+    mark(logoSchool, 44),
+    h("div", { class: "val-school" }, [
+      h("strong", { text: row.school }),
+      h("p", { text: row.conference || "—" }),
+    ]),
+    h("div", { class: "val-money val-valuation" }, [
+      h("span", { class: "val-k", text: "Valuation" }),
+      h("strong", { text: formatValuation(row.valuation_usd) }),
+    ]),
+    h("div", { class: "val-money val-nil" }, [
+      h("span", { class: "val-k", text: "NIL" }),
+      h("strong", { text: formatNil(row.nil_budget_usd) }),
+      row.nil_is_estimate ? h("span", { class: "val-est", text: "est." }) : null,
+    ]),
+  ];
+  if (known && known.slug) {
+    return h("a", {
+      class: "val-row",
+      href: `#/schools/${encodeURIComponent(known.slug)}`,
+      style: `--rail:${logoSchool.color}`,
+    }, inner);
+  }
+  return h("div", { class: "val-row", style: `--rail:${logoSchool.color}` }, inner);
+}
+
+function valuationFootnote(sources) {
+  const valuation = sources.valuation || {};
+  const prior = sources.prior_valuation || {};
+  const nil = sources.nil || {};
+  return h("p", { class: "val-footnote" }, [
+    document.createTextNode("Valuations are "),
+    sourceLink(valuation.url, "The Athletic's July 2026"),
+    document.createTextNode(" estimated football program values (hypothetical sale prices), movement is against their "),
+    sourceLink(prior.url, "July 2025 list"),
+    document.createTextNode(", and NIL is "),
+    sourceLink(nil.url, "nil-ncaa.com"),
+    document.createTextNode("'s estimated football roster cost for 2026-27, not school-audited."),
+    nil.methodology_url
+      ? document.createTextNode(" ")
+      : null,
+    nil.methodology_url ? sourceLink(nil.methodology_url, "NIL methodology") : null,
+    nil.methodology_url ? document.createTextNode(".") : null,
+  ]);
+}
+
+function sourceLink(href, text) {
+  if (!href) return document.createTextNode(text);
+  return h("a", {
+    href,
+    target: "_blank",
+    rel: "noopener noreferrer",
+    text,
+  });
+}
+
+function sortedValuations(schools, sort) {
+  const rows = schools.slice();
+  if (sort === "nil") {
+    rows.sort((a, b) => {
+      const aMissing = !Number.isFinite(a.nil_budget_usd);
+      const bMissing = !Number.isFinite(b.nil_budget_usd);
+      if (aMissing !== bMissing) return aMissing ? 1 : -1;
+      if (a.nil_budget_usd !== b.nil_budget_usd) return b.nil_budget_usd - a.nil_budget_usd;
+      return String(a.school || "").localeCompare(String(b.school || ""));
+    });
+    return rows;
+  }
+  rows.sort((a, b) => {
+    const ar = Number.isFinite(a.valuation_rank) ? a.valuation_rank : 1e9;
+    const br = Number.isFinite(b.valuation_rank) ? b.valuation_rank : 1e9;
+    if (ar !== br) return ar - br;
+    const av = Number.isFinite(a.valuation_usd) ? a.valuation_usd : -1;
+    const bv = Number.isFinite(b.valuation_usd) ? b.valuation_usd : -1;
+    if (av !== bv) return bv - av;
+    return String(a.school || "").localeCompare(String(b.school || ""));
+  });
+  return rows;
+}
+
+function rankChangeSpots(row) {
+  if (Number.isFinite(row.rank_change_spots)) return row.rank_change_spots;
+  if (Number.isFinite(row.prior_valuation_rank) && Number.isFinite(row.valuation_rank)) {
+    return row.prior_valuation_rank - row.valuation_rank;
+  }
+  return null;
+}
+
+function movementNode(spots) {
+  if (spots == null) {
+    return h("span", {
+      class: "val-move flat",
+      text: "—",
+      "aria-label": "Valuation rank change is not in the file",
+    });
+  }
+  if (spots === 0) {
+    return h("span", {
+      class: "val-move flat",
+      "aria-label": "No change from the 2025 valuation ranking",
+    }, [
+      h("span", { class: "val-dash" }),
+    ]);
+  }
+  const up = spots > 0;
+  const spotsMoved = Math.abs(spots);
+  const unit = spotsMoved === 1 ? "spot" : "spots";
+  const label = up
+    ? `Up ${spotsMoved} ${unit} from the 2025 valuation ranking`
+    : `Down ${spotsMoved} ${unit} from the 2025 valuation ranking`;
+  return h("span", { class: up ? "val-move up" : "val-move down", "aria-label": label }, [
+    arrowSvg(up),
+    document.createTextNode(String(spotsMoved)),
+  ]);
+}
+
+function arrowSvg(up) {
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", "0 0 16 16");
+  svg.setAttribute("width", "12");
+  svg.setAttribute("height", "12");
+  svg.setAttribute("aria-hidden", "true");
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("fill", "currentColor");
+  path.setAttribute("d", up
+    ? "M8 2.2 12.4 7.4H9.5V13.8H6.5V7.4H3.6Z"
+    : "M8 13.8 3.6 8.6H6.5V2.2H9.5V8.6H12.4Z");
+  svg.append(path);
+  return svg;
+}
+
+function valuationCount(rows, conference) {
+  const noun = rows.length === 1 ? "school" : "schools";
+  if (conference === "all") return `${rows.length} ${noun}`;
+  return `${rows.length} ${conference} ${noun}`;
+}
+
+function lookupSchool(name) {
+  const key = String(name || "").toLowerCase();
+  return payload.schools.find((school) => school.school.toLowerCase() === key) || null;
+}
+
+function formatValuation(usd) {
+  if (!Number.isFinite(usd)) return "—";
+  const n = Math.round(usd);
+  if (Math.abs(n) >= 1000000000) {
+    const tenths = Math.round(n / 10000000);
+    const sign = tenths < 0 ? "−" : "";
+    const abs = Math.abs(tenths);
+    const whole = Math.floor(abs / 100);
+    const frac = String(abs % 100).padStart(2, "0");
+    return `${sign}$${whole}.${frac}B`;
+  }
+  const millions = Math.round(n / 1000000);
+  const sign = millions < 0 ? "−" : "";
+  return `${sign}$${Math.abs(millions)}M`;
+}
+
+function formatNil(usd) {
+  if (!Number.isFinite(usd)) return "—";
+  const tenths = Math.round(usd / 100000);
+  const sign = tenths < 0 ? "−" : "";
+  const abs = Math.abs(tenths);
+  const whole = Math.floor(abs / 10);
+  const frac = abs % 10;
+  return `${sign}$${whole}.${frac}M`;
+}
+
+function chips(label, options, current, onPick) {
+  return h("div", { class: "chips", role: "group", "aria-label": label }, options.map(([value, text]) =>
+    h("button", {
+      type: "button",
+      text,
+      "aria-pressed": current === value ? "true" : "false",
+      onclick: () => onPick(value),
+    })
+  ));
 }
 
 function renderError(message) {

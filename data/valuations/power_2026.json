@@ -1,0 +1,3218 @@
+{
+  "generated_at": "2026-09-24T14:30:00-04:00",
+  "scope": "Power programs only for 2026 season: SEC (16), Big Ten (18), Big 12 (16), ACC (17), Notre Dame (Independent). Total 68. Oregon State and Washington State are Pac-12 / not Power.",
+  "conference_membership_sources": [
+    "https://www.foxsports.com/stories/college-football/pac-12-mountain-west-mac-sun-belt-realignment",
+    "https://wtop.com/ncaa-football/2026/05/whos-playing-where-a-cheat-sheet-on-college-sports-realignment/"
+  ],
+  "valuation_metric": "Hypothetical open-market sale price of the football program (The Athletic methodology: revenue multiples by conference tier + brand/demographics/realignment adjustments).",
+  "nil_metric_recommendation": "Use nil-ncaa.com estimated football roster cost (school rev-share to football + third-party NIL) for 2026-27 \u2014 only consistent school-by-school series covering all 68. Do NOT mix with all-sports House cap (~$20.5M in 2025-26 / ~$21.3M in 2026-27) or football-only rev-share (~$13\u201316M when school-reported).",
+  "nil_coverage": "68/68 estimated; 0/68 school-audited football NIL budgets located as a uniform public series.",
+  "valuation_coverage": "68/68 current (Athletic 2026); 68/68 prior (Athletic 2025 via 2026 restatement).",
+  "wsj_brewer_note": "WSJ/Ryan Brewer Jan 2026 (2025 season) and Jan 2025 (2024 season) also publish football enterprise values; free secondary coverage typically only top ~20. Not used as primary here because incomplete free Power coverage vs Athletic's full 68.",
+  "paywalls": "Athletic primary URLs are subscriber-paywalled; numbers verified via free secondary reprints (On3, SI/FanNation, Yahoo/Buffaloes Wire, RawChili mirror).",
+  "in_season_movement_recommendation": {
+    "ship": false,
+    "primary_arrows": "Year-over-year Athletic rank change (rank_change_spots) until next Athletic annual update.",
+    "optional_estimate": "If desired later, clearly labeled 'in-season estimate' separate from published valuation: V_t = V_0 * (1 + 0.015*z(win%) + 0.010*z(attendance) + 0.020*AP_bonus) with |weekly \u0394| capped at 2% of V_0 and AP_bonus = max(0, (26-AP_rank)/25) only when ranked. Do not overwrite published valuation_usd.",
+    "reason": "No official weekly valuation exists; small capped overlay is transparent but risks users treating estimates as fact. Prefer YoY published arrows for v1."
+  },
+  "schools": [
+    {
+      "school": "Texas",
+      "conference": "SEC",
+      "valuation_usd": 2460000000,
+      "valuation_rank": 1,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 2380000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 1,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 0,
+      "nil_budget_usd": 46485000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Ohio State",
+      "conference": "Big Ten",
+      "valuation_usd": 2300000000,
+      "valuation_rank": 2,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 1900000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 3,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 1,
+      "nil_budget_usd": 40421000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Notre Dame",
+      "conference": "Independent",
+      "valuation_usd": 2100000000,
+      "valuation_rank": 3,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 1850000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 4,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 1,
+      "nil_budget_usd": 38448000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Michigan",
+      "conference": "Big Ten",
+      "valuation_usd": 2000000000,
+      "valuation_rank": 4,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 1830000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 5,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 1,
+      "nil_budget_usd": 32964000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Georgia",
+      "conference": "SEC",
+      "valuation_usd": 1950000000,
+      "valuation_rank": 5,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 1920000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 2,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -3,
+      "nil_budget_usd": 35173000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Alabama",
+      "conference": "SEC",
+      "valuation_usd": 1800000000,
+      "valuation_rank": 6,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 1740000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 6,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 0,
+      "nil_budget_usd": 36490000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Oklahoma",
+      "conference": "SEC",
+      "valuation_usd": 1600000000,
+      "valuation_rank": 7,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 1490000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 7,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 0,
+      "nil_budget_usd": 31470000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": "Tied at No. 7 in Athletic 2026; both recorded as rank 7."
+    },
+    {
+      "school": "USC",
+      "conference": "Big Ten",
+      "valuation_usd": 1600000000,
+      "valuation_rank": 7,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 1400000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 8,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 1,
+      "nil_budget_usd": 34728000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": "Tied at No. 7 in Athletic 2026; both recorded as rank 7."
+    },
+    {
+      "school": "Tennessee",
+      "conference": "SEC",
+      "valuation_usd": 1570000000,
+      "valuation_rank": 9,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 1370000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 9,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 0,
+      "nil_budget_usd": 33696000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Penn State",
+      "conference": "Big Ten",
+      "valuation_usd": 1400000000,
+      "valuation_rank": 10,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 1200000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 11,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 1,
+      "nil_budget_usd": 29208000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "LSU",
+      "conference": "SEC",
+      "valuation_usd": 1320000000,
+      "valuation_rank": 11,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 1230000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 10,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -1,
+      "nil_budget_usd": 40966000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Florida",
+      "conference": "SEC",
+      "valuation_usd": 1160000000,
+      "valuation_rank": 12,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 1080000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 12,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 0,
+      "nil_budget_usd": 28524000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Oregon",
+      "conference": "Big Ten",
+      "valuation_usd": 1130000000,
+      "valuation_rank": 13,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 990000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 14,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 1,
+      "nil_budget_usd": 43405000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Auburn",
+      "conference": "SEC",
+      "valuation_usd": 1110000000,
+      "valuation_rank": 14,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 1060000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 13,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -1,
+      "nil_budget_usd": 28852000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Nebraska",
+      "conference": "Big Ten",
+      "valuation_usd": 1060000000,
+      "valuation_rank": 15,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 930000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 17,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 2,
+      "nil_budget_usd": 27440000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": "Tied at No. 15 in Athletic 2026."
+    },
+    {
+      "school": "Washington",
+      "conference": "Big Ten",
+      "valuation_usd": 1060000000,
+      "valuation_rank": 15,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 970000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 16,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 1,
+      "nil_budget_usd": 26357000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": "Tied at No. 15 in Athletic 2026."
+    },
+    {
+      "school": "Texas A&M",
+      "conference": "SEC",
+      "valuation_usd": 1050000000,
+      "valuation_rank": 17,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 973000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 15,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -2,
+      "nil_budget_usd": 36797000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Miami",
+      "conference": "ACC",
+      "valuation_usd": 950000000,
+      "valuation_rank": 18,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 604000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 24,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 6,
+      "nil_budget_usd": 38629000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Wisconsin",
+      "conference": "Big Ten",
+      "valuation_usd": 922000000,
+      "valuation_rank": 19,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 801000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 19,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 0,
+      "nil_budget_usd": 24484000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Florida State",
+      "conference": "ACC",
+      "valuation_usd": 819000000,
+      "valuation_rank": 20,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 867000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 18,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -2,
+      "nil_budget_usd": 26391000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Iowa",
+      "conference": "Big Ten",
+      "valuation_usd": 806000000,
+      "valuation_rank": 21,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 709000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 20,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -1,
+      "nil_budget_usd": 23649000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Indiana",
+      "conference": "Big Ten",
+      "valuation_usd": 696000000,
+      "valuation_rank": 22,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 386000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 38,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 16,
+      "nil_budget_usd": 27253000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Arkansas",
+      "conference": "SEC",
+      "valuation_usd": 690000000,
+      "valuation_rank": 23,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 646000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 23,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 0,
+      "nil_budget_usd": 23935000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Michigan State",
+      "conference": "Big Ten",
+      "valuation_usd": 686000000,
+      "valuation_rank": 24,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 708000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 21,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -3,
+      "nil_budget_usd": 23115000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Clemson",
+      "conference": "ACC",
+      "valuation_usd": 674000000,
+      "valuation_rank": 25,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 665000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 22,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -3,
+      "nil_budget_usd": 27786000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Utah",
+      "conference": "Big 12",
+      "valuation_usd": 638000000,
+      "valuation_rank": 26,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 539000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 29,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 3,
+      "nil_budget_usd": 21947000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Ole Miss",
+      "conference": "SEC",
+      "valuation_usd": 636000000,
+      "valuation_rank": 27,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 591000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 25,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -2,
+      "nil_budget_usd": 31815000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Minnesota",
+      "conference": "Big Ten",
+      "valuation_usd": 629000000,
+      "valuation_rank": 28,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 562000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 28,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 0,
+      "nil_budget_usd": 22575000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "South Carolina",
+      "conference": "SEC",
+      "valuation_usd": 597000000,
+      "valuation_rank": 29,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 563000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 27,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -2,
+      "nil_budget_usd": 27355000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Illinois",
+      "conference": "Big Ten",
+      "valuation_usd": 568000000,
+      "valuation_rank": 30,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 405000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 36,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 6,
+      "nil_budget_usd": 21854000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "North Carolina",
+      "conference": "ACC",
+      "valuation_usd": 560000000,
+      "valuation_rank": 31,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 572000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 26,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -5,
+      "nil_budget_usd": 21876000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Texas Tech",
+      "conference": "Big 12",
+      "valuation_usd": 525000000,
+      "valuation_rank": 32,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 400000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 33,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 1,
+      "nil_budget_usd": 33320000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": "Athletic 2026 restates 2025 prior as $400M; contemporaneous Jul 2025 Yahoo/Buffaloes Wire secondary coverage of Athletic list cited Texas Tech at $440M. Using Athletic's own 2026 restatement for YoY."
+    },
+    {
+      "school": "Virginia Tech",
+      "conference": "ACC",
+      "valuation_usd": 520000000,
+      "valuation_rank": 33,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 455000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 31,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -2,
+      "nil_budget_usd": 21908000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "BYU",
+      "conference": "Big 12",
+      "valuation_usd": 500000000,
+      "valuation_rank": 34,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 306000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 50,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 16,
+      "nil_budget_usd": 23041000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": "Tied at No. 34 in Athletic 2026."
+    },
+    {
+      "school": "Missouri",
+      "conference": "SEC",
+      "valuation_usd": 500000000,
+      "valuation_rank": 34,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 407000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 34,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 0,
+      "nil_budget_usd": 27505000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": "Tied at No. 34 in Athletic 2026."
+    },
+    {
+      "school": "Northwestern",
+      "conference": "Big Ten",
+      "valuation_usd": 498000000,
+      "valuation_rank": 36,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 406000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 35,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -1,
+      "nil_budget_usd": 21035000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "TCU",
+      "conference": "Big 12",
+      "valuation_usd": 495000000,
+      "valuation_rank": 37,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 523000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 30,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -7,
+      "nil_budget_usd": 22683000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "NC State",
+      "conference": "ACC",
+      "valuation_usd": 480000000,
+      "valuation_rank": 38,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 445000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 32,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -6,
+      "nil_budget_usd": 20456000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Purdue",
+      "conference": "Big Ten",
+      "valuation_usd": 450000000,
+      "valuation_rank": 39,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 367000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 41,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 2,
+      "nil_budget_usd": 20367000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Kentucky",
+      "conference": "SEC",
+      "valuation_usd": 400000000,
+      "valuation_rank": 40,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 400000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 37,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -3,
+      "nil_budget_usd": 24538000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Georgia Tech",
+      "conference": "ACC",
+      "valuation_usd": 398000000,
+      "valuation_rank": 41,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 340000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 43,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 2,
+      "nil_budget_usd": 21750000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Oklahoma State",
+      "conference": "Big 12",
+      "valuation_usd": 389000000,
+      "valuation_rank": 42,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 373000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 39,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -3,
+      "nil_budget_usd": 22146000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Arizona State",
+      "conference": "Big 12",
+      "valuation_usd": 374000000,
+      "valuation_rank": 43,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 372000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 40,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -3,
+      "nil_budget_usd": 21524000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Colorado",
+      "conference": "Big 12",
+      "valuation_usd": 368000000,
+      "valuation_rank": 44,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 328000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 47,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 3,
+      "nil_budget_usd": 23179000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "UCLA",
+      "conference": "Big Ten",
+      "valuation_usd": 363000000,
+      "valuation_rank": 45,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 340000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 43,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -2,
+      "nil_budget_usd": 24332000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Maryland",
+      "conference": "Big Ten",
+      "valuation_usd": 359000000,
+      "valuation_rank": 46,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 288000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 52,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 6,
+      "nil_budget_usd": 23720000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Louisville",
+      "conference": "ACC",
+      "valuation_usd": 350000000,
+      "valuation_rank": 47,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 350000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 42,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -5,
+      "nil_budget_usd": 21906000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Iowa State",
+      "conference": "Big 12",
+      "valuation_usd": 330000000,
+      "valuation_rank": 48,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 331000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 45,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -3,
+      "nil_budget_usd": 20098000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Duke",
+      "conference": "ACC",
+      "valuation_usd": 328000000,
+      "valuation_rank": 49,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 323000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 48,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -1,
+      "nil_budget_usd": 20492000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": "Tied at No. 49 in Athletic 2026."
+    },
+    {
+      "school": "Syracuse",
+      "conference": "ACC",
+      "valuation_usd": 328000000,
+      "valuation_rank": 49,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 329000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 46,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -3,
+      "nil_budget_usd": 20074000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": "Tied at No. 49 in Athletic 2026."
+    },
+    {
+      "school": "Pittsburgh",
+      "conference": "ACC",
+      "valuation_usd": 323000000,
+      "valuation_rank": 51,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 303000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 51,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 0,
+      "nil_budget_usd": 21240000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Rutgers",
+      "conference": "Big Ten",
+      "valuation_usd": 314000000,
+      "valuation_rank": 52,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 188000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 62,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 10,
+      "nil_budget_usd": 21321000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "West Virginia",
+      "conference": "Big 12",
+      "valuation_usd": 289000000,
+      "valuation_rank": 53,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 284000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 53,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 0,
+      "nil_budget_usd": 20925000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Arizona",
+      "conference": "Big 12",
+      "valuation_usd": 268000000,
+      "valuation_rank": 54,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 282000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 54,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 0,
+      "nil_budget_usd": 20401000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": "Tied at No. 54 in Athletic 2026."
+    },
+    {
+      "school": "Kansas State",
+      "conference": "Big 12",
+      "valuation_usd": 268000000,
+      "valuation_rank": 54,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 321000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 49,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -5,
+      "nil_budget_usd": 21690000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": "Tied at No. 54 in Athletic 2026."
+    },
+    {
+      "school": "Baylor",
+      "conference": "Big 12",
+      "valuation_usd": 267000000,
+      "valuation_rank": 56,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 276000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 55,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -1,
+      "nil_budget_usd": 20967000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Virginia",
+      "conference": "ACC",
+      "valuation_usd": 263000000,
+      "valuation_rank": 57,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 257000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 56,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -1,
+      "nil_budget_usd": 21084000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "SMU",
+      "conference": "ACC",
+      "valuation_usd": 251000000,
+      "valuation_rank": 58,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 178000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 63,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 5,
+      "nil_budget_usd": 22044000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Vanderbilt",
+      "conference": "SEC",
+      "valuation_usd": 250000000,
+      "valuation_rank": 59,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 228000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 58,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -1,
+      "nil_budget_usd": 25457000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Mississippi State",
+      "conference": "SEC",
+      "valuation_usd": 248000000,
+      "valuation_rank": 60,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 250000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 57,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -3,
+      "nil_budget_usd": 22942000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "UCF",
+      "conference": "Big 12",
+      "valuation_usd": 234000000,
+      "valuation_rank": 61,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 210000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 59,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -2,
+      "nil_budget_usd": 19800000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Kansas",
+      "conference": "Big 12",
+      "valuation_usd": 225000000,
+      "valuation_rank": 62,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 197000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 61,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -1,
+      "nil_budget_usd": 19900000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Boston College",
+      "conference": "ACC",
+      "valuation_usd": 185000000,
+      "valuation_rank": 63,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 172000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 64,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 1,
+      "nil_budget_usd": 18797000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "California",
+      "conference": "ACC",
+      "valuation_usd": 183000000,
+      "valuation_rank": 64,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 158000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 65,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 1,
+      "nil_budget_usd": 20378000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Stanford",
+      "conference": "ACC",
+      "valuation_usd": 182000000,
+      "valuation_rank": 65,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 202000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 62,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": -3,
+      "nil_budget_usd": 20324000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": "Athletic 2026 restates Stanford 2025 rank as No. 62; SI Cal Jul 27 2025 ACC breakdown listed Stanford No. 60 overall. Using Athletic restatement."
+    },
+    {
+      "school": "Wake Forest",
+      "conference": "ACC",
+      "valuation_usd": 150000000,
+      "valuation_rank": 66,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 124000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 66,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 0,
+      "nil_budget_usd": 20022000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Cincinnati",
+      "conference": "Big 12",
+      "valuation_usd": 110000000,
+      "valuation_rank": 67,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 106000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 67,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 0,
+      "nil_budget_usd": 20049000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    },
+    {
+      "school": "Houston",
+      "conference": "Big 12",
+      "valuation_usd": 100000000,
+      "valuation_rank": 68,
+      "valuation_year": 2026,
+      "valuation_season_label": "Entering 2026 season (Athletic July 2026 Power 4 + Notre Dame list)",
+      "valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/7467869/2026/07/28/college-football-program-valuations-rankings-2026-texas-notre-dame-osu/",
+        "date": "2026-07-28",
+        "paywalled": true,
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-most-valuable-college-football-programs-top-10-conference-breakdown-entering-2026-season/",
+          "https://www.rawchili.com/nfl/957704/"
+        ]
+      },
+      "prior_valuation_usd": 91000000,
+      "prior_year": 2025,
+      "prior_valuation_rank": 68,
+      "prior_valuation_source": {
+        "publisher": "The Athletic (New York Times)",
+        "url": "https://www.nytimes.com/athletic/6500596/2025/07/21/college-football-program-valuations-rankings-2025/",
+        "date": "2025-07-21",
+        "paywalled": true,
+        "note": "Prior values and ranks are The Athletic's own 2025 figures as restated in the July 2026 article (same publisher YoY).",
+        "secondary_urls": [
+          "https://www.on3.com/news/the-athletic-ranks-top-25-most-valuable-college-football-programs/",
+          "https://www.si.com/college/cal/football/the-athletic-s-college-football-valuation-rankings-don-t-favor-cal-01k16msdmkyz",
+          "https://sports.yahoo.com/article/big-12-football-programs-ranked-191518595.html",
+          "https://www.on3.com/news/the-athletic-ranks-sec-football-programs-from-most-valuable-to-least-ahead-of-2025-season/"
+        ]
+      },
+      "rank_change_spots": 0,
+      "nil_budget_usd": 24456000,
+      "nil_metric": "estimated_football_roster_cost_revshare_plus_third_party_nil",
+      "nil_is_estimate": true,
+      "nil_year": "2026-27",
+      "nil_source": {
+        "publisher": "NIL-NCAA.com (Patrick O'Rourke, CPA)",
+        "url": "https://nil-ncaa.com/football/",
+        "date": "2026",
+        "methodology_url": "https://nil-ncaa.com/methodology/",
+        "note": "Estimates of total football roster cost = school revenue sharing allocated to football + third-party/commercial NIL. Not school-reported audited figures. Author flags third-party NIL as private/opaque."
+      },
+      "notes": null
+    }
+  ]
+}
