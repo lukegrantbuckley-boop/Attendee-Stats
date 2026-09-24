@@ -192,6 +192,7 @@ def run_ingest(
     min_interval_hours: float,
     client,
     venue_cache: dict | None = None,
+    finalize=None,
 ) -> int:
     meta = load_meta()
     seasons = meta.setdefault("seasons", {})
@@ -273,6 +274,14 @@ def run_ingest(
         "rankings": normalize_rankings(rankings),
     }
     if not snapshot["teams"] or not snapshot["games"]:
+        raise CfbdError("CFBD returned no FBS teams or no games. The live snapshot was not replaced.")
+
+    if finalize is not None:
+        updated = finalize(snapshot)
+        if not isinstance(updated, dict):
+            raise CfbdError("The refresh step did not return a snapshot. The live file was not replaced.")
+        snapshot = updated
+    if not snapshot.get("teams") or not snapshot.get("games"):
         raise CfbdError("CFBD returned no FBS teams or no games. The live snapshot was not replaced.")
 
     write_json(live_path(year), snapshot)
