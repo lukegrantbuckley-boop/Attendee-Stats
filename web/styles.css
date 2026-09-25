@@ -771,11 +771,51 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .flag-high { color: #9a3412; font-weight: 600; }
 .flag-low { color: #0f766e; font-weight: 600; }
 
+.view-toggle { margin: 0 0 14px; }
+
+.rev-stats .stat b {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.rev-stats .stat b svg { width: 14px; height: 14px; flex: 0 0 auto; }
+
+.rev-up { color: #166534; }
+.rev-down { color: #b42318; }
+
+.rev-table td.rev-up,
+.rev-table td.rev-down { font-weight: 600; }
+
+.rev-note {
+  display: block;
+  margin-top: 2px;
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.rev-table .rev-note { color: var(--ink-soft); font-weight: 500; }
+
+.rev-covid { margin-left: 8px; }
+
+.rev-covid-row { background: rgba(92, 86, 76, 0.05); }
+
+.rev-footnotes p { margin: 10px 0 0; max-width: 78ch; }
+
+.rev-table th,
+.rev-table td { white-space: nowrap; }
+
 @media (max-width: 720px) {
   .site-header { flex-wrap: wrap; gap: 8px 14px; height: auto; }
   .header-nav { margin-left: 0; }
   .banner { top: 108px; }
   .chart-wrap { height: 300px; }
+  .view-toggle .segment { width: 100%; }
+  .view-toggle .segment button { flex: 1 1 auto; text-align: center; }
+  .rev-stats { grid-template-columns: 1fr; }
   .card:hover { transform: none; }
   .range-bar .segment { width: 100%; }
   .range-bar .segment button { flex: 1 1 auto; }

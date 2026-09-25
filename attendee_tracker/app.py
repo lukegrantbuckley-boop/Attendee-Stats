@@ -13,6 +13,7 @@ from attendee_tracker.attendance_growth import rank_attendance_growth
 from attendee_tracker.business_news import load_business_news, safe_slug
 from attendee_tracker.config import load_dotenv, season_year
 from attendee_tracker.history import HistoryWindowError, assemble_history, find_school, validate_window
+from attendee_tracker.revenue import UnknownSchool, school_revenue
 from attendee_tracker.store import live_path, load_live, load_sample, sample_path
 from attendee_tracker.valuations import ValuationsError, list_valuations
 
@@ -174,6 +175,15 @@ def valuations(sort: str = Query("valuation")):
             {"error": exc.code, "message": exc.message},
             status_code=exc.status,
         )
+
+
+@app.get("/api/revenue/{slug}")
+def revenue(slug: str):
+    """Reported EADA football revenue for one school. No API key and no estimated years."""
+    try:
+        return school_revenue(slug)
+    except (UnknownSchool, ValueError):
+        return JSONResponse({"error": "unknown_school"}, status_code=404)
 
 
 @app.get("/")

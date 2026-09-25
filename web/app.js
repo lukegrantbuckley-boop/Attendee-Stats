@@ -1,6 +1,7 @@
 /* Attendee Tracker UI. Attendance comes from /api/season and /api/school.
    Business headlines load separately from /api/school/{slug}/business-news.
-   Power valuations load from /api/valuations. */
+   Power valuations load from /api/valuations.
+   Football revenue loads from /api/revenue/{slug} when a school page opens. */
 
 const view = document.querySelector("#view");
 const banner = document.querySelector("#banner");
@@ -18,6 +19,8 @@ const filters = { query: "", tier: "all", sort: "ap", span: 1 };
 const valuationView = { sort: "valuation", conference: "all" };
 let valuationsPayload = null;
 let valuationsToken = 0;
+const revenueBySlug = new Map();
+const revenueInflight = new Set();
 
 const VALUATION_CONFERENCES = [
   ["all", "All"],
@@ -83,7 +86,7 @@ function render() {
   setNav(route.name === "school" ? "home" : route.name);
   if (route.name === "analysis") renderAnalysis();
   else if (route.name === "valuations") renderValuations();
-  else if (route.name === "school") renderSchool(route.slug);
+  else if (route.name === "school") renderSchool(route.slug, route.view);
   else renderHome();
   view.focus({ preventScroll: true });
 }
@@ -93,7 +96,14 @@ function currentRoute() {
   if (hash === "/analysis") return { name: "analysis" };
   if (hash === "/valuations") return { name: "valuations" };
   const match = hash.match(/^\/schools\/([^/]+)/);
-  if (match) return { name: "school", slug: match[1] };
+  if (match) {
+    const rest = hash.slice(match[0].length).replace(/\/+$/, "");
+    return {
+      name: "school",
+      slug: match[1],
+      view: rest === "/revenue" ? "revenue" : "attendance",
+    };
+  }
   return { name: "home" };
 }
 
@@ -276,7 +286,7 @@ function lastHomeMeta(school) {
   return "Awaiting attendance";
 }
 
-function renderSchool(slug) {
+function renderSchool(slug, pageView) {
   const school = schoolsBySlug[slug];
   if (!school) {
     view.replaceChildren(
@@ -288,11 +298,49 @@ function renderSchool(slug) {
     );
     return;
   }
+  const showRevenue = revenuePageRequested(slug, pageView);
+  if (showRevenue) {
+    renderRevenue(school, slug);
+    return;
+  }
   const token = ++historyToken;
   const endYear = Number(payload.meta.season);
-  view.replaceChildren(
+  const revenue = revenueBySlug.get(slug);
+  const nodes = [
     h("a", { class: "back", href: "#/", text: "All schools" }),
-    h("div", { class: "school-head" }, [
+    schoolIdentity(school),
+    h("div", { class: "range-bar" }, [
+      segment("Attendance range", RANGE_OPTIONS, filters.span, (value) => {
+        filters.span = value === RANGE_LAST ? RANGE_LAST : Number(value);
+        render();
+      }),
+      h("p", { class: "muted range-hint", text: rangeHint(endYear, filters.span) }),
+    ]),
+    h("div", { id: "school-body", "aria-live": "polite" }),
+    businessNewsSection(slug),
+  ];
+  if (revenue) nodes.splice(1, 0, schoolViewToggle(slug, "attendance"));
+  view.replaceChildren(...nodes);
+  if (!revenueBySlug.has(slug)) ensureRevenue(slug);
+  if (filters.span === 1) {
+    fillSeasonBody(school, endYear);
+    return;
+  }
+  if (filters.span === RANGE_LAST) {
+    const year = previousSeasonYear(endYear);
+    const body = document.getElementById("school-body");
+    body.replaceChildren(h("p", { class: "loading", text: `Loading ${year} home attendance…` }));
+    loadPriorSeason(school, year, token);
+    return;
+  }
+  const bounds = historyBounds(filters.span, endYear);
+  const body = document.getElementById("school-body");
+  body.replaceChildren(h("p", { class: "loading", text: `Loading ${bounds.start}–${bounds.end} home attendance…` }));
+  loadHistory(slug, school, bounds, token);
+}
+
+function schoolIdentity(school) {
+  return h("div", { class: "school-head" }, [
       mark(school, 84),
       h("div", {}, [
         h("p", { class: "muted", text: `${school.conference} · ${school.tier}` }),
@@ -315,32 +363,316 @@ function renderSchool(slug) {
           filters.span === RANGE_LAST ? null : attendancePins(school),
         ]),
       ]),
+    ]);
+}
+
+function revenuePageRequested(slug, pageView) {
+  if (pageView !== "revenue") return false;
+  if (revenueBySlug.has(slug) && !revenueBySlug.get(slug)) {
+    const next = `#/schools/${encodeURIComponent(slug)}`;
+    if (location.hash !== next) history.replaceState(null, "", next);
+    return false;
+  }
+  return true;
+}
+
+function renderRevenue(school, slug) {
+  const data = revenueBySlug.get(slug);
+  const nodes = [
+    h("a", { class: "back", href: "#/", text: "All schools" }),
+    schoolViewToggle(slug, "revenue"),
+    schoolIdentity(school),
+  ];
+  if (!data) {
+    nodes.push(h("p", { class: "loading", text: "Loading football revenue…" }));
+    view.replaceChildren(...nodes);
+    ensureRevenue(slug);
+    return;
+  }
+  nodes.push(
+    h("section", { class: "panel", id: "football-revenue" }, [
+      h("h3", { text: "Football revenue" }),
+      h("p", { class: "muted", text: "Reported football revenue by fiscal year. A blank year was not in the filing and is not estimated. The 2020 bar is the COVID season: its change is omitted, and 2021 is compared with 2019." }),
+      revenueStats(data),
+      h("div", { class: "chart-wrap" }, [h("canvas", { id: "revenue-chart" })]),
+      revenueFootnotes(data),
     ]),
-    h("div", { class: "range-bar" }, [
-      segment("Attendance range", RANGE_OPTIONS, filters.span, (value) => {
-        filters.span = value === RANGE_LAST ? RANGE_LAST : Number(value);
-        render();
-      }),
-      h("p", { class: "muted range-hint", text: rangeHint(endYear, filters.span) }),
-    ]),
-    h("div", { id: "school-body", "aria-live": "polite" }),
-    businessNewsSection(slug)
+    h("section", { class: "panel" }, [
+      h("h3", { text: "Year by year" }),
+      h("div", { class: "table-wrap" }, [revenueTable(data.years || [])]),
+    ])
   );
-  if (filters.span === 1) {
-    fillSeasonBody(school, endYear);
+  view.replaceChildren(...nodes);
+  drawRevenueChart(school, data);
+}
+
+function schoolViewToggle(slug, pageView) {
+  return h("div", { class: "view-toggle", id: "school-view-toggle" }, [
+    segment("School view", [
+      ["attendance", "Home Attendance"],
+      ["revenue", "Revenue"],
+    ], pageView === "revenue" ? "revenue" : "attendance", (value) => {
+      const base = `#/schools/${encodeURIComponent(slug)}`;
+      location.hash = value === "revenue" ? `${base}/revenue` : base;
+    }),
+  ]);
+}
+
+function ensureRevenue(slug) {
+  if (revenueBySlug.has(slug) || revenueInflight.has(slug)) return;
+  revenueInflight.add(slug);
+  loadSchoolRevenue(slug);
+}
+
+async function loadSchoolRevenue(slug) {
+  let data = null;
+  try {
+    const response = await fetch(`/api/revenue/${encodeURIComponent(slug)}`);
+    const body = await response.json();
+    if (response.ok && body && !body.error && Array.isArray(body.years)) data = body;
+  } catch (_error) {
+    data = null;
+  }
+  revenueInflight.delete(slug);
+  revenueBySlug.set(slug, data);
+  const route = currentRoute();
+  if (route.name !== "school" || route.slug !== slug) return;
+  if (route.view !== "revenue") {
+    if (data) mountSchoolViewToggle(slug, "attendance");
     return;
   }
-  if (filters.span === RANGE_LAST) {
-    const year = previousSeasonYear(endYear);
-    const body = document.getElementById("school-body");
-    body.replaceChildren(h("p", { class: "loading", text: `Loading ${year} home attendance…` }));
-    loadPriorSeason(school, year, token);
+  render();
+}
+
+function mountSchoolViewToggle(slug, pageView) {
+  if (document.getElementById("school-view-toggle")) return;
+  const back = view.querySelector(".back");
+  if (!back) return;
+  back.insertAdjacentElement("afterend", schoolViewToggle(slug, pageView));
+}
+
+function revenueStats(data) {
+  const latest = data.latest || {};
+  const nodes = [
+    stat(formatDollars(latest.revenue_usd), `FY${latest.year} football revenue`),
+  ];
+  if (latest.yoy_usd != null) {
+    const versus = latest.yoy_base_year && latest.yoy_base_year !== latest.year - 1
+      ? `vs ${latest.yoy_base_year}`
+      : `vs FY${latest.yoy_base_year}`;
+    nodes.push(revenueMoveStat(latest.yoy_usd, latest.yoy_pct, versus));
+  } else if (latest.year === 2020) {
+    nodes.push(stat("—", "Change omitted · COVID"));
+  }
+  if (data.growth_10y) nodes.push(revenueGrowthStat(data.growth_10y));
+  return h("div", { class: "stats rev-stats" }, nodes);
+}
+
+function revenueMoveStat(usd, pct, label) {
+  const tone = usd > 0 ? "rev-up" : usd < 0 ? "rev-down" : "";
+  return h("div", { class: "stat" }, [
+    h("b", { class: tone }, [
+      usd === 0 ? null : arrowSvg(usd > 0),
+      document.createTextNode(`${formatSignedDollars(usd)} · ${formatSignedPercentPoints(pct)}`),
+    ]),
+    h("span", { text: label }),
+  ]);
+}
+
+function revenueGrowthStat(growth) {
+  return revenueMoveStat(
+    growth.delta_usd,
+    growth.pct,
+    `10-year growth, ${growth.from_year} → ${growth.to_year}`
+  );
+}
+
+function revenueFootnotes(data) {
+  const seen = new Set();
+  const notes = [];
+  (data.years || []).forEach((row) => {
+    if (!row.footnote || seen.has(row.footnote)) return;
+    seen.add(row.footnote);
+    notes.push(row.footnote);
+  });
+  return h("div", { class: "rev-footnotes" }, [
+    h("p", { class: "muted", text: data.display_footnote || "" }),
+    ...notes.map((text) => h("p", { class: "muted", text: `* ${text}` })),
+  ]);
+}
+
+function revenueTable(rows) {
+  return h("table", { class: "rev-table" }, [
+    h("thead", {}, [h("tr", {}, [
+      h("th", { text: "Year" }),
+      h("th", { class: "num", text: "Revenue" }),
+      h("th", { class: "num", text: "YoY $" }),
+      h("th", { class: "num", text: "YoY %" }),
+    ])]),
+    h("tbody", {}, rows.map((row) => h("tr", { class: row.covid ? "rev-covid-row" : "" }, [
+      h("td", {}, [
+        document.createTextNode(String(row.year)),
+        row.covid ? h("span", { class: "pill quiet rev-covid", text: "COVID" }) : null,
+      ]),
+      h("td", { class: "num", text: revenueAmount(row) }),
+      yoyDollarCell(row),
+      yoyPercentCell(row),
+    ]))),
+  ]);
+}
+
+function revenueAmount(row) {
+  if (row.revenue_usd == null) return "—";
+  return `${formatDollars(row.revenue_usd)}${row.footnote ? "*" : ""}`;
+}
+
+function yoyDollarCell(row) {
+  if (row.covid) {
+    return h("td", { class: "num" }, [
+      document.createTextNode("—"),
+      h("span", { class: "rev-note", text: "Omitted · COVID" }),
+    ]);
+  }
+  if (row.yoy_usd == null) return h("td", { class: "num", text: "—" });
+  return h("td", { class: `num ${yoyTone(row.yoy_usd)}` }, [
+    document.createTextNode(formatSignedDollars(row.yoy_usd)),
+    yoyCompareNote(row),
+  ]);
+}
+
+function yoyPercentCell(row) {
+  if (row.covid || row.yoy_pct == null) return h("td", { class: "num", text: "—" });
+  return h("td", { class: `num ${yoyTone(row.yoy_pct)}` }, [
+    document.createTextNode(formatSignedPercentPoints(row.yoy_pct)),
+    yoyCompareNote(row),
+  ]);
+}
+
+function yoyCompareNote(row) {
+  if (row.yoy_base_year == null || row.yoy_base_year === row.year - 1) return null;
+  return h("span", { class: "rev-note", text: `vs ${row.yoy_base_year}` });
+}
+
+function yoyTone(value) {
+  if (value > 0) return "rev-up";
+  if (value < 0) return "rev-down";
+  return "";
+}
+
+function drawRevenueChart(school, data) {
+  const canvas = document.getElementById("revenue-chart");
+  const rows = data.years || [];
+  if (!canvas || typeof Chart === "undefined") {
+    canvas?.replaceWith(h("p", { text: "The chart library did not load. The table below still lists every fiscal year." }));
     return;
   }
-  const bounds = historyBounds(filters.span, endYear);
-  const body = document.getElementById("school-body");
-  body.replaceChildren(h("p", { class: "loading", text: `Loading ${bounds.start}–${bounds.end} home attendance…` }));
-  loadHistory(slug, school, bounds, token);
+  if (!rows.some((row) => row.revenue_usd != null)) {
+    canvas.replaceWith(h("p", { text: "No reported football revenue to plot." }));
+    return;
+  }
+  const color = school.color || "#1e3a5f";
+  const chart = new Chart(canvas, {
+    type: "bar",
+    data: {
+      labels: rows.map((row) => (row.covid ? [String(row.year), "COVID"] : String(row.year))),
+      datasets: [{
+        label: "Football revenue",
+        data: rows.map((row) => (row.revenue_usd == null ? null : row.revenue_usd)),
+        backgroundColor: rows.map((row) => (row.covid ? "#c4b8a5" : color)),
+        borderColor: rows.map((row) => (row.covid ? "#5c564c" : color)),
+        borderWidth: rows.map((row) => (row.covid ? 1.5 : 0)),
+        borderRadius: 6,
+        maxBarThickness: 48,
+      }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            title(items) {
+              const row = rows[items[0].dataIndex];
+              return row.covid ? `${row.year} · COVID` : String(row.year);
+            },
+            label(context) {
+              const row = rows[context.dataIndex];
+              if (row.revenue_usd == null) return "Not reported";
+              const star = row.footnote ? "*" : "";
+              return `${formatDollars(row.revenue_usd)}${star}`;
+            },
+            afterLabel(context) {
+              const row = rows[context.dataIndex];
+              if (row.covid) return "YoY omitted · COVID";
+              if (row.yoy_usd == null) return row.revenue_usd == null ? "" : "No prior year to compare";
+              const versus = row.yoy_base_year && row.yoy_base_year !== row.year - 1
+                ? ` vs ${row.yoy_base_year}`
+                : "";
+              return `${formatSignedDollars(row.yoy_usd)} (${formatSignedPercentPoints(row.yoy_pct)})${versus}`;
+            },
+            footer(items) {
+              const row = rows[items[0].dataIndex];
+              return row.footnote ? `* ${row.footnote}` : "";
+            },
+          },
+        },
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: { callback: (value) => formatRevenueAxis(value) },
+        },
+        x: {
+          ticks: {
+            autoSkip: false,
+            maxRotation: 0,
+            color: (context) => (rows[context.index] && rows[context.index].covid ? "#9a3412" : "#5c564c"),
+          },
+        },
+      },
+    },
+  });
+  charts.push(chart);
+}
+
+function formatDollars(value) {
+  if (value == null || !Number.isFinite(Number(value))) return "—";
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  }).format(Number(value));
+}
+
+function formatSignedDollars(value) {
+  if (value == null || !Number.isFinite(Number(value))) return "—";
+  const number = Number(value);
+  const text = formatDollars(Math.abs(number));
+  if (number > 0) return `+${text}`;
+  if (number < 0) return `−${text}`;
+  return text;
+}
+
+function formatSignedPercentPoints(value) {
+  if (value == null || !Number.isFinite(Number(value))) return "—";
+  const number = Number(value);
+  const text = `${Math.abs(number).toFixed(2)}%`;
+  if (number > 0) return `+${text}`;
+  if (number < 0) return `−${text}`;
+  return text;
+}
+
+function formatRevenueAxis(value) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return "";
+  const abs = Math.abs(number);
+  if (abs >= 1000000) {
+    const millions = number / 1000000;
+    const digits = abs >= 100000000 ? 0 : 1;
+    return `$${millions.toFixed(digits)}M`;
+  }
+  return formatDollars(number);
 }
 
 function previousSeasonYear(endYear) {
@@ -1517,7 +1849,7 @@ function valuationRow(row, index, sort) {
   if (known && known.slug) {
     return h("a", {
       class: "val-row",
-      href: `#/schools/${encodeURIComponent(known.slug)}`,
+      href: `#/schools/${encodeURIComponent(known.slug)}/revenue`,
       style: `--rail:${logoSchool.color}`,
     }, inner);
   }
