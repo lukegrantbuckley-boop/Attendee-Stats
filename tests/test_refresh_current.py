@@ -283,7 +283,7 @@ def test_2020_stays_omitted_and_2026_cache_has_real_attendance():
     assert raw["source"] == "cfbd"
     assert raw["synthetic"] is False
     completed = [game for game in raw["games"] if game["completed"] and not game["neutral_site"]]
-    assert len(completed) == 254
+    assert len(completed) == 325
     assert all(isinstance(game["attendance"], int) and game["attendance"] >= 0 for game in completed)
     assert sum(game["attendance"] == 0 for game in completed) == 4
     assert all(game["attendance_source"] == ESPN_SOURCE for game in completed)
@@ -296,6 +296,15 @@ def test_2020_stays_omitted_and_2026_cache_has_real_attendance():
         if game["home_team"] == "Alabama" and game["away_team"] == "East Carolina"
     )
     assert alabama["attendance"] == 100077
+    carolina = next(
+        game
+        for game in completed
+        if game["home_team"] == "Alabama" and game["away_team"] == "South Carolina"
+    )
+    assert carolina["week"] == 4
+    assert carolina["home_points"] == 49
+    assert carolina["away_points"] == 18
+    assert carolina["attendance"] == 100077
 
     client = TestClient(app)
     health = client.get("/api/health")
@@ -310,10 +319,10 @@ def test_2020_stays_omitted_and_2026_cache_has_real_attendance():
     schools = {row["school"]: row for row in body["schools"]}
     assert len(schools) == 138
     with_crowd = [row for row in schools.values() if row["avg_home_attendance"] is not None]
-    assert len(with_crowd) == 137
-    assert schools["Western Kentucky"]["avg_home_attendance"] is None
-    assert schools["Western Kentucky"]["reported_home_games"] == 0
-    assert schools["UL Monroe"]["avg_home_attendance"] == 0
+    assert len(with_crowd) == 138
+    assert schools["Western Kentucky"]["avg_home_attendance"] == 17247
+    assert schools["Western Kentucky"]["reported_home_games"] == 1
+    assert schools["UL Monroe"]["avg_home_attendance"] == 7663
     tide = schools["Alabama"]
     assert tide["avg_home_attendance"] == 100077
     reported = [game for game in tide["home_games"] if game["attendance_status"] == "reported"]
