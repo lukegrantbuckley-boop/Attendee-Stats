@@ -3,9 +3,9 @@
   "synthetic": false,
   "notice": null,
   "season": 2026,
-  "fetched_at": "2026-09-27T17:48:20Z",
+  "fetched_at": "2026-09-27T22:52:24Z",
   "warnings": [
-    "CFBD_API_KEY was not available on 2026-09-27, so this refresh did not call CFBD. The 2026-09-24 CFBD schedule, teams, and venues were kept. All 71 ESPN week-4 games matched those CFBD game ids. ESPN scoreboard final scores marked those 71 games completed. No earlier-week score changed. ESPN summaries filled attendance for all 71 newly completed non-neutral home games (site.api.espn.com .../summary?event=ID \u2192 gameInfo.attendance). Completed non-neutral games: 325, all with a reported attendance. No attendance was invented. Neutral-site games were not given a home crowd. FBS team records were updated from ESPN scoreboard overall records and match the completed-game results. FCS opponents with a newer ESPN overall record (a week-4 game against an FBS team, or a week-5 scoreboard record) were updated. Other non-FBS records stayed at the 2026-09-24 CFBD values so an older ESPN snapshot would not replace them. ESPN has no AP Top 25 for week 5 (the week-5 AP rankings request returned 404 on 2026-09-27). The latest AP poll remains week 4, dated 2026-09-20T07:00Z, and its 25 teams match the ranks already stored."
+    "CFBD_API_KEY was not available on 2026-09-27, so this refresh did not call CFBD. The 2026-09-24 CFBD schedule, teams, and venues were kept. ESPN scoreboards for weeks 1-6 matched the cache: no new completed games and no score changes. No completed non-neutral home game was missing attendance, so no new crowd was filled and existing attendance was not replaced. Completed non-neutral games: 325, all with a reported attendance. Four games still report an ESPN attendance of zero (Purdue vs Indiana State, Oklahoma vs UTEP, Sam Houston vs Tulsa, UL Monroe vs SE Louisiana). No new zero-attendance games. No attendance was invented. Neutral-site games were not given a home crowd. FBS and non-FBS records were unchanged. ESPN AP Top 25 week 5 is dated 2026-09-27T07:00Z. The week-5 AP request that returned 404 earlier on 2026-09-27 now returns this poll. Weeks 1-4 of the stored AP Top 25 were left as they were."
   ],
   "calls_this_run": 0,
   "teams": [
@@ -35463,6 +35463,164 @@
           "team_id": 258,
           "school": "Virginia",
           "conference": "ACC"
+        }
+      ]
+    },
+    {
+      "season": 2026,
+      "season_type": "regular",
+      "week": 5,
+      "poll": "AP Top 25",
+      "ranks": [
+        {
+          "rank": 1,
+          "team_id": 251,
+          "school": "Texas",
+          "conference": "SEC"
+        },
+        {
+          "rank": 2,
+          "team_id": 61,
+          "school": "Georgia",
+          "conference": "SEC"
+        },
+        {
+          "rank": 3,
+          "team_id": 87,
+          "school": "Notre Dame",
+          "conference": "FBS Independents"
+        },
+        {
+          "rank": 4,
+          "team_id": 2390,
+          "school": "Miami",
+          "conference": "ACC"
+        },
+        {
+          "rank": 5,
+          "team_id": 194,
+          "school": "Ohio State",
+          "conference": "Big Ten"
+        },
+        {
+          "rank": 6,
+          "team_id": 84,
+          "school": "Indiana",
+          "conference": "Big Ten"
+        },
+        {
+          "rank": 7,
+          "team_id": 333,
+          "school": "Alabama",
+          "conference": "SEC"
+        },
+        {
+          "rank": 8,
+          "team_id": 57,
+          "school": "Florida",
+          "conference": "SEC"
+        },
+        {
+          "rank": 9,
+          "team_id": 145,
+          "school": "Ole Miss",
+          "conference": "SEC"
+        },
+        {
+          "rank": 10,
+          "team_id": 252,
+          "school": "BYU",
+          "conference": "Big 12"
+        },
+        {
+          "rank": 11,
+          "team_id": 99,
+          "school": "LSU",
+          "conference": "SEC"
+        },
+        {
+          "rank": 12,
+          "team_id": 2641,
+          "school": "Texas Tech",
+          "conference": "Big 12"
+        },
+        {
+          "rank": 13,
+          "team_id": 254,
+          "school": "Utah",
+          "conference": "Big 12"
+        },
+        {
+          "rank": 14,
+          "team_id": 2294,
+          "school": "Iowa",
+          "conference": "Big Ten"
+        },
+        {
+          "rank": 15,
+          "team_id": 2483,
+          "school": "Oregon",
+          "conference": "Big Ten"
+        },
+        {
+          "rank": 16,
+          "team_id": 344,
+          "school": "Mississippi State",
+          "conference": "SEC"
+        },
+        {
+          "rank": 17,
+          "team_id": 2633,
+          "school": "Tennessee",
+          "conference": "SEC"
+        },
+        {
+          "rank": 18,
+          "team_id": 30,
+          "school": "USC",
+          "conference": "Big Ten"
+        },
+        {
+          "rank": 19,
+          "team_id": 197,
+          "school": "Oklahoma State",
+          "conference": "Big 12"
+        },
+        {
+          "rank": 20,
+          "team_id": 248,
+          "school": "Houston",
+          "conference": "Big 12"
+        },
+        {
+          "rank": 21,
+          "team_id": 2567,
+          "school": "SMU",
+          "conference": "ACC"
+        },
+        {
+          "rank": 22,
+          "team_id": 68,
+          "school": "Boise State",
+          "conference": "Pac-12"
+        },
+        {
+          "rank": 23,
+          "team_id": 26,
+          "school": "UCLA",
+          "conference": "Big Ten"
+        },
+        {
+          "rank": 24,
+          "team_id": 96,
+          "school": "Kentucky",
+          "conference": "SEC"
+        },
+        {
+          "rank": 25,
+          "team_id": 142,
+          "school": "Missouri",
+          "conference": "SEC"
         }
       ]
     }
