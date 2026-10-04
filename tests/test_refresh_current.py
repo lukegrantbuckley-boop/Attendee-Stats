@@ -283,7 +283,7 @@ def test_2020_stays_omitted_and_2026_cache_has_real_attendance():
     assert raw["source"] == "cfbd"
     assert raw["synthetic"] is False
     completed = [game for game in raw["games"] if game["completed"] and not game["neutral_site"]]
-    assert len(completed) == 325
+    assert len(completed) == 384
     assert all(isinstance(game["attendance"], int) and game["attendance"] >= 0 for game in completed)
     assert sum(game["attendance"] == 0 for game in completed) == 4
     assert all(game["attendance_source"] == ESPN_SOURCE for game in completed)
