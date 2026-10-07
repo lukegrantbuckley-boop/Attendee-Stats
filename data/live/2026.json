@@ -5,7 +5,8 @@
   "season": 2026,
   "fetched_at": "2026-10-04T22:50:38Z",
   "warnings": [
-    "CFBD_API_KEY was not available on 2026-10-04, so this refresh did not call CFBD. The stored schedule, teams, and venues were kept. ESPN scoreboards for weeks 1-8 matched the cache: 59 week-5 games (2026-10-02T00:00Z through 2026-10-04T03:59Z) were newly final, with no earlier-week score changes. ESPN summaries filled attendance for 59 completed non-neutral home games. 0 stayed null. No attendance was invented. Neutral-site games were not given a home crowd. Completed non-neutral games: 384. With a reported attendance: 384. Still null: 0. Four games still report an ESPN attendance of zero (Purdue vs Indiana State, Oklahoma vs UTEP, Sam Houston vs Tulsa, UL Monroe vs SE Louisiana). No new zero-attendance games. FBS records were recalculated from completed games (115 changed) and matched ESPN overall records. Non-FBS records were updated only when ESPN showed more games played (3 changed: McNeese, Samford, Texas Southern). ESPN AP Top 25 week 6 is dated 2026-10-04T07:00Z. Weeks 1-5 of the stored AP Top 25 were left as they were."
+    "CFBD_API_KEY was not available on 2026-10-04, so this refresh did not call CFBD. The stored schedule, teams, and venues were kept. ESPN scoreboards for weeks 1-8 matched the cache: 59 week-5 games (2026-10-02T00:00Z through 2026-10-04T03:59Z) were newly final, with no earlier-week score changes. ESPN summaries filled attendance for 59 completed non-neutral home games. 0 stayed null. No attendance was invented. Neutral-site games were not given a home crowd. Completed non-neutral games: 384. With a reported attendance: 383. Still null: 1. Official overrides replaced three ESPN zeros (Purdue vs Indiana State 49,019, Oklahoma vs UTEP 84,315, UL Monroe vs SE Louisiana 13,211). Sam Houston vs Tulsa is not reported. No other attendance figure was changed. FBS records were recalculated from completed games (115 changed) and matched ESPN overall records. Non-FBS records were updated only when ESPN showed more games played (3 changed: McNeese, Samford, Texas Southern). ESPN AP Top 25 week 6 is dated 2026-10-04T07:00Z. Weeks 1-5 of the stored AP Top 25 were left as they were.",
+    "Official attendance overrides replaced the feed figure for Purdue vs Indiana State (49,019), Oklahoma vs UTEP (84,315), UL Monroe vs SE Louisiana (13,211), Sam Houston vs Tulsa (not reported). Published crowds were used where one was reported. No attendance was estimated."
   ],
   "calls_this_run": 0,
   "teams": [
@@ -9507,7 +9508,7 @@
       "completed": true,
       "neutral_site": false,
       "conference_game": false,
-      "attendance": 0,
+      "attendance": 49019,
       "venue_id": 3907,
       "venue": "Ross-Ade Stadium",
       "home_id": 2509,
@@ -9518,7 +9519,12 @@
       "away_team": "Indiana State",
       "away_conference": "MVFC",
       "away_points": 19,
-      "attendance_source": "espn_summary"
+      "attendance_source": "official",
+      "attendance_source_url": "https://purduesports.com/news/2026/09/5/boilers-chop-sycamores-in-season-opener",
+      "attendance_source_urls": [
+        "https://purduesports.com/news/2026/09/5/boilers-chop-sycamores-in-season-opener"
+      ],
+      "attendance_source_note": "ESPN reported 0. Official crowd published by Purdue athletics."
     },
     {
       "id": 401856664,
@@ -9529,7 +9535,7 @@
       "completed": true,
       "neutral_site": false,
       "conference_game": false,
-      "attendance": 0,
+      "attendance": 84315,
       "venue_id": 3835,
       "venue": "Memorial Stadium (Norman, OK)",
       "home_id": 201,
@@ -9540,7 +9546,13 @@
       "away_team": "UTEP",
       "away_conference": "Mountain West",
       "away_points": 0,
-      "attendance_source": "espn_summary"
+      "attendance_source": "official",
+      "attendance_source_url": "https://soonersports.com/documents/download/2026/9/5/01_OU_Postgame_Notes_vs_UTEP.pdf",
+      "attendance_source_urls": [
+        "https://soonersports.com/documents/download/2026/9/5/01_OU_Postgame_Notes_vs_UTEP.pdf",
+        "https://sportsdata.usatoday.com/football/ncaaf/summary/2968514"
+      ],
+      "attendance_source_note": "ESPN reported 0. Official crowd is 84,315. OU's season stats page shows 83,415, which is not used."
     },
     {
       "id": 401858429,
@@ -12628,7 +12640,7 @@
       "completed": true,
       "neutral_site": false,
       "conference_game": false,
-      "attendance": 0,
+      "attendance": null,
       "venue_id": 3647,
       "venue": "Elliott T. Bowers Stadium",
       "home_id": 2534,
@@ -12639,7 +12651,7 @@
       "away_team": "Tulsa",
       "away_conference": "American Athletic",
       "away_points": 23,
-      "attendance_source": "espn_summary"
+      "attendance_source_note": "No official figure. The conference box score lists 0 and the school recap gives none, so this game is not reported."
     },
     {
       "id": 401858443,
@@ -13925,7 +13937,7 @@
       "completed": true,
       "neutral_site": false,
       "conference_game": false,
-      "attendance": 0,
+      "attendance": 13211,
       "venue_id": 3817,
       "venue": "Malone Stadium",
       "home_id": 2433,
@@ -13936,7 +13948,12 @@
       "away_team": "SE Louisiana",
       "away_conference": "Southland",
       "away_points": 38,
-      "attendance_source": "espn_summary"
+      "attendance_source": "official",
+      "attendance_source_url": "https://ulmwarhawks.com/sports/football/stats",
+      "attendance_source_urls": [
+        "https://ulmwarhawks.com/sports/football/stats"
+      ],
+      "attendance_source_note": "ESPN reported 0. Official crowd published on the UL Monroe football stats page."
     },
     {
       "id": 401862771,

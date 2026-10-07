@@ -1,0 +1,52 @@
+{
+  "note": "Approved published crowds for games where ESPN gameInfo.attendance is 0. refresh_current merges this file onto data/live/{season}.json after every ESPN fill, and the site merges it again when it reads the cache. A null attendance is not a crowd of 0: the game stays not reported and is left out of averages, fill percentage, and rankings. Do not estimate a crowd. Do not add 2020. Do not change any game that is not listed here.",
+  "overrides": [
+    {
+      "season": 2026,
+      "game_id": 401858435,
+      "week": 1,
+      "home_team": "Purdue",
+      "away_team": "Indiana State",
+      "attendance": 49019,
+      "sources": [
+        "https://purduesports.com/news/2026/09/5/boilers-chop-sycamores-in-season-opener"
+      ],
+      "note": "ESPN reported 0. Official crowd published by Purdue athletics."
+    },
+    {
+      "season": 2026,
+      "game_id": 401856664,
+      "week": 1,
+      "home_team": "Oklahoma",
+      "away_team": "UTEP",
+      "attendance": 84315,
+      "sources": [
+        "https://soonersports.com/documents/download/2026/9/5/01_OU_Postgame_Notes_vs_UTEP.pdf",
+        "https://sportsdata.usatoday.com/football/ncaaf/summary/2968514"
+      ],
+      "note": "ESPN reported 0. Official crowd is 84,315. OU's season stats page shows 83,415, which is not used."
+    },
+    {
+      "season": 2026,
+      "game_id": 401868317,
+      "week": 3,
+      "home_team": "UL Monroe",
+      "away_team": "SE Louisiana",
+      "attendance": 13211,
+      "sources": [
+        "https://ulmwarhawks.com/sports/football/stats"
+      ],
+      "note": "ESPN reported 0. Official crowd published on the UL Monroe football stats page."
+    },
+    {
+      "season": 2026,
+      "game_id": 401862707,
+      "week": 2,
+      "home_team": "Sam Houston",
+      "away_team": "Tulsa",
+      "attendance": null,
+      "sources": [],
+      "note": "No official figure. The conference box score lists 0 and the school recap gives none, so this game is not reported."
+    }
+  ]
+}
