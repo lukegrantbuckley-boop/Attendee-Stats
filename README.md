@@ -86,6 +86,8 @@ python -m attendee_tracker.refresh_current --force
 
 It uses the same 18-hour freshness window as ingest unless you pass `--force`. ESPN is consulted only for completed non-neutral home games whose CFBD attendance is null: the FBS scoreboard, then each summary's `gameInfo.attendance`. A number CFBD already has is kept. If ESPN has no figure, the game stays null. Nothing is invented. A filled game records `attendance_source` of `espn_summary`. A CFBD crowd is recorded as `cfbd`. The command requires `CFBD_API_KEY`, writes `data/live/{year}.json`, and will not commit `.env` or the key.
 
+Approved corrections for a bad ESPN zero live in `data/attendance_overrides.json`, with the source URL on each published crowd. `refresh_current` merges that file after the ESPN fill, and the site merges it again whenever it reads `data/live`. A later refresh that writes ESPN's 0 back is replaced by the override. A null attendance in that file means the game is not reported: it is left out of averages, fill percentage, and rankings, the same as any other missing crowd. Overrides apply only to the games listed there. They do not estimate a crowd, they do not change any other game, and 2020 is not in the file.
+
 2020 remains in the cache and remains omitted from averages, growth, Last 5, Last 10, and the loyal and soft lists.
 
 ### Daily refresh at 10:00 America/New_York

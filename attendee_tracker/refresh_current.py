@@ -4,6 +4,8 @@ CFBD stays the source for games, records, rankings, teams, and venues.
 When a completed non-neutral home game has null attendance, this command
 reads ESPN's summary ``gameInfo.attendance``. It never invents a crowd.
 A CFBD number is never replaced. Missing ESPN figures stay null.
+Approved corrections in ``data/attendance_overrides.json`` are merged after
+that fill, so an ESPN attendance of 0 does not stick for those games.
 
 Usage:
     python -m attendee_tracker.refresh_current
@@ -22,10 +24,15 @@ import time
 from collections.abc import Callable
 from datetime import datetime, timedelta, timezone
 
+from attendee_tracker.attendance_overrides import (
+    OFFICIAL_SOURCE,
+    apply_attendance_overrides,
+    override_is_unreported,
+)
 from attendee_tracker.cfbd_client import CfbdClient, CfbdError, MissingApiKey
 from attendee_tracker.config import DEFAULT_MIN_INTERVAL_HOURS, api_key, load_dotenv, season_year
 from attendee_tracker.ingest import MISSING_KEY_MESSAGE, resolve_years, run_ingest
-from attendee_tracker.store import append_quota, live_path, load_live, write_json
+from attendee_tracker.store import append_quota, live_path, load_live, read_json, write_json
 
 ESPN_SOURCE = "espn_summary"
 CFBD_SOURCE = "cfbd"
@@ -107,10 +114,14 @@ def refresh_season(
     get_json: Callable[[str], dict] | None = None,
     sleep: Callable[[float], None] | None = None,
 ) -> int:
-    """Re-pull CFBD, then fill null attendance. Returns the CFBD call count."""
+    """Re-pull CFBD, then fill null attendance. Returns the CFBD call count.
+
+    Official overrides are merged after ESPN writes, including when this run
+    does not call ESPN because the cache is already full of numbers.
+    """
     getter = get_json or curl_json
     pause = sleep or time.sleep
-    prior = prior_espn_attendance(load_live(year))
+    prior = prior_espn_attendance(_raw_live(year))
 
     def finalize(snapshot: dict) -> dict:
         return fill_from_espn(snapshot, year, prior, getter, pause)
@@ -123,7 +134,7 @@ def refresh_season(
         finalize=finalize,
     )
     if calls == 0:
-        snapshot = load_live(year)
+        snapshot = _raw_live(year)
         games = snapshot.get("games") if isinstance(snapshot, dict) else None
         if isinstance(snapshot, dict) and any(needs_espn_fill(game) for game in games or [] if isinstance(game, dict)):
             updated = fill_from_espn(snapshot, year, prior, getter, pause)
@@ -131,10 +142,35 @@ def refresh_season(
             print(f"Wrote {live_path(year)}")
         else:
             print("No completed home games were missing attendance. ESPN was not called.")
+    _persist_overrides(year)
     written = load_live(year)
     if isinstance(written, dict):
         print_fill_summary(written)
     return calls
+
+
+def _raw_live(year: int) -> dict | None:
+    """The live file as stored, before official overrides are merged."""
+    payload = read_json(live_path(year))
+    return payload if isinstance(payload, dict) else None
+
+
+def _persist_overrides(year: int) -> None:
+    """Write the override merge when the stored file still has the feed figure.
+
+    A fresh cache can already hold ESPN zeros. Those games do not need an
+    ESPN fill, so the merge still has to land on disk.
+    """
+    path = live_path(year)
+    payload = read_json(path)
+    if not isinstance(payload, dict):
+        return
+    before = json.dumps(payload, sort_keys=True)
+    apply_attendance_overrides(payload)
+    if json.dumps(payload, sort_keys=True) == before:
+        return
+    write_json(path, payload)
+    print(f"Wrote {path}")
 
 
 def espn_attendance_value(value) -> int | None:
@@ -164,7 +200,14 @@ def espn_attendance_value(value) -> int | None:
 
 
 def needs_espn_fill(game: dict) -> bool:
+    """Completed non-neutral home games that still have no crowd.
+
+    A game the override file marks as not reported stays null. ESPN's 0 is
+    not a crowd for that game, and this command does not ask for one.
+    """
     if not isinstance(game, dict) or game.get("attendance") is not None:
+        return False
+    if override_is_unreported(game):
         return False
     return bool(game.get("completed")) and not bool(game.get("neutral_site"))
 
@@ -220,7 +263,7 @@ def apply_attendance_sources(snapshot: dict, espn_events: list[dict], *, prior: 
         if not isinstance(game, dict):
             continue
         if game.get("attendance") is not None:
-            if game.get("attendance_source") != ESPN_SOURCE:
+            if game.get("attendance_source") not in (ESPN_SOURCE, OFFICIAL_SOURCE):
                 game["attendance_source"] = CFBD_SOURCE
             continue
         if not needs_espn_fill(game):
@@ -257,14 +300,17 @@ def apply_attendance_sources(snapshot: dict, espn_events: list[dict], *, prior: 
 def fill_from_espn(snapshot: dict, year: int, prior: dict[int, int], get_json, sleep) -> dict:
     games = [game for game in snapshot.get("games") or [] if isinstance(game, dict)]
     if not any(needs_espn_fill(game) for game in games):
-        return apply_attendance_sources(snapshot, [], prior=prior)
+        apply_attendance_sources(snapshot, [], prior=prior)
+        # Overrides run last so an ESPN 0 cannot replace a published crowd
+        # or turn a game with no official figure into a counted zero.
+        return apply_attendance_overrides(snapshot)
     try:
         events = fetch_espn_events(year, games, get_json=get_json, sleep=sleep)
     except EspnUnavailable as exc:
         restored = 0
         for game in games:
             if game.get("attendance") is not None:
-                if game.get("attendance_source") != ESPN_SOURCE:
+                if game.get("attendance_source") not in (ESPN_SOURCE, OFFICIAL_SOURCE):
                     game["attendance_source"] = CFBD_SOURCE
                 continue
             if needs_espn_fill(game) and _restore_prior(game, prior):
@@ -276,8 +322,9 @@ def fill_from_espn(snapshot: dict, year: int, prior: dict[int, int], get_json, s
                 "ESPN attendance values where CFBD is still null. No attendance was invented."
             ),
         )
-        return snapshot
-    return apply_attendance_sources(snapshot, events, prior=prior)
+        return apply_attendance_overrides(snapshot)
+    apply_attendance_sources(snapshot, events, prior=prior)
+    return apply_attendance_overrides(snapshot)
 
 
 def fetch_espn_events(year: int, games: list[dict], *, get_json, sleep) -> list[dict]:
@@ -421,10 +468,14 @@ def print_fill_summary(snapshot: dict) -> None:
     completed = [game for game in games if game.get("completed") and not game.get("neutral_site")]
     espn = sum(1 for game in completed if game.get("attendance_source") == ESPN_SOURCE and game.get("attendance") is not None)
     cfbd = sum(1 for game in completed if game.get("attendance_source") == CFBD_SOURCE and game.get("attendance") is not None)
+    official = sum(
+        1 for game in completed if game.get("attendance_source") == OFFICIAL_SOURCE and game.get("attendance") is not None
+    )
     missing = sum(1 for game in completed if game.get("attendance") is None)
     print(
         f"Completed non-neutral games: {len(completed)}. "
-        f"Attendance from CFBD: {cfbd}. From ESPN summaries: {espn}. Still null: {missing}."
+        f"Attendance from CFBD: {cfbd}. From ESPN summaries: {espn}. "
+        f"Official overrides: {official}. Still null: {missing}."
     )
 
 

@@ -10,6 +10,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
+from attendee_tracker.attendance_overrides import apply_attendance_overrides
 from attendee_tracker.config import data_dir, sample_path
 
 
@@ -104,4 +105,6 @@ def load_live(year: int) -> dict | None:
         return None
     if not isinstance(payload, dict):
         raise ValueError(f"Live cache {live_path(year)} is not a JSON object.")
-    return payload
+    # An ESPN rewrite of the live file can put a bad 0 back. The override
+    # file is applied on read so the site keeps the published crowd.
+    return apply_attendance_overrides(payload)
