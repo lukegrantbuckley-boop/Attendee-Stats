@@ -200,3 +200,17 @@ pytest
 - Ticket prices are out of scope for Phase 1. There is no placeholder price data.
 - Business headlines are links out to public feeds. ESPN team news, On3 school pages, and Knight-Newhouse finance numbers are not pulled yet.
 - Attendance growth uses seasons that have been ingested. A program with fewer than five reported home averages in the last 10 seasons is left off both growth lists. 2020 is omitted as the COVID season from those averages and from the growth rate. Social follower history is not part of this app.
+
+## CFBD double-check (backup only)
+
+ESPN remains the primary source for the weekly refresh. After ESPN fills
+attendance and records, run:
+
+```
+python -m attendee_tracker.cfbd_check --year 2026
+```
+
+It makes two CFBD calls (games, records), never edits the cache, and flags
+final-score mismatches, FBS win/loss mismatches, and attendance gaps of at
+least 5,000 and 15% when CFBD has a crowd figure. Exit code 3 means flags need
+a human look; with no `CFBD_API_KEY` it skips and exits 0.
