@@ -1870,7 +1870,6 @@ function paintMarketing(data) {
       stat(String(data.year), data.season_partial ? "Season, in progress" : "Season"),
       stat(String(data.n_teams ?? "—"), "Teams in the fit"),
       stat(formatStat(data.pearson_r), "Pearson r, win % vs fill"),
-      stat(data.threshold ? `${data.threshold.residual_z} SD` : "—", "Distance from the line"),
     ]),
     h("div", { class: "jumps", role: "navigation", "aria-label": "On this page" }, [
       jumpButton("Marketing Approaches", "marketing-approaches"),
@@ -1905,7 +1904,7 @@ function marketingSection(data, approaches) {
     h("p", { class: "tier-note", text: "These teams won more games than they lost and still filled meaningfully less of the stadium than the fitted line expects. The note under each card is yours to write in data/marketing_approaches.json." }),
     approaches.length
       ? h("div", { class: "approach-grid" }, approaches.map((row) => approachCard(row, data)))
-      : h("p", { text: `No winning team sits ${data.threshold.residual_z} residual standard deviations below the line in ${data.year}.` }),
+      : h("p", { text: `No winning team sits below the line in ${data.year}.` }),
   ]);
 }
 
@@ -1915,7 +1914,7 @@ function workedSection(data, worked) {
     h("p", { class: "tier-note", text: "Group of 5 and other non-Power 4 schools at .500 or worse, filling more of the stadium than the same line expects. Each note is a published promotion with a date. It is not a claim that the promotion caused that season's crowd. If a dated source was not found, the card says so." }),
     worked.length
       ? h("div", { class: "approach-grid" }, worked.map((row) => workedCard(row, data)))
-      : h("p", { text: `No Group of 5 school with a losing or .500 record sits ${data.threshold.residual_z} residual standard deviations above the line in ${data.year}.` }),
+      : h("p", { text: `No Group of 5 school with a losing or .500 record sits above the line in ${data.year}.` }),
   ]);
 }
 
@@ -1924,7 +1923,6 @@ function approachCard(row, data) {
   return h("article", { class: "approach-card", style: `--rail:${row.color || "#1e3a5f"}` }, [
     approachIdentity(row),
     approachPins(row, "below"),
-    h("p", { class: "approach-gap", text: gapSentence(row, "below") }),
     h("div", { class: empty ? "take is-empty" : "take" }, [
       h("span", { class: "take-k", text: "Luke's take" }),
       h("p", { text: empty ? (data.placeholder || "Luke's take: coming soon") : row.strategy }),
@@ -1937,7 +1935,6 @@ function workedCard(row, data) {
   return h("article", { class: "approach-card", style: `--rail:${row.color || "#1e3a5f"}` }, [
     approachIdentity(row),
     approachPins(row, "above"),
-    h("p", { class: "approach-gap", text: gapSentence(row, "above") }),
     promotions.length
       ? h("div", { class: "promo-list" }, promotions.map(promotionItem))
       : h("p", { class: "promo-missing", text: data.no_promotion || "No documented promotion found" }),
@@ -1978,12 +1975,6 @@ function gapAmount(residual) {
   if (residual == null) return "—";
   const points = Math.abs(residual) * 100;
   return `${(Math.round(points * 10) / 10).toFixed(1)} pts`;
-}
-
-function gapSentence(row, direction) {
-  const sd = row.residual_z == null ? "—" : Math.abs(row.residual_z).toFixed(2);
-  const where = direction === "below" ? "under" : "over";
-  return `${sd} residual standard deviations ${where} the fitted line.`;
 }
 
 function promotionItem(item) {

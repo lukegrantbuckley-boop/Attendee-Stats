@@ -621,12 +621,6 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 .approach-pins { margin-top: 0; }
 
-.approach-gap {
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: 0.88rem;
-}
-
 .take, .promo {
   margin: 0;
   padding: 12px;
