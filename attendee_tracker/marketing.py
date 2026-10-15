@@ -39,13 +39,13 @@ PLACEHOLDER = "Luke's take: coming soon"
 NO_PROMOTION = "No documented promotion found"
 
 THRESHOLD_SUMMARY = (
-    "A team is far enough off the line when its capacity fill is at least "
-    f"{RESIDUAL_Z:g} residual standard deviations from the ordinary-least-squares "
-    "fit of average capacity filled on season win percentage. That is the same "
-    "cutoff the Analysis scatter uses. A winning record is a win percentage above "
-    ".500. A losing or poor record is .500 or worse. The second list keeps Group of 5 "
-    "and other non-Power 4 schools. NFL and shared pro stadiums never enter the fit. "
-    "2020 is omitted."
+    "These lists use the same fitted line as the Analysis scatter: average capacity "
+    "filled against season win percentage. A winning record is a win percentage above "
+    ".500. A losing or poor record is .500 or worse. The first list is winning teams "
+    "whose fill sits below that line. The second list is Group of 5 and other "
+    "non-Power 4 schools at .500 or worse whose fill sits above it. Each card shows "
+    "how many points of capacity that is. NFL and shared pro stadiums never enter "
+    "the fit. 2020 is omitted."
 )
 
 

@@ -20,6 +20,7 @@ from attendee_tracker.marketing import (
     marketing_report,
     select_marketing_groups,
 )
+from attendee_tracker.config import ROOT
 from attendee_tracker.store import load_live
 
 # 2025 is the last complete season. These slugs are the teams that clear
@@ -80,8 +81,12 @@ def test_threshold_matches_the_analysis_scatter():
     assert report["threshold"]["residual_z"] == RESIDUAL_Z
     assert report["threshold"]["winning_win_pct_above"] == 0.5
     assert report["threshold"]["poor_win_pct_at_or_below"] == 0.5
-    assert "1.25" in report["threshold"]["summary"]
-    assert "2020" in report["threshold"]["summary"]
+    summary = report["threshold"]["summary"].casefold()
+    assert "2020" in summary
+    assert "below that line" in summary
+    assert "above it" in summary
+    assert "standard deviation" not in summary
+    assert " sd" not in summary
 
 
 def test_selects_winning_teams_below_the_line_and_g5_poor_teams_above_it():
@@ -226,6 +231,24 @@ def test_api_refuses_2020_and_serves_the_in_progress_season():
             assert all(item["source_url"].startswith("https://") and item["date"] for item in row["promotions"])
         else:
             assert row["promotions"] == []
+
+
+def test_marketing_tab_copy_keeps_points_and_hides_standard_deviations():
+    summary = marketing_report(COMPLETE_SEASON)["threshold"]["summary"]
+    _assert_no_displayed_sd(summary)
+    script = (ROOT / "web" / "app.js").read_text(encoding="utf-8")
+    block = script.split("function renderMarketing", 1)[1].split("function valuationHead", 1)[0]
+    _assert_no_displayed_sd(block)
+    assert "residual_z" not in block
+    assert "Below the fit" in block
+    assert "Above the fit" in block
+    assert "pts" in block
+
+
+def _assert_no_displayed_sd(text: str) -> None:
+    folded = text.casefold()
+    assert "standard deviation" not in folded
+    assert " sd" not in folded
 
 
 def test_index_puts_marketing_approaches_after_valuations():
