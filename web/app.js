@@ -1,6 +1,7 @@
 /* Attendee Tracker UI. Attendance comes from /api/season and /api/school.
    Business headlines load separately from /api/school/{slug}/business-news.
    Power valuations load from /api/valuations.
+   Marketing approaches load from /api/marketing.
    Football revenue loads from /api/revenue/{slug} when a school page opens. */
 
 const view = document.querySelector("#view");
@@ -19,6 +20,9 @@ const filters = { query: "", tier: "all", sort: "ap", span: 1 };
 const valuationView = { sort: "valuation", conference: "all" };
 let valuationsPayload = null;
 let valuationsToken = 0;
+const marketingPayloads = new Map();
+let marketingYear = 2025;
+let marketingToken = 0;
 const revenueBySlug = new Map();
 const revenueInflight = new Set();
 
@@ -86,6 +90,7 @@ function render() {
   setNav(route.name === "school" ? "home" : route.name);
   if (route.name === "analysis") renderAnalysis();
   else if (route.name === "valuations") renderValuations();
+  else if (route.name === "marketing") renderMarketing();
   else if (route.name === "school") renderSchool(route.slug, route.view);
   else renderHome();
   view.focus({ preventScroll: true });
@@ -95,6 +100,7 @@ function currentRoute() {
   const hash = decodeURIComponent((location.hash || "#/").replace(/^#/, ""));
   if (hash === "/analysis") return { name: "analysis" };
   if (hash === "/valuations") return { name: "valuations" };
+  if (hash === "/marketing") return { name: "marketing" };
   const match = hash.match(/^\/schools\/([^/]+)/);
   if (match) {
     const rest = hash.slice(match[0].length).replace(/\/+$/, "");
@@ -1802,6 +1808,201 @@ function paintValuations() {
       : h("p", { class: "empty", text: "No schools in that conference." }),
     valuationFootnote(data.sources || {})
   );
+}
+
+function renderMarketing() {
+  const cached = marketingPayloads.get(marketingYear);
+  if (cached) {
+    paintMarketing(cached);
+    return;
+  }
+  const token = ++marketingToken;
+  view.replaceChildren(
+    h("p", { class: "lede", text: "Winning teams that still do not fill the building, and the smaller schools that do." }),
+    h("p", { class: "loading", text: `Loading the ${marketingYear} marketing lists…` })
+  );
+  loadMarketing(marketingYear, token);
+}
+
+async function loadMarketing(year, token) {
+  let body;
+  try {
+    const response = await fetch(`/api/marketing?year=${encodeURIComponent(year)}`);
+    body = await response.json();
+    if (token !== marketingToken || currentRoute().name !== "marketing") return;
+    if (!response.ok || body.error) {
+      view.replaceChildren(h("div", { class: "error" }, [
+        h("h2", { text: "No marketing list for that season" }),
+        h("p", { text: body.message || "The marketing lists could not be loaded." }),
+      ]));
+      return;
+    }
+  } catch (_error) {
+    if (token !== marketingToken || currentRoute().name !== "marketing") return;
+    view.replaceChildren(h("div", { class: "error" }, [
+      h("h2", { text: "No marketing list for that season" }),
+      h("p", { text: "The marketing lists could not be loaded." }),
+    ]));
+    return;
+  }
+  marketingPayloads.set(year, body);
+  if (currentRoute().name === "marketing" && marketingYear === year) paintMarketing(body);
+}
+
+function paintMarketing(data) {
+  const years = Array.isArray(data.years) && data.years.length ? data.years : [data.year];
+  const approaches = Array.isArray(data.approaches) ? data.approaches : [];
+  const worked = Array.isArray(data.what_has_worked) ? data.what_has_worked : [];
+  const partial = data.season_partial
+    ? `${data.year} is still in progress, so the record and the fill can move.`
+    : `${data.year} is a complete season.`;
+  view.replaceChildren(
+    h("p", { class: "lede", text: "Winning teams that still do not fill the building, and the smaller schools that do." }),
+    h("p", { class: "sublede", text: data.threshold && data.threshold.summary ? data.threshold.summary : "" }),
+    h("div", { class: "range-bar" }, [
+      segment("Marketing season", years.map((year) => [year, marketingYearLabel(year, data)]), marketingYear, (value) => {
+        marketingYear = value;
+        renderMarketing();
+      }),
+      h("p", { class: "muted range-hint", text: partial }),
+    ]),
+    h("div", { class: "stats" }, [
+      stat(String(data.year), data.season_partial ? "Season, in progress" : "Season"),
+      stat(String(data.n_teams ?? "—"), "Teams in the fit"),
+      stat(formatStat(data.pearson_r), "Pearson r, win % vs fill"),
+      stat(data.threshold ? `${data.threshold.residual_z} SD` : "—", "Distance from the line"),
+    ]),
+    h("div", { class: "jumps", role: "navigation", "aria-label": "On this page" }, [
+      jumpButton("Marketing Approaches", "marketing-approaches"),
+      jumpButton("What Has Worked", "what-has-worked"),
+    ]),
+    marketingSection(data, approaches),
+    workedSection(data, worked)
+  );
+}
+
+function jumpButton(label, id) {
+  return h("button", {
+    type: "button",
+    text: label,
+    onclick: () => {
+      const target = document.getElementById(id);
+      if (!target) return;
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    },
+  });
+}
+
+function marketingYearLabel(year, data) {
+  if (year === data.complete_season) return `${year} · Complete`;
+  return `${year} · In progress`;
+}
+
+function marketingSection(data, approaches) {
+  return h("section", { class: "panel approach-section", id: "marketing-approaches" }, [
+    h("h2", { text: "Marketing Approaches" }),
+    h("p", { class: "tier-note", text: "These teams won more games than they lost and still filled meaningfully less of the stadium than the fitted line expects. The note under each card is yours to write in data/marketing_approaches.json." }),
+    approaches.length
+      ? h("div", { class: "approach-grid" }, approaches.map((row) => approachCard(row, data)))
+      : h("p", { text: `No winning team sits ${data.threshold.residual_z} residual standard deviations below the line in ${data.year}.` }),
+  ]);
+}
+
+function workedSection(data, worked) {
+  return h("section", { class: "panel approach-section", id: "what-has-worked" }, [
+    h("h2", { text: "What Has Worked" }),
+    h("p", { class: "tier-note", text: "Group of 5 and other non-Power 4 schools at .500 or worse, filling more of the stadium than the same line expects. Each note is a published promotion with a date. It is not a claim that the promotion caused that season's crowd. If a dated source was not found, the card says so." }),
+    worked.length
+      ? h("div", { class: "approach-grid" }, worked.map((row) => workedCard(row, data)))
+      : h("p", { text: `No Group of 5 school with a losing or .500 record sits ${data.threshold.residual_z} residual standard deviations above the line in ${data.year}.` }),
+  ]);
+}
+
+function approachCard(row, data) {
+  const empty = row.strategy_is_empty !== false && !String(row.strategy || "").trim();
+  return h("article", { class: "approach-card", style: `--rail:${row.color || "#1e3a5f"}` }, [
+    approachIdentity(row),
+    approachPins(row, "below"),
+    h("p", { class: "approach-gap", text: gapSentence(row, "below") }),
+    h("div", { class: empty ? "take is-empty" : "take" }, [
+      h("span", { class: "take-k", text: "Luke's take" }),
+      h("p", { text: empty ? (data.placeholder || "Luke's take: coming soon") : row.strategy }),
+    ]),
+  ]);
+}
+
+function workedCard(row, data) {
+  const promotions = Array.isArray(row.promotions) ? row.promotions : [];
+  return h("article", { class: "approach-card", style: `--rail:${row.color || "#1e3a5f"}` }, [
+    approachIdentity(row),
+    approachPins(row, "above"),
+    h("p", { class: "approach-gap", text: gapSentence(row, "above") }),
+    promotions.length
+      ? h("div", { class: "promo-list" }, promotions.map(promotionItem))
+      : h("p", { class: "promo-missing", text: data.no_promotion || "No documented promotion found" }),
+  ]);
+}
+
+function approachIdentity(row) {
+  const body = [
+    mark({
+      school: row.school,
+      logo: row.logo,
+      color: row.color || "#1e3a5f",
+      abbreviation: row.abbreviation,
+    }),
+    h("div", {}, [
+      h("h3", { text: row.school }),
+      h("p", { text: [row.conference, row.tier].filter(Boolean).join(" · ") }),
+    ]),
+  ];
+  if (!row.slug) return h("div", { class: "approach-id" }, body);
+  return h("a", { class: "approach-id", href: `#/schools/${encodeURIComponent(row.slug)}` }, body);
+}
+
+function approachPins(row, direction) {
+  return h("div", { class: "pins approach-pins" }, [
+    pin("Record", row.record || "—", winLine(row.win_pct)),
+    pin("Fill", formatPct(row.fill_pct), "Average capacity filled"),
+    pin("Vs the line", gapAmount(row.residual), direction === "below" ? "Below the fit" : "Above the fit"),
+  ]);
+}
+
+function winLine(winPct) {
+  if (winPct == null) return "";
+  return `${formatPct(winPct)} of decided games`;
+}
+
+function gapAmount(residual) {
+  if (residual == null) return "—";
+  const points = Math.abs(residual) * 100;
+  return `${(Math.round(points * 10) / 10).toFixed(1)} pts`;
+}
+
+function gapSentence(row, direction) {
+  const sd = row.residual_z == null ? "—" : Math.abs(row.residual_z).toFixed(2);
+  const where = direction === "below" ? "under" : "over";
+  return `${sd} residual standard deviations ${where} the fitted line.`;
+}
+
+function promotionItem(item) {
+  return h("div", { class: "promo" }, [
+    h("p", { text: item.summary }),
+    h("p", { class: "promo-source" }, [
+      item.source_url
+        ? h("a", { href: item.source_url, target: "_blank", rel: "noopener noreferrer", text: item.source_name || "Source" })
+        : h("span", { text: item.source_name || "Source" }),
+      document.createTextNode(item.date ? ` · ${formatIsoDate(item.date)}` : ""),
+    ]),
+  ]);
+}
+
+function formatIsoDate(iso) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || "");
+  if (!match) return iso || "";
+  const date = new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+  return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric" }).format(date);
 }
 
 function valuationHead() {
