@@ -1,0 +1,16 @@
+{
+  "note": "Luke's strategy notes, keyed by school slug. Leave text as an empty string until it is written. The page shows \"Luke's take: coming soon\" when the text is empty. Add a slug when a new school shows up on the list; a missing slug uses the same placeholder.",
+  "strategies": {
+    "memphis": "",
+    "central-michigan": "",
+    "arkansas-state": "",
+    "california": "",
+    "duke": "",
+    "new-mexico": "",
+    "eastern-michigan": "",
+    "ucla": "",
+    "south-alabama": "",
+    "louisiana": "",
+    "utsa": ""
+  }
+}

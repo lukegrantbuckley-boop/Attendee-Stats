@@ -13,6 +13,7 @@ from attendee_tracker.attendance_growth import rank_attendance_growth
 from attendee_tracker.business_news import load_business_news, safe_slug
 from attendee_tracker.config import load_dotenv, season_year
 from attendee_tracker.history import HistoryWindowError, assemble_history, find_school, validate_window
+from attendee_tracker.marketing import MarketingError, marketing_report
 from attendee_tracker.revenue import UnknownSchool, school_revenue
 from attendee_tracker.store import live_path, load_live, load_sample, sample_path
 from attendee_tracker.valuations import ValuationsError, list_valuations
@@ -171,6 +172,23 @@ def valuations(sort: str = Query("valuation")):
     try:
         return list_valuations(sort)
     except ValuationsError as exc:
+        return JSONResponse(
+            {"error": exc.code, "message": exc.message},
+            status_code=exc.status,
+        )
+
+
+@app.get("/api/marketing")
+def marketing(year: int | None = None):
+    """Winning-record soft crowds, and Group of 5 crowds above the fit line.
+
+    Notes and promotions come from committed JSON. The fit is the same
+    line the Analysis page draws. 2020 is refused.
+    """
+    selected = year if year is not None else 2025
+    try:
+        return marketing_report(selected)
+    except MarketingError as exc:
         return JSONResponse(
             {"error": exc.code, "message": exc.message},
             status_code=exc.status,

@@ -117,6 +117,7 @@ Open <http://127.0.0.1:8742>. The process binds `0.0.0.0` and uses `PORT` from t
 - `/api/season?year=` is still one season, used by the home grid.
 - `/api/school/{slug}?from=2021&to=2025` is that school's home-attendance series. `/api/history?from=2021&to=2025` is the same window for every school, without per-game rows. Years with no `data/live/{year}.json` are listed in `missing_years` and are not given a crowd. Teams are matched by team id, then by school name when an older file uses a different id. Conference is stored on each season, so a realignment does not merge two programs or drop the move.
 - `/api/valuations` reads the committed file `data/valuations/power_2026.json`. `?sort=valuation` (the default) orders by The Athletic rank. `?sort=nil` orders by the NIL estimate. No key is required, and a missing file is an error rather than a filled-in number.
+- `/api/marketing?year=2025` is the Marketing Approaches tab. The default year is 2025. `year=2026` is the in-progress season. `year=2020` is refused.
 
 Regenerate the committed fixture after changing the generator:
 
@@ -156,6 +157,8 @@ Schools whose listed home stadium is an NFL building are kept out of those lists
 The valuations tab lists the 68 Power football programs (SEC, Big Ten, Big 12, ACC, and Notre Dame). Each row is the published rank, the same logo used on the school card, the school and conference, The Athletic valuation, and the NIL estimate. Valuation is the default sort. NIL budget is the other sort, and in that order the year-over-year arrows are left off, since there is no prior NIL ranking. A green arrow is spots moved up from The Athletic's July 2025 ranking, a red arrow is spots moved down, and a dash is no change. Those spots are `rank_change_spots` in the file (the same figure as prior rank minus current rank). Conference chips filter the list. A school row opens that program's existing page when the season cache has the same school name.
 
 The dollars are not computed here. Valuations are The Athletic's July 28, 2026 hypothetical football-program sale prices. Movement is against their July 21, 2025 list. NIL is nil-ncaa.com's estimated football roster cost for 2026-27 (school revenue share to football plus third-party NIL), marked as an estimate, not a school-audited budget. The page links those sources. There is no in-season estimate.
+
+**Marketing Approaches** sits on the tab after Valuations. It uses the same capacity-versus-record line as Analysis. A team is listed when its fill is at least 1.25 residual standard deviations off that line. The first section is winning records (win percentage above .500) that sit below the line. Each card has a slot for a strategy note from `data/marketing_approaches.json`, keyed by school slug. An empty note shows "Luke's take: coming soon". The second section, What Has Worked, is Group of 5 and other non-Power 4 schools at .500 or worse that sit above the line. Promotions in `data/what_has_worked.json` are published items with a source URL and date. A school with nothing stored says "No documented promotion found". The default year is 2025, the last complete season. 2026 is on the same control because the rest of the site can already switch between the current season and the last one. 2020 is not offered. NFL and shared pro stadiums stay out of the fit.
 
 ## Deploy on Render (free)
 

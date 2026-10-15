@@ -1,0 +1,117 @@
+{
+  "note": "Published fan-engagement promotions for schools that clear the reverse-outlier rule: Group of 5 (and other non-Power 4) schools with a win percentage at or below .500 whose capacity fill is at least 1.25 residual standard deviations above the record-versus-fill line. Record and fill_pct are the season snapshot used when the note was written. fill_pct is the share of listed capacity (1.0 is a full stadium). The page recomputes record and fill for the season on screen and joins these notes by slug. A school with an empty promotions list has no documented promotion in this file. Coastal Carolina's free-concession program is real, but the 2025 crowd is only 0.54 residual standard deviations above the line, so the school is not on this list.",
+  "schools": [
+    {
+      "slug": "app-state",
+      "school": "App State",
+      "season": 2025,
+      "conference": "Sun Belt",
+      "tier": "Group of 5",
+      "record": "5-8",
+      "win_pct": 0.3846,
+      "fill_pct": 1.0604,
+      "residual": 0.3132,
+      "residual_z": 1.75,
+      "promotions": [
+        {
+          "summary": "Every 2026 home date at Kidd Brewer Stadium has a published theme: Gold Out against Maine, Black Saturday Under the Lights against Charlotte, plus Homecoming, Family Weekend, Heroes Day, and Senior Day. Season-ticket holders who renewed by April 15 kept that price for 2026 and 2027 and received early access to discounted single-game tickets.",
+          "source_url": "https://appstatesports.com/news/2026/4/3/2026-app-state-football-home-game-themes-announced.aspx",
+          "source_name": "App State Athletics",
+          "date": "2026-04-03"
+        },
+        {
+          "summary": "App State introduced Yosef's Yard Party for Saturday home games in 2026: a free-admission pregame fan zone on the residence-hall lawn, open from three hours before kickoff until 15 minutes before, with yard games, music, and free posters.",
+          "source_url": "https://appstatesports.com/news/2026/9/3/2026-app-state-football-a-to-z-fan-guide.aspx",
+          "source_name": "App State Athletics",
+          "date": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "slug": "charlotte",
+      "school": "Charlotte",
+      "season": 2025,
+      "conference": "American Athletic",
+      "tier": "Group of 5",
+      "record": "1-11",
+      "win_pct": 0.0833,
+      "fill_pct": 0.8866,
+      "residual": 0.258,
+      "residual_z": 1.44,
+      "promotions": [
+        {
+          "summary": "For the Sept. 13, 2025 home game against Monmouth, Charlotte Athletics paired Hall of Fame weekend with Family Weekend and asked the crowd to wear green for a Green Out.",
+          "source_url": "https://charlotte49ers.com/news/2025/9/9/football-charlotte-welcomes-monmouth-for-hall-of-fame-weekend",
+          "source_name": "Charlotte Athletics",
+          "date": "2025-09-09"
+        },
+        {
+          "summary": "UNC Charlotte's student section, the CLT Gold Mine, gets students into games free with a student ID and charges no dues. The group also plans shirt and rally-towel giveaways.",
+          "source_url": "https://inside.charlotte.edu/2026/09/01/inside-the-clt-gold-mine-how-charlottes-student-section-is-preparing-for-the-fall/",
+          "source_name": "Inside UNC Charlotte",
+          "date": "2026-09-01"
+        }
+      ]
+    },
+    {
+      "slug": "colorado-state",
+      "school": "Colorado State",
+      "season": 2026,
+      "conference": "Pac-12",
+      "tier": "Group of 5",
+      "record": "2-3",
+      "win_pct": 0.4,
+      "fill_pct": 1.0689,
+      "residual": 0.3116,
+      "residual_z": 1.66,
+      "promotions": [
+        {
+          "summary": "Colorado State's university newsroom said students can claim one free ticket to each home football game, first come, first served, after the school entered the Pac-12. One guest ticket is available for a student at another college or a high school.",
+          "source_url": "https://source.colostate.edu/get-your-student-football-tickets-as-csu-enters-the-pac-12-era/",
+          "source_name": "Colorado State University SOURCE",
+          "date": "2026-07-31"
+        }
+      ]
+    },
+    {
+      "slug": "old-dominion",
+      "school": "Old Dominion",
+      "season": 2026,
+      "conference": "Sun Belt",
+      "tier": "Group of 5",
+      "record": "2-4",
+      "win_pct": 0.3333,
+      "fill_pct": 1.0508,
+      "residual": 0.3111,
+      "residual_z": 1.66,
+      "promotions": [
+        {
+          "summary": "For the Sept. 27, 2025 home game against Liberty, Old Dominion entered every fan with a ticket account in a drawing for a seven-day Carnival cruise for two. The athletics release said no extra purchase was required to enter.",
+          "source_url": "https://odusports.com/news/2025/09/23/boat-loads-of-fan-activities-scheduled-for-saturdays-game-against-liberty-including-carnival-cruise-giveaway",
+          "source_name": "Old Dominion Athletics",
+          "date": "2025-09-23"
+        }
+      ]
+    },
+    {
+      "slug": "kennesaw-state",
+      "school": "Kennesaw State",
+      "season": 2026,
+      "conference": "Conference USA",
+      "tier": "Group of 5",
+      "record": "1-4",
+      "win_pct": 0.2,
+      "fill_pct": 0.9754,
+      "residual": 0.2707,
+      "residual_z": 1.44,
+      "promotions": [
+        {
+          "summary": "Kennesaw State Athletics told students that tickets are complimentary for home regular-season contests when they pay the athletics fee. For 2024, football tickets were claimed online with a student email, opening two weeks before each home game.",
+          "source_url": "https://ksuowls.com/news/2024/8/23/football-student-tickets-information-for-2024.aspx",
+          "source_name": "Kennesaw State Athletics",
+          "date": "2024-08-23"
+        }
+      ]
+    }
+  ]
+}

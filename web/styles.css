@@ -76,15 +76,20 @@ button, input { font: inherit; color: inherit; }
   margin: 0;
   color: var(--ink-soft);
   font-size: 0.92rem;
+  min-width: 0;
 }
 
 .header-nav {
   margin-left: auto;
   display: flex;
   gap: 6px;
+  min-width: 0;
+  overflow-x: auto;
 }
 
 .header-nav a {
+  flex: 0 0 auto;
+  white-space: nowrap;
   text-decoration: none;
   padding: 8px 12px;
   border-radius: 999px;
@@ -548,6 +553,129 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   line-height: 1.25;
 }
 
+.approach-section { scroll-margin-top: 96px; }
+
+.approach-section h2 {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-weight: 560;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.approach-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 16px 16px 18px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  min-width: 0;
+}
+
+.approach-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 4px;
+  border-radius: 4px;
+  background: var(--rail, var(--navy));
+}
+
+.approach-id {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.approach-id .mark { width: 52px; height: 52px; border-radius: 14px; }
+
+.approach-id h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 560;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.approach-id p {
+  margin: 3px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.approach-pins { margin-top: 0; }
+
+.approach-gap {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.take, .promo {
+  margin: 0;
+  padding: 12px;
+  border-radius: 14px;
+  background: var(--card);
+}
+
+.take.is-empty {
+  border: 1px dashed var(--line);
+  background: transparent;
+}
+
+.take-k {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.take p, .promo p { margin: 6px 0 0; }
+
+.take.is-empty p { margin: 4px 0 0; color: var(--ink-soft); }
+
+.promo-list { display: flex; flex-direction: column; gap: 8px; }
+
+.promo-source {
+  margin: 8px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.promo-source a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.promo-source a:hover { text-decoration: underline; }
+
+.promo-missing {
+  margin: 0;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px dashed var(--line);
+  color: var(--ink-soft);
+}
+
 .outlier-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -810,8 +938,13 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 @media (max-width: 720px) {
   .site-header { flex-wrap: wrap; gap: 8px 14px; height: auto; }
-  .header-nav { margin-left: 0; }
-  .banner { top: 108px; }
+  .header-nav {
+    margin-left: 0;
+    flex-wrap: wrap;
+    overflow: visible;
+    row-gap: 4px;
+  }
+  .banner { top: 180px; }
   .chart-wrap { height: 300px; }
   .view-toggle .segment { width: 100%; }
   .view-toggle .segment button { flex: 1 1 auto; text-align: center; }
@@ -821,6 +954,9 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   .range-bar .segment button { flex: 1 1 auto; }
   .loyalty-grid { grid-template-columns: 1fr; }
   .header-nav a { padding: 8px 10px; }
+  .approach-grid { grid-template-columns: 1fr; }
+  .approach-pins { grid-template-columns: 1fr 1fr; }
+  .approach-pins .pin:last-child { grid-column: 1 / -1; }
   .val-head { display: none; }
   .val-row {
     grid-template-columns: 3.5rem 40px minmax(0, 1fr);
