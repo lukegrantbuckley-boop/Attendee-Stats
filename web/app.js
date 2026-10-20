@@ -2229,19 +2229,140 @@ function stat(value, label) {
   return h("div", { class: "stat" }, [h("b", { text: value }), h("span", { text: label })]);
 }
 
+const PLATE_LIGHT = [255, 253, 248];
+const PLATE_INK = [28, 25, 21];
+const logoPlates = new Map();
+const logoPlateLoads = new Map();
+
 function mark(school, _size) {
-  const node = h("div", { class: "mark", style: `background:${school.color};color:${textOn(school.color)}` });
-  if (school.logo) {
-    const image = h("img", { alt: "", src: school.logo });
-    image.addEventListener("error", () => {
-      image.remove();
-      node.textContent = initials(school);
+  const node = h("div", { class: "mark" });
+  if (!school.logo) {
+    paintMonogram(node, school);
+    return node;
+  }
+  node.classList.add("mark-logo");
+  if (logoPlates.get(school.logo) === "dark") node.classList.add("on-dark");
+  if (logoPlates.has(school.logo)) node.classList.add("plate-ready");
+  const image = h("img", { alt: "", src: school.logo });
+  image.addEventListener("error", () => {
+    image.remove();
+    paintMonogram(node, school);
+  });
+  node.append(image);
+  if (!logoPlates.has(school.logo)) {
+    settleLogoPlate(school.logo).then((plate) => {
+      if (!node.isConnected || !node.classList.contains("mark-logo")) return;
+      node.classList.toggle("on-dark", plate === "dark");
+      node.classList.add("plate-ready");
     });
-    node.append(image);
-  } else {
-    node.textContent = initials(school);
   }
   return node;
+}
+
+function paintMonogram(node, school) {
+  node.classList.remove("mark-logo", "on-dark", "plate-ready");
+  node.style.background = school.color || "#1e3a5f";
+  node.style.color = textOn(school.color);
+  node.textContent = initials(school);
+}
+
+function settleLogoPlate(url) {
+  if (logoPlates.has(url)) return Promise.resolve(logoPlates.get(url));
+  if (!logoPlateLoads.has(url)) {
+    logoPlateLoads.set(url, measureLogoPlate(url).then((plate) => {
+      logoPlates.set(url, plate);
+      return plate;
+    }));
+  }
+  return logoPlateLoads.get(url);
+}
+
+function measureLogoPlate(url) {
+  return loadProbe(probeLogoUrl(url)).then((img) => {
+    try {
+      const pixels = opaquePixels(img);
+      if (!pixels.length) return "light";
+      const light = plateScore(pixels, PLATE_LIGHT);
+      const ink = plateScore(pixels, PLATE_INK);
+      return choosePlate(light, ink);
+    } catch (_error) {
+      return "light";
+    }
+  }).catch(() => "light");
+}
+
+function probeLogoUrl(url) {
+  const match = /\/(\d+)\.png(?:[?#].*)?$/i.exec(url || "");
+  if (!match) return url;
+  return `https://a.espncdn.com/i/teamlogos/ncaa/500/${match[1]}.png`;
+}
+
+function loadProbe(src) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const timer = setTimeout(() => {
+      img.onload = null;
+      img.onerror = null;
+      reject(new Error("timeout"));
+    }, 4000);
+    img.onload = () => {
+      clearTimeout(timer);
+      resolve(img);
+    };
+    img.onerror = () => {
+      clearTimeout(timer);
+      reject(new Error("load"));
+    };
+    img.crossOrigin = "anonymous";
+    img.src = src;
+  });
+}
+
+function opaquePixels(img) {
+  const size = 48;
+  const canvas = document.createElement("canvas");
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext("2d", { willReadFrequently: true });
+  ctx.drawImage(img, 0, 0, size, size);
+  const data = ctx.getImageData(0, 0, size, size).data;
+  const pixels = [];
+  for (let i = 0; i < data.length; i += 4) {
+    if (data[i + 3] < 80) continue;
+    pixels.push([data[i], data[i + 1], data[i + 2]]);
+  }
+  return pixels;
+}
+
+function plateScore(pixels, plate) {
+  const ratios = pixels.map((pixel) => contrastRatio(pixel, plate)).sort((a, b) => a - b);
+  const readable = ratios.filter((ratio) => ratio >= 3).length / ratios.length;
+  return { readable, median: ratios[Math.floor(ratios.length / 2)] };
+}
+
+function choosePlate(light, ink) {
+  if (Math.abs(light.median - ink.median) <= 0.35) {
+    if (Math.abs(light.readable - ink.readable) <= 0.05) return "light";
+    return light.readable >= ink.readable ? "light" : "dark";
+  }
+  return light.median > ink.median ? "light" : "dark";
+}
+
+function contrastRatio(rgb, plate) {
+  const left = relativeLum(rgb);
+  const right = relativeLum(plate);
+  const lighter = Math.max(left, right);
+  const darker = Math.min(left, right);
+  return (lighter + 0.05) / (darker + 0.05);
+}
+
+function relativeLum(rgb) {
+  return (0.2126 * channelLum(rgb[0])) + (0.7152 * channelLum(rgb[1])) + (0.0722 * channelLum(rgb[2]));
+}
+
+function channelLum(value) {
+  const channel = value / 255;
+  return channel <= 0.04045 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4;
 }
 
 function initials(school) {
