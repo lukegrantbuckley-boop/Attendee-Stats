@@ -271,8 +271,6 @@ button, input { font: inherit; color: inherit; }
   background: var(--rail, var(--navy));
 }
 
-.card:hover { transform: translateY(-2px); }
-
 .mark {
   width: 58px;
   height: 58px;
@@ -967,7 +965,6 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   .view-toggle .segment { width: 100%; }
   .view-toggle .segment button { flex: 1 1 auto; text-align: center; }
   .rev-stats { grid-template-columns: 1fr; }
-  .card:hover { transform: none; }
   .range-bar .segment { width: 100%; }
   .range-bar .segment button { flex: 1 1 auto; }
   .loyalty-grid { grid-template-columns: 1fr; }
@@ -1006,5 +1003,4 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .card:hover { transform: none; }
 }

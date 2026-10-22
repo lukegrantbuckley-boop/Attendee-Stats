@@ -26,6 +26,16 @@ let marketingToken = 0;
 const revenueBySlug = new Map();
 const revenueInflight = new Set();
 
+const motionApi = window.Motion || null;
+const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+const countedStats = new Set();
+let cancelLift = () => {};
+let motionFromRender = false;
+let lastMotionKey = "";
+let lastShellKey = "";
+let valuationReorder = false;
+
 const VALUATION_CONFERENCES = [
   ["all", "All"],
   ["SEC", "SEC"],
@@ -88,11 +98,30 @@ function render() {
   destroyCharts();
   const route = currentRoute();
   setNav(route.name === "school" ? "home" : route.name);
-  if (route.name === "analysis") renderAnalysis();
-  else if (route.name === "valuations") renderValuations();
-  else if (route.name === "marketing") renderMarketing();
-  else if (route.name === "school") renderSchool(route.slug, route.view);
-  else renderHome();
+  const shellKey = motionShellKey(route);
+  const motionKey = motionViewKey(route);
+  const shellChanged = shellKey !== lastShellKey;
+  const viewChanged = motionKey !== lastMotionKey;
+  lastShellKey = shellKey;
+  lastMotionKey = motionKey;
+  motionFromRender = true;
+  try {
+    if (route.name === "analysis") renderAnalysis();
+    else if (route.name === "valuations") renderValuations();
+    else if (route.name === "marketing") renderMarketing();
+    else if (route.name === "school") renderSchool(route.slug, route.view);
+    else renderHome();
+  } finally {
+    motionFromRender = false;
+  }
+  if (shellChanged) motionSwap(view);
+  else if (viewChanged) {
+    motionSwap(document.getElementById("school-body"));
+    motionSwap(document.getElementById("season-pins"));
+  }
+  if (shellChanged || viewChanged || route.name === "home") motionLists(view, !(shellChanged || viewChanged));
+  motionCounts(view);
+  motionHover();
   view.focus({ preventScroll: true });
 }
 
@@ -215,6 +244,11 @@ function renderHome() {
       : h("p", { class: "empty", text: "No schools match that search." }),
     h("p", { class: "muted", text: `${meta.team_count} schools in the ${meta.season} cache.` })
   );
+  if (!motionFromRender) {
+    motionLists(view, true);
+    motionCounts(view);
+    motionHover();
+  }
 }
 
 function schoolCard(school) {
@@ -245,18 +279,37 @@ function schoolCard(school) {
   ]);
 }
 
-function attendancePins(school) {
+function attendancePins(school, scope) {
+  const id = `${scope || (payload && payload.meta ? payload.meta.season : "season")}:${school.slug || school.school}`;
+  const avgText = seasonAvgValue(school);
+  const meta = seasonAvgMeta(school);
+  const avgCount = avgText === "—" || school.avg_home_attendance == null
+    ? null
+    : { key: `${id}:avg`, value: Number(school.avg_home_attendance), kind: "int" };
+  const fillCount = school.avg_capacity_pct == null || !String(meta).endsWith("% full")
+    ? null
+    : { key: `${id}:fill`, value: Number(school.avg_capacity_pct), kind: "pct-full" };
+  const lastText = lastHomeValue(school);
+  const lastCount = lastText === "—" || school.last_home_attendance == null
+    ? null
+    : { key: `${id}:last`, value: Number(school.last_home_attendance), kind: "int" };
   return h("div", { class: "pins" }, [
-    pin("Season avg", seasonAvgValue(school), seasonAvgMeta(school)),
-    pin("Last home", lastHomeValue(school), lastHomeMeta(school)),
+    pin("Season avg", avgText, meta, { value: avgCount, meta: fillCount }),
+    pin("Last home", lastText, lastHomeMeta(school), { value: lastCount }),
   ]);
 }
 
-function pin(label, value, meta) {
+function pin(label, value, meta, counts) {
+  const strong = { text: value };
+  const metaProps = { class: "pin-m", text: meta };
+  if (counts) {
+    applyCount(strong, counts.value);
+    applyCount(metaProps, counts.meta);
+  }
   return h("div", { class: "pin" }, [
     h("span", { class: "pin-k", text: label }),
-    h("strong", { text: value }),
-    h("span", { class: "pin-m", text: meta }),
+    h("strong", strong),
+    h("span", metaProps),
   ]);
 }
 
@@ -594,6 +647,7 @@ function drawRevenueChart(school, data) {
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      animation: chartAnimation(),
       plugins: {
         legend: { display: false },
         tooltip: {
@@ -814,7 +868,13 @@ async function loadPriorSeason(school, year, token) {
     return;
   }
   const pins = document.getElementById("season-pins");
-  if (pins) pins.replaceChildren(attendancePins(prior));
+  if (pins) {
+    pins.replaceChildren(attendancePins(prior, year));
+    if (!motionFromRender) {
+      motionSwap(pins);
+      motionCounts(pins);
+    }
+  }
   fillSeasonBody(prior, year);
 }
 
@@ -868,6 +928,7 @@ function fillSeasonBody(school, seasonYear) {
     ])
   );
   drawAttendanceChart(school, games);
+  afterPartial(body);
 }
 
 async function loadHistory(slug, school, bounds, token) {
@@ -929,6 +990,7 @@ function renderHistory(school, history) {
     ])
   );
   if (plottable) drawHistoryChart(school, rows);
+  afterPartial(node);
 }
 
 function windowRows(history) {
@@ -1055,6 +1117,7 @@ function drawHistoryChart(school, rows) {
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      animation: chartAnimation(),
       plugins: {
         legend: { display: false },
         tooltip: {
@@ -1206,10 +1269,12 @@ function renderScatter(seasonBody, year) {
   if (!body) return;
   if (covid) {
     body.replaceChildren(h("p", { text: "Omitted · COVID" }));
+    afterPartial(body);
     return;
   }
   body.replaceChildren(h("div", { class: "chart-wrap" }, [h("canvas", { id: "scatter-chart" })]));
   drawScatter(analysis);
+  afterPartial(body);
 }
 
 function scatterHint(year, seasonBody) {
@@ -1309,6 +1374,7 @@ function renderLoyalty(node, seasonBody, year) {
       ),
     ])
   );
+  afterPartial(node);
 }
 
 function seasonIsCovid(year, seasonBody) {
@@ -1343,7 +1409,7 @@ function loyaltyPanel(id, title, blurb, rows, covid, partial) {
   else body = h("p", { text: "No qualifying team has a below-median record in this cache." });
   return h("section", { class: "panel", id }, [
     h("h3", { text: title }),
-    h("p", { class: "muted", text: blurb }),
+      h("p", { class: "muted", text: blurb }),
     body,
   ]);
 }
@@ -1438,6 +1504,7 @@ function renderGrowth(node, growth, yearFrom, yearTo) {
           growthPanel(fallingTitle.toLowerCase().replace(/\s+/g, "-"), fallingTitle, fallingBlurb, falling),
         ])
   );
+  afterPartial(node);
 }
 
 function growthPanel(id, title, blurb, rows) {
@@ -1600,6 +1667,7 @@ function drawAttendanceChart(school, games) {
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      animation: chartAnimation(),
       plugins: {
         legend: { display: false },
         tooltip: {
@@ -1668,6 +1736,7 @@ function drawScatter(analysis) {
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      animation: chartAnimation(),
       onClick(_event, elements) {
         if (!elements.length) return;
         const item = chart.data.datasets[elements[0].datasetIndex].data[elements[0].index];
@@ -1777,6 +1846,9 @@ function paintValuations() {
   const schools = Array.isArray(data.schools) ? data.schools : [];
   const sort = valuationView.sort === "nil" ? "nil" : "valuation";
   const conference = valuationView.conference;
+  const reorder = valuationReorder;
+  valuationReorder = false;
+  const previous = reorder ? captureValuationTops() : null;
   const ordered = sortedValuations(schools, sort)
     .filter((row) => conference === "all" || row.conference === conference);
   const sublede = sort === "nil"
@@ -1792,10 +1864,12 @@ function paintValuations() {
         ["nil", "NIL budget"],
       ], sort, (value) => {
         valuationView.sort = value;
+        valuationReorder = true;
         paintValuations();
       }),
       chips("Conference", VALUATION_CONFERENCES, conference, (value) => {
         valuationView.conference = value;
+        valuationReorder = true;
         paintValuations();
       }),
     ]),
@@ -1808,6 +1882,18 @@ function paintValuations() {
       : h("p", { class: "empty", text: "No schools in that conference." }),
     valuationFootnote(data.sources || {})
   );
+  if (reorder) {
+    if (previous && previous.size) flipValuationRows(previous);
+    motionCounts(view);
+    motionHover();
+    return;
+  }
+  if (!motionFromRender) {
+    motionSwap(view);
+    motionLists(view, false);
+    motionCounts(view);
+    motionHover();
+  }
 }
 
 function renderMarketing() {
@@ -1878,6 +1964,14 @@ function paintMarketing(data) {
     marketingSection(data, approaches),
     workedSection(data, worked)
   );
+  lastShellKey = `marketing:${marketingYear}`;
+  lastMotionKey = lastShellKey;
+  if (!motionFromRender) {
+    motionSwap(view);
+    motionLists(view, false);
+    motionCounts(view);
+    motionHover();
+  }
 }
 
 function jumpButton(label, id) {
@@ -1959,9 +2053,14 @@ function approachIdentity(row) {
 }
 
 function approachPins(row, direction) {
+  const fill = row.fill_pct == null ? null : {
+    key: `fill:${marketingYear}:${row.slug || row.school}`,
+    value: Number(row.fill_pct),
+    kind: "pct",
+  };
   return h("div", { class: "pins approach-pins" }, [
     pin("Record", row.record || "—", winLine(row.win_pct)),
-    pin("Fill", formatPct(row.fill_pct), "Average capacity filled"),
+    pin("Fill", formatPct(row.fill_pct), "Average capacity filled", fill ? { value: fill } : null),
     pin("Vs the line", gapAmount(row.residual), direction === "below" ? "Below the fit" : "Above the fit"),
   ]);
 }
@@ -2030,22 +2129,32 @@ function valuationRow(row, index, sort) {
     ]),
     h("div", { class: "val-money val-valuation" }, [
       h("span", { class: "val-k", text: "Valuation" }),
-      h("strong", { text: formatValuation(row.valuation_usd) }),
+      h("strong", countProps(formatValuation(row.valuation_usd), Number.isFinite(row.valuation_usd) ? {
+        key: `val:${row.school}`,
+        value: row.valuation_usd,
+        kind: "usd",
+      } : null)),
     ]),
     h("div", { class: "val-money val-nil" }, [
       h("span", { class: "val-k", text: "NIL" }),
-      h("strong", { text: formatNil(row.nil_budget_usd) }),
+      h("strong", countProps(formatNil(row.nil_budget_usd), Number.isFinite(row.nil_budget_usd) ? {
+        key: `nil:${row.school}`,
+        value: row.nil_budget_usd,
+        kind: "nil",
+      } : null)),
       row.nil_is_estimate ? h("span", { class: "val-est", text: "est." }) : null,
     ]),
   ];
+  const props = {
+    class: "val-row",
+    style: `--rail:${logoSchool.color}`,
+    "data-school": row.school || "",
+  };
   if (known && known.slug) {
-    return h("a", {
-      class: "val-row",
-      href: `#/schools/${encodeURIComponent(known.slug)}/revenue`,
-      style: `--rail:${logoSchool.color}`,
-    }, inner);
+    props.href = `#/schools/${encodeURIComponent(known.slug)}/revenue`;
+    return h("a", props, inner);
   }
-  return h("div", { class: "val-row", style: `--rail:${logoSchool.color}` }, inner);
+  return h("div", props, inner);
 }
 
 function valuationFootnote(sources) {
@@ -2214,6 +2323,11 @@ function destroyCharts() {
   charts = [];
 }
 
+function chartAnimation() {
+  if (reduceMotionQuery.matches) return false;
+  return { duration: 380, easing: "easeOutQuart" };
+}
+
 function segment(label, options, current, onPick) {
   return h("div", { class: "segment", role: "group", "aria-label": label }, options.map(([value, text]) =>
     h("button", {
@@ -2242,21 +2356,97 @@ function mark(school, _size) {
   }
   node.classList.add("mark-logo");
   if (logoPlates.get(school.logo) === "dark") node.classList.add("on-dark");
-  if (logoPlates.has(school.logo)) node.classList.add("plate-ready");
   const image = h("img", { alt: "", src: school.logo });
   image.addEventListener("error", () => {
     image.remove();
     paintMonogram(node, school);
   });
   node.append(image);
-  if (!logoPlates.has(school.logo)) {
+  const plateReady = () => {
+    if (!node.classList.contains("mark-logo")) return;
+    if (!node.isConnected) {
+      if (node.dataset.plateWait === "1") return;
+      node.dataset.plateWait = "1";
+      queueMicrotask(() => {
+        delete node.dataset.plateWait;
+        if (node.isConnected) plateReady();
+      });
+      return;
+    }
+    revealLogo(node, image);
+  };
+  if (logoPlates.has(school.logo)) plateReady();
+  else {
     settleLogoPlate(school.logo).then((plate) => {
-      if (!node.isConnected || !node.classList.contains("mark-logo")) return;
+      if (!node.classList.contains("mark-logo")) return;
       node.classList.toggle("on-dark", plate === "dark");
-      node.classList.add("plate-ready");
+      plateReady();
     });
   }
   return node;
+}
+
+const logoQueue = [];
+let logoFlush = false;
+
+function revealLogo(node, image) {
+  const start = () => {
+    if (!node.isConnected) {
+      if (node.dataset.logoWait === "1") return;
+      node.dataset.logoWait = "1";
+      queueMicrotask(() => {
+        delete node.dataset.logoWait;
+        if (node.isConnected) start();
+      });
+      return;
+    }
+    if (!node.classList.contains("mark-logo") || node.dataset.logoIn === "1") return;
+    logoQueue.push({ node, image });
+    if (logoFlush) return;
+    logoFlush = true;
+    queueMicrotask(flushLogos);
+  };
+  if (image.complete && image.naturalWidth > 0) start();
+  else if (!image.complete) image.addEventListener("load", start, { once: true });
+}
+
+function flushLogos() {
+  logoFlush = false;
+  const batch = logoQueue.splice(0);
+  const visible = [];
+  const hidden = [];
+  const viewport = window.innerHeight;
+  for (let i = 0; i < batch.length; i += 1) {
+    const item = batch[i];
+    if (!item.node.isConnected || !item.node.classList.contains("mark-logo") || item.node.dataset.logoIn === "1") continue;
+    const rect = item.node.getBoundingClientRect();
+    if (rect.bottom > 0 && rect.top < viewport) visible.push(item);
+    else hidden.push(item);
+  }
+  for (let i = 0; i < visible.length; i += 1) fadeLogo(visible[i]);
+  if (!hidden.length) return;
+  if (reduceMotion() || !motionApi) {
+    for (let i = 0; i < hidden.length; i += 1) fadeLogo(hidden[i]);
+    return;
+  }
+  motionApi.inView(hidden.map((item) => item.node), (node) => {
+    for (let i = 0; i < hidden.length; i += 1) {
+      if (hidden[i].node === node) fadeLogo(hidden[i]);
+    }
+  });
+}
+
+function fadeLogo(item) {
+  const node = item.node;
+  const image = item.image;
+  if (!node.isConnected || !node.classList.contains("mark-logo") || node.dataset.logoIn === "1") return;
+  node.dataset.logoIn = "1";
+  node.classList.add("plate-ready");
+  if (reduceMotion() || !motionApi) {
+    image.style.opacity = "";
+    return;
+  }
+  motionApi.animate(image, { opacity: [0, 1] }, { duration: 0.24, ease: "easeOut" });
 }
 
 function paintMonogram(node, school) {
@@ -2479,6 +2669,220 @@ function formatDate(iso) {
 
 function slugify(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+function reduceMotion() {
+  return reduceMotionQuery.matches;
+}
+
+function motionShellKey(route) {
+  if (route.name === "school") return `school:${route.slug}:${route.view}`;
+  if (route.name === "marketing") return `marketing:${marketingYear}`;
+  return route.name;
+}
+
+function motionViewKey(route) {
+  if (route.name === "school") return `${motionShellKey(route)}:${filters.span}`;
+  return motionShellKey(route);
+}
+
+function motionSwap(node) {
+  if (!node || reduceMotion() || !motionApi) return;
+  motionApi.animate(node, {
+    opacity: [0, 1],
+    transform: ["translateY(8px)", "translateY(0px)"],
+  }, { duration: 0.3, ease: "easeOut" });
+}
+
+function motionLists(root, withOpacity) {
+  if (!root || reduceMotion() || !motionApi) return;
+  const cards = root.querySelectorAll(".grid > .card");
+  if (cards.length) staggerNodes(cards, withOpacity);
+  const lists = root.querySelectorAll(".loyal-list, .approach-grid, .outlier-grid, .val-board");
+  for (let i = 0; i < lists.length; i += 1) {
+    const kids = lists[i].querySelectorAll(":scope > .loyal-row, :scope > .approach-card, :scope > .outlier, :scope > .val-row");
+    if (kids.length) staggerNodes(kids, withOpacity);
+  }
+  const bodies = root.querySelectorAll(".table-wrap:not(.fit-table) > table > tbody");
+  for (let i = 0; i < bodies.length; i += 1) {
+    const rows = bodies[i].querySelectorAll(":scope > tr");
+    if (rows.length) staggerNodes(rows, withOpacity);
+  }
+}
+
+function staggerNodes(nodes, withOpacity) {
+  const batch = [];
+  const cap = 8;
+  if (nodes.length <= 12) {
+    const count = Math.min(nodes.length, 12);
+    for (let i = 0; i < count; i += 1) batch.push(nodes[i]);
+  } else {
+    const viewport = window.innerHeight;
+    for (let i = 0; i < nodes.length && batch.length < cap; i += 1) {
+      const rect = nodes[i].getBoundingClientRect();
+      if (rect.bottom > 0 && rect.top < viewport) batch.push(nodes[i]);
+    }
+    if (!batch.length) {
+      for (let i = 0; i < cap && i < nodes.length; i += 1) batch.push(nodes[i]);
+    }
+  }
+  if (!batch.length) return;
+  const values = withOpacity
+    ? { opacity: [0, 1], transform: ["translateY(8px)", "translateY(0px)"] }
+    : { transform: ["translateY(6px)", "translateY(0px)"] };
+  motionApi.animate(batch, values, {
+    duration: 0.26,
+    ease: "easeOut",
+    delay: motionApi.stagger(0.018),
+  });
+}
+
+function motionHover() {
+  cancelLift();
+  cancelLift = () => {};
+  if (!view || reduceMotion() || !motionApi || !finePointer.matches) return;
+  const nodes = view.querySelectorAll(".card, .loyal-row, .approach-card, .val-row, .outlier");
+  if (!nodes.length) return;
+  cancelLift = motionApi.hover(nodes, (element) => {
+    motionApi.animate(element, { transform: "translateY(-2px)" }, {
+      type: "spring",
+      bounce: 0,
+      visualDuration: 0.18,
+    });
+    return () => {
+      motionApi.animate(element, { transform: "translateY(0px)" }, {
+        type: "spring",
+        bounce: 0,
+        visualDuration: 0.2,
+      });
+    };
+  });
+}
+
+function afterPartial(node) {
+  if (motionFromRender || !node) return;
+  motionSwap(node);
+  motionLists(node, false);
+  motionCounts(node);
+  motionHover();
+}
+
+function applyCount(props, spec) {
+  if (!spec || !Number.isFinite(Number(spec.value))) return;
+  props["data-count"] = spec.key;
+  props["data-count-value"] = String(spec.value);
+  props["data-count-kind"] = spec.kind || "int";
+}
+
+function countProps(text, spec) {
+  const props = { text };
+  applyCount(props, spec);
+  return props;
+}
+
+function motionCounts(root) {
+  if (!root) return;
+  const nodes = root.querySelectorAll("[data-count]");
+  const jobs = [];
+  for (let i = 0; i < nodes.length; i += 1) {
+    const node = nodes[i];
+    const key = node.getAttribute("data-count");
+    const kind = node.getAttribute("data-count-kind") || "int";
+    const target = Number(node.getAttribute("data-count-value"));
+    node.removeAttribute("data-count");
+    node.removeAttribute("data-count-kind");
+    node.removeAttribute("data-count-value");
+    if (!key || countedStats.has(key) || !Number.isFinite(target) || target === 0) continue;
+    if (node.closest("[aria-live]")) continue;
+    jobs.push({ node, key, kind, target, finalText: node.textContent });
+  }
+  if (!jobs.length) return;
+  if (reduceMotion() || !motionApi) {
+    for (let i = 0; i < jobs.length; i += 1) countedStats.add(jobs[i].key);
+    return;
+  }
+  const viewport = window.innerHeight;
+  const hidden = [];
+  for (let i = 0; i < jobs.length; i += 1) {
+    const rect = jobs[i].node.getBoundingClientRect();
+    if (rect.bottom > 0 && rect.top < viewport) playCount(jobs[i]);
+    else hidden.push(jobs[i]);
+  }
+  if (!hidden.length) return;
+  motionApi.inView(hidden.map((job) => job.node), (node) => {
+    for (let i = 0; i < hidden.length; i += 1) {
+      if (hidden[i].node === node) playCount(hidden[i]);
+    }
+  });
+}
+
+function playCount(job) {
+  if (!job.node.isConnected || countedStats.has(job.key)) return;
+  countedStats.add(job.key);
+  const renderValue = (value) => renderCount(job.kind, value);
+  job.node.textContent = renderValue(0);
+  const controls = motionApi.animate(0, job.target, {
+    duration: 0.4,
+    ease: "easeOut",
+    onUpdate: (latest) => {
+      job.node.textContent = renderValue(latest);
+    },
+  });
+  const finish = () => {
+    if (job.node.isConnected) job.node.textContent = job.finalText;
+  };
+  if (controls && controls.finished && typeof controls.finished.then === "function") controls.finished.then(finish);
+  else window.setTimeout(finish, 420);
+}
+
+function renderCount(kind, value) {
+  if (kind === "pct") return formatPct(value);
+  if (kind === "pct-full") return `${formatPct(value)} full`;
+  if (kind === "usd") return formatValuation(value);
+  if (kind === "nil") return formatNil(value);
+  return formatInt(Math.round(value));
+}
+
+function captureValuationTops() {
+  const map = new Map();
+  const rows = view.querySelectorAll(".val-row");
+  for (let i = 0; i < rows.length; i += 1) {
+    const id = rows[i].getAttribute("data-school");
+    if (id) map.set(id, rows[i].getBoundingClientRect().top);
+  }
+  return map;
+}
+
+function flipValuationRows(previous) {
+  if (reduceMotion() || !motionApi) return;
+  const rows = view.querySelectorAll(".val-row");
+  const animated = [];
+  const fresh = [];
+  for (let i = 0; i < rows.length; i += 1) {
+    const row = rows[i];
+    const id = row.getAttribute("data-school");
+    if (!id || !previous.has(id)) {
+      fresh.push(row);
+      continue;
+    }
+    const delta = previous.get(id) - row.getBoundingClientRect().top;
+    if (delta > 0.5 || delta < -0.5) animated.push({ row, delta });
+  }
+  for (let i = 0; i < animated.length; i += 1) {
+    const item = animated[i];
+    const controls = motionApi.animate(item.row, {
+      transform: [`translateY(${item.delta}px)`, "translateY(0px)"],
+    }, { duration: 0.34, ease: "easeOut" });
+    const clear = () => {
+      if (item.row.isConnected) item.row.style.transform = "";
+    };
+    if (controls && controls.finished && typeof controls.finished.then === "function") {
+      controls.finished.then(() => requestAnimationFrame(clear));
+    } else {
+      window.setTimeout(clear, 380);
+    }
+  }
+  if (fresh.length) staggerNodes(fresh, true);
 }
 
 function h(tag, props, children) {
