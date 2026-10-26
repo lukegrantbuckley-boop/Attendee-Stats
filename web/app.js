@@ -2,7 +2,8 @@
    Business headlines load separately from /api/school/{slug}/business-news.
    Power valuations load from /api/valuations.
    Marketing approaches load from /api/marketing.
-   Football revenue loads from /api/revenue/{slug} when a school page opens. */
+   Football revenue loads from /api/revenue/{slug} when a school page opens.
+   Football campaigns load from /api/campaigns/{slug}?year= when that tab is open. */
 
 const view = document.querySelector("#view");
 const banner = document.querySelector("#banner");
@@ -25,6 +26,8 @@ let marketingYear = 2025;
 let marketingToken = 0;
 const revenueBySlug = new Map();
 const revenueInflight = new Set();
+const campaignsByKey = new Map();
+let campaignToken = 0;
 
 const motionApi = window.Motion || null;
 const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
@@ -109,7 +112,7 @@ function render() {
     if (route.name === "analysis") renderAnalysis();
     else if (route.name === "valuations") renderValuations();
     else if (route.name === "marketing") renderMarketing();
-    else if (route.name === "school") renderSchool(route.slug, route.view);
+    else if (route.name === "school") renderSchool(route.slug, route.view, route.year);
     else renderHome();
   } finally {
     motionFromRender = false;
@@ -133,10 +136,19 @@ function currentRoute() {
   const match = hash.match(/^\/schools\/([^/]+)/);
   if (match) {
     const rest = hash.slice(match[0].length).replace(/\/+$/, "");
+    let pageView = "attendance";
+    let year = 2026;
+    if (rest === "/revenue") pageView = "revenue";
+    else if (rest === "/campaigns" || rest === "/campaigns/2026") pageView = "campaigns";
+    else if (rest === "/campaigns/2025") {
+      pageView = "campaigns";
+      year = 2025;
+    }
     return {
       name: "school",
       slug: match[1],
-      view: rest === "/revenue" ? "revenue" : "attendance",
+      view: pageView,
+      year,
     };
   }
   return { name: "home" };
@@ -345,7 +357,7 @@ function lastHomeMeta(school) {
   return "Awaiting attendance";
 }
 
-function renderSchool(slug, pageView) {
+function renderSchool(slug, pageView, campaignYear) {
   const school = schoolsBySlug[slug];
   if (!school) {
     view.replaceChildren(
@@ -362,11 +374,15 @@ function renderSchool(slug, pageView) {
     renderRevenue(school, slug);
     return;
   }
+  if (pageView === "campaigns") {
+    renderCampaigns(school, slug, campaignYear || 2026);
+    return;
+  }
   const token = ++historyToken;
   const endYear = Number(payload.meta.season);
-  const revenue = revenueBySlug.get(slug);
   const nodes = [
     h("a", { class: "back", href: "#/", text: "All schools" }),
+    schoolViewToggle(slug, "attendance"),
     schoolIdentity(school),
     h("div", { class: "range-bar" }, [
       segment("Attendance range", RANGE_OPTIONS, filters.span, (value) => {
@@ -378,7 +394,6 @@ function renderSchool(slug, pageView) {
     h("div", { id: "school-body", "aria-live": "polite" }),
     businessNewsSection(slug),
   ];
-  if (revenue) nodes.splice(1, 0, schoolViewToggle(slug, "attendance"));
   view.replaceChildren(...nodes);
   if (!revenueBySlug.has(slug)) ensureRevenue(slug);
   if (filters.span === 1) {
@@ -465,16 +480,120 @@ function renderRevenue(school, slug) {
   drawRevenueChart(school, data);
 }
 
+function schoolViewOptions(slug) {
+  const options = [["attendance", "Home Attendance"]];
+  if (revenueBySlug.get(slug)) options.push(["revenue", "Revenue"]);
+  options.push(["campaigns", "Campaigns"]);
+  return options;
+}
+
 function schoolViewToggle(slug, pageView) {
+  const current = pageView === "revenue" || pageView === "campaigns" ? pageView : "attendance";
   return h("div", { class: "view-toggle", id: "school-view-toggle" }, [
-    segment("School view", [
-      ["attendance", "Home Attendance"],
-      ["revenue", "Revenue"],
-    ], pageView === "revenue" ? "revenue" : "attendance", (value) => {
+    segment("School view", schoolViewOptions(slug), current, (value) => {
       const base = `#/schools/${encodeURIComponent(slug)}`;
-      location.hash = value === "revenue" ? `${base}/revenue` : base;
+      if (value === "revenue") location.hash = `${base}/revenue`;
+      else if (value === "campaigns") location.hash = `${base}/campaigns`;
+      else location.hash = base;
     }),
   ]);
+}
+
+function renderCampaigns(school, slug, year) {
+  const selected = year === 2025 ? 2025 : 2026;
+  view.replaceChildren(
+    h("a", { class: "back", href: "#/", text: "All schools" }),
+    schoolViewToggle(slug, "campaigns"),
+    schoolIdentity(school),
+    h("section", { class: "panel", id: "football-campaigns" }, [
+      h("div", { class: "range-bar" }, [
+        segment("Campaign season", [[2026, "2026"], [2025, "2025"]], selected, (value) => {
+          const base = `#/schools/${encodeURIComponent(slug)}/campaigns`;
+          location.hash = Number(value) === 2025 ? `${base}/2025` : base;
+        }),
+        h("p", { class: "muted range-hint", text: "Football marketing and fan campaigns. Game previews and facility news are not listed." }),
+      ]),
+      h("div", { id: "school-body", "aria-live": "polite" }, [
+        h("p", { class: "loading", text: `Loading ${selected} football campaigns…` }),
+      ]),
+    ])
+  );
+  if (!revenueBySlug.has(slug)) ensureRevenue(slug);
+  const cached = campaignsByKey.get(`${slug}:${selected}`);
+  if (cached) fillCampaigns(selected, cached);
+  else loadCampaigns(slug, selected);
+}
+
+function fillCampaigns(year, data) {
+  const body = document.getElementById("school-body");
+  if (!body) return;
+  const items = Array.isArray(data.items) ? data.items : [];
+  if (!items.length) {
+    body.replaceChildren(h("p", { class: "promo-missing", text: data.empty_message || "Not yet reviewed" }));
+  } else {
+    body.replaceChildren(h("div", { class: "campaign-list" }, items.map(campaignCard)));
+  }
+  afterPartial(body);
+}
+
+async function loadCampaigns(slug, year) {
+  const token = ++campaignToken;
+  let data = { items: [], empty_message: "Not yet reviewed", year };
+  try {
+    const response = await fetch(`/api/campaigns/${encodeURIComponent(slug)}?year=${year}`);
+    const body = await response.json();
+    if (response.ok && body && !body.error) data = body;
+    else data = { items: [], empty_message: "Campaigns could not be loaded.", year };
+  } catch (_error) {
+    data = { items: [], empty_message: "Campaigns could not be loaded.", year };
+  }
+  campaignsByKey.set(`${slug}:${year}`, data);
+  const route = currentRoute();
+  if (token !== campaignToken || route.name !== "school" || route.slug !== slug || route.view !== "campaigns") return;
+  if ((route.year || 2026) !== year) return;
+  fillCampaigns(year, data);
+}
+
+function campaignCard(item) {
+  const pills = [h("span", { class: "pill", text: campaignTypeLabel(item.type) })];
+  if (item.type === "theme_night") pills.push(h("span", { class: "pill announced", text: "Announced" }));
+  return h("article", { class: "campaign" }, [
+    h("div", { class: "pills" }, pills),
+    h("h3", { text: item.title || "Football campaign" }),
+    campaignGame(item.game),
+    h("p", { text: item.description || "" }),
+    h("p", { class: "promo-source" }, [
+      item.source_url
+        ? h("a", {
+          href: item.source_url,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          text: item.source_name || "Source",
+        })
+        : h("span", { text: item.source_name || "Source" }),
+      document.createTextNode(item.date ? ` · ${formatIsoDate(item.date)}` : ""),
+    ]),
+  ]);
+}
+
+function campaignGame(game) {
+  if (!game || !game.opponent) return null;
+  const where = game.home ? `Home vs ${game.opponent}` : `At ${game.opponent}`;
+  return h("p", { class: "muted campaign-game", text: where });
+}
+
+function campaignTypeLabel(type) {
+  const labels = {
+    theme_night: "Theme night",
+    giveaway: "Giveaway",
+    ticket_deal: "Ticket deal",
+    student_promo: "Student promo",
+    community: "Community",
+    sponsor_activation: "Sponsor",
+    digital: "Digital",
+    fan_experience: "Fan experience",
+  };
+  return labels[type] || "Campaign";
 }
 
 function ensureRevenue(slug) {
@@ -497,17 +616,22 @@ async function loadSchoolRevenue(slug) {
   const route = currentRoute();
   if (route.name !== "school" || route.slug !== slug) return;
   if (route.view !== "revenue") {
-    if (data) mountSchoolViewToggle(slug, "attendance");
+    if (data) mountSchoolViewToggle(slug, route.view === "campaigns" ? "campaigns" : "attendance");
     return;
   }
   render();
 }
 
 function mountSchoolViewToggle(slug, pageView) {
-  if (document.getElementById("school-view-toggle")) return;
+  const existing = document.getElementById("school-view-toggle");
+  const next = schoolViewToggle(slug, pageView);
+  if (existing) {
+    existing.replaceWith(next);
+    return;
+  }
   const back = view.querySelector(".back");
   if (!back) return;
-  back.insertAdjacentElement("afterend", schoolViewToggle(slug, pageView));
+  back.insertAdjacentElement("afterend", next);
 }
 
 function revenueStats(data) {
@@ -2676,12 +2800,15 @@ function reduceMotion() {
 }
 
 function motionShellKey(route) {
-  if (route.name === "school") return `school:${route.slug}:${route.view}`;
+  if (route.name === "school") return `school:${route.slug}:${route.view || "attendance"}`;
   if (route.name === "marketing") return `marketing:${marketingYear}`;
   return route.name;
 }
 
 function motionViewKey(route) {
+  if (route.name === "school" && route.view === "campaigns") {
+    return `${motionShellKey(route)}:${route.year || 2026}`;
+  }
   if (route.name === "school") return `${motionShellKey(route)}:${filters.span}`;
   return motionShellKey(route);
 }
@@ -2698,9 +2825,9 @@ function motionLists(root, withOpacity) {
   if (!root || reduceMotion() || !motionApi) return;
   const cards = root.querySelectorAll(".grid > .card");
   if (cards.length) staggerNodes(cards, withOpacity);
-  const lists = root.querySelectorAll(".loyal-list, .approach-grid, .outlier-grid, .val-board");
+  const lists = root.querySelectorAll(".loyal-list, .approach-grid, .outlier-grid, .val-board, .campaign-list");
   for (let i = 0; i < lists.length; i += 1) {
-    const kids = lists[i].querySelectorAll(":scope > .loyal-row, :scope > .approach-card, :scope > .outlier, :scope > .val-row");
+    const kids = lists[i].querySelectorAll(":scope > .loyal-row, :scope > .approach-card, :scope > .outlier, :scope > .val-row, :scope > .campaign");
     if (kids.length) staggerNodes(kids, withOpacity);
   }
   const bodies = root.querySelectorAll(".table-wrap:not(.fit-table) > table > tbody");
@@ -2741,7 +2868,7 @@ function motionHover() {
   cancelLift();
   cancelLift = () => {};
   if (!view || reduceMotion() || !motionApi || !finePointer.matches) return;
-  const nodes = view.querySelectorAll(".card, .loyal-row, .approach-card, .val-row, .outlier");
+  const nodes = view.querySelectorAll(".card, .loyal-row, .approach-card, .val-row, .outlier, .campaign");
   if (!nodes.length) return;
   cancelLift = motionApi.hover(nodes, (element) => {
     motionApi.animate(element, { transform: "translateY(-2px)" }, {

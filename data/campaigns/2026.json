@@ -1,0 +1,2193 @@
+{
+  "air-force": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "886fd518f7ff2132",
+        "title": "2026 football fan event",
+        "date": "2026-07-13",
+        "announced": true,
+        "game": null,
+        "type": "fan_experience",
+        "description": "Air Force scheduled an on-site fan event for the 2026 football season.",
+        "source_url": "https://goairforcefalcons.com/news/2026/7/13/football-falcon-fan-fest-is-free-and-open-to-the-public",
+        "source_name": "Air Force Academy Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "akron": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "alabama": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "885ee408accd37cb",
+        "title": "2026 football ticket offer",
+        "date": "2026-07-06",
+        "announced": true,
+        "game": {
+          "opponent": "Texas A&M",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Alabama published a ticket offer for the 2026 football season.",
+        "source_url": "https://rolltide.com/news/2026/7/6/footballs-single-game-tickets-on-sale-july-7",
+        "source_name": "Alabama Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "app-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "3036bac7704aac30",
+        "title": "2026 football ticket offer",
+        "date": "2026-01-14",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "App State published a ticket offer for the 2026 football season.",
+        "source_url": "https://appstatesports.com/news/2026/1/13/renew-app-state-football-season-tickets-for-2026",
+        "source_name": "App State Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "997ad4f2dddedeec",
+        "title": "2026 football home-game themes",
+        "date": "2026-04-03",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "App State announced themed promotions for its 2026 home football games.",
+        "source_url": "https://appstatesports.com/news/2026/4/3/2026-app-state-football-home-game-themes-announced",
+        "source_name": "App State Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "arizona": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "19f6b75dfe1bd451",
+        "title": "2026 football theme",
+        "date": "2026-04-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Arizona announced themed promotions for its 2026 home football games.",
+        "source_url": "https://arizonawildcats.com/news/2026/4/22/arizona-football-debuts-2026-promo-schedule",
+        "source_name": "University of Arizona Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "arkansas": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "auburn": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "ball-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "c434d1e67ff22552",
+        "title": "2026 football ticket offer",
+        "date": "2026-03-05",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Ball State published a ticket offer for the 2026 football season.",
+        "source_url": "https://ballstatesports.com/news/2026/3/5/football-season-tickets-on-sale-for-2026-season",
+        "source_name": "Ball State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "08ede3f19228aa3f",
+        "title": "2026 football ticket offer",
+        "date": "2026-07-20",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Ball State published a ticket offer for the 2026 football season.",
+        "source_url": "https://ballstatesports.com/news/2026/7/20/football-single-game-tickets-on-sale-for-2026-home-games",
+        "source_name": "Ball State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "461f1906e1c5a3ed",
+        "title": "2026 football community event",
+        "date": "2026-09-21",
+        "announced": true,
+        "game": {
+          "opponent": "Toledo",
+          "home": true
+        },
+        "type": "community",
+        "description": "Ball State scheduled a community event around its 2026 football games.",
+        "source_url": "https://ballstatesports.com/news/2026/9/21/ball-state-and-toledo-kick-off-community-day-at-2-pm-et-on-saturday-Oct3",
+        "source_name": "Ball State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "fd223e8bef6a5498",
+        "title": "2026 football ticket offer",
+        "date": "2026-09-30",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Ball State published a ticket offer for the 2026 football season.",
+        "source_url": "https://ballstatesports.com/news/2026/9/30/football-football-gameday-ball-state-welcomes-toledo-for-community-day",
+        "source_name": "Ball State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "4a1da4d3a7dc92cb",
+        "title": "2026 football ticket offer",
+        "date": "2026-10-21",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Ball State published a ticket offer for the 2026 football season.",
+        "source_url": "https://ballstatesports.com/news/2026/10/21/football-football-gameday-ball-state-homecoming-celebration-welcomes-sacramento-state-to-muncie",
+        "source_name": "Ball State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "baylor": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "b6b45b7464278fa6",
+        "title": "2026 football home-game themes",
+        "date": "2026-06-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Baylor announced themed promotions for its 2026 home football games.",
+        "source_url": "https://baylorbears.com/news/2026/6/22/baylor-announces-2026-football-game-themes",
+        "source_name": "Baylor",
+        "source_type": "official"
+      }
+    ]
+  },
+  "boise-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "cd2d65997771c2ac",
+        "title": "2026 football theme",
+        "date": "2026-08-06",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Boise State announced themed promotions for its 2026 home football games.",
+        "source_url": "https://broncosports.com/news/2026/8/6/Boise_State_to_Celebrate_Iconic_Moments_in_Program_History_with_this_Season\u2019s_Game_Themes",
+        "source_name": "Boise State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "boston-college": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "bowling-green": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "96bba6eb9847098a",
+        "title": "2026 football theme",
+        "date": "2026-05-11",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Bowling Green announced themed promotions for its 2026 home football games. The release names Home Opener Military Appreciation Day, Homecoming Extra Yard for Teachers, Hall of Fame Future Falcons Day, and Fan and Student Appreciation Night, among others.",
+        "source_url": "https://bgsufalcons.com/news/2026/5/11/bowling-green-built-falcon-football-unveils-2026-promotion-schedule",
+        "source_name": "Bowling Green State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "buffalo": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "22186b7c05291863",
+        "title": "2026 football theme",
+        "date": "2026-03-30",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Buffalo announced themed promotions for its 2026 home football games.",
+        "source_url": "https://ubbulls.com/news/2026/3/30/general-bulls-unveil-exciting-2026-home-football-promotions-at-broadview-stadium",
+        "source_name": "University at Buffalo",
+        "source_type": "official"
+      },
+      {
+        "id": "45aeb89ffd834166",
+        "title": "2026 football theme",
+        "date": "2026-10-20",
+        "announced": true,
+        "game": {
+          "opponent": "Bowling Green",
+          "home": true
+        },
+        "type": "theme_night",
+        "description": "Buffalo announced themed promotions for its 2026 home football games.",
+        "source_url": "https://ubbulls.com/news/2026/10/20/football-bulls-host-bowling-green-on-saturday-for-senior-day",
+        "source_name": "University at Buffalo",
+        "source_type": "official"
+      }
+    ]
+  },
+  "byu": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "central-michigan": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "d6db65d8bd755c44",
+        "title": "2026 football ticket offer",
+        "date": "2026-09-28",
+        "announced": false,
+        "game": {
+          "opponent": "Akron",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Central Michigan published a ticket offer for the 2026 football season.",
+        "source_url": "https://cmuchippewas.com/news/2026/9/28/football-2026-homecoming-central",
+        "source_name": "Central Michigan University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "charlotte": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "b592ffa76bf2f6ea",
+        "title": "2026 football ticket offer",
+        "date": "2026-01-12",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Charlotte published a ticket offer for the 2026 football season.",
+        "source_url": "https://charlotte49ers.com/news/2026/1/12/2026-football-season-tickets-now-available",
+        "source_name": "Charlotte Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "cincinnati": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "coastal-carolina": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "ad6a1af11de80ec4",
+        "title": "2026 football theme",
+        "date": "2026-05-13",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Coastal Carolina announced themed promotions for its 2026 home football games.",
+        "source_url": "https://goccusports.com/news/2026/5/13/last-call-renew-your-coastal-carolina-football-season-tickets",
+        "source_name": "Coastal Carolina University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "6ba6eed28dc8ab83",
+        "title": "2026 football promotional schedule",
+        "date": "2026-05-26",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Coastal Carolina announced themed promotions for its 2026 home football games. The release names White Out / Beach Bash and Teal Out.",
+        "source_url": "https://goccusports.com/news/2026/5/26/coastal-carolina-announces-2026-football-promotional-schedule",
+        "source_name": "Coastal Carolina University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "26f3ed160fa3e76a",
+        "title": "2026 football theme",
+        "date": "2026-07-14",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Coastal Carolina announced themed promotions for its 2026 home football games. The release names Beach Bash / White Out Sept and Homecoming / Black Out Nov.",
+        "source_url": "https://goccusports.com/news/2026/7/14/single-game-tickets-now-available-for-2026-football-season",
+        "source_name": "Coastal Carolina University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "bd18b5072042a142",
+        "title": "2026 football theme",
+        "date": "2026-08-21",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Coastal Carolina announced themed promotions for its 2026 home football games.",
+        "source_url": "https://goccusports.com/news/2026/8/21/coastal-carolina-football-home-opener-to-feature-three-part-drone-show-white-out-and-free-concessions",
+        "source_name": "Coastal Carolina University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "0ffc4a5e7a9d0ada",
+        "title": "2026 football giveaway",
+        "date": "2026-10-15",
+        "announced": true,
+        "game": {
+          "opponent": "App State",
+          "home": true
+        },
+        "type": "giveaway",
+        "description": "Coastal Carolina set a fan giveaway around its 2026 football games.",
+        "source_url": "https://goccusports.com/news/2026/10/15/coastal-carolina-to-give-away-five-90s-inspired-football-jerseys-friday-night",
+        "source_name": "Coastal Carolina University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "colorado": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "d6972f9c6e0a9a4a",
+        "title": "2026 football ticket offer",
+        "date": "2026-01-06",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Colorado published a ticket offer for the 2026 football season.",
+        "source_url": "https://cubuffs.com/news/2026/1/6/renew-your-football-season-tickets-for-2026-today",
+        "source_name": "University of Colorado Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "5e6231a01be7eeb4",
+        "title": "2026 football theme",
+        "date": "2026-04-14",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Colorado announced themed promotions for its 2026 home football games.",
+        "source_url": "https://cubuffs.com/news/2026/4/14/colorado-unveils-home-football-game-themes-in-conjunction-with-mini-plans-going-on-sale",
+        "source_name": "University of Colorado Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "c370b9bda80a1d9c",
+        "title": "2026 football ticket offer",
+        "date": "2026-05-05",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Colorado published a ticket offer for the 2026 football season.",
+        "source_url": "https://cubuffs.com/news/2026/5/5/single-game-football-tickets-on-sale-now",
+        "source_name": "University of Colorado Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "f652340a916e317f",
+        "title": "2026 football giveaway",
+        "date": "2026-09-19",
+        "announced": false,
+        "game": null,
+        "type": "giveaway",
+        "description": "Colorado set a fan giveaway around its 2026 football games.",
+        "source_url": "https://cubuffs.com/news/2026/9/19/football-giveaways-costly-as-buffs-suffer-defeat-to-northwestern",
+        "source_name": "University of Colorado Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "colorado-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "cd73e4965c72d365",
+        "title": "2026 football ticket offer",
+        "date": "2026-06-03",
+        "announced": true,
+        "game": {
+          "opponent": "Wyoming",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Colorado State published a ticket offer for the 2026 football season.",
+        "source_url": "https://csurams.com/news/2026/6/3/football-single-game-tickets-on-sale-now",
+        "source_name": "Colorado State Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "304b529727bb61b0",
+        "title": "2026 football giveaway",
+        "date": "2026-09-19",
+        "announced": false,
+        "game": null,
+        "type": "giveaway",
+        "description": "Colorado State set a fan giveaway around its 2026 football games.",
+        "source_url": "https://csurams.com/news/2026/9/19/general-9-19-g-que-bbq-20pt-free-sandwich19",
+        "source_name": "Colorado State Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "23fe9b967b633503",
+        "title": "2026 football giveaway",
+        "date": "2026-10-03",
+        "announced": false,
+        "game": null,
+        "type": "giveaway",
+        "description": "Colorado State set a fan giveaway around its 2026 football games.",
+        "source_url": "https://csurams.com/news/2026/10/3/general-10-3-g-que-bbq-20pt-free-sandwich",
+        "source_name": "Colorado State Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "4fcb6736cb509de1",
+        "title": "2026 football giveaway",
+        "date": "2026-10-24",
+        "announced": false,
+        "game": null,
+        "type": "giveaway",
+        "description": "Colorado State set a fan giveaway around its 2026 football games.",
+        "source_url": "https://csurams.com/news/2026/10/24/general-10-24-g-que-bbq-20pt-free-sandwich",
+        "source_name": "Colorado State Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "delaware": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "a3397f36c94cf1d3",
+        "title": "2026 football theme",
+        "date": "2026-10-17",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Delaware announced themed promotions for its 2026 home football games.",
+        "source_url": "https://bluehens.com/news/2026/10/17/football-plays-host-to-missouri-state-on-tuesday-for-senior-day",
+        "source_name": "University of Delaware Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "duke": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "east-carolina": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "cb5092a7f502efea",
+        "title": "2026 football ticket offer",
+        "date": "2026-03-02",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "East Carolina published a ticket offer for the 2026 football season.",
+        "source_url": "https://ecupirates.com/news/2026/3/2/2026-ecu-football-tickets-are-officially-on-sale",
+        "source_name": "East Carolina University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "6d1ea34d50327768",
+        "title": "2026 football ticket offer",
+        "date": "2026-10-22",
+        "announced": true,
+        "game": {
+          "opponent": "Temple",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "East Carolina published a ticket offer for the 2026 football season.",
+        "source_url": "https://ecupirates.com/news/2026/10/22/football-ecu-announces-halloween-ticket-special-and-game-day-festivities-for-temple-matchup",
+        "source_name": "East Carolina University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "eastern-michigan": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "4fc4b8ffd5af64a9",
+        "title": "2026 football home-game themes",
+        "date": "2026-07-21",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Eastern Michigan announced themed promotions for its 2026 home football games.",
+        "source_url": "https://emueagles.com/news/2026/7/21/eastern-football-announces-themes-for-2026-home-games",
+        "source_name": "Eastern Michigan University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "florida": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "florida-atlantic": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "53c96d5498fde1f5",
+        "title": "2026 football home-game themes",
+        "date": "2026-06-15",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Florida Atlantic announced themed promotions for its 2026 home football games. The release names Paradise Appreciation & Vice Night.",
+        "source_url": "https://fausports.com/news/2026/6/15/football-launches-singe-game-tickets-announces-home-game-themes",
+        "source_name": "Florida Atlantic University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "fresno-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "c8848bd822851273",
+        "title": "2026 football theme",
+        "date": "2026-03-23",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Fresno State announced themed promotions for its 2026 home football games.",
+        "source_url": "https://gobulldogs.com/news/2026/3/23/football-fresno-state-athletics-to-offer-limited-quantity-game-worn-ag-themed-football-jerseys-for-new-valley-co-op-gifts",
+        "source_name": "Fresno State",
+        "source_type": "official"
+      }
+    ]
+  },
+  "georgia": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "b090932faa288077",
+        "title": "2026 football theme",
+        "date": "2026-09-08",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Georgia announced themed promotions for its 2026 home football games.",
+        "source_url": "https://georgiadogs.com/news/2026/9/8/football-georgia-hosts-western-kentucky-for-unleashed-white-out-game",
+        "source_name": "University of Georgia Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "georgia-southern": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "cedbb85b2ea68148",
+        "title": "2026 football promotional schedule",
+        "date": "2026-04-04",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Georgia Southern announced themed promotions for its 2026 home football games.",
+        "source_url": "https://gseagles.com/news/2026/4/4/georgia-southern-announces-2026-football-promotional-schedule",
+        "source_name": "Georgia Southern University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "georgia-tech": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "hawai-i": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "c8c97f9ef205a765",
+        "title": "2026 football theme",
+        "date": "2026-08-18",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Hawai'i announced themed promotions for its 2026 home football games.",
+        "source_url": "https://hawaiiathletics.com/news/2026/8/18/football-group-ticket-offers-game-themes-for-2026-season",
+        "source_name": "University of Hawai&#39;i at Manoa Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "houston": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "98b5397e2c377829",
+        "title": "2026 football home-game themes",
+        "date": "2026-06-17",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Houston announced themed promotions for its 2026 home football games.",
+        "source_url": "https://uhcougars.com/news/2026/6/17/2026-football-game-themes-announced",
+        "source_name": "University of Houston Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "illinois": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "indiana": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "iowa-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "a8efe69ca9ad041c",
+        "title": "2026 football ticket offer",
+        "date": "2026-01-30",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Iowa State published a ticket offer for the 2026 football season.",
+        "source_url": "https://cyclones.com/news/2026/1/30/football-season-tickets-on-sale-monday",
+        "source_name": "Iowa State Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "0fa57160cb58f847",
+        "title": "2026 football home-game themes",
+        "date": "2026-06-11",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Iowa State announced themed promotions for its 2026 home football games.",
+        "source_url": "https://cyclones.com/news/2026/6/11/football-theme-games-announced-for-2026-season",
+        "source_name": "Iowa State Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "jacksonville-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "752641e01bad3983",
+        "title": "2026 football ticket offer",
+        "date": "2026-06-29",
+        "announced": true,
+        "game": {
+          "opponent": "Kennesaw State",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Jacksonville State published a ticket offer for the 2026 football season.",
+        "source_url": "https://jaxstatesports.com/news/2026/6/29/football-tickets-on-sale-for-jax-state-road-opener",
+        "source_name": "Jacksonville State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "95f128647c650f30",
+        "title": "2026 football ticket offer",
+        "date": "2026-08-03",
+        "announced": true,
+        "game": {
+          "opponent": "Sam Houston",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Jacksonville State published a ticket offer for the 2026 football season.",
+        "source_url": "https://jaxstatesports.com/news/2026/8/3/football-single-game-tickets-on-sale-now",
+        "source_name": "Jacksonville State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "james-madison": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "c6573a46d2326bf3",
+        "title": "2026 football promotional schedule",
+        "date": "2026-06-04",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "James Madison announced themed promotions for its 2026 home football games.",
+        "source_url": "https://jmusports.com/news/2026/6/4/jmu-announces-full-promotional-schedule-for-2026-football-season",
+        "source_name": "James Madison University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "kansas": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "kansas-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "f20f4786898176c3",
+        "title": "2026 football ticket offer",
+        "date": "2026-01-29",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Kansas State published a ticket offer for the 2026 football season.",
+        "source_url": "https://kstatesports.com/news/2026/1/29/2026-football-season-tickets-on-sale-next-week",
+        "source_name": "Kansas State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "21a58b2a967e5da4",
+        "title": "2026 football ticket offer",
+        "date": "2026-10-19",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Kansas State published a ticket offer for the 2026 football season.",
+        "source_url": "https://kstatesports.com/news/2026/10/19/athletics-2027-football-season-tickets-and-renewals-now-available",
+        "source_name": "Kansas State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "kennesaw-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "bd82b5923816eb9f",
+        "title": "2026 football ticket offer",
+        "date": "2026-02-16",
+        "announced": false,
+        "game": {
+          "opponent": "West Georgia",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Kennesaw State published a ticket offer for the 2026 football season.",
+        "source_url": "https://ksuowls.com/news/2026/2/16/renewals-begin-for-2026-kennesaw-state-football-tickets",
+        "source_name": "Kennesaw State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "kent-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "3a4298f38521c4b1",
+        "title": "2026 football promotional schedule",
+        "date": "2026-07-30",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Kent State announced themed promotions for its 2026 home football games.",
+        "source_url": "https://kentstatesports.com/news/2026/7/30/flashes-announce-2026-football-promotional-schedule",
+        "source_name": "Kent State Golden Flashes",
+        "source_type": "official"
+      }
+    ]
+  },
+  "kentucky": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "27668193d2fa9a54",
+        "title": "2026 football promotional schedule",
+        "date": "2026-06-25",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Kentucky announced themed promotions for its 2026 home football games.",
+        "source_url": "https://ukathletics.com/news/2026/06/25/2026-kentucky-football-promotional-schedule-fan-themes-announced",
+        "source_name": "UK Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "liberty": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "c7e27872d8add92e",
+        "title": "2026 football ticket offer",
+        "date": "2026-01-08",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Liberty published a ticket offer for the 2026 football season.",
+        "source_url": "https://libertyflames.com/news/2026/1/8/season-tickets-now-on-sale-for-2026-football-season",
+        "source_name": "Liberty University",
+        "source_type": "official"
+      }
+    ]
+  },
+  "louisiana": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "0e7dd38b6d0898aa",
+        "title": "2026 football promotional schedule",
+        "date": "2026-06-23",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Louisiana announced themed promotions for its 2026 home football games.",
+        "source_url": "https://ragincajuns.com/news/2026/6/23/louisiana-football-announces-2026-promotional-schedule",
+        "source_name": "Louisiana Ragin' Cajuns",
+        "source_type": "official"
+      },
+      {
+        "id": "3567083186694b8f",
+        "title": "2026 football ticket offer",
+        "date": "2026-08-04",
+        "announced": true,
+        "game": {
+          "opponent": "Lamar",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Louisiana published a ticket offer for the 2026 football season.",
+        "source_url": "https://ragincajuns.com/news/2026/8/4/2026-football-single-game-tickets-on-sale",
+        "source_name": "Louisiana Ragin' Cajuns",
+        "source_type": "official"
+      }
+    ]
+  },
+  "louisiana-tech": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "87ba1b030d2f1a82",
+        "title": "2026 football ticket offer",
+        "date": "2026-02-02",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Louisiana Tech published a ticket offer for the 2026 football season.",
+        "source_url": "https://latechsports.com/news/2026/2/2/2026-football-ticket-renewals-now-open",
+        "source_name": "LA Tech Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "e16782ce574ee355",
+        "title": "2026 football fan event",
+        "date": "2026-07-31",
+        "announced": false,
+        "game": null,
+        "type": "fan_experience",
+        "description": "Louisiana Tech scheduled an on-site fan event for the 2026 football season.",
+        "source_url": "https://latechsports.com/news/2026/7/31/general-louisiana-tech-to-host-2026-fall-fan-fest-on-aug-21-at-joe-aillet-stadium",
+        "source_name": "LA Tech Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "56b2e659696db631",
+        "title": "2026 football ticket offer",
+        "date": "2026-08-03",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Louisiana Tech published a ticket offer for the 2026 football season.",
+        "source_url": "https://latechsports.com/news/2026/8/3/2026-football-single-game-tickets-on-sale",
+        "source_name": "LA Tech Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "louisville": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "be4852c282cc2335",
+        "title": "2026 football home-game themes",
+        "date": "2026-06-11",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Louisville announced themed promotions for its 2026 home football games.",
+        "source_url": "https://gocards.com/news/2026/6/11/louisville-announces-theme-games-for-2026-football-season",
+        "source_name": "University of Louisville Athletic",
+        "source_type": "official"
+      }
+    ]
+  },
+  "marshall": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "c6d5738516f893b3",
+        "title": "2026 football theme",
+        "date": "2026-06-01",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Marshall announced themed promotions for its 2026 home football games.",
+        "source_url": "https://herdzone.com/news/2026/6/1/marshall-football-2026-game-themes-game-1-we-are-marshall",
+        "source_name": "Marshall University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "d097bf149beef45c",
+        "title": "2026 football theme",
+        "date": "2026-06-08",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Marshall announced themed promotions for its 2026 home football games.",
+        "source_url": "https://herdzone.com/news/2026/6/8/marshall-football-2026-game-themes-game-2-homecoming",
+        "source_name": "Marshall University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "d40cd3a5526358c1",
+        "title": "2026 football theme",
+        "date": "2026-06-16",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Marshall announced themed promotions for its 2026 home football games.",
+        "source_url": "https://herdzone.com/news/2026/6/16/marshall-football-2026-game-themes-game-3-we-are-herd-strong",
+        "source_name": "Marshall University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "b80928ddc8b89799",
+        "title": "2026 football theme",
+        "date": "2026-06-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Marshall announced themed promotions for its 2026 home football games.",
+        "source_url": "https://herdzone.com/news/2026/6/22/marshall-football-2026-game-themes-game-4-herd-house-party",
+        "source_name": "Marshall University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "77b1d7797bfa89d1",
+        "title": "2026 football theme",
+        "date": "2026-07-06",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Marshall announced themed promotions for its 2026 home football games.",
+        "source_url": "https://herdzone.com/news/2026/7/6/marshall-football-2026-game-themes-game-5-play-for-the-75",
+        "source_name": "Marshall University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "1da50b97781d4736",
+        "title": "2026 football theme",
+        "date": "2026-07-13",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Marshall announced themed promotions for its 2026 home football games.",
+        "source_url": "https://herdzone.com/news/2026/7/13/marshall-football-2026-game-themes-game-6-salute-to-service",
+        "source_name": "Marshall University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "maryland": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "98905277620bcbde",
+        "title": "2026 football home-game themes",
+        "date": "2026-02-19",
+        "announced": true,
+        "game": {
+          "opponent": "UCLA Homecoming",
+          "home": true
+        },
+        "type": "community",
+        "description": "Maryland scheduled a community event around its 2026 football games.",
+        "source_url": "https://umterps.com/news/2026/2/19/maryland-football-announces-theme-games-for-2026-season",
+        "source_name": "University of Maryland Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "55f6d5af64296bae",
+        "title": "2026 football promotional schedule",
+        "date": "2026-08-13",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Maryland announced themed promotions for its 2026 home football games. The release names DC Comics Superhero Day Presented by, Homecoming Presented by, Military Appreciation Day Presented by, and Maryland Forever Presented by.",
+        "source_url": "https://umterps.com/news/2026/8/13/maryland-football-announces-promotional-schedule-for-2026-season",
+        "source_name": "University of Maryland Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "massachusetts": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "0302e8a7f73488c2",
+        "title": "2026 football promotional schedule",
+        "date": "2026-07-14",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Massachusetts announced themed promotions for its 2026 home football games.",
+        "source_url": "https://umassathletics.com/news/2026/7/14/massachusetts-football-announces-promotional-schedule-and-releases-single-game-football-tickets",
+        "source_name": "University of Massachusetts Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "memphis": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "c9ab202b2984405c",
+        "title": "2026 football home-game themes",
+        "date": "2026-06-02",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Memphis announced themed promotions for its 2026 home football games. The release names 901 Game, Youth Day & UofM Student Appreciation, Battle for the Bones / BBQ & Blues, and The DeAngelo Williams Foundation, among others.",
+        "source_url": "https://gotigersgo.com/news/2026/6/2/football-themes-announced-for-2026-tiger-home-games",
+        "source_name": "University of Memphis Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "miami": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "miami-oh": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "e9d74281f9ca982e",
+        "title": "2026 football fan event",
+        "date": "2026-09-22",
+        "announced": false,
+        "game": null,
+        "type": "fan_experience",
+        "description": "Miami (OH) scheduled an on-site fan event for the 2026 football season.",
+        "source_url": "https://miamiredhawks.com/news/2026/9/22/general-miami-athletics-homecoming-week",
+        "source_name": "Miami University RedHawks",
+        "source_type": "official"
+      }
+    ]
+  },
+  "michigan": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "michigan-state": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "middle-tennessee": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "69804c87b70fd754",
+        "title": "2026 football promotional schedule",
+        "date": "2026-05-28",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Middle Tennessee announced themed promotions for its 2026 home football games.",
+        "source_url": "https://goblueraiders.com/news/2026/5/28/football-mtsu-marketing-announces-2026-football-game-promotions",
+        "source_name": "Middle Tennessee State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "833f74faea171c0a",
+        "title": "2026 football theme",
+        "date": "2026-07-31",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Middle Tennessee announced themed promotions for its 2026 home football games.",
+        "source_url": "https://goblueraiders.com/news/2026/7/31/mtsu-football-launches-season-long-team-store-featuring-exclusive-all-in-white-out-shirt",
+        "source_name": "Middle Tennessee State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "minnesota": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "575c6d4c8bdadf3f",
+        "title": "2026 football home-game themes",
+        "date": "2026-04-02",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Minnesota announced themed promotions for its 2026 home football games. The release names Gold Out & Champions Day, High School Band Cheer and Dance Day High, Maroon Out & Homecoming, and Senior Day.",
+        "source_url": "https://gophersports.com/news/2026/4/2/football-game-themes-for-2026-season-announced",
+        "source_name": "University of Minnesota Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "mississippi-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "528a59415e88f799",
+        "title": "2026 football theme",
+        "date": "2026-09-25",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Mississippi State announced themed promotions for its 2026 home football games.",
+        "source_url": "https://hailstate.com/news/2026/9/25/football-bulldogs-host-missouri-for-white-out-game",
+        "source_name": "Mississippi State",
+        "source_type": "official"
+      }
+    ]
+  },
+  "missouri": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "missouri-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "369f8f9a389af038",
+        "title": "2026 football ticket offer",
+        "date": "2026-05-11",
+        "announced": true,
+        "game": {
+          "opponent": "New Mexico State",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Missouri State published a ticket offer for the 2026 football season.",
+        "source_url": "https://missouristatebears.com/news/2026/5/11/football-missouri-state-announces-homecoming-weekend-dates",
+        "source_name": "Missouri State",
+        "source_type": "official"
+      },
+      {
+        "id": "ae00938bf2d2d894",
+        "title": "2026 football ticket offer",
+        "date": "2026-06-08",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Missouri State published a ticket offer for the 2026 football season.",
+        "source_url": "https://missouristatebears.com/news/2026/6/8/football-single-game-tickets-on-sale",
+        "source_name": "Missouri State",
+        "source_type": "official"
+      },
+      {
+        "id": "7a21610ca69418cc",
+        "title": "2026 football home-game themes",
+        "date": "2026-07-29",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Missouri State announced themed promotions for its 2026 home football games. The release names Heroes Day | Extra Yard for Teachers |, Youth Football Night Tues, Faith & Family Night | Black Out |, and Homecoming Sat, among others.",
+        "source_url": "https://missouristatebears.com/news/2026/7/29/mo-state-athletics-announces-2026-football-game-themes",
+        "source_name": "Missouri State",
+        "source_type": "official"
+      }
+    ]
+  },
+  "navy": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "nc-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "0f0ffafaedc35e2c",
+        "title": "2026 football ticket offer",
+        "date": "2026-03-12",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "NC State published a ticket offer for the 2026 football season.",
+        "source_url": "https://gopack.com/news/2026/3/12/football-tickets-on-sale-for-2026-nc-state-athletic-hall-of-fame-induction-gala",
+        "source_name": "NC State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "4c6a573b8fa41cde",
+        "title": "2026 football ticket offer",
+        "date": "2026-05-11",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "NC State published a ticket offer for the 2026 football season.",
+        "source_url": "https://gopack.com/news/2026/5/11/football-nc-state-football-single-game-tickets-on-sale-now",
+        "source_name": "NC State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "nevada": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "1104940426e5c2c5",
+        "title": "2026 football ticket offer",
+        "date": "2026-05-26",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Nevada published a ticket offer for the 2026 football season.",
+        "source_url": "https://nevadawolfpack.com/news/2026/5/26/nevada-football-2026-season-tickets-on-sale-now",
+        "source_name": "University of Nevada Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "af7e287288f675ef",
+        "title": "2026 football giveaway",
+        "date": "2026-09-19",
+        "announced": false,
+        "game": null,
+        "type": "giveaway",
+        "description": "Nevada set a fan giveaway around its 2026 football games.",
+        "source_url": "https://nevadawolfpack.com/news/2026/9/20/football-giveaways-doom-wolf-pack-saturday-night",
+        "source_name": "University of Nevada Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "new-mexico": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "north-carolina": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "north-texas": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "86340781ee3c4375",
+        "title": "2026 football ticket offer",
+        "date": "2026-06-15",
+        "announced": true,
+        "game": {
+          "opponent": "UNLV",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "North Texas published a ticket offer for the 2026 football season.",
+        "source_url": "https://meangreensports.com/news/2026/6/15/unt-athletics-announces-denton-desert-ticket-package-for-football-home-opener-vs-unlv",
+        "source_name": "University of North Texas Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "e13b828b184c5656",
+        "title": "2026 football home-game themes",
+        "date": "2026-06-23",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "North Texas announced themed promotions for its 2026 home football games.",
+        "source_url": "https://meangreensports.com/news/2026/6/23/football-announces-game-themes-for-2026-season",
+        "source_name": "University of North Texas Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "b240f8305e6ddd8b",
+        "title": "2026 football theme",
+        "date": "2026-09-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "North Texas announced themed promotions for its 2026 home football games.",
+        "source_url": "https://meangreensports.com/news/2026/9/22/football-mean-green-looking-to-rebound-on-senior-day",
+        "source_name": "University of North Texas Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "northern-illinois": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "8c18483d3b637933",
+        "title": "2026 football ticket offer",
+        "date": "2026-02-18",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Northern Illinois published a ticket offer for the 2026 football season.",
+        "source_url": "https://niuhuskies.com/news/2025/2/18/2025-niu-football-season-tickets-on-sale-as-huskie-athletic-fund-launches-new-membership-structure",
+        "source_name": "NIU Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "b0a497c0723e90a5",
+        "title": "2026 football ticket offer",
+        "date": "2026-04-21",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Northern Illinois published a ticket offer for the 2026 football season.",
+        "source_url": "https://niuhuskies.com/news/2025/4/21/niu-introduces-three-year-lock-in-rate-for-football-season-tickets",
+        "source_name": "NIU Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "f6547d4a98edcdf7",
+        "title": "2026 football theme",
+        "date": "2026-05-26",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Northern Illinois announced themed promotions for its 2026 home football games.",
+        "source_url": "https://niuhuskies.com/news/2026/5/26/niu-football-announces-promo-schedule-for-2026-season",
+        "source_name": "NIU Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "22982035a4009ff8",
+        "title": "2026 football community event",
+        "date": "2026-06-10",
+        "announced": true,
+        "game": null,
+        "type": "community",
+        "description": "Northern Illinois scheduled a community event around its 2026 football games.",
+        "source_url": "https://niuhuskies.com/news/2025/6/10/promotions-for-2025-niu-football-home-games-set",
+        "source_name": "NIU Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "751584edd54d7a77",
+        "title": "2026 football theme",
+        "date": "2026-08-16",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Northern Illinois announced themed promotions for its 2026 home football games.",
+        "source_url": "https://niuhuskies.com/news/2024/8/16/the-yard-niu-football-promotions-line-ups-set",
+        "source_name": "NIU Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "2556a3b772084a26",
+        "title": "2026 football theme",
+        "date": "2026-11-28",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Northern Illinois announced themed promotions for its 2026 home football games.",
+        "source_url": "https://niuhuskies.com/news/2025/11/28/football-kent-state-outlasts-niu-on-senior-day",
+        "source_name": "NIU Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "northwestern": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "ohio-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "e0761e91c8c42a96",
+        "title": "2026 football home-game themes",
+        "date": "2026-08-14",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Ohio State announced themed promotions for its 2026 home football games. The release names Honoring Coach Jim Tressel, Helmet Stripe Game, and The Rivalry Game.",
+        "source_url": "https://ohiostatebuckeyes.com/news/2026/8/14/football-new-at-the-shoe-ohio-state-unveils-2026-home-game-themes-and-fan-experience-upgrades",
+        "source_name": "Ohio State",
+        "source_type": "official"
+      }
+    ]
+  },
+  "oklahoma": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "3a731bfddb430942",
+        "title": "2026 football ticket offer",
+        "date": "2026-02-25",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Oklahoma published a ticket offer for the 2026 football season.",
+        "source_url": "https://soonersports.com/news/2026/2/25/athletics-spring-game-start-time-and-ticket-information-announced",
+        "source_name": "University of Oklahoma",
+        "source_type": "official"
+      }
+    ]
+  },
+  "oklahoma-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "609c3faf891ec8af",
+        "title": "2026 football ticket offer",
+        "date": "2026-08-27",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Oklahoma State published a ticket offer for the 2026 football season.",
+        "source_url": "https://okstate.com/news/2026/8/27/cowboy-football-oklahoma-state-sells-out-single-game-tickets-against-oregon",
+        "source_name": "Oklahoma State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "old-dominion": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "ole-miss": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "oregon": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "39ca25b951684a5f",
+        "title": "2026 football ticket offer",
+        "date": "2026-01-24",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Oregon published a ticket offer for the 2026 football season.",
+        "source_url": "https://goducks.com/news/2026/1/24/football-schedule-to-be-announced-tuesday-as-season-ticket-deadlines-for-2026-approach",
+        "source_name": "University of Oregon Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "oregon-state": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "penn-state": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "pittsburgh": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "9f17379578f95046",
+        "title": "2026 football promotional schedule",
+        "date": "2026-03-18",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Pittsburgh announced themed promotions for its 2026 home football games. The release names Pittsburgh Day, Hall of Fame Pitt honors the legends who, Party on the North Shore Acrisure Stadium, and 1976 National Championship Golden Anniversary, among others.",
+        "source_url": "https://pittsburghpanthers.com/news/2026/3/18/pitt-football-unveils-2026-promotional-schedule-as-part-of-revamped-game-day-fan-experience",
+        "source_name": "Pitt Panthers #H2P",
+        "source_type": "official"
+      },
+      {
+        "id": "d1954cc1a9ccf439",
+        "title": "2026 football home-game themes",
+        "date": "2026-04-17",
+        "announced": true,
+        "game": null,
+        "type": "fan_experience",
+        "description": "Pittsburgh scheduled an on-site fan event for the 2026 football season.",
+        "source_url": "https://pittsburghpanthers.com/news/2026/4/17/pitt-football-announces-2026-group-theme-schedule",
+        "source_name": "Pitt Panthers #H2P",
+        "source_type": "official"
+      }
+    ]
+  },
+  "purdue": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "rice": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "rutgers": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "488bd387df9b7228",
+        "title": "2026 football giveaway",
+        "date": "2026-04-14",
+        "announced": true,
+        "game": {
+          "opponent": "Indiana",
+          "home": true
+        },
+        "type": "giveaway",
+        "description": "Rutgers set a fan giveaway around its 2026 football games.",
+        "source_url": "https://scarletknights.com/news/2026/4/14/football-2026-homecoming-family-weekend-oct-3-vs-indiana",
+        "source_name": "Rutgers University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "ca6077cfa8ed88ed",
+        "title": "2026 football ticket offer",
+        "date": "2026-07-07",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Rutgers published a ticket offer for the 2026 football season.",
+        "source_url": "https://scarletknights.com/news/2026/7/7/don-t-miss-amoment-2026-football-themes-promotions",
+        "source_name": "Rutgers University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "sam-houston": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "san-diego-state": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "san-jos-state": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "smu": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "08a0ed08d59800e8",
+        "title": "2026 football promotional schedule",
+        "date": "2026-08-19",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "SMU announced themed promotions for its 2026 home football games.",
+        "source_url": "https://smumustangs.com/news/2026/8/19/smu-announces-2026-football-promotional-schedule",
+        "source_name": "SMU Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "south-alabama": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "8a302f6c9e6f8eed",
+        "title": "2026 football home-game themes",
+        "date": "2026-04-10",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "South Alabama announced themed promotions for its 2026 home football games.",
+        "source_url": "https://usajaguars.com/news/2026/4/10/football-south-alabama-announces-2026-game-themes",
+        "source_name": "University of South Alabama Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "south-carolina": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "south-florida": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "e1a9effb5162f430",
+        "title": "2026 football ticket offer",
+        "date": "2026-04-06",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "South Florida published a ticket offer for the 2026 football season.",
+        "source_url": "https://gousfbulls.com/news/2026/4/6/south-florida-football-spring-game-tickets-on-sale-now",
+        "source_name": "USF Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "45c7423b6f165f51",
+        "title": "2026 football promotional schedule",
+        "date": "2026-08-27",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "South Florida announced themed promotions for its 2026 home football games. The release names Opening Night Title sponsor, Homecoming Title sponsor, Black Out/Halloween Title sponsor, and Salute to Service Giveaway, among others.",
+        "source_url": "https://gousfbulls.com/news/2026/8/27/south-florida-unveils-2026-football-promotional-schedule",
+        "source_name": "USF Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "8de2f8d14f4f9c3c",
+        "title": "2026 football giveaway",
+        "date": "2026-10-14",
+        "announced": true,
+        "game": null,
+        "type": "giveaway",
+        "description": "South Florida set a fan giveaway around its 2026 football games.",
+        "source_url": "https://gousfbulls.com/news/2026/10/14/usf-football-returns-to-ray-jay-for-homecoming-clash-vs-kent-state",
+        "source_name": "USF Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "southern-miss": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "13d83bc82680c843",
+        "title": "2026 football ticket offer",
+        "date": "2026-02-18",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Southern Miss published a ticket offer for the 2026 football season.",
+        "source_url": "https://southernmiss.com/news/2026/2/18/southern-miss-announces-2026-football-season-ticket-pricing-for-new-and-renewal-tickets",
+        "source_name": "Southern Miss",
+        "source_type": "official"
+      },
+      {
+        "id": "1362a0d0d3bd321d",
+        "title": "2026 football promotional schedule",
+        "date": "2026-05-11",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Southern Miss announced themed promotions for its 2026 home football games.",
+        "source_url": "https://southernmiss.com/news/2026/5/11/southern-miss-announces-promotional-schedule-for-2026-football-home-games",
+        "source_name": "Southern Miss",
+        "source_type": "official"
+      }
+    ]
+  },
+  "syracuse": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "d2b5bad65cd4e285",
+        "title": "2026 football promotional schedule",
+        "date": "2026-06-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Syracuse announced themed promotions for its 2026 home football games. The release names Youth Sports Day Sept and Homecoming Nov.",
+        "source_url": "https://cuse.com/news/2026/6/22/syracuse-football-promotional-schedule-announced",
+        "source_name": "Syracuse University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "9889ab6114641973",
+        "title": "2026 football ticket offer",
+        "date": "2026-06-22",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Syracuse published a ticket offer for the 2026 football season.",
+        "source_url": "https://cuse.com/news/2026/6/22/football-exclusive-pre-sales-for-single-game-tickets-begin-tuesday",
+        "source_name": "Syracuse University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "tcu": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "9dec2af68f84fbeb",
+        "title": "2026 football home-game themes",
+        "date": "2026-07-23",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "TCU announced themed promotions for its 2026 home football games.",
+        "source_url": "https://gofrogs.com/news/2026/7/23/game-themes-for-2026-football-season-announced",
+        "source_name": "TCU Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "temple": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "d7351c91baf58dbb",
+        "title": "2026 football ticket offer",
+        "date": "2026-04-20",
+        "announced": true,
+        "game": {
+          "opponent": "Rhode Island",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Temple published a ticket offer for the 2026 football season.",
+        "source_url": "https://owlsports.com/news/2026/4/20/temple-football-announces-season-ticket-promotional-sale",
+        "source_name": "Temple",
+        "source_type": "official"
+      },
+      {
+        "id": "e3d9a72b63e15d8c",
+        "title": "2026 football promotional schedule",
+        "date": "2026-07-14",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Temple announced themed promotions for its 2026 home football games.",
+        "source_url": "https://owlsports.com/news/2026/7/14/temple-football-announces-2026-promotional-schedule",
+        "source_name": "Temple",
+        "source_type": "official"
+      }
+    ]
+  },
+  "tennessee": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "texas": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "texas-a-m": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "texas-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "178f399e21a6eb26",
+        "title": "2026 football home-game themes",
+        "date": "2026-03-25",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Texas State announced themed promotions for its 2026 home football games.",
+        "source_url": "https://txst.com/news/2026/3/25/texas-state-announces-2026-football-game-themes-and-promotions",
+        "source_name": "Texas State Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "texas-tech": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "af9efcf7133fa81f",
+        "title": "2026 football ticket offer",
+        "date": "2026-05-11",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Texas Tech published a ticket offer for the 2026 football season.",
+        "source_url": "https://texastech.com/news/2026/5/11/football-texas-tech-sells-out-2026-football-season-tickets",
+        "source_name": "Texas Tech Red Raiders",
+        "source_type": "official"
+      },
+      {
+        "id": "3c3095347ac34a47",
+        "title": "2026 football theme",
+        "date": "2026-06-18",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Texas Tech announced themed promotions for its 2026 home football games. The release names Agriculture Game, Homecoming, Red Raider Club Appreciation Game, and Senior Day.",
+        "source_url": "https://texastech.com/news/2026/6/18/football-texas-tech-unveils-game-themes-for-2026-season",
+        "source_name": "Texas Tech Red Raiders",
+        "source_type": "official"
+      },
+      {
+        "id": "460c424d1aab9395",
+        "title": "2026 student football promotion",
+        "date": "2026-08-14",
+        "announced": false,
+        "game": null,
+        "type": "student_promo",
+        "description": "Texas Tech aimed a student promotion at its 2026 football games.",
+        "source_url": "https://texastech.com/news/2026/8/14/football-texas-tech-introduces-new-student-ticket-reservation-system",
+        "source_name": "Texas Tech Red Raiders",
+        "source_type": "official"
+      },
+      {
+        "id": "135816d7a5eaf6ae",
+        "title": "2026 student football promotion",
+        "date": "2026-08-20",
+        "announced": true,
+        "game": null,
+        "type": "student_promo",
+        "description": "Texas Tech aimed a student promotion at its 2026 football games.",
+        "source_url": "https://texastech.com/news/2026/8/20/football-texas-tech-renames-student-section-to-honor-jones-family",
+        "source_name": "Texas Tech Red Raiders",
+        "source_type": "official"
+      }
+    ]
+  },
+  "toledo": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "f48eceeefd1921b4",
+        "title": "2026 football home-game themes",
+        "date": "2026-06-02",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Toledo announced themed promotions for its 2026 home football games.",
+        "source_url": "https://utrockets.com/news/2026/6/2/toledo-football-announces-game-themes-for-2026-season",
+        "source_name": "University of Toledo Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "7aedcd4e75cd6ca6",
+        "title": "2026 football giveaway",
+        "date": "2026-08-27",
+        "announced": false,
+        "game": null,
+        "type": "giveaway",
+        "description": "Toledo set a fan giveaway around its 2026 football games.",
+        "source_url": "https://utrockets.com/news/2026/8/27/toledo-football-set-for-2026-home-season-with-full-slate-of-promotional-themes",
+        "source_name": "University of Toledo Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "troy": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "643d6bf7a6eb9d3c",
+        "title": "2026 football home-game themes",
+        "date": "2026-05-14",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Troy announced themed promotions for its 2026 home football games.",
+        "source_url": "https://troytrojans.com/news/2026/5/14/troy-announces-game-themes-for-2026-football-season",
+        "source_name": "Troy University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "tulane": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "tulsa": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "uab": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "7b1bba77e675da9d",
+        "title": "2026 football fan event",
+        "date": "2026-06-01",
+        "announced": false,
+        "game": null,
+        "type": "fan_experience",
+        "description": "UAB scheduled an on-site fan event for the 2026 football season.",
+        "source_url": "https://uabsports.com/news/2026/6/1/football-group-tickets-and-fan-experience-packages-available-for-the-2026-season",
+        "source_name": "UAB Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "eacc8cab55c97f3e",
+        "title": "2026 football ticket offer",
+        "date": "2026-07-20",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "UAB published a ticket offer for the 2026 football season.",
+        "source_url": "https://uabsports.com/news/2026/7/20/football-uab-single-game-and-away-tickets-exclusive-presale",
+        "source_name": "UAB Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "510947798aa0032e",
+        "title": "2026 football ticket offer",
+        "date": "2026-08-03",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "UAB published a ticket offer for the 2026 football season.",
+        "source_url": "https://uabsports.com/news/2026/8/3/2026-uab-football-single-game-tickets-on-sale-now",
+        "source_name": "UAB Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "ucf": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "uconn": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "fefaeb9ff1d91f28",
+        "title": "2026 football ticket offer",
+        "date": "2026-07-16",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "UConn published a ticket offer for the 2026 football season.",
+        "source_url": "https://uconnhuskies.com/news/2026/7/16/single-game-tickets-for-uconn-footballs-2026-season-go-on-sale-next-week",
+        "source_name": "University of Connecticut Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "ul-monroe": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "d3a7756557cea0fe",
+        "title": "2026 football ticket offer",
+        "date": "2026-03-17",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "UL Monroe published a ticket offer for the 2026 football season.",
+        "source_url": "https://ulmwarhawks.com/news/2025/3/17/2025-ulm-football-season-tickets-on-sale-now",
+        "source_name": "University of Louisiana Monroe Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "932ff18d8201d6bb",
+        "title": "2026 football home-game themes",
+        "date": "2026-05-23",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "UL Monroe announced themed promotions for its 2026 home football games.",
+        "source_url": "https://ulmwarhawks.com/news/2025/5/23/ulm-announces-game-themes-for-2025-football-season",
+        "source_name": "University of Louisiana Monroe Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "3fc010fd47e42804",
+        "title": "2026 football ticket offer",
+        "date": "2026-08-15",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "UL Monroe published a ticket offer for the 2026 football season.",
+        "source_url": "https://ulmwarhawks.com/news/2025/8/15/general-ulm-athletics-partners-with-vivenu-as-official-ticketing-platform",
+        "source_name": "University of Louisiana Monroe Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "unlv": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "b5fee3f2c13d9fad",
+        "title": "2026 football ticket offer",
+        "date": "2026-02-04",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "UNLV published a ticket offer for the 2026 football season.",
+        "source_url": "https://unlvrebels.com/news/2026/2/4/unlv-announces-football-season-ticket-rewards-program",
+        "source_name": "University of Nevada Las Vegas Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "91dbb33e6406b6cf",
+        "title": "2026 football ticket offer",
+        "date": "2026-04-17",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "UNLV published a ticket offer for the 2026 football season.",
+        "source_url": "https://unlvrebels.com/news/2026/4/17/football-free-tickets-now-available-for-spring-game-april-25",
+        "source_name": "University of Nevada Las Vegas Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "6b7b72a26e348635",
+        "title": "2026 football home-game themes",
+        "date": "2026-04-20",
+        "announced": true,
+        "game": null,
+        "type": "community",
+        "description": "UNLV scheduled a community event around its 2026 football games.",
+        "source_url": "https://unlvrebels.com/news/2026/4/20/homecoming-game-announced-as-part-of-2026-football-themes",
+        "source_name": "University of Nevada Las Vegas Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "usc": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "utah": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "6eb2043f82fa2ab1",
+        "title": "2026 football ticket offer",
+        "date": "2026-02-12",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Utah published a ticket offer for the 2026 football season.",
+        "source_url": "https://utahutes.com/news/2026/2/12/utah-football-season-ticket-renewal-period-opens-today",
+        "source_name": "University of Utah Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "bafcddb3dafe08ab",
+        "title": "2026 football community event",
+        "date": "2026-08-05",
+        "announced": true,
+        "game": null,
+        "type": "community",
+        "description": "Utah scheduled a community event around its 2026 football games.",
+        "source_url": "https://utahutes.com/news/2026/8/5/2026-utah-football-home-game-promotions-announced",
+        "source_name": "University of Utah Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "b78da2bdf6890a84",
+        "title": "2026 football sponsor event",
+        "date": "2026-10-19",
+        "announced": false,
+        "game": {
+          "opponent": "Houston",
+          "home": true
+        },
+        "type": "sponsor_activation",
+        "description": "Utah paired a sponsor activation with its 2026 football games.",
+        "source_url": "https://utahutes.com/news/2026/10/19/general-game-week-fan-guide-presented-by-utah-360-homecoming-espn-college-gameday-vs-houston",
+        "source_name": "University of Utah Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "utah-state": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "utsa": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "virginia": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "wake-forest": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "0f674854356e9155",
+        "title": "2026 football ticket offer",
+        "date": "2026-01-13",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Wake Forest published a ticket offer for the 2026 football season.",
+        "source_url": "https://godeacs.com/news/2026/1/13/wake-forest-the-carolinas-winningest-power-4-program-opens-early-ticket-sales-for-2026-home-game-vs-college-football-playoff-finalist-miami-opening-night-on-sept-3",
+        "source_name": "Wake Forest University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "washington": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "0787ba3c6b7a44b9",
+        "title": "2026 football home-game themes",
+        "date": "2026-07-30",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Washington announced themed promotions for its 2026 home football games. The release names Boeing Apple Cup, Band Day Gameday presented by Dick's Drive-In, Community Day, and Unleashed Gameday presented by Pepsi, among others.",
+        "source_url": "https://gohuskies.com/news/2026/7/30/2026-uw-football-game-themes-announced",
+        "source_name": "University of Washington Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "washington-state": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "west-virginia": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "1bf9a366ca3337ab",
+        "title": "2026 football promotional schedule",
+        "date": "2026-07-06",
+        "announced": true,
+        "game": {
+          "opponent": "Coastal Carolina",
+          "home": true
+        },
+        "type": "theme_night",
+        "description": "West Virginia announced themed promotions for its 2026 home football games.",
+        "source_url": "https://wvusports.com/news/2026/7/6/2026-football-promotional-slate-announced",
+        "source_name": "West Virginia University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "western-kentucky": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "a10f32b713a1671e",
+        "title": "2026 football home-game themes",
+        "date": "2026-08-24",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Western Kentucky announced themed promotions for its 2026 home football games.",
+        "source_url": "https://wkusports.com/news/2026/8/24/2026-hilltopper-football-game-themes-announced",
+        "source_name": "Western Kentucky University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "western-michigan": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "wisconsin": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "wyoming": {
+    "checked_at": "2026-10-26",
+    "items": []
+  }
+}

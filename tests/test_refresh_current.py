@@ -575,3 +575,33 @@ def test_overrides_do_not_apply_to_2020_or_a_different_matchup():
     assert other["games"][0]["attendance"] == 52273
     assert other["games"][0]["attendance_source"] == ESPN_SOURCE
     assert "not applied" in " ".join(other["warnings"])
+
+
+def test_boise_state_at_washington_state_is_a_pullman_home_game():
+    """Week 8, 2026 was played at Gesa Field, not Albertsons Stadium.
+
+    ESPN, the Pac-12 box score, and both athletics sites put Washington
+    State at home. A swapped ESPN event does not match (see
+    test coverage of match_espn_event). 2025 has no meeting of these teams.
+    """
+    import json
+    from pathlib import Path
+
+    live = json.loads(Path("data/live/2026.json").read_text(encoding="utf-8"))
+    game = next(row for row in live["games"] if row["id"] == 401860907)
+    assert game["start_date"].startswith("2026-10-24")
+    assert game["home_team"] == "Washington State"
+    assert game["away_team"] == "Boise State"
+    assert game["venue"] == "Gesa Field"
+    assert game["venue_id"] == 3820
+    assert game["neutral_site"] is False
+    assert game["attendance"] == 2730
+    assert game["home_points"] == 10
+    assert game["away_points"] == 31
+    prior = json.loads(Path("data/live/2025.json").read_text(encoding="utf-8"))
+    meetings = [
+        row
+        for row in prior["games"]
+        if {row.get("home_team"), row.get("away_team")} == {"Washington State", "Boise State"}
+    ]
+    assert meetings == []
