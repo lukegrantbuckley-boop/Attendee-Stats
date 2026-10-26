@@ -54,7 +54,7 @@ from attendee_tracker.store import (
 
 MISSING_KEY_MESSAGE = """CFBD_API_KEY is not set.
 Copy .env.example to .env and paste a key from https://collegefootballdata.com/key
-Attendee Tracker will not invent attendance figures.
+CFB Engagement Tracker will not invent attendance figures.
 The site can still be reviewed with the labeled sample fixture. Start it with:
   python -m attendee_tracker.serve
 """
@@ -66,7 +66,7 @@ _YEAR_RANGE = re.compile(r"(\d{4})\s*[-:]\s*(\d{4})")
 
 def main(argv: list[str] | None = None) -> None:
     load_dotenv()
-    parser = argparse.ArgumentParser(description="Refresh the CFBD cache for Attendee Tracker.")
+    parser = argparse.ArgumentParser(description="Refresh the CFBD cache for CFB Engagement Tracker.")
     parser.add_argument(
         "--year",
         type=int,

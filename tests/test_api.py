@@ -215,5 +215,5 @@ def test_index_html():
     client = TestClient(app)
     response = client.get("/")
     assert response.status_code == 200
-    assert "Attendee Tracker" in response.text
+    assert "CFB Engagement Tracker" in response.text
     assert "/assets/app.js" in response.text
