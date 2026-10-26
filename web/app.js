@@ -1,4 +1,4 @@
-/* Attendee Tracker UI. Attendance comes from /api/season and /api/school.
+/* CFB Engagement Tracker UI. Attendance comes from /api/season and /api/school.
    Business headlines load separately from /api/school/{slug}/business-news.
    Power valuations load from /api/valuations.
    Marketing approaches load from /api/marketing.
@@ -83,7 +83,7 @@ function applyChrome() {
     : "AP poll not in this cache";
   const source = meta.synthetic ? "Sample data" : "College Football Data";
   seasonLabel.textContent = `${meta.season} season · ${poll} · ${source}`;
-  document.title = `Attendee Tracker · ${meta.season}`;
+  document.title = `CFB Engagement Tracker · ${meta.season}`;
   if (meta.banner) {
     banner.hidden = false;
     banner.replaceChildren(

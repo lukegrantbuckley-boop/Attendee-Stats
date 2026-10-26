@@ -1,4 +1,4 @@
-"""HTTP API and static site for Attendee Tracker."""
+"""HTTP API and static site for CFB Engagement Tracker."""
 
 from __future__ import annotations
 
@@ -22,7 +22,7 @@ from attendee_tracker.valuations import ValuationsError, list_valuations
 WEB = Path(__file__).resolve().parent.parent / "web"
 
 load_dotenv()
-app = FastAPI(title="Attendee Tracker", docs_url=None, redoc_url=None)
+app = FastAPI(title="CFB Engagement Tracker", docs_url=None, redoc_url=None)
 
 
 @app.get("/api/health")

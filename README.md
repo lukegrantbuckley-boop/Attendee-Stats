@@ -1,4 +1,4 @@
-# Attendee Tracker
+# CFB Engagement Tracker
 
 College football home attendance for every FBS program, grouped by conference. Phase 1 covers Power 4 and Group of 5 schools: logos, stadium capacity, season record, the latest AP Top 25, a home-attendance chart by opponent, and a computed look at how record lines up with the crowd. Ticket prices are not in this version.
 
