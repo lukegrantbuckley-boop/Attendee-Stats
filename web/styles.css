@@ -917,6 +917,33 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 .view-toggle { margin: 0 0 14px; }
 
+.campaign-list { display: flex; flex-direction: column; gap: 10px; }
+
+.campaign {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 16px;
+  padding: 14px 16px;
+}
+
+.campaign h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 560;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.campaign p { margin: 8px 0 0; }
+
+.campaign-game { margin-top: 6px; }
+
+.pill.announced {
+  background: #1e3a5f;
+  color: #f8fafc;
+}
+
 .rev-stats .stat b {
   display: flex;
   align-items: center;

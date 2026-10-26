@@ -1,0 +1,3311 @@
+{
+  "air-force": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "2c59aed841deb8b2",
+        "title": "2025 football fan event",
+        "date": "2025-07-10",
+        "announced": true,
+        "game": null,
+        "type": "fan_experience",
+        "description": "Air Force scheduled an on-site fan event for the 2025 football season.",
+        "source_url": "https://goairforcefalcons.com/news/2025/7/10/football-falcon-fan-fest-is-free-and-open-to-the-public",
+        "source_name": "Air Force Academy Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "5ed6918660dae37e",
+        "title": "2025 football theme",
+        "date": "2025-11-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Air Force announced themed promotions for its 2025 home football games.",
+        "source_url": "https://goairforcefalcons.com/news/2025/11/22/football-air-force-downed-by-new-mexico-on-senior-night",
+        "source_name": "Air Force Academy Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "akron": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "55ffb4691350d0df",
+        "title": "Group Bounce Back Nov",
+        "date": "2025-05-28",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Akron announced themed promotions for its 2025 home football games. The release names Group Bounce Back Nov.",
+        "source_url": "https://gozips.com/news/2025/5/28/akron-athletics-announces-2025-football-promo-schedule",
+        "source_name": "University of Akron Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "alabama": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "ab0b3c4524efa9e6",
+        "title": "2025 football ticket offer",
+        "date": "2025-07-07",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Alabama published a ticket offer for the 2025 football season.",
+        "source_url": "https://rolltide.com/news/2025/7/7/footballs-home-single-game-tickets-on-sale-july-8",
+        "source_name": "Alabama Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "d73aabca7a891fa3",
+        "title": "2025 football theme",
+        "date": "2025-11-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Alabama announced themed promotions for its 2025 home football games.",
+        "source_url": "https://rolltide.com/news/2025/11/22/no-10-10-10-alabama-football-downs-eastern-illinois-56-0-on-senior-day",
+        "source_name": "Alabama Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "app-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "e0c619deb3247c82",
+        "title": "2025 football theme",
+        "date": "2025-05-16",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "App State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://appstatesports.com/news/2025/5/16/app-state-reveals-2025-football-game-themes",
+        "source_name": "App State Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "9d559404029709ac",
+        "title": "2025 football ticket offer",
+        "date": "2025-06-06",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "App State published a ticket offer for the 2025 football season.",
+        "source_url": "https://appstatesports.com/news/2025/6/6/2025-football-single-game-ticket-update",
+        "source_name": "App State Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "arizona": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "635a615dfef19146",
+        "title": "2025 football home-game themes",
+        "date": "2025-03-31",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Arizona announced themed promotions for its 2025 home football games.",
+        "source_url": "https://arizonawildcats.com/news/2025/3/31/arizona-football-announces-2025-game-themes",
+        "source_name": "University of Arizona Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "d40b9cac55d30fce",
+        "title": "2025 football theme",
+        "date": "2025-11-17",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Arizona announced themed promotions for its 2025 home football games.",
+        "source_url": "https://arizonawildcats.com/news/2025/11/17/football-wildcats-host-bears-for-senior-day-at-casino-del-sol-stadium",
+        "source_name": "University of Arizona Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "5864b63de79051ab",
+        "title": "2025 football theme",
+        "date": "2025-11-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Arizona announced themed promotions for its 2025 home football games.",
+        "source_url": "https://arizonawildcats.com/news/2025/11/22/football-arizona-holds-baylor-scoreless-in-second-half-for-senior-day-win",
+        "source_name": "University of Arizona Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "arkansas": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "auburn": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "ball-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "9572db5739c72c6f",
+        "title": "2025 football ticket offer",
+        "date": "2025-08-20",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Ball State published a ticket offer for the 2025 football season.",
+        "source_url": "https://ballstatesports.com/news/2025/8/20/football-homecoming-game-slated-for-3-30-pm-oct-18-vs-akron",
+        "source_name": "Ball State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "baylor": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "6d0f33522f741d43",
+        "title": "2025 football home-game themes",
+        "date": "2025-06-06",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Baylor announced themed promotions for its 2025 home football games.",
+        "source_url": "https://baylorbears.com/news/2025/6/6/2025-baylor-football-game-themes-announced",
+        "source_name": "Baylor",
+        "source_type": "official"
+      },
+      {
+        "id": "d0ddd39ee16c388b",
+        "title": "2025 football theme",
+        "date": "2025-06-09",
+        "announced": true,
+        "game": {
+          "opponent": "Auburn",
+          "home": true
+        },
+        "type": "theme_night",
+        "description": "Baylor announced themed promotions for its 2025 home football games.",
+        "source_url": "https://baylorbears.com/news/2025/6/9/blackout-on-the-brazos-2025-baylor-football-vs-auburn-game-theme-revealed",
+        "source_name": "Baylor",
+        "source_type": "official"
+      }
+    ]
+  },
+  "boise-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "57dbb202593afb33",
+        "title": "2025 football ticket offer",
+        "date": "2025-04-15",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Boise State published a ticket offer for the 2025 football season.",
+        "source_url": "https://broncosports.com/news/2025/4/15/general-2025-bronco-football-season-tickets-available-for-purchase",
+        "source_name": "Boise State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "f1a60e8106647afd",
+        "title": "2025 football ticket offer",
+        "date": "2025-05-13",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Boise State published a ticket offer for the 2025 football season.",
+        "source_url": "https://broncosports.com/news/2025/5/13/boise-state-athletics-announces-season-ticket-target-of-23k-for-football",
+        "source_name": "Boise State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "71c0933978fb632c",
+        "title": "2025 football theme",
+        "date": "2025-11-19",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Boise State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://broncosports.com/news/2025/11/19/football-braxton-fely-a-senior-day-that-almost-wasn-t",
+        "source_name": "Boise State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "175e39233014340d",
+        "title": "2025 football theme",
+        "date": "2025-11-20",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Boise State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://broncosports.com/news/2025/11/20/football-broncos-celebrate-senior-night-against-colorado-state",
+        "source_name": "Boise State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "boston-college": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "a8e4e8c738f58986",
+        "title": "2025 football community event",
+        "date": "2025-02-27",
+        "announced": true,
+        "game": null,
+        "type": "community",
+        "description": "Boston College scheduled a community event around its 2025 football games.",
+        "source_url": "https://bceagles.com/news/2025/2/27/theme-days-set-for-2025-bc-football-season",
+        "source_name": "Boston College Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "bowling-green": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "7fbe5054650bf40c",
+        "title": "2025 football community event",
+        "date": "2025-07-02",
+        "announced": true,
+        "game": null,
+        "type": "community",
+        "description": "Bowling Green scheduled a community event around its 2025 football games.",
+        "source_url": "https://bgsufalcons.com/news/2025/7/2/general-bgsu-athletics-partners-with-vet-tix-to-provide-complimentary-tickets-to-veterans-military-personnel-first-responders-and-their-families",
+        "source_name": "Bowling Green State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "ddc5f24961615217",
+        "title": "2025 football theme",
+        "date": "2025-10-27",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Bowling Green announced themed promotions for its 2025 home football games.",
+        "source_url": "https://bgsufalcons.com/news/2025/10/27/football-falcons-return-home-to-host-buffalo-for-senior-day-on-saturday",
+        "source_name": "Bowling Green State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "buffalo": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "4313564d35728c06",
+        "title": "2025 football ticket offer",
+        "date": "2025-06-02",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Buffalo published a ticket offer for the 2025 football season.",
+        "source_url": "https://ubbulls.com/news/2025/6/2/ub-football-ticket-update",
+        "source_name": "University at Buffalo",
+        "source_type": "official"
+      }
+    ]
+  },
+  "byu": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "central-michigan": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "9b005375cda37a0a",
+        "title": "2025 football ticket offer",
+        "date": "2025-07-16",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Central Michigan published a ticket offer for the 2025 football season.",
+        "source_url": "https://cmuchippewas.com/news/2025/7/16/special-football-season-ticket-promotion-announced",
+        "source_name": "Central Michigan University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "15add68595c832b9",
+        "title": "2025 football ticket offer",
+        "date": "2025-10-19",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Central Michigan published a ticket offer for the 2025 football season.",
+        "source_url": "https://cmuchippewas.com/news/2025/10/19/general-2025-homecoming-central",
+        "source_name": "Central Michigan University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "9528ba58467e7ab9",
+        "title": "2025 football theme",
+        "date": "2025-11-26",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Central Michigan announced themed promotions for its 2025 home football games.",
+        "source_url": "https://cmuchippewas.com/news/2025/11/26/football-chippewas-host-toledo-for-senior-day-final-regular-season-game-on-saturday",
+        "source_name": "Central Michigan University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "dbf0843bd4a8cf60",
+        "title": "2025 football theme",
+        "date": "2025-11-27",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Central Michigan announced themed promotions for its 2025 home football games.",
+        "source_url": "https://cmuchippewas.com/news/2025/11/27/football-senior-day-2025-prideful-group-bought-in-paid-the-price-and-laid-the-foundation",
+        "source_name": "Central Michigan University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "fb144a6c4448955a",
+        "title": "2025 football giveaway",
+        "date": "2025-12-26",
+        "announced": false,
+        "game": null,
+        "type": "giveaway",
+        "description": "Central Michigan set a fan giveaway around its 2025 football games.",
+        "source_url": "https://cmuchippewas.com/news/2025/12/26/football-chippewas-play-giveaway-in-falling-to-northwestern-in-gameabove-sports-bowl",
+        "source_name": "Central Michigan University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "charlotte": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "e598221628f91303",
+        "title": "2025 football community event",
+        "date": "2025-06-03",
+        "announced": false,
+        "game": null,
+        "type": "community",
+        "description": "Charlotte scheduled a community event around its 2025 football games.",
+        "source_url": "https://charlotte49ers.com/news/2025/6/3/theme-days-set-for-2025-football-season",
+        "source_name": "Charlotte Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "b64080fe3cb0c574",
+        "title": "2025 football theme",
+        "date": "2025-11-11",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Charlotte announced themed promotions for its 2025 home football games.",
+        "source_url": "https://charlotte49ers.com/news/2025/11/11/football-charlotte-hosts-utsa-on-senior-day",
+        "source_name": "Charlotte Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "bc4301213106ab73",
+        "title": "2025 football theme",
+        "date": "2025-11-15",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Charlotte announced themed promotions for its 2025 home football games.",
+        "source_url": "https://charlotte49ers.com/news/2025/11/15/football-niners-fall-to-utsa-on-senior-day",
+        "source_name": "Charlotte Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "cincinnati": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "coastal-carolina": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "476ae8acd279a490",
+        "title": "2025 football promotional schedule",
+        "date": "2025-04-03",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Coastal Carolina announced themed promotions for its 2025 home football games.",
+        "source_url": "https://goccusports.com/news/2025/4/3/football-announces-2025-promotional-schedule",
+        "source_name": "Coastal Carolina University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "1bce0d28da7b4f53",
+        "title": "2025 football ticket offer",
+        "date": "2025-08-06",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Coastal Carolina published a ticket offer for the 2025 football season.",
+        "source_url": "https://goccusports.com/news/2025/8/6/football-coastal-carolina-athletics-tickets-going-digital",
+        "source_name": "Coastal Carolina University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "colorado": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "colorado-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "e1ad057c89ff01af",
+        "title": "2025 football home-game themes",
+        "date": "2025-03-10",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Colorado State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://csurams.com/news/2025/3/10/football-rams-announce-homecoming-date-and-game-themes",
+        "source_name": "Colorado State Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "delaware": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "58fe5060e2d7c6cd",
+        "title": "2025 football theme",
+        "date": "2025-07-17",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Delaware announced themed promotions for its 2025 home football games.",
+        "source_url": "https://bluehens.com/news/2025/7/17/2025-football-promo-schedule-announced",
+        "source_name": "University of Delaware Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "ec8130e79dd09755",
+        "title": "2025 football theme",
+        "date": "2025-11-26",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Delaware announced themed promotions for its 2025 home football games.",
+        "source_url": "https://bluehens.com/news/2025/11/26/football-hosts-utep-for-senior-day-on-saturday",
+        "source_name": "University of Delaware Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "duke": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "east-carolina": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "ea76aabedae15747",
+        "title": "2025 football giveaway",
+        "date": "2025-01-23",
+        "announced": false,
+        "game": null,
+        "type": "giveaway",
+        "description": "East Carolina set a fan giveaway around its 2025 football games.",
+        "source_url": "https://ecupirates.com/news/2025/1/23/general-update-ecu-athletics-to-host-military-bowl-celebration-on-friday-jan-24",
+        "source_name": "East Carolina University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "412f0cdecb33db19",
+        "title": "2025 football ticket offer",
+        "date": "2025-01-29",
+        "announced": true,
+        "game": {
+          "opponent": "Campbell",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "East Carolina published a ticket offer for the 2025 football season.",
+        "source_url": "https://ecupirates.com/news/2025/1/29/save-the-date-2025-football-season-tickets",
+        "source_name": "East Carolina University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "66d9e4e4df6a5a75",
+        "title": "2025 football ticket offer",
+        "date": "2025-02-04",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "East Carolina published a ticket offer for the 2025 football season.",
+        "source_url": "https://ecupirates.com/news/2025/2/4/football-2025-season-tickets-and-renewals-on-sale",
+        "source_name": "East Carolina University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "3b29c832f5829e88",
+        "title": "2025 football ticket offer",
+        "date": "2025-08-27",
+        "announced": true,
+        "game": {
+          "opponent": "NC State",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "East Carolina published a ticket offer for the 2025 football season.",
+        "source_url": "https://ecupirates.com/news/2025/8/27/general-ecu-athletics-surpasses-last-years-season-ticket-total-with-15-205-sold",
+        "source_name": "East Carolina University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "1a5dbd5f5e9668e3",
+        "title": "2025 football theme",
+        "date": "2025-11-15",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "East Carolina announced themed promotions for its 2025 home football games.",
+        "source_url": "https://ecupirates.com/news/2025/11/15/football-ecu-hosts-memphis-for-senior-day",
+        "source_name": "East Carolina University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "eastern-michigan": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "0acad8b92aa6c589",
+        "title": "2025 football home-game themes",
+        "date": "2025-06-16",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Eastern Michigan published a ticket offer for the 2025 football season.",
+        "source_url": "https://emueagles.com/news/2025/6/16/eastern-football-announces-themes-for-2025-home-games",
+        "source_name": "Eastern Michigan University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "a387f3eadb7ab625",
+        "title": "2025 football theme",
+        "date": "2025-11-19",
+        "announced": true,
+        "game": {
+          "opponent": "Western Michigan",
+          "home": true
+        },
+        "type": "theme_night",
+        "description": "Eastern Michigan announced themed promotions for its 2025 home football games.",
+        "source_url": "https://emueagles.com/news/2025/11/19/football-eastern-faces-rival-wmu-in-senior-night-maction",
+        "source_name": "Eastern Michigan University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "c1700e9d684bf9da",
+        "title": "2025 football theme",
+        "date": "2025-11-24",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Eastern Michigan announced themed promotions for its 2025 home football games.",
+        "source_url": "https://emueagles.com/news/2025/11/24/football-emu-hosts-western-michigan-for-senior-night-and-the-night-shift-at-the-factory",
+        "source_name": "Eastern Michigan University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "florida": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "florida-atlantic": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "e7d3d183e3dc3cd6",
+        "title": "2025 football ticket offer",
+        "date": "2025-02-28",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Florida Atlantic published a ticket offer for the 2025 football season.",
+        "source_url": "https://fausports.com/news/2025/2/28/football-schedule-announces-season-tickets-now-on-sale",
+        "source_name": "Florida Atlantic University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "56368c0ab6055ce5",
+        "title": "2025 football promotional schedule",
+        "date": "2025-08-01",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Florida Atlantic announced themed promotions for its 2025 home football games.",
+        "source_url": "https://fausports.com/news/2025/8/1/florida-atlantic-announces-football-promotional-schedule",
+        "source_name": "Florida Atlantic University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "44561aeb057c8d0c",
+        "title": "2025 football ticket offer",
+        "date": "2025-11-19",
+        "announced": true,
+        "game": {
+          "opponent": "St",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Florida Atlantic published a ticket offer for the 2025 football season.",
+        "source_url": "https://fausports.com/news/2025/11/19/general-hometown-teams-feast-week-ticket-deal-announced",
+        "source_name": "Florida Atlantic University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "fresno-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "1c4b3e09426c8e54",
+        "title": "2025 football home-game themes",
+        "date": "2025-07-19",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Fresno State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://gobulldogs.com/news/2025/7/19/football-2025-football-game-themes-announced-single-game-tickets-on-sale",
+        "source_name": "Fresno State",
+        "source_type": "official"
+      },
+      {
+        "id": "31fe67af8b03d69d",
+        "title": "2025 football theme",
+        "date": "2025-11-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Fresno State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://gobulldogs.com/news/2025/11/22/football-dogs-stall-in-second-half-fall-on-senior-night",
+        "source_name": "Fresno State",
+        "source_type": "official"
+      }
+    ]
+  },
+  "georgia": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "f86406338c275bf0",
+        "title": "2025 football ticket offer",
+        "date": "2025-02-05",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Georgia published a ticket offer for the 2025 football season.",
+        "source_url": "https://georgiadogs.com/news/2025/2/5/2025-football-season-ticket-and-hartman-fund-contribution-information",
+        "source_name": "University of Georgia Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "79befb2f946a0e6d",
+        "title": "2025 football theme",
+        "date": "2025-11-17",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Georgia announced themed promotions for its 2025 home football games.",
+        "source_url": "https://georgiadogs.com/news/2025/11/17/football-georgia-faces-charlotte-on-senior-day",
+        "source_name": "University of Georgia Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "georgia-southern": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "3d9e1913d1f0ef11",
+        "title": "2025 football theme",
+        "date": "2025-11-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Georgia Southern announced themed promotions for its 2025 home football games.",
+        "source_url": "https://gseagles.com/news/2025/11/22/odu-spoils-senior-day-for-georgia-southern-football-on-saturday",
+        "source_name": "Georgia Southern University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "georgia-tech": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "hawai-i": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "c4ecebfa3e9fcaa7",
+        "title": "2025 football ticket offer",
+        "date": "2025-05-20",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Hawai'i published a ticket offer for the 2025 football season.",
+        "source_url": "https://hawaiiathletics.com/news/2025/5/20/football-season-tickets-on-sale",
+        "source_name": "University of Hawai&#39;i at Manoa Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "5003e4ac2e9b2716",
+        "title": "2025 football ticket offer",
+        "date": "2025-11-10",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Hawai'i published a ticket offer for the 2025 football season.",
+        "source_url": "https://hawaiiathletics.com/news/2025/11/10/2026-football-season-ticket-deposit",
+        "source_name": "University of Hawai&#39;i at Manoa Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "d396d0b1ac74474d",
+        "title": "2025 football theme",
+        "date": "2025-11-29",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Hawai'i announced themed promotions for its 2025 home football games.",
+        "source_url": "https://hawaiiathletics.com/news/2025/11/30/football-warriors-reclaim-paniolo-trophy-with-senior-night-win",
+        "source_name": "University of Hawai&#39;i at Manoa Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "houston": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "4b1775a3e210da95",
+        "title": "2025 football ticket offer",
+        "date": "2025-02-25",
+        "announced": true,
+        "game": {
+          "opponent": "Stephen",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Houston published a ticket offer for the 2025 football season.",
+        "source_url": "https://uhcougars.com/news/2025/2/25/football-season-tickets-renewals-underway-on-thursday-feb-27",
+        "source_name": "University of Houston Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "50eaf4061084f1b6",
+        "title": "2025 football theme",
+        "date": "2025-03-19",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Houston announced themed promotions for its 2025 home football games.",
+        "source_url": "https://uhcougars.com/news/2025/3/19/football-game-themes-unveiled-for-2025-season",
+        "source_name": "University of Houston Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "276f50ecd96dbbe0",
+        "title": "2025 football ticket offer",
+        "date": "2025-07-09",
+        "announced": true,
+        "game": {
+          "opponent": "Stephen",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Houston published a ticket offer for the 2025 football season.",
+        "source_url": "https://uhcougars.com/news/2025/7/9/houston-football-single-game-tickets-on-sale",
+        "source_name": "University of Houston Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "7967275c47478e06",
+        "title": "2025 football ticket offer",
+        "date": "2025-08-08",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Houston published a ticket offer for the 2025 football season.",
+        "source_url": "https://uhcougars.com/news/2025/8/8/football-cougars-set-to-host-fan-fest",
+        "source_name": "University of Houston Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "76c04ab52fb98d41",
+        "title": "2025 football ticket offer",
+        "date": "2025-08-19",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Houston published a ticket offer for the 2025 football season.",
+        "source_url": "https://uhcougars.com/news/2025/8/19/football-bayou-bucket-classic-luncheon-tickets-on-sale",
+        "source_name": "University of Houston Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "illinois": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "ad3c2ba40aefb6cb",
+        "title": "2025 football promotional schedule",
+        "date": "2025-07-29",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Illinois announced themed promotions for its 2025 home football games.",
+        "source_url": "https://fightingillini.com/news/2025/7/29/fighting-illini-football-promotional-schedule-announced-for-2025",
+        "source_name": "University of Illinois Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "934304ff4fcb0e08",
+        "title": "2025 football ticket offer",
+        "date": "2025-11-08",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Illinois published a ticket offer for the 2025 football season.",
+        "source_url": "https://fightingillini.com/news/2025/11/8/2026-football-season-ticket-deposits-now-availabile",
+        "source_name": "University of Illinois Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "indiana": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "iowa-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "ef8beb0358391e07",
+        "title": "2025 football ticket offer",
+        "date": "2025-01-31",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Iowa State published a ticket offer for the 2025 football season.",
+        "source_url": "https://cyclones.com/news/2025/1/31/football-season-tickets-on-sale-monday",
+        "source_name": "Iowa State Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "c53e516a6cec4929",
+        "title": "2025 football ticket offer",
+        "date": "2025-02-05",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Iowa State published a ticket offer for the 2025 football season.",
+        "source_url": "https://cyclones.com/news/2025/2/5/football-single-game-tickets-on-sale-soon-for-aer-lingus-classic",
+        "source_name": "Iowa State Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "d8ff5cbb07029352",
+        "title": "2025 football home-game themes",
+        "date": "2025-08-06",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Iowa State announced themed promotions for its 2025 home football games. The release names Cyclone Club Day of Honor Cyclone Club Day, Color It Cardinal FOX BIG NOON, White Out, and Homecoming and Hall of Fame Homecoming is.",
+        "source_url": "https://cyclones.com/news/2025/8/6/football-theme-games-announced-for-2025-season",
+        "source_name": "Iowa State Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "75bbe0cde6497ccd",
+        "title": "2025 football theme",
+        "date": "2025-11-19",
+        "announced": true,
+        "game": {
+          "opponent": "Kansas",
+          "home": true
+        },
+        "type": "theme_night",
+        "description": "Iowa State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://cyclones.com/news/2025/11/19/football-primer-iowa-state-hosts-kansas-for-senior-day",
+        "source_name": "Iowa State Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "58b775e069e6d2d5",
+        "title": "2025 football theme",
+        "date": "2025-11-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Iowa State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://cyclones.com/news/2025/11/22/football-cyclones-rout-jayhawks-on-senior-day",
+        "source_name": "Iowa State Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "jacksonville-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "8e3f27520e123a42",
+        "title": "2025 football ticket offer",
+        "date": "2025-03-03",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Jacksonville State published a ticket offer for the 2025 football season.",
+        "source_url": "https://jaxstatesports.com/news/2025/3/3/football-season-tickets-on-sale-now",
+        "source_name": "Jacksonville State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "8ea0e3f52f818c25",
+        "title": "2025 football ticket offer",
+        "date": "2025-08-01",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Jacksonville State published a ticket offer for the 2025 football season.",
+        "source_url": "https://jaxstatesports.com/news/2025/8/1/jax-state-football-single-game-tickets-on-sale-now",
+        "source_name": "Jacksonville State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "james-madison": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "03ba2db500d80c50",
+        "title": "2025 football promotional schedule",
+        "date": "2025-07-21",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "James Madison announced themed promotions for its 2025 home football games.",
+        "source_url": "https://jmusports.com/news/2025/7/21/james-madison-athletics-announces-its-full-promotional-schedule-for-the-2025-football-season",
+        "source_name": "James Madison University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "76c1f296cf0b2399",
+        "title": "Marvel Super Hero Day",
+        "date": "2025-08-22",
+        "announced": true,
+        "game": {
+          "opponent": "Washington State",
+          "home": true
+        },
+        "type": "theme_night",
+        "description": "James Madison announced a Marvel Super Hero Day promotion for a 2025 home football game.",
+        "source_url": "https://jmusports.com/news/2025/8/22/james-madison-football-to-host-first-ever-collegiate-marvel-super-hero-day",
+        "source_name": "James Madison University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "kansas": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "00449772195f9f8b",
+        "title": "2025 football ticket offer",
+        "date": "2025-01-23",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Kansas published a ticket offer for the 2025 football season.",
+        "source_url": "https://kuathletics.com/news/2025/1/23/the-time-is-now-2025-kansas-football-season-tickets-on-sale",
+        "source_name": "University of Kansas",
+        "source_type": "official"
+      },
+      {
+        "id": "df66da4262fd7ea4",
+        "title": "2025 football theme",
+        "date": "2025-11-24",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Kansas announced themed promotions for its 2025 home football games.",
+        "source_url": "https://kuathletics.com/news/2025/11/24/football-kansas-hosts-no-14-utah-on-senior-day",
+        "source_name": "University of Kansas",
+        "source_type": "official"
+      }
+    ]
+  },
+  "kansas-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "487cc444799f35c7",
+        "title": "2025 football ticket offer",
+        "date": "2025-03-03",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Kansas State published a ticket offer for the 2025 football season.",
+        "source_url": "https://kstatesports.com/news/2025/3/3/2025-football-season-ticket-information-announced",
+        "source_name": "Kansas State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "991b95e79de53091",
+        "title": "2025 football theme",
+        "date": "2025-06-11",
+        "announced": true,
+        "game": {
+          "opponent": "North Dakota",
+          "home": true
+        },
+        "type": "theme_night",
+        "description": "Kansas State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://kstatesports.com/news/2025/6/11/football-k-state-to-stripe-out-bill-snyder-family-stadium-for-home-opener-vs-north-dakota",
+        "source_name": "Kansas State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "eabe7087cd2ab609",
+        "title": "2025 football ticket offer",
+        "date": "2025-06-17",
+        "announced": true,
+        "game": {
+          "opponent": "North Dakota",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Kansas State published a ticket offer for the 2025 football season.",
+        "source_url": "https://kstatesports.com/news/2025/6/17/single-game-football-tickets-on-sale-now",
+        "source_name": "Kansas State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "086b9a446fcdba9d",
+        "title": "2025 football theme",
+        "date": "2025-08-07",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Kansas State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://kstatesports.com/news/2025/8/7/football-drone-show-and-stripe-out-highlight-home-opener",
+        "source_name": "Kansas State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "6d975f9921b0be83",
+        "title": "2025 football theme",
+        "date": "2025-11-24",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Kansas State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://kstatesports.com/news/2025/11/24/football-k-state-hosts-colorado-on-senior-day",
+        "source_name": "Kansas State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "kennesaw-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "ebcc8c4c86fd7f56",
+        "title": "2025 football ticket offer",
+        "date": "2025-04-09",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Kennesaw State published a ticket offer for the 2025 football season.",
+        "source_url": "https://ksuowls.com/news/2025/4/9/renewals-begin-for-2025-kennesaw-state-football-tickets",
+        "source_name": "Kennesaw State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "c0faf86277c3558e",
+        "title": "2025 football ticket offer",
+        "date": "2025-05-16",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Kennesaw State published a ticket offer for the 2025 football season.",
+        "source_url": "https://ksuowls.com/news/2025/5/16/football-season-ticket-renewal-deadline-is-today",
+        "source_name": "Kennesaw State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "61b1a47b31000d39",
+        "title": "2025 football ticket offer",
+        "date": "2025-05-19",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Kennesaw State published a ticket offer for the 2025 football season.",
+        "source_url": "https://ksuowls.com/news/2025/5/19/new-football-season-ticket-tickets-on-sale-now",
+        "source_name": "Kennesaw State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "35fc4bfd4b572ee7",
+        "title": "2025 football home-game themes",
+        "date": "2025-06-10",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Kennesaw State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://ksuowls.com/news/2025/6/10/ksu-football-announces-2025-home-game-themes-promotions",
+        "source_name": "Kennesaw State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "kent-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "9901377422758e1a",
+        "title": "2025 football promotional schedule",
+        "date": "2025-08-13",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Kent State announced themed promotions for its 2025 home football games. The release names Don't miss out on a second.",
+        "source_url": "https://kentstatesports.com/news/2025/8/13/flashes-announce-football-promotional-schedule",
+        "source_name": "Kent State Golden Flashes",
+        "source_type": "official"
+      },
+      {
+        "id": "adf258b2bdf05993",
+        "title": "2025 football theme",
+        "date": "2025-11-18",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Kent State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://kentstatesports.com/news/2025/11/18/football-golden-flashes-host-central-michigan-on-senior-day",
+        "source_name": "Kent State Golden Flashes",
+        "source_type": "official"
+      }
+    ]
+  },
+  "kentucky": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "726706c792223ade",
+        "title": "2025 football ticket offer",
+        "date": "2025-02-10",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Kentucky published a ticket offer for the 2025 football season.",
+        "source_url": "https://ukathletics.com/news/2025/02/10/uk-announces-2025-football-season-ticket-information",
+        "source_name": "UK Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "3c940ce4d220c020",
+        "title": "2025 football ticket offer",
+        "date": "2025-06-12",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Kentucky published a ticket offer for the 2025 football season.",
+        "source_url": "https://ukathletics.com/news/2025/06/12/kentucky-football-mini-pack-tickets-on-sale",
+        "source_name": "UK Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "liberty": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "45f095f785d6b063",
+        "title": "2025 football fan event",
+        "date": "2025-08-12",
+        "announced": false,
+        "game": null,
+        "type": "fan_experience",
+        "description": "Liberty scheduled an on-site fan event for the 2025 football season.",
+        "source_url": "https://libertyflames.com/news/2025/8/12/football-liberty-to-host-fan-appreciation-day-on-saturday",
+        "source_name": "Liberty University",
+        "source_type": "official"
+      }
+    ]
+  },
+  "louisiana": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "7928a9308d9d7391",
+        "title": "2025 football ticket offer",
+        "date": "2025-08-04",
+        "announced": true,
+        "game": {
+          "opponent": "Rice",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Louisiana published a ticket offer for the 2025 football season.",
+        "source_url": "https://ragincajuns.com/news/2025/8/4/single-game-tickets-on-sale-for-ragin-cajuns-football",
+        "source_name": "Louisiana Ragin' Cajuns",
+        "source_type": "official"
+      }
+    ]
+  },
+  "louisiana-tech": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "0002f3de00c7cc3f",
+        "title": "2025 football ticket offer",
+        "date": "2025-02-24",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Louisiana Tech published a ticket offer for the 2025 football season.",
+        "source_url": "https://latechsports.com/news/2025/2/24/tech-athletics-announces-2025-football-season-ticket-renewals-pricing-and-priority-points-program",
+        "source_name": "LA Tech Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "1c1f08276409bbe6",
+        "title": "2025 football ticket offer",
+        "date": "2025-03-03",
+        "announced": true,
+        "game": {
+          "opponent": "Southeastern",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Louisiana Tech published a ticket offer for the 2025 football season.",
+        "source_url": "https://latechsports.com/news/2025/3/3/bulldog-football-announces-2025-season-ticket-renewals-new-season-ticket-sales",
+        "source_name": "LA Tech Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "c4ce9bf9a76a3676",
+        "title": "2025 football fan event",
+        "date": "2025-07-25",
+        "announced": false,
+        "game": null,
+        "type": "fan_experience",
+        "description": "Louisiana Tech scheduled an on-site fan event for the 2025 football season.",
+        "source_url": "https://latechsports.com/news/2025/7/25/general-louisiana-tech-to-host-2025-fall-fan-fest-on-august-15-at-joe-aillet-stadium",
+        "source_name": "LA Tech Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "22dbdc35246ad52e",
+        "title": "2025 football ticket offer",
+        "date": "2025-08-04",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Louisiana Tech published a ticket offer for the 2025 football season.",
+        "source_url": "https://latechsports.com/news/2025/8/4/football-single-game-tickets-on-sale-now",
+        "source_name": "LA Tech Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "4b4add5b8c6c1b38",
+        "title": "2025 football ticket offer",
+        "date": "2025-09-02",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Louisiana Tech published a ticket offer for the 2025 football season.",
+        "source_url": "https://latechsports.com/news/2025/9/2/general-tickets-on-sale-for-hall-of-fame-induction-ceremony",
+        "source_name": "LA Tech Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "louisville": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "a1498d04683f1698",
+        "title": "2025 football home-game themes",
+        "date": "2025-06-17",
+        "announced": true,
+        "game": {
+          "opponent": "Eastern Kentucky",
+          "home": false
+        },
+        "type": "theme_night",
+        "description": "Louisville announced themed promotions for its 2025 home football games.",
+        "source_url": "https://gocards.com/news/2025/6/17/football-louisville-announces-2025-theme-games-at-l-n-stadium",
+        "source_name": "University of Louisville Athletic",
+        "source_type": "official"
+      }
+    ]
+  },
+  "marshall": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "698e9b8d823e5ec3",
+        "title": "2025 football ticket offer",
+        "date": "2025-05-28",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Marshall published a ticket offer for the 2025 football season.",
+        "source_url": "https://herdzone.com/news/2025/5/28/marshall-footballs-2025-season-tickets-on-sale-now",
+        "source_name": "Marshall University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "a37cf80c87408c74",
+        "title": "2025 football ticket offer",
+        "date": "2025-07-22",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Marshall published a ticket offer for the 2025 football season.",
+        "source_url": "https://herdzone.com/news/2025/7/22/single-game-2025-football-tickets-on-sale-this-week",
+        "source_name": "Marshall University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "f79107fb1949c4c6",
+        "title": "2025 football theme",
+        "date": "2025-11-27",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Marshall announced themed promotions for its 2025 home football games.",
+        "source_url": "https://herdzone.com/news/2025/11/27/marshall-football-hosts-georgia-southern-for-senior-day",
+        "source_name": "Marshall University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "maryland": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "33a27d682fe2b86d",
+        "title": "2025 football home-game themes",
+        "date": "2025-02-10",
+        "announced": true,
+        "game": {
+          "opponent": "Washington Homecoming",
+          "home": true
+        },
+        "type": "community",
+        "description": "Maryland scheduled a community event around its 2025 football games.",
+        "source_url": "https://umterps.com/news/2025/2/10/football-announces-theme-games-for-2025-season",
+        "source_name": "University of Maryland Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "de19e1c5af5b30aa",
+        "title": "2025 football ticket offer",
+        "date": "2025-07-09",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Maryland published a ticket offer for the 2025 football season.",
+        "source_url": "https://umterps.com/news/2025/7/9/football-announces-on-sale-dates-promotions-for-the-2025-season",
+        "source_name": "University of Maryland Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "massachusetts": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "memphis": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "miami": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "miami-oh": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "2620c3dba5b3def4",
+        "title": "2025 football ticket offer",
+        "date": "2025-07-29",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Miami (OH) published a ticket offer for the 2025 football season.",
+        "source_url": "https://miamiredhawks.com/news/2025/7/29/single-game-football-ticket-on-sale-august-1",
+        "source_name": "Miami University RedHawks",
+        "source_type": "official"
+      },
+      {
+        "id": "fe1ac313eacd31ec",
+        "title": "2025 football ticket offer",
+        "date": "2025-11-29",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Miami (OH) published a ticket offer for the 2025 football season.",
+        "source_url": "https://miamiredhawks.com/news/2025/11/29/football-mac-championship-ticket-info",
+        "source_name": "Miami University RedHawks",
+        "source_type": "official"
+      }
+    ]
+  },
+  "michigan": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "michigan-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "ff5d07f08d3b1dc8",
+        "title": "2025 football ticket offer",
+        "date": "2025-03-12",
+        "announced": false,
+        "game": {
+          "opponent": "UCLA",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Michigan State published a ticket offer for the 2025 football season.",
+        "source_url": "https://msuspartans.com/news/2025/3/12/football-season-ticket-renewals-are-underway",
+        "source_name": "Michigan State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "f13813b27c966040",
+        "title": "2025 football theme",
+        "date": "2025-11-11",
+        "announced": true,
+        "game": {
+          "opponent": "Penn State",
+          "home": true
+        },
+        "type": "theme_night",
+        "description": "Michigan State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://msuspartans.com/news/2025/11/11/football-land-grant-trophy-on-the-line-as-spartans-host-penn-state-on-senior-day",
+        "source_name": "Michigan State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "middle-tennessee": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "a962895ac824c8c1",
+        "title": "2025 football ticket offer",
+        "date": "2025-02-07",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Middle Tennessee published a ticket offer for the 2025 football season.",
+        "source_url": "https://goblueraiders.com/news/2025/2/7/football-blue-raider-football-season-tickets-are-on-sale",
+        "source_name": "Middle Tennessee State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "74c4ecca76f7d749",
+        "title": "2025 football ticket offer",
+        "date": "2025-04-15",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Middle Tennessee published a ticket offer for the 2025 football season.",
+        "source_url": "https://goblueraiders.com/news/2025/4/15/football-exclusive-football-season-ticket-holder-benefits-announced",
+        "source_name": "Middle Tennessee State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "5a4b02d13d5c60fb",
+        "title": "2025 football promotional schedule",
+        "date": "2025-06-03",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Middle Tennessee announced themed promotions for its 2025 home football games. The release names Mid-South Ford.",
+        "source_url": "https://goblueraiders.com/news/2025/6/3/2025-football-promotional-schedule-set",
+        "source_name": "Middle Tennessee State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "2cc189a8ce8b78b7",
+        "title": "2025 football ticket offer",
+        "date": "2025-07-22",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Middle Tennessee published a ticket offer for the 2025 football season.",
+        "source_url": "https://goblueraiders.com/news/2025/7/22/single-game-tickets-on-sale-for-blue-raider-football",
+        "source_name": "Middle Tennessee State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "9b0b373b3d1e4a80",
+        "title": "2025 football theme",
+        "date": "2025-11-21",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Middle Tennessee announced themed promotions for its 2025 home football games.",
+        "source_url": "https://goblueraiders.com/news/2025/11/21/football-blue-raiders-host-sam-houston-on-senior-day",
+        "source_name": "Middle Tennessee State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "20953207895fdea1",
+        "title": "2025 football theme",
+        "date": "2025-11-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Middle Tennessee announced themed promotions for its 2025 home football games.",
+        "source_url": "https://goblueraiders.com/news/2025/11/22/football-blue-raiders-roll-past-sam-houston-on-senior-day",
+        "source_name": "Middle Tennessee State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "minnesota": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "a909375eb0efcccc",
+        "title": "2025 football ticket offer",
+        "date": "2025-01-22",
+        "announced": true,
+        "game": {
+          "opponent": "Purdue",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Minnesota published a ticket offer for the 2025 football season.",
+        "source_url": "https://gophersports.com/news/2025/1/22/football-minnesota-to-host-purdue-on-homecoming",
+        "source_name": "University of Minnesota Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "4467147aaca0c39e",
+        "title": "2025 football home-game themes",
+        "date": "2025-04-01",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Minnesota announced themed promotions for its 2025 home football games. The release names Gold Out, High School Band Dance and Cheer Day High, Maroon Out, and Stripe Out / Homecoming, among others.",
+        "source_url": "https://gophersports.com/news/2025/4/1/football-game-themes-for-2025-season-announced",
+        "source_name": "University of Minnesota Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "79bf05c61479778f",
+        "title": "2025 football theme",
+        "date": "2025-08-26",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Minnesota announced themed promotions for its 2025 home football games.",
+        "source_url": "https://gophersports.com/news/2025/8/26/football-new-foods-game-themes-and-more-entry-points-await-minnesota-fans-in-advance-of-2025-season",
+        "source_name": "University of Minnesota Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "fc4df689367d166c",
+        "title": "2025 football theme",
+        "date": "2025-11-28",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Minnesota announced themed promotions for its 2025 home football games.",
+        "source_url": "https://gophersports.com/news/2025/11/28/football-game-trailer-gophers-badgers-on-senior-day",
+        "source_name": "University of Minnesota Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "mississippi-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "42b7d7108e3054ad",
+        "title": "2025 football theme",
+        "date": "2025-08-14",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Mississippi State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://hailstate.com/news/2025/8/14/football-bulldogs-to-honor-2000-snow-bowl-team-with-white-out-white-interlocking-msu-helmet-against-tennessee",
+        "source_name": "Mississippi State",
+        "source_type": "official"
+      },
+      {
+        "id": "75f860fdf40b8bd2",
+        "title": "2025 football ticket offer",
+        "date": "2025-10-02",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Mississippi State published a ticket offer for the 2025 football season.",
+        "source_url": "https://hailstate.com/news/2025/10/2/football-partial-season-tickets-on-sale-now",
+        "source_name": "Mississippi State",
+        "source_type": "official"
+      }
+    ]
+  },
+  "missouri": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "missouri-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "590034bf06ec3044",
+        "title": "2025 football theme",
+        "date": "2025-05-12",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Missouri State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://missouristatebears.com/news/2025/5/12/plan-for-single-game-football-tickets-unveiled",
+        "source_name": "Missouri State",
+        "source_type": "official"
+      },
+      {
+        "id": "ff7941f235d829d3",
+        "title": "2025 football home-game themes",
+        "date": "2025-06-20",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Missouri State announced themed promotions for its 2025 home football games. The release names FBS Home Opener Sat, Black Out | Future Bears Kids Day |, Ag Day Sat, and Homecoming | Heroes Day Sat, among others.",
+        "source_url": "https://missouristatebears.com/news/2025/6/20/football-missouri-state-announces-2025-game-themes",
+        "source_name": "Missouri State",
+        "source_type": "official"
+      },
+      {
+        "id": "add54ae4ce0ecbc2",
+        "title": "2025 football community event",
+        "date": "2025-11-11",
+        "announced": false,
+        "game": null,
+        "type": "community",
+        "description": "Missouri State scheduled a community event around its 2025 football games.",
+        "source_url": "https://missouristatebears.com/news/2025/11/11/football-grid-bears-prepare-for-homecoming-clash-vs-utep",
+        "source_name": "Missouri State",
+        "source_type": "official"
+      },
+      {
+        "id": "dfd236404decf118",
+        "title": "2025 football theme",
+        "date": "2025-11-29",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Missouri State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://missouristatebears.com/news/2025/11/29/football-big-fourth-quarter-by-la-tech-spoils-msu-senior-day",
+        "source_name": "Missouri State",
+        "source_type": "official"
+      },
+      {
+        "id": "1798242973b8152d",
+        "title": "2025 football ticket offer",
+        "date": "2025-12-04",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Missouri State published a ticket offer for the 2025 football season.",
+        "source_url": "https://missouristatebears.com/news/2025/12/4/2026-football-season-tickets-on-sale-now",
+        "source_name": "Missouri State",
+        "source_type": "official"
+      }
+    ]
+  },
+  "navy": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "cafec639c7b4bfcc",
+        "title": "2025 football fan event",
+        "date": "2025-08-02",
+        "announced": false,
+        "game": null,
+        "type": "fan_experience",
+        "description": "Navy scheduled an on-site fan event for the 2025 football season.",
+        "source_url": "https://navysports.com/news/2025/8/2/2025-navy-football-fan-fest-video",
+        "source_name": "Naval Academy Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "d21e7bf38b386304",
+        "title": "2025 football theme",
+        "date": "2025-11-06",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Navy announced themed promotions for its 2025 home football games.",
+        "source_url": "https://navysports.com/news/2025/11/6/sprint-football-hosts-caldwell-for-senior-day",
+        "source_name": "Naval Academy Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "d40f0dedd88cb0eb",
+        "title": "2025 football theme",
+        "date": "2025-11-07",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Navy announced themed promotions for its 2025 home football games.",
+        "source_url": "https://navysports.com/news/2025/11/8/second-half-shutout-helps-sprint-football-to-senior-day-win",
+        "source_name": "Naval Academy Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "nc-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "71f941bf0bd12743",
+        "title": "2025 football ticket offer",
+        "date": "2025-05-22",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "NC State published a ticket offer for the 2025 football season.",
+        "source_url": "https://gopack.com/news/2025/5/22/football-wolfpack-nation-delivers-again-30-000-season-tickets-sold-for-22nd-straight-year",
+        "source_name": "NC State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "nevada": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "4a1586d3f10b2613",
+        "title": "2025 football ticket offer",
+        "date": "2025-01-13",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Nevada published a ticket offer for the 2025 football season.",
+        "source_url": "https://nevadawolfpack.com/news/2025/1/13/2025-nevada-football-season-ticket-now-on-sale",
+        "source_name": "University of Nevada Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "2266a8d63fc17c3b",
+        "title": "2025 football home-game themes",
+        "date": "2025-08-01",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Nevada announced themed promotions for its 2025 home football games.",
+        "source_url": "https://nevadawolfpack.com/news/2025/8/1/football-single-game-tickets-on-sale-2025-game-themes-announced",
+        "source_name": "University of Nevada Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "new-mexico": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "north-carolina": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "0843aa76bc7b953b",
+        "title": "2025 football giveaway",
+        "date": "2025-10-14",
+        "announced": false,
+        "game": null,
+        "type": "giveaway",
+        "description": "North Carolina set a fan giveaway around its 2025 football games.",
+        "source_url": "https://goheels.com/news/2025/10/14/student-athlete-development-carolina-athletics-spotlights-world-mental-health-day",
+        "source_name": "University of North Carolina Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "077b817712f501a1",
+        "title": "2025 football community event",
+        "date": "2025-11-07",
+        "announced": true,
+        "game": null,
+        "type": "community",
+        "description": "North Carolina scheduled a community event around its 2025 football games.",
+        "source_url": "https://goheels.com/news/2025/11/7/football-know-before-you-go-vs-stanford-homecoming-military-appreciation-day-initiatives",
+        "source_name": "University of North Carolina Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "2c7f696022669528",
+        "title": "2025 football theme",
+        "date": "2025-11-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "North Carolina announced themed promotions for its 2025 home football games.",
+        "source_url": "https://goheels.com/news/2025/11/22/football-duke-slips-past-carolina-on-senior-day-32-25",
+        "source_name": "University of North Carolina Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "north-texas": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "573ad37cbcf0dd67",
+        "title": "2025 football ticket offer",
+        "date": "2025-02-03",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "North Texas published a ticket offer for the 2025 football season.",
+        "source_url": "https://meangreensports.com/news/2025/2/3/football-2025-season-ticket-renewals-available-now",
+        "source_name": "University of North Texas Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "79655fa5d639a9e9",
+        "title": "2025 football home-game themes",
+        "date": "2025-05-13",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "North Texas announced themed promotions for its 2025 home football games. The release names Home Opener Saturday Sept, DFW Sports Day Friday Oct, Homecoming Saturday Nov, and Senior Day In addition weekly traditions such as.",
+        "source_url": "https://meangreensports.com/news/2025/5/13/unt-announces-game-themes-for-2025-football-season",
+        "source_name": "University of North Texas Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "2a04fe6533b4e5dd",
+        "title": "2025 football ticket offer",
+        "date": "2025-06-03",
+        "announced": true,
+        "game": {
+          "opponent": "Washington State",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "North Texas published a ticket offer for the 2025 football season.",
+        "source_url": "https://meangreensports.com/news/2025/6/3/single-game-football-tickets-on-sale",
+        "source_name": "University of North Texas Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "be74fa6825f022ad",
+        "title": "2025 football giveaway",
+        "date": "2025-10-03",
+        "announced": true,
+        "game": {
+          "opponent": "USF",
+          "home": true
+        },
+        "type": "giveaway",
+        "description": "North Texas set a fan giveaway around its 2025 football games.",
+        "source_url": "https://meangreensports.com/news/2025/10/3/general-ticketing-and-marketing-updates-usf",
+        "source_name": "University of North Texas Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "3161ac8b0a68d810",
+        "title": "2025 football ticket offer",
+        "date": "2025-11-12",
+        "announced": true,
+        "game": {
+          "opponent": "Temple",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "North Texas published a ticket offer for the 2025 football season.",
+        "source_url": "https://meangreensports.com/news/2025/11/12/football-deposits-for-new-season-ticket-holders-on-sale-for-2026",
+        "source_name": "University of North Texas Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "903f8117dee7ed27",
+        "title": "2025 football ticket offer",
+        "date": "2025-12-15",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "North Texas published a ticket offer for the 2025 football season.",
+        "source_url": "https://meangreensports.com/news/2025/12/15/football-season-ticket-renewals-for-2026-on-sale",
+        "source_name": "University of North Texas Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "northern-illinois": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "northwestern": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "ohio-state": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "oklahoma": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "cd61425e2e9f1c4b",
+        "title": "2025 football ticket offer",
+        "date": "2025-06-18",
+        "announced": true,
+        "game": {
+          "opponent": "Auburn",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Oklahoma published a ticket offer for the 2025 football season.",
+        "source_url": "https://soonersports.com/news/2025/6/18/single-game-football-tickets-on-sale-for-six-2025-ou-home-contests",
+        "source_name": "University of Oklahoma",
+        "source_type": "official"
+      },
+      {
+        "id": "3b8618fee8ae5ee1",
+        "title": "2025 football theme",
+        "date": "2025-11-21",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Oklahoma announced themed promotions for its 2025 home football games.",
+        "source_url": "https://soonersports.com/news/2025/11/21/football-built-to-adapt-spears-jennings-shaped-by-military-roots",
+        "source_name": "University of Oklahoma",
+        "source_type": "official"
+      },
+      {
+        "id": "c9576e6df26ec33e",
+        "title": "2025 football theme",
+        "date": "2025-11-29",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Oklahoma announced themed promotions for its 2025 home football games.",
+        "source_url": "https://soonersports.com/news/2025/11/29/football-fourth-quarter-comeback-caps-senior-day-win",
+        "source_name": "University of Oklahoma",
+        "source_type": "official"
+      }
+    ]
+  },
+  "oklahoma-state": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "old-dominion": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "ole-miss": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "oregon": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "61f002f58530e181",
+        "title": "2025 football theme",
+        "date": "2025-11-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Oregon announced themed promotions for its 2025 home football games.",
+        "source_url": "https://goducks.com/news/2025/11/22/football-senior-day-a-celebration-for-ducks",
+        "source_name": "University of Oregon Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "oregon-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "b3d7d9efcbbbccf2",
+        "title": "2025 football ticket offer",
+        "date": "2025-01-06",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Oregon State published a ticket offer for the 2025 football season.",
+        "source_url": "https://osubeavers.com/news/2025/1/6/2025-football-season-ticket-renewals-available-now",
+        "source_name": "Oregon State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "194d0f006fe40a87",
+        "title": "2025 football ticket offer",
+        "date": "2025-07-29",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Oregon State published a ticket offer for the 2025 football season.",
+        "source_url": "https://osubeavers.com/news/2025/7/29/themes-promotions-set-for-2025-football-season",
+        "source_name": "Oregon State University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "ac79264d1ce91224",
+        "title": "2025 football theme",
+        "date": "2025-11-03",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Oregon State announced themed promotions for its 2025 home football games.",
+        "source_url": "https://osubeavers.com/news/2025/11/3/football-beavers-host-bearkats-senior-day-saturday",
+        "source_name": "Oregon State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "penn-state": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "pittsburgh": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "9ab194b786c1802c",
+        "title": "2025 football theme",
+        "date": "2025-06-12",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Pittsburgh announced themed promotions for its 2025 home football games.",
+        "source_url": "https://pittsburghpanthers.com/news/2025/6/12/pitt-football-announces-initial-home-game-promotions-for-2025-season",
+        "source_name": "Pitt Panthers #H2P",
+        "source_type": "official"
+      },
+      {
+        "id": "6186b702bc27d5de",
+        "title": "2025 football home-game themes",
+        "date": "2025-07-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Pittsburgh announced themed promotions for its 2025 home football games.",
+        "source_url": "https://pittsburghpanthers.com/news/2025/7/22/pitt-football-announces-remaining-2025-home-game-themes",
+        "source_name": "Pitt Panthers #H2P",
+        "source_type": "official"
+      },
+      {
+        "id": "ab1d6b1935114f61",
+        "title": "2025 football theme",
+        "date": "2025-11-24",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Pittsburgh announced themed promotions for its 2025 home football games.",
+        "source_url": "https://pittsburghpanthers.com/news/2025/11/24/football-game-week-pitt-welcomes-no-13-miami-on-senior-day",
+        "source_name": "Pitt Panthers #H2P",
+        "source_type": "official"
+      }
+    ]
+  },
+  "purdue": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "rice": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "37657eaf64e2951a",
+        "title": "2025 football ticket offer",
+        "date": "2025-04-18",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Rice published a ticket offer for the 2025 football season.",
+        "source_url": "https://riceowls.com/news/2025/4/18/2025-football-season-tickets-now-on-sale",
+        "source_name": "Rice University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "96d65d5cf0518196",
+        "title": "2025 football community event",
+        "date": "2025-07-25",
+        "announced": true,
+        "game": {
+          "opponent": "Houston",
+          "home": true
+        },
+        "type": "community",
+        "description": "Rice scheduled a community event around its 2025 football games.",
+        "source_url": "https://riceowls.com/news/2025/7/25/football-single-game-tickets-now-on-sale",
+        "source_name": "Rice University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "f258cf50dd6064d1",
+        "title": "2025 football theme",
+        "date": "2025-08-11",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Rice announced themed promotions for its 2025 home football games.",
+        "source_url": "https://riceowls.com/news/2025/8/11/2025-football-game-themes-revealed",
+        "source_name": "Rice University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "425b275cee992d5d",
+        "title": "2025 football theme",
+        "date": "2025-11-16",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Rice announced themed promotions for its 2025 home football games.",
+        "source_url": "https://riceowls.com/news/2025/11/16/football-senior-day-moves-to-prine-time",
+        "source_name": "Rice University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "rutgers": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "4f8776dad8a73a83",
+        "title": "2025 football ticket offer",
+        "date": "2025-03-04",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Rutgers published a ticket offer for the 2025 football season.",
+        "source_url": "https://scarletknights.com/news/2025/3/4/2025-football-season-tickets-on-sale",
+        "source_name": "Rutgers University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "43890f08e1d04e8c",
+        "title": "2025 football theme",
+        "date": "2025-06-17",
+        "announced": true,
+        "game": {
+          "opponent": "Iowa",
+          "home": true
+        },
+        "type": "theme_night",
+        "description": "Rutgers announced themed promotions for its 2025 home football games.",
+        "source_url": "https://scarletknights.com/news/2025/6/17/football-the-blackout-is-back-friday-sept-19-vs-iowa",
+        "source_name": "Rutgers University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "b9a1ee7f8638fb33",
+        "title": "2025 football home-game themes",
+        "date": "2025-06-24",
+        "announced": true,
+        "game": null,
+        "type": "community",
+        "description": "Rutgers scheduled a community event around its 2025 football games.",
+        "source_url": "https://scarletknights.com/news/2025/6/24/don-t-miss-amoment-football-announced-2025-themes-promotions",
+        "source_name": "Rutgers University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "93bdfaf53078ebf3",
+        "title": "2025 football community event",
+        "date": "2025-10-27",
+        "announced": true,
+        "game": {
+          "opponent": "Maryland",
+          "home": true
+        },
+        "type": "community",
+        "description": "Rutgers scheduled a community event around its 2025 football games.",
+        "source_url": "https://scarletknights.com/news/2025/10/27/football-military-appreciation-2-30-pm-vs-maryland",
+        "source_name": "Rutgers University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "bf95e33d8c5073d5",
+        "title": "2025 football theme",
+        "date": "2025-11-17",
+        "announced": true,
+        "game": {
+          "opponent": "Penn State",
+          "home": true
+        },
+        "type": "theme_night",
+        "description": "Rutgers announced themed promotions for its 2025 home football games.",
+        "source_url": "https://scarletknights.com/news/2025/11/17/football-senior-day-thank-you-fans-3-30-pm-vs-penn-state",
+        "source_name": "Rutgers University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "sam-houston": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "san-diego-state": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "san-jos-state": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "smu": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "b3337116d49db7ab",
+        "title": "2025 football ticket offer",
+        "date": "2025-01-15",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "SMU published a ticket offer for the 2025 football season.",
+        "source_url": "https://smumustangs.com/news/2025/1/15/football-season-ticket-pricing-for-2025-announced",
+        "source_name": "SMU Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "7272220e78919886",
+        "title": "2025 football home-game themes",
+        "date": "2025-05-30",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "SMU announced themed promotions for its 2025 home football games.",
+        "source_url": "https://smumustangs.com/news/2025/5/30/2025-football-theme-games-announced",
+        "source_name": "SMU Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "1668dcd37e8242ae",
+        "title": "2025 football theme",
+        "date": "2025-11-18",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "SMU announced themed promotions for its 2025 home football games.",
+        "source_url": "https://smumustangs.com/news/2025/11/18/football-mustangs-host-cardinals-on-senior-day-saturday-at-11-am-ct",
+        "source_name": "SMU Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "south-alabama": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "85f36913ed5ee720",
+        "title": "2025 football home-game themes",
+        "date": "2025-05-21",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "South Alabama announced themed promotions for its 2025 home football games.",
+        "source_url": "https://usajaguars.com/news/2025/5/21/south-alabama-football-announces-2025-game-themes",
+        "source_name": "University of South Alabama Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "782a37225e18d879",
+        "title": "2025 football ticket offer",
+        "date": "2025-07-01",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "South Alabama published a ticket offer for the 2025 football season.",
+        "source_url": "https://usajaguars.com/news/2025/7/1/south-alabama-football-away-game-tickets-on-sale",
+        "source_name": "University of South Alabama Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "c3e7e299c5618ae7",
+        "title": "2025 football theme",
+        "date": "2025-11-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "South Alabama announced themed promotions for its 2025 home football games.",
+        "source_url": "https://usajaguars.com/news/2025/11/23/football-jags-stay-perfect-against-southern-miss-with-senior-day-win",
+        "source_name": "University of South Alabama Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "south-carolina": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "south-florida": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "30e3cfa803dc511f",
+        "title": "2025 student football promotion",
+        "date": "2025-04-10",
+        "announced": false,
+        "game": null,
+        "type": "student_promo",
+        "description": "South Florida aimed a student promotion at its 2025 football games.",
+        "source_url": "https://gousfbulls.com/news/2025/4/10/football-bulls-excited-for-student-appreciation-night-scrimmage-under-the-lights",
+        "source_name": "USF Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "0f36f99aa054692d",
+        "title": "2025 football fan event",
+        "date": "2025-06-10",
+        "announced": false,
+        "game": null,
+        "type": "fan_experience",
+        "description": "South Florida scheduled an on-site fan event for the 2025 football season.",
+        "source_url": "https://gousfbulls.com/news/2025/6/10/football-usf-coaches-and-student-athletes-headline-bulls-around-the-bay-event-at-busch-gardens",
+        "source_name": "USF Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "a57692d563ee5367",
+        "title": "2025 football community event",
+        "date": "2025-11-06",
+        "announced": false,
+        "game": null,
+        "type": "community",
+        "description": "South Florida scheduled a community event around its 2025 football games.",
+        "source_url": "https://gousfbulls.com/news/2025/11/6/football-salute-to-service-honoring-military-service-holds-extra-special-meaning-for-many-bulls",
+        "source_name": "USF Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "28c91c1f9533b7b0",
+        "title": "2025 football giveaway",
+        "date": "2025-11-25",
+        "announced": false,
+        "game": null,
+        "type": "giveaway",
+        "description": "South Florida set a fan giveaway around its 2025 football games.",
+        "source_url": "https://gousfbulls.com/news/2025/11/25/usf-football-plans-many-giveaways-on-fan-appreciation-night-saturday-at-ray-jay",
+        "source_name": "USF Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "southern-miss": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "045a78b9b97c6dc4",
+        "title": "2025 football ticket offer",
+        "date": "2025-02-12",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Southern Miss published a ticket offer for the 2025 football season.",
+        "source_url": "https://southernmiss.com/news/2025/2/12/athletics-announces-drawings-for-renewed-football-season-ticket-holders",
+        "source_name": "Southern Miss",
+        "source_type": "official"
+      },
+      {
+        "id": "fd1b2216af54b8bf",
+        "title": "2025 football ticket offer",
+        "date": "2025-03-17",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Southern Miss published a ticket offer for the 2025 football season.",
+        "source_url": "https://southernmiss.com/news/2025/3/17/new-season-tickets-order-for-2025-football-season-now-available",
+        "source_name": "Southern Miss",
+        "source_type": "official"
+      },
+      {
+        "id": "49c969db8ed1deb0",
+        "title": "2025 football promotional schedule",
+        "date": "2025-07-10",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Southern Miss announced themed promotions for its 2025 home football games.",
+        "source_url": "https://southernmiss.com/news/2025/7/10/southern-miss-announces-2025-football-promotional-schedule",
+        "source_name": "Southern Miss",
+        "source_type": "official"
+      },
+      {
+        "id": "c337cc7a439a954c",
+        "title": "2025 football fan event",
+        "date": "2025-08-07",
+        "announced": false,
+        "game": null,
+        "type": "fan_experience",
+        "description": "Southern Miss scheduled an on-site fan event for the 2025 football season.",
+        "source_url": "https://southernmiss.com/news/2025/8/7/football-2025-fan-fest",
+        "source_name": "Southern Miss",
+        "source_type": "official"
+      },
+      {
+        "id": "d3992c2d6ed63692",
+        "title": "2025 football giveaway",
+        "date": "2025-09-29",
+        "announced": false,
+        "game": {
+          "opponent": "ULM",
+          "home": true
+        },
+        "type": "giveaway",
+        "description": "Southern Miss set a fan giveaway around its 2025 football games.",
+        "source_url": "https://southernmiss.com/news/2025/9/29/football-southern-miss-athletics-launches-the-golden-advantage-buy-early-score-more-ticket-promotion-for-homecoming-vs-ulm",
+        "source_name": "Southern Miss",
+        "source_type": "official"
+      }
+    ]
+  },
+  "syracuse": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "a50c038fe8880f21",
+        "title": "2025 football ticket offer",
+        "date": "2025-02-27",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Syracuse published a ticket offer for the 2025 football season.",
+        "source_url": "https://cuse.com/news/2025/2/27/football-family-weekend-orange-central-and-military-appreciation-dates-announced",
+        "source_name": "Syracuse University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "4723a8893a35c228",
+        "title": "2025 football ticket offer",
+        "date": "2025-04-28",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Syracuse published a ticket offer for the 2025 football season.",
+        "source_url": "https://cuse.com/news/2025/4/28/football-renew-season-tickets-by-may-1",
+        "source_name": "Syracuse University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "6c8a8a3cc9154563",
+        "title": "2025 football home-game themes",
+        "date": "2025-06-20",
+        "announced": true,
+        "game": {
+          "opponent": "UCONN The",
+          "home": true
+        },
+        "type": "community",
+        "description": "Syracuse scheduled a community event around its 2025 football games.",
+        "source_url": "https://cuse.com/news/2025/6/20/theme-days-announced-for-football-season",
+        "source_name": "Syracuse University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "d26903c71dd2d281",
+        "title": "2025 football ticket offer",
+        "date": "2025-06-24",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Syracuse published a ticket offer for the 2025 football season.",
+        "source_url": "https://cuse.com/news/2025/6/24/football-individual-game-tickets-on-sale",
+        "source_name": "Syracuse University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "tcu": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "temple": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "53bc45ee59edb4be",
+        "title": "2025 football ticket offer",
+        "date": "2025-06-10",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Temple published a ticket offer for the 2025 football season.",
+        "source_url": "https://owlsports.com/news/2025/6/10/temple-football-2025-single-game-tickets-on-sale-now",
+        "source_name": "Temple",
+        "source_type": "official"
+      },
+      {
+        "id": "5463f98872a710ca",
+        "title": "2025 football theme",
+        "date": "2025-11-17",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Temple announced themed promotions for its 2025 home football games.",
+        "source_url": "https://owlsports.com/news/2025/11/17/football-temple-to-host-24-tulane-on-senior-day",
+        "source_name": "Temple",
+        "source_type": "official"
+      },
+      {
+        "id": "288074e2949baa1d",
+        "title": "2025 football ticket offer",
+        "date": "2025-11-17",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Temple published a ticket offer for the 2025 football season.",
+        "source_url": "https://owlsports.com/news/2025/11/17/2026-temple-football-season-tickets-on-sale-now",
+        "source_name": "Temple",
+        "source_type": "official"
+      }
+    ]
+  },
+  "tennessee": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "1271676991b0de4a",
+        "title": "2025 football theme",
+        "date": "2025-11-29",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Tennessee announced themed promotions for its 2025 home football games.",
+        "source_url": "https://utsports.com/news/2025/11/29/football-19-vols-fall-in-senior-day-matchup-against-14-vanderbilt-45-24",
+        "source_name": "University of Tennessee Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "texas": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "texas-a-m": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "texas-state": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "texas-tech": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "86357cf85a3126f1",
+        "title": "2025 football theme",
+        "date": "2025-11-10",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Texas Tech announced themed promotions for its 2025 home football games.",
+        "source_url": "https://texastech.com/news/2025/11/10/football-no8-texas-tech-ucf-square-off-saturday-on-senior-day",
+        "source_name": "Texas Tech Red Raiders",
+        "source_type": "official"
+      }
+    ]
+  },
+  "toledo": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "9a1c7ccbe3655d56",
+        "title": "2025 football ticket offer",
+        "date": "2025-08-12",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Toledo published a ticket offer for the 2025 football season.",
+        "source_url": "https://utrockets.com/news/2025/8/12/football-homecoming-game-to-kick-off-at-3-30-pm",
+        "source_name": "University of Toledo Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "0d712d40d0d2da63",
+        "title": "2025 football fan event",
+        "date": "2025-08-25",
+        "announced": true,
+        "game": null,
+        "type": "fan_experience",
+        "description": "Toledo scheduled an on-site fan event for the 2025 football season.",
+        "source_url": "https://utrockets.com/news/2025/8/25/toledo-football-unveils-promotions-and-gameday-upgrades-program-for-2025-season",
+        "source_name": "University of Toledo Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "3b11f21b8572db55",
+        "title": "2025 football ticket offer",
+        "date": "2025-12-09",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Toledo published a ticket offer for the 2025 football season.",
+        "source_url": "https://utrockets.com/news/2025/12/9/football-tickets-on-sale-now-for-bushs-boca-raton-bowl-of-beans",
+        "source_name": "University of Toledo Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "troy": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "747943ff77816e39",
+        "title": "2025 football ticket offer",
+        "date": "2025-01-28",
+        "announced": true,
+        "game": {
+          "opponent": "South Alabama",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Troy published a ticket offer for the 2025 football season.",
+        "source_url": "https://troytrojans.com/news/2025/1/28/troy-football-season-tickets-for-2025-season-on-sale",
+        "source_name": "Troy University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "9d24a6040b7f5577",
+        "title": "2025 football home-game themes",
+        "date": "2025-05-07",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Troy announced themed promotions for its 2025 home football games.",
+        "source_url": "https://troytrojans.com/news/2025/5/7/troy-announces-game-themes-for-2025-football-season",
+        "source_name": "Troy University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "40565d364c8e510b",
+        "title": "2025 football theme",
+        "date": "2025-11-20",
+        "announced": true,
+        "game": {
+          "opponent": "Georgia State",
+          "home": false
+        },
+        "type": "theme_night",
+        "description": "Troy announced themed promotions for its 2025 home football games.",
+        "source_url": "https://troytrojans.com/news/2025/11/20/football-troy-hosts-georgia-state-on-senior-day-military-appreciation-day-at-the-vet",
+        "source_name": "Troy University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "73c61f9615fda521",
+        "title": "2025 football theme",
+        "date": "2025-11-22",
+        "announced": true,
+        "game": {
+          "opponent": "Memphis",
+          "home": true
+        },
+        "type": "theme_night",
+        "description": "Troy announced themed promotions for its 2025 home football games.",
+        "source_url": "https://troytrojans.com/news/2025/11/22/football-crowder-throws-four-td-passes-troy-knocks-off-georgia-state-on-senior-day",
+        "source_name": "Troy University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "tulane": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "tulsa": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "d69fc3f9d482b21f",
+        "title": "2025 football community event",
+        "date": "2025-07-07",
+        "announced": true,
+        "game": null,
+        "type": "community",
+        "description": "Tulsa scheduled a community event around its 2025 football games.",
+        "source_url": "https://tulsahurricane.com/news/2025/7/7/tulsa-football-announces-2025-home-game-promotions",
+        "source_name": "Tulsa",
+        "source_type": "official"
+      },
+      {
+        "id": "85808ffbc7468f54",
+        "title": "2025 football ticket offer",
+        "date": "2025-08-15",
+        "announced": true,
+        "game": {
+          "opponent": "Abilene Christian",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Tulsa published a ticket offer for the 2025 football season.",
+        "source_url": "https://tulsahurricane.com/news/2025/8/15/single-game-football-tickets-on-sale-now",
+        "source_name": "Tulsa",
+        "source_type": "official"
+      },
+      {
+        "id": "fc0117c910eba14b",
+        "title": "13 at Oklahoma State",
+        "date": "2025-11-26",
+        "announced": true,
+        "game": {
+          "opponent": "Navy",
+          "home": false
+        },
+        "type": "theme_night",
+        "description": "Tulsa announced themed promotions for its 2025 home football games. The release names 13 at Oklahoma State.",
+        "source_url": "https://tulsahurricane.com/news/2025/11/26/football-tulsa-hosts-uab-on-senior-day-at-h-a-chapman-stadium",
+        "source_name": "Tulsa",
+        "source_type": "official"
+      }
+    ]
+  },
+  "uab": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "d45b27beed6bf858",
+        "title": "2025 football ticket offer",
+        "date": "2025-01-21",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "UAB published a ticket offer for the 2025 football season.",
+        "source_url": "https://uabsports.com/news/2025/1/21/2025-uab-football-season-tickets-on-sale-now",
+        "source_name": "UAB Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "cdb1da84a6779cbf",
+        "title": "2025 football promotional schedule",
+        "date": "2025-04-16",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "UAB announced themed promotions for its 2025 home football games.",
+        "source_url": "https://uabsports.com/news/2025/4/16/uab-football-announces-2025-promotional-schedule",
+        "source_name": "UAB Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "f4345a9a890085aa",
+        "title": "2025 football fan event",
+        "date": "2025-06-02",
+        "announced": true,
+        "game": null,
+        "type": "fan_experience",
+        "description": "UAB scheduled an on-site fan event for the 2025 football season.",
+        "source_url": "https://uabsports.com/news/2025/6/2/group-tickets-and-fan-experience-packages-available-for-2025-football-season",
+        "source_name": "UAB Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "3172eb2ee651efa4",
+        "title": "2025 football ticket offer",
+        "date": "2025-07-18",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "UAB published a ticket offer for the 2025 football season.",
+        "source_url": "https://uabsports.com/news/2025/7/18/uab-football-single-game-and-away-game-tickets-exclusive-presale",
+        "source_name": "UAB Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "4135ab982f59ff7c",
+        "title": "2025 football ticket offer",
+        "date": "2025-08-01",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "UAB published a ticket offer for the 2025 football season.",
+        "source_url": "https://uabsports.com/news/2025/8/1/2025-uab-football-single-game-tickets-on-sale-now",
+        "source_name": "UAB Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "b87b1a3060aecdec",
+        "title": "2025 football fan event",
+        "date": "2025-08-07",
+        "announced": true,
+        "game": null,
+        "type": "fan_experience",
+        "description": "UAB scheduled an on-site fan event for the 2025 football season.",
+        "source_url": "https://uabsports.com/news/2025/8/7/football-know-before-you-go-saturdays-uab-fan-fest-information",
+        "source_name": "UAB Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "c42cfc6a3a34cfe1",
+        "title": "2025 football theme",
+        "date": "2025-11-20",
+        "announced": true,
+        "game": {
+          "opponent": "South Florida",
+          "home": false
+        },
+        "type": "theme_night",
+        "description": "UAB announced themed promotions for its 2025 home football games.",
+        "source_url": "https://uabsports.com/news/2025/11/20/football-uab-hosts-south-florida-on-senior-day-at-protective-stadium",
+        "source_name": "UAB Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "ucf": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "uconn": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "3cd91371ce31f113",
+        "title": "2025 football home-game themes",
+        "date": "2025-06-12",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "UConn announced themed promotions for its 2025 home football games. The release names 12 noon and 12 noon Close out the 2025 home football.",
+        "source_url": "https://uconnhuskies.com/news/2025/6/12/uconn-football-announces-2025-home-game-themes",
+        "source_name": "University of Connecticut Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "ul-monroe": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "unlv": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "7dd399888ecfdb33",
+        "title": "2025 football ticket offer",
+        "date": "2025-04-04",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "UNLV published a ticket offer for the 2025 football season.",
+        "source_url": "https://unlvrebels.com/news/2025/4/4/season-ticket-holders-invited-to-april-12-football-practice-biennial-unlv-merch-sale-announced",
+        "source_name": "University of Nevada Las Vegas Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "bb1376e54b08c89b",
+        "title": "2025 football ticket offer",
+        "date": "2025-07-03",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "UNLV published a ticket offer for the 2025 football season.",
+        "source_url": "https://unlvrebels.com/news/2025/7/3/single-game-tickets-now-on-sale-for-unlv-football",
+        "source_name": "University of Nevada Las Vegas Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "16ac45352b59587f",
+        "title": "2025 football theme",
+        "date": "2025-11-17",
+        "announced": true,
+        "game": {
+          "opponent": "Hawai'i",
+          "home": true
+        },
+        "type": "theme_night",
+        "description": "UNLV announced themed promotions for its 2025 home football games.",
+        "source_url": "https://unlvrebels.com/news/2025/11/17/football-game-11-golden-pineapple-trophy-up-for-grabs-on-senior-night-friday",
+        "source_name": "University of Nevada Las Vegas Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "usc": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "utah": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "1ba8f4b130b1fd42",
+        "title": "2025 football ticket offer",
+        "date": "2025-02-11",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Utah published a ticket offer for the 2025 football season.",
+        "source_url": "https://utahutes.com/news/2025/2/11/utah-football-season-ticket-renewal-period-begins-today",
+        "source_name": "University of Utah Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "96c09ec38e859229",
+        "title": "2025 football ticket offer",
+        "date": "2025-06-19",
+        "announced": true,
+        "game": {
+          "opponent": "Cal Poly",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Utah published a ticket offer for the 2025 football season.",
+        "source_url": "https://utahutes.com/news/2025/6/19/utah-football-announces-2025-home-game-promotions",
+        "source_name": "University of Utah Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "678f8cf8db00432f",
+        "title": "2025 football ticket offer",
+        "date": "2025-07-16",
+        "announced": true,
+        "game": {
+          "opponent": "Colorado",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Utah published a ticket offer for the 2025 football season.",
+        "source_url": "https://utahutes.com/news/2025/7/16/football-single-game-tickets-and-mini-plans-on-sale-now",
+        "source_name": "University of Utah Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "88b1b8d3dcf52bd6",
+        "title": "2025 football fan event",
+        "date": "2025-07-17",
+        "announced": true,
+        "game": null,
+        "type": "fan_experience",
+        "description": "Utah scheduled an on-site fan event for the 2025 football season.",
+        "source_url": "https://utahutes.com/news/2025/7/17/general-fan-fest-returns-to-rice-eccles-stadium-on-aug-16",
+        "source_name": "University of Utah Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "bd54ddecae511ee4",
+        "title": "2025 football sponsor event",
+        "date": "2025-10-20",
+        "announced": false,
+        "game": null,
+        "type": "sponsor_activation",
+        "description": "Utah paired a sponsor activation with its 2025 football games.",
+        "source_url": "https://utahutes.com/news/2025/10/20/general-game-week-fan-guide-presented-by-utah-360-homecoming-stripe-the-stadium",
+        "source_name": "University of Utah Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "d95867d0fd63e1d7",
+        "title": "2025 football community event",
+        "date": "2025-10-28",
+        "announced": false,
+        "game": null,
+        "type": "community",
+        "description": "Utah scheduled a community event around its 2025 football games.",
+        "source_url": "https://utahutes.com/news/2025/10/28/general-game-week-fan-guide-presented-by-utah-360-military-appreciation-game-vs-17th-ranked-cincinnati",
+        "source_name": "University of Utah Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "fe00c1232395ede8",
+        "title": "2025 football theme",
+        "date": "2025-11-17",
+        "announced": true,
+        "game": {
+          "opponent": "Kansas State",
+          "home": true
+        },
+        "type": "theme_night",
+        "description": "Utah announced themed promotions for its 2025 home football games.",
+        "source_url": "https://utahutes.com/news/2025/11/17/football-utah-hosts-kansas-state-for-senior-day",
+        "source_name": "University of Utah Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "utah-state": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "021159e2ba33d0c6",
+        "title": "2025 football ticket offer",
+        "date": "2025-01-13",
+        "announced": false,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Utah State published a ticket offer for the 2025 football season.",
+        "source_url": "https://utahstateaggies.com/news/2025/1/13/2025-football-season-ticket-renewals-available-now",
+        "source_name": "Utah State University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "utsa": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "virginia": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "wake-forest": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "2eed61fcba833a61",
+        "title": "2025 football ticket offer",
+        "date": "2025-06-10",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Wake Forest published a ticket offer for the 2025 football season.",
+        "source_url": "https://godeacs.com/news/2025/6/10/family-friendly-fun-awaits-this-fall-bojangles-four-packs-single-game-tickets-on-sale-now",
+        "source_name": "Wake Forest University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "78ae84781e3f7e14",
+        "title": "2025 football ticket offer",
+        "date": "2025-11-08",
+        "announced": false,
+        "game": {
+          "opponent": "No",
+          "home": true
+        },
+        "type": "ticket_deal",
+        "description": "Wake Forest published a ticket offer for the 2025 football season.",
+        "source_url": "https://godeacs.com/news/2025/11/8/football-excitement-all-around-deactown-new-99-built-in-the-dark-ticket-plan-and-season-ticket-deposits-available-for-much-anticipated-2026-season",
+        "source_name": "Wake Forest University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "a16823650d08c047",
+        "title": "2025 football ticket offer",
+        "date": "2025-11-08",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Wake Forest published a ticket offer for the 2025 football season.",
+        "source_url": "https://godeacs.com/news/2025/11/8/lets-go-demon-deacons-going-bowling-2026-football-season-tickets-on-sale-now",
+        "source_name": "Wake Forest University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "8fddda9d58ec8a14",
+        "title": "2025 football theme",
+        "date": "2025-11-19",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Wake Forest announced themed promotions for its 2025 home football games.",
+        "source_url": "https://godeacs.com/news/2025/11/19/football-thank-you-demon-deacons-wake-forest-set-to-honor-69-students-on-saturday-at-allegacy-stadium-for-senior-day",
+        "source_name": "Wake Forest University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "f37161d3cfd1296e",
+        "title": "2025 football ticket offer",
+        "date": "2025-12-05",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "Wake Forest published a ticket offer for the 2025 football season.",
+        "source_url": "https://godeacs.com/news/2025/12/5/season-tickets-and-annual-seat-rights-program-now-available-for-2026-wake-forest-football-season-at-allegacy-stadium",
+        "source_name": "Wake Forest University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "washington": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "0048fcf1faeee498",
+        "title": "2025 football home-game themes",
+        "date": "2025-07-07",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Washington announced themed promotions for its 2025 home football games. The release names Community Day 8, Band Day presented by Dick's Drive In 8, Purple Reign Game presented by Pepsi time TBD, and Homecoming presented by Planet Fitness 6, among others.",
+        "source_url": "https://gohuskies.com/news/2025/7/7/2025-uw-football-game-themes-announced",
+        "source_name": "University of Washington Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "washington-state": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "west-virginia": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "0833d62cd3e83d03",
+        "title": "2025 football ticket offer",
+        "date": "2025-01-17",
+        "announced": true,
+        "game": null,
+        "type": "ticket_deal",
+        "description": "West Virginia published a ticket offer for the 2025 football season.",
+        "source_url": "https://wvusports.com/news/2025/1/17/2025-football-season-ticket-holder-reward-prizes-announced",
+        "source_name": "West Virginia University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "14fc4bfd7c0ea06f",
+        "title": "2025 football theme",
+        "date": "2025-06-26",
+        "announced": true,
+        "game": {
+          "opponent": "Robert Morris",
+          "home": true
+        },
+        "type": "theme_night",
+        "description": "West Virginia announced themed promotions for its 2025 home football games.",
+        "source_url": "https://wvusports.com/news/2025/6/26/football-game-promotions-announced",
+        "source_name": "West Virginia University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "western-kentucky": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "e5302db62fef3c19",
+        "title": "2025 football home-game themes",
+        "date": "2025-07-23",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Western Kentucky announced themed promotions for its 2025 home football games.",
+        "source_url": "https://wkusports.com/news/2025/7/23/game-themes-announced-for-2025-wku-football-season",
+        "source_name": "Western Kentucky University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "1b08b1783445c536",
+        "title": "2025 football theme",
+        "date": "2025-08-28",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Western Kentucky announced themed promotions for its 2025 home football games.",
+        "source_url": "https://wkusports.com/news/2025/8/28/football-hilltoppers-remain-home-for-white-out-game-against-north-alabama-on-saturday",
+        "source_name": "Western Kentucky University Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "85fa995647e4abf8",
+        "title": "2025 football theme",
+        "date": "2025-11-12",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Western Kentucky announced themed promotions for its 2025 home football games.",
+        "source_url": "https://wkusports.com/news/2025/11/12/football-hilltoppers-welcome-rival-middle-tennessee-for-senior-day",
+        "source_name": "Western Kentucky University Athletics",
+        "source_type": "official"
+      }
+    ]
+  },
+  "western-michigan": {
+    "checked_at": "2026-10-26",
+    "items": []
+  },
+  "wisconsin": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "4d3d184f3a183362",
+        "title": "2025 football promotional schedule",
+        "date": "2025-06-04",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Wisconsin announced themed promotions for its 2025 home football games. The release names Halftime band light show Sept, Stripe Out Ag, Homecoming student 'Block W' hat Oct, and Military Appreciation Day Nov.",
+        "source_url": "https://uwbadgers.com/news/2025/6/4/football-promotional-schedule-revealed-for-2025-football-season",
+        "source_name": "Wisconsin Badgers",
+        "source_type": "official"
+      },
+      {
+        "id": "01d2e1c69c5da2b6",
+        "title": "2025 football theme",
+        "date": "2025-11-22",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Wisconsin announced themed promotions for its 2025 home football games.",
+        "source_url": "https://uwbadgers.com/news/2025/11/22/football-wisconsin-takes-down-no-21-illinois-on-senior-day",
+        "source_name": "Wisconsin Badgers",
+        "source_type": "official"
+      }
+    ]
+  },
+  "wyoming": {
+    "checked_at": "2026-10-26",
+    "items": [
+      {
+        "id": "2cb7eedc5701b5ad",
+        "title": "2025 football theme",
+        "date": "2025-09-29",
+        "announced": true,
+        "game": null,
+        "type": "theme_night",
+        "description": "Wyoming announced themed promotions for its 2025 home football games.",
+        "source_url": "https://gowyo.com/news/2025/9/29/football-cowboys-open-mw-play-hosting-unlv-for-homecoming-and-stripe-out-on-saturday",
+        "source_name": "University of Wyoming Athletics",
+        "source_type": "official"
+      },
+      {
+        "id": "5d5f0354af45f1fa",
+        "title": "2025 football theme",
+        "date": "2025-11-22",
+        "announced": true,
+        "game": {
+          "opponent": "Nevada",
+          "home": true
+        },
+        "type": "theme_night",
+        "description": "Wyoming announced themed promotions for its 2025 home football games.",
+        "source_url": "https://gowyo.com/news/2025/11/22/football-cowboys-fall-in-senior-day-heartbreaker-to-nevada-13-7",
+        "source_name": "University of Wyoming Athletics",
+        "source_type": "official"
+      }
+    ]
+  }
+}

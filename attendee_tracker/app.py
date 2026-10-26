@@ -11,6 +11,7 @@ from fastapi.staticfiles import StaticFiles
 from attendee_tracker.assemble import assemble
 from attendee_tracker.attendance_growth import rank_attendance_growth
 from attendee_tracker.business_news import load_business_news, safe_slug
+from attendee_tracker.campaigns import CampaignError, school_campaigns
 from attendee_tracker.config import load_dotenv, season_year
 from attendee_tracker.history import HistoryWindowError, assemble_history, find_school, validate_window
 from attendee_tracker.marketing import MarketingError, marketing_report
@@ -189,6 +190,28 @@ def marketing(year: int | None = None):
     try:
         return marketing_report(selected)
     except MarketingError as exc:
+        return JSONResponse(
+            {"error": exc.code, "message": exc.message},
+            status_code=exc.status,
+        )
+
+
+@app.get("/api/campaigns/{slug}")
+def campaigns(slug: str, year: int | None = None):
+    """Football fan and marketing campaigns for 2025 or 2026.
+
+    Items are the committed files under data/campaigns. A school that has
+    not been reviewed is reported that way. Nothing is invented.
+    """
+    try:
+        safe_slug(slug)
+    except ValueError:
+        return JSONResponse({"error": "unknown_school"}, status_code=404)
+    if _find_current_school(slug) is None:
+        return JSONResponse({"error": "unknown_school"}, status_code=404)
+    try:
+        return school_campaigns(slug, year if year is not None else 2026)
+    except CampaignError as exc:
         return JSONResponse(
             {"error": exc.code, "message": exc.message},
             status_code=exc.status,
