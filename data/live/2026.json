@@ -3,12 +3,13 @@
   "synthetic": false,
   "notice": null,
   "season": 2026,
-  "fetched_at": "2026-10-25T22:57:06Z",
+  "fetched_at": "2026-11-01T23:54:59Z",
   "warnings": [
     "CFBD_API_KEY was not available on 2026-10-11, so this refresh did not call CFBD. The stored schedule, teams, and venues were kept. ESPN scoreboards for weeks 1-15 matched all 888 stored games: 58 week-6 games (2026-10-07T00:00:00Z through 2026-10-11T02:30:00Z) were newly final, with no earlier-week score changes. 61 incomplete TBD events on ESPN are not in the stored schedule and were not added. ESPN summaries filled attendance for 57 completed non-neutral home games. 0 stayed null. No attendance was invented. Neutral-site games were not given a home crowd. Completed non-neutral games: 441. With a reported attendance: 440. Still null: 1. Official overrides kept Purdue vs Indiana State 49,019, Oklahoma vs UTEP 84,315, and UL Monroe vs SE Louisiana 13,211. Sam Houston vs Tulsa is not reported. No new ESPN zero-attendance games. FBS records were recalculated from completed games (116 changed) and matched ESPN overall records. Non-FBS records were updated only when ESPN showed more games played (0 changed). ESPN AP Top 25 week 7 is dated 2026-10-11T07:00Z. Weeks 1-6 of the stored AP Top 25 were left as they were.",
     "Official attendance overrides replaced the feed figure for Purdue vs Indiana State (49,019), Oklahoma vs UTEP (84,315), UL Monroe vs SE Louisiana (13,211), Sam Houston vs Tulsa (not reported). Published crowds were used where one was reported. No attendance was estimated.",
     "CFBD_API_KEY was not available on 2026-10-18, so this refresh did not call CFBD. The stored schedule, teams, and venues were kept. ESPN scoreboards matched 888 of 888 stored games: 62 week-7 games (2026-10-13T23:00:00.000Z through 2026-10-18T02:30:00.000Z) were newly final. No earlier-week score changes. 61 incomplete events on ESPN are not in the stored schedule and were not added. ESPN summaries filled attendance for 60 completed non-neutral home games. 2 stayed null. No attendance was invented. Neutral-site games were not given a home crowd. Completed non-neutral games: 503. With a reported attendance: 500. Still null: 3. Official overrides kept Purdue vs Indiana State 49,019, Oklahoma vs UTEP 84,315, and UL Monroe vs SE Louisiana 13,211. Sam Houston vs Tulsa is not reported. FBS records were recalculated from completed games (121 changed) and matched ESPN overall records. Non-FBS records were updated only when ESPN showed more games played (3 changed). ESPN AP Top 25 week 8 is dated 2026-10-18T07:00Z. Weeks 1-7 of the stored AP Top 25 were left as they were.",
-    "CFBD_API_KEY was not available on 2026-10-25, so this refresh did not call CFBD. The stored schedule, teams, and venues were kept. ESPN scoreboards matched 888 of 888 stored games: 56 week-8 games (2026-10-20T23:00:00.000Z through 2026-10-25T02:00:00.000Z) were newly final. No earlier-week score changes. 61 incomplete events on ESPN are not in the stored schedule and were not added. ESPN summaries filled attendance for 56 newly final non-neutral home games. ESPN also filled Michigan State vs Northwestern (67,423), which had been left null. No attendance was invented. Neutral-site games were not given a home crowd. Completed non-neutral games: 559. With a reported attendance: 557. Still null: 2. Official overrides kept Purdue vs Indiana State 49,019, Oklahoma vs UTEP 84,315, and UL Monroe vs SE Louisiana 13,211. Sam Houston vs Tulsa is not reported. No new ESPN zero-attendance games. California vs Wake Forest remains not reported because ESPN attendance is still 0. FBS records were recalculated from completed games (112 changed) and matched ESPN overall records. Non-FBS records were updated only when ESPN showed more games played (5 changed). ESPN AP Top 25 week 9 is dated 2026-10-25T07:00Z. Weeks 1-8 of the stored AP Top 25 were left as they were."
+    "CFBD_API_KEY was not available on 2026-10-25, so this refresh did not call CFBD. The stored schedule, teams, and venues were kept. ESPN scoreboards matched 888 of 888 stored games: 56 week-8 games (2026-10-20T23:00:00.000Z through 2026-10-25T02:00:00.000Z) were newly final. No earlier-week score changes. 61 incomplete events on ESPN are not in the stored schedule and were not added. ESPN summaries filled attendance for 56 newly final non-neutral home games. ESPN also filled Michigan State vs Northwestern (67,423), which had been left null. No attendance was invented. Neutral-site games were not given a home crowd. Completed non-neutral games: 559. With a reported attendance: 557. Still null: 2. Official overrides kept Purdue vs Indiana State 49,019, Oklahoma vs UTEP 84,315, and UL Monroe vs SE Louisiana 13,211. Sam Houston vs Tulsa is not reported. No new ESPN zero-attendance games. California vs Wake Forest remains not reported because ESPN attendance is still 0. FBS records were recalculated from completed games (112 changed) and matched ESPN overall records. Non-FBS records were updated only when ESPN showed more games played (5 changed). ESPN AP Top 25 week 9 is dated 2026-10-25T07:00Z. Weeks 1-8 of the stored AP Top 25 were left as they were.",
+    "CFBD_API_KEY was not available on 2026-11-01, so this refresh did not call CFBD. The stored schedule, teams, and venues were kept. ESPN scoreboards matched 888 of 888 stored games: 56 week-9 games (2026-10-27T23:00:00.000Z through 2026-11-01T02:30:00.000Z) were newly final. No earlier-week score changes. 62 incomplete events on ESPN are not in the stored schedule and were not added. ESPN summaries filled attendance for 53 newly final non-neutral home games. ESPN also filled California vs Wake Forest (34,850), which had been left null. No attendance was invented. Neutral-site games were not given a home crowd. Completed non-neutral games: 613. With a reported attendance: 611. Still null: 2. Official overrides kept Purdue vs Indiana State 49,019, Oklahoma vs UTEP 84,315, and UL Monroe vs SE Louisiana 13,211. Sam Houston vs Tulsa is not reported. New Mexico State vs Jacksonville State remains not reported because ESPN attendance is 0. FBS records were recalculated from completed games (112 changed) and matched ESPN overall records. Non-FBS records were updated only when ESPN showed more games played (0 changed). ESPN AP Top 25 week 10 is dated 2026-11-01T07:00Z. Weeks 1-9 of the stored AP Top 25 were left as they were."
   ],
   "calls_this_run": 0,
   "teams": [
@@ -19882,7 +19883,7 @@
       "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 34850,
       "venue_id": 3831,
       "venue": "California Memorial Stadium",
       "home_id": 25,
@@ -19892,7 +19893,8 @@
       "away_id": 154,
       "away_team": "Wake Forest",
       "away_conference": "ACC",
-      "away_points": 41
+      "away_points": 41,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401871091,
@@ -21506,20 +21508,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-27T23:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 12147,
       "venue_id": 3796,
       "venue": "Houchens Industries-L.T. Smith Stadium",
       "home_id": 98,
       "home_team": "Western Kentucky",
       "home_conference": "Conference USA",
-      "home_points": null,
+      "home_points": 21,
       "away_id": 48,
       "away_team": "Delaware",
       "away_conference": "Conference USA",
-      "away_points": null
+      "away_points": 35,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401871072,
@@ -21527,20 +21530,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-28T00:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 11119,
       "venue_id": 3878,
       "venue": "Plaster Sports Complex",
       "home_id": 2623,
       "home_team": "Missouri State",
       "home_conference": "Conference USA",
-      "home_points": null,
+      "home_points": 24,
       "away_id": 2534,
       "away_team": "Sam Houston",
       "away_conference": "Conference USA",
-      "away_points": null
+      "away_points": 3,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401871058,
@@ -21548,20 +21552,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-28T23:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 10005,
       "venue_id": 3725,
       "venue": "Johnny \"Red\" Floyd Stadium",
       "home_id": 2393,
       "home_team": "Middle Tennessee",
       "home_conference": "Conference USA",
-      "home_points": null,
+      "home_points": 28,
       "away_id": 338,
       "away_team": "Kennesaw State",
       "away_conference": "Conference USA",
-      "away_points": null
+      "away_points": 44,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401871057,
@@ -21569,7 +21574,7 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-29T00:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
       "attendance": null,
@@ -21578,11 +21583,11 @@
       "home_id": 166,
       "home_team": "New Mexico State",
       "home_conference": "Conference USA",
-      "home_points": null,
+      "home_points": 0,
       "away_id": 55,
       "away_team": "Jacksonville State",
       "away_conference": "Conference USA",
-      "away_points": null
+      "away_points": 24
     },
     {
       "id": 401869963,
@@ -21590,20 +21595,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-29T23:30:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 25005,
       "venue_id": 3651,
       "venue": "Bridgeforth Stadium",
       "home_id": 256,
       "home_team": "James Madison",
       "home_conference": "Sun Belt",
-      "home_points": null,
+      "home_points": 21,
       "away_id": 2653,
       "away_team": "Troy",
       "away_conference": "Sun Belt",
-      "away_points": null
+      "away_points": 24,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401862812,
@@ -21611,20 +21617,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-29T23:30:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 22092,
       "venue_id": 3825,
       "venue": "DATCU Stadium",
       "home_id": 249,
       "home_team": "North Texas",
       "home_conference": "American Athletic",
-      "home_points": null,
+      "home_points": 48,
       "away_id": 2226,
       "away_team": "Florida Atlantic",
       "away_conference": "American Athletic",
-      "away_points": null
+      "away_points": 41,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401862813,
@@ -21632,20 +21639,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-30T23:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 8106,
       "venue_id": 4418,
       "venue": "Jerry Richardson Stadium",
       "home_id": 2429,
       "home_team": "Charlotte",
       "home_conference": "American Athletic",
-      "home_points": null,
+      "home_points": 31,
       "away_id": 2655,
       "away_team": "Tulane",
       "away_conference": "American Athletic",
-      "away_points": null
+      "away_points": 38,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401856844,
@@ -21653,20 +21661,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-30T23:30:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 45906,
       "venue_id": 3652,
       "venue": "FBC Mortgage Stadium",
       "home_id": 2116,
       "home_team": "UCF",
       "home_conference": "Big 12",
-      "home_points": null,
+      "home_points": 9,
       "away_id": 239,
       "away_team": "Baylor",
       "away_conference": "Big 12",
-      "away_points": null
+      "away_points": 41,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401866451,
@@ -21674,20 +21683,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T02:30:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 9931,
       "venue_id": 3757,
       "venue": "Hornet Stadium",
       "home_id": 16,
       "home_team": "Sacramento State",
       "home_conference": "Mid-American",
-      "home_points": null,
+      "home_points": 31,
       "away_id": 2309,
       "away_team": "Kent State",
       "away_conference": "Mid-American",
-      "away_points": null
+      "away_points": 10,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858277,
@@ -21695,20 +21705,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 52933,
       "venue_id": 3670,
       "venue": "Carter-Finley Stadium",
       "home_id": 152,
       "home_team": "NC State",
       "home_conference": "ACC",
-      "home_points": null,
+      "home_points": 31,
       "away_id": 25,
       "away_team": "California",
       "away_conference": "ACC",
-      "away_points": null
+      "away_points": 10,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858506,
@@ -21716,20 +21727,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 102041,
       "venue_id": 3632,
       "venue": "Beaver Stadium",
       "home_id": 213,
       "home_team": "Penn State",
       "home_conference": "Big Ten",
-      "home_points": null,
+      "home_points": 31,
       "away_id": 2509,
       "away_team": "Purdue",
       "away_conference": "Big Ten",
-      "away_points": null
+      "away_points": 17,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401864529,
@@ -21737,20 +21749,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 9291,
       "venue_id": 3935,
       "venue": "CEFCU Stadium",
       "home_id": 23,
       "home_team": "San Jos\u00e9 State",
       "home_conference": "Mountain West",
-      "home_points": null,
+      "home_points": 16,
       "away_id": 167,
       "away_team": "New Mexico",
       "away_conference": "Mountain West",
-      "away_points": null
+      "away_points": 21,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401856845,
@@ -21758,20 +21771,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 32549,
       "venue_id": 3616,
       "venue": "Amon G. Carter Stadium",
       "home_id": 2628,
       "home_team": "TCU",
       "home_conference": "Big 12",
-      "home_points": null,
+      "home_points": 22,
       "away_id": 2305,
       "away_team": "Kansas",
       "away_conference": "Big 12",
-      "away_points": null
+      "away_points": 16,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401856843,
@@ -21779,20 +21793,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 63332,
       "venue_id": 3801,
       "venue": "LaVell Edwards Stadium",
       "home_id": 252,
       "home_team": "BYU",
       "home_conference": "Big 12",
-      "home_points": null,
+      "home_points": 27,
       "away_id": 9,
       "away_team": "Arizona State",
       "away_conference": "Big 12",
-      "away_points": null
+      "away_points": 20,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858505,
@@ -21800,20 +21815,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 55673,
       "venue_id": 3626,
       "venue": "Autzen Stadium",
       "home_id": 2483,
       "home_team": "Oregon",
       "home_conference": "Big Ten",
-      "home_points": null,
+      "home_points": 34,
       "away_id": 77,
       "away_team": "Northwestern",
       "away_conference": "Big Ten",
-      "away_points": null
+      "away_points": 26,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401856737,
@@ -21821,20 +21837,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 103586,
       "venue_id": 3910,
       "venue": "DKR-Texas Memorial Stadium",
       "home_id": 251,
       "home_team": "Texas",
       "home_conference": "SEC",
-      "home_points": null,
+      "home_points": 31,
       "away_id": 344,
       "away_team": "Mississippi State",
       "away_conference": "SEC",
-      "away_points": null
+      "away_points": 3,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401871096,
@@ -21842,20 +21859,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 17093,
       "venue_id": 3918,
       "venue": "S.B. Ballard Stadium",
       "home_id": 295,
       "home_team": "Old Dominion",
       "home_conference": "Sun Belt",
-      "home_points": null,
+      "home_points": 23,
       "away_id": 276,
       "away_team": "Marshall",
       "away_conference": "Sun Belt",
-      "away_points": null
+      "away_points": 36,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401871095,
@@ -21863,20 +21881,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 9086,
       "venue_id": 3817,
       "venue": "Malone Stadium",
       "home_id": 2433,
       "home_team": "UL Monroe",
       "home_conference": "Sun Belt",
-      "home_points": null,
+      "home_points": 21,
       "away_id": 2572,
       "away_team": "Southern Miss",
       "away_conference": "Sun Belt",
-      "away_points": null
+      "away_points": 35,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401869944,
@@ -21884,20 +21903,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 13681,
       "venue_id": 4246,
       "venue": "Center Parc Stadium",
       "home_id": 2247,
       "home_team": "Georgia State",
       "home_conference": "Sun Belt",
-      "home_points": null,
+      "home_points": 20,
       "away_id": 324,
       "away_team": "Coastal Carolina",
       "away_conference": "Sun Belt",
-      "away_points": null
+      "away_points": 31,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401862815,
@@ -21905,20 +21925,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 30213,
       "venue_id": 3699,
       "venue": "Dowdy-Ficklen Stadium",
       "home_id": 151,
       "home_team": "East Carolina",
       "home_conference": "American Athletic",
-      "home_points": null,
+      "home_points": 17,
       "away_id": 218,
       "away_team": "Temple",
       "away_conference": "American Athletic",
-      "away_points": null
+      "away_points": 9,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401871097,
@@ -21926,20 +21947,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 13078,
       "venue_id": 6526,
       "venue": "Hancock Whitney Stadium",
       "home_id": 6,
       "home_team": "South Alabama",
       "home_conference": "Sun Belt",
-      "home_points": null,
+      "home_points": 20,
       "away_id": 2348,
       "away_team": "Louisiana Tech",
       "away_conference": "Sun Belt",
-      "away_points": null
+      "away_points": 35,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858280,
@@ -21947,20 +21969,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 60472,
       "venue_id": 3697,
       "venue": "Doak Campbell Stadium",
       "home_id": 52,
       "home_team": "Florida State",
       "home_conference": "ACC",
-      "home_points": null,
+      "home_points": 24,
       "away_id": 228,
       "away_team": "Clemson",
       "away_conference": "ACC",
-      "away_points": null
+      "away_points": 36,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858503,
@@ -21968,20 +21991,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 27207,
       "venue_id": 3665,
       "venue": "SECU Stadium",
       "home_id": 120,
       "home_team": "Maryland",
       "home_conference": "Big Ten",
-      "home_points": null,
+      "home_points": 17,
       "away_id": 356,
       "away_team": "Illinois",
       "away_conference": "Big Ten",
-      "away_points": null
+      "away_points": 20,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401862814,
@@ -21989,20 +22013,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 32502,
       "venue_id": 3805,
       "venue": "Simmons Bank Liberty Stadium",
       "home_id": 235,
       "home_team": "Memphis",
       "home_conference": "American Athletic",
-      "home_points": null,
+      "home_points": 49,
       "away_id": 349,
       "away_team": "Army",
       "away_conference": "American Athletic",
-      "away_points": null
+      "away_points": 22,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401860924,
@@ -22010,20 +22035,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 32501,
       "venue_id": 3660,
       "venue": "Valley Children's Stadium",
       "home_id": 278,
       "home_team": "Fresno State",
       "home_conference": "Pac-12",
-      "home_points": null,
+      "home_points": 38,
       "away_id": 204,
       "away_team": "Oregon State",
       "away_conference": "Pac-12",
-      "away_points": null
+      "away_points": 22,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858283,
@@ -22031,20 +22057,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 44308,
       "venue_id": 3873,
       "venue": "L&N Federal Credit Union Stadium",
       "home_id": 97,
       "home_team": "Louisville",
       "home_conference": "ACC",
-      "home_points": null,
+      "home_points": 52,
       "away_id": 24,
       "away_team": "Stanford",
       "away_conference": "ACC",
-      "away_points": null
+      "away_points": 24,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401862816,
@@ -22052,20 +22079,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 22829,
       "venue_id": 3886,
       "venue": "Raymond James Stadium",
       "home_id": 58,
       "home_team": "South Florida",
       "home_conference": "American Athletic",
-      "home_points": null,
+      "home_points": 30,
       "away_id": 5,
       "away_team": "UAB",
       "away_conference": "American Athletic",
-      "away_points": null
+      "away_points": 10,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858509,
@@ -22073,20 +22101,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 70810,
       "venue_id": 477,
       "venue": "Los Angeles Memorial Coliseum",
       "home_id": 30,
       "home_team": "USC",
       "home_conference": "Big Ten",
-      "home_points": null,
+      "home_points": 30,
       "away_id": 194,
       "away_team": "Ohio State",
       "away_conference": "Big Ten",
-      "away_points": null
+      "away_points": 18,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858507,
@@ -22094,20 +22123,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 39540,
       "venue_id": 6577,
       "venue": "SHI Stadium",
       "home_id": 164,
       "home_team": "Rutgers",
       "home_conference": "Big Ten",
-      "home_points": null,
+      "home_points": 21,
       "away_id": 130,
       "away_team": "Michigan",
       "away_conference": "Big Ten",
-      "away_points": null
+      "away_points": 28,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858502,
@@ -22115,20 +22145,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 69250,
       "venue_id": 3793,
       "venue": "Kinnick Stadium",
       "home_id": 2294,
       "home_team": "Iowa",
       "home_conference": "Big Ten",
-      "home_points": null,
+      "home_points": 30,
       "away_id": 275,
       "away_team": "Wisconsin",
       "away_conference": "Big Ten",
-      "away_points": null
+      "away_points": 0,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858284,
@@ -22136,20 +22167,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 30218,
       "venue_id": 3630,
       "venue": "Allegacy Federal Credit Union Stadium",
       "home_id": 154,
       "home_team": "Wake Forest",
       "home_conference": "ACC",
-      "home_points": null,
+      "home_points": 51,
       "away_id": 258,
       "away_team": "Virginia",
       "away_conference": "ACC",
-      "away_points": null
+      "away_points": 7,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401856847,
@@ -22157,20 +22189,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 50295,
       "venue_id": 3772,
       "venue": "Jack Trice Stadium",
       "home_id": 66,
       "home_team": "Iowa State",
       "home_conference": "Big 12",
-      "home_points": null,
+      "home_points": 51,
       "away_id": 197,
       "away_team": "Oklahoma State",
       "away_conference": "Big 12",
-      "away_points": null
+      "away_points": 49,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858501,
@@ -22178,20 +22211,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 54400,
       "venue_id": 3830,
       "venue": "Memorial Stadium (Bloomington, IN)",
       "home_id": 84,
       "home_team": "Indiana",
       "home_conference": "Big Ten",
-      "home_points": null,
+      "home_points": 23,
       "away_id": 135,
       "away_team": "Minnesota",
       "away_conference": "Big Ten",
-      "away_points": null
+      "away_points": 16,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858282,
@@ -22199,20 +22233,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 44257,
       "venue_id": 3787,
       "venue": "Kenan Stadium",
       "home_id": 153,
       "home_team": "North Carolina",
       "home_conference": "ACC",
-      "home_points": null,
+      "home_points": 35,
       "away_id": 2390,
       "away_team": "Miami",
       "away_conference": "ACC",
-      "away_points": null
+      "away_points": 38,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401856733,
@@ -22220,20 +22255,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 65117,
       "venue_id": 3887,
       "venue": "Razorback Stadium",
       "home_id": 8,
       "home_team": "Arkansas",
       "home_conference": "SEC",
-      "home_points": null,
+      "home_points": 10,
       "away_id": 142,
       "away_team": "Missouri",
       "away_conference": "SEC",
-      "away_points": null
+      "away_points": 34,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401856736,
@@ -22241,20 +22277,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 83189,
       "venue_id": 3835,
       "venue": "Memorial Stadium (Norman, OK)",
       "home_id": 201,
       "home_team": "Oklahoma",
       "home_conference": "SEC",
-      "home_points": null,
+      "home_points": 25,
       "away_id": 2579,
       "away_team": "South Carolina",
       "away_conference": "SEC",
-      "away_points": null
+      "away_points": 42,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858504,
@@ -22262,20 +22299,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 86097,
       "venue_id": 3834,
       "venue": "Memorial Stadium (Lincoln, NE)",
       "home_id": 158,
       "home_team": "Nebraska",
       "home_conference": "Big Ten",
-      "home_points": null,
+      "home_points": 10,
       "away_id": 264,
       "away_team": "Washington",
       "away_conference": "Big Ten",
-      "away_points": null
+      "away_points": 17,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401869846,
@@ -22283,20 +22321,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 22832,
       "venue_id": 3608,
       "venue": "Allen E. Paulson Stadium",
       "home_id": 290,
       "home_team": "Georgia Southern",
       "home_conference": "Sun Belt",
-      "home_points": null,
+      "home_points": 19,
       "away_id": 2026,
       "away_team": "App State",
       "away_conference": "Sun Belt",
-      "away_points": null
+      "away_points": 3,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858281,
@@ -22304,20 +22343,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 42904,
       "venue_id": 3752,
       "venue": "Acrisure Stadium",
       "home_id": 221,
       "home_team": "Pittsburgh",
       "home_conference": "ACC",
-      "home_points": null,
+      "home_points": 34,
       "away_id": 59,
       "away_team": "Georgia Tech",
       "away_conference": "ACC",
-      "away_points": null
+      "away_points": 11,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858279,
@@ -22325,20 +22365,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 15653,
       "venue_id": 3982,
       "venue": "Wallace Wade Stadium",
       "home_id": 150,
       "home_team": "Duke",
       "home_conference": "ACC",
-      "home_points": null,
+      "home_points": 47,
       "away_id": 103,
       "away_team": "Boston College",
       "away_conference": "ACC",
-      "away_points": null
+      "away_points": 2,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401856842,
@@ -22346,20 +22387,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 59131,
       "venue_id": 3784,
       "venue": "Jones AT&T Stadium",
       "home_id": 2641,
       "home_team": "Texas Tech",
       "home_conference": "Big 12",
-      "home_points": null,
+      "home_points": 34,
       "away_id": 12,
       "away_team": "Arizona",
       "away_conference": "Big 12",
-      "away_points": null
+      "away_points": 26,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858508,
@@ -22367,20 +22409,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": false,
-      "attendance": null,
+      "attendance": 24611,
       "venue_id": 1056,
       "venue": "Rose Bowl",
       "home_id": 26,
       "home_team": "UCLA",
       "home_conference": "Big Ten",
-      "home_points": null,
+      "home_points": 27,
       "away_id": 2440,
       "away_team": "Nevada",
       "away_conference": "Mountain West",
-      "away_points": null
+      "away_points": 0,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401856735,
@@ -22388,20 +22431,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 67041,
       "venue_id": 3974,
       "venue": "Vaught-Hemingway Stadium",
       "home_id": 145,
       "home_team": "Ole Miss",
       "home_conference": "SEC",
-      "home_points": null,
+      "home_points": 45,
       "away_id": 2,
       "away_team": "Auburn",
       "away_conference": "SEC",
-      "away_points": null
+      "away_points": 15,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401858278,
@@ -22409,20 +22453,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 33396,
       "venue_id": 1964,
       "venue": "JMA Wireless Dome",
       "home_id": 183,
       "home_team": "Syracuse",
       "home_conference": "ACC",
-      "home_points": null,
+      "home_points": 30,
       "away_id": 2567,
       "away_team": "SMU",
       "away_conference": "ACC",
-      "away_points": null
+      "away_points": 27,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401856848,
@@ -22430,20 +22475,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 36487,
       "venue_id": 3854,
       "venue": "Nippert Stadium",
       "home_id": 2132,
       "home_team": "Cincinnati",
       "home_conference": "Big 12",
-      "home_points": null,
+      "home_points": 25,
       "away_id": 254,
       "away_team": "Utah",
       "away_conference": "Big 12",
-      "away_points": null
+      "away_points": 49,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401856846,
@@ -22451,20 +22497,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T04:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 46325,
       "venue_id": 3726,
       "venue": "Folsom Field",
       "home_id": 38,
       "home_team": "Colorado",
       "home_conference": "Big 12",
-      "home_points": null,
+      "home_points": 27,
       "away_id": 2306,
       "away_team": "Kansas State",
       "away_conference": "Big 12",
-      "away_points": null
+      "away_points": 24,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401866452,
@@ -22472,20 +22519,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T16:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 20179,
       "venue_id": 3980,
       "venue": "Waldo Stadium",
       "home_id": 2711,
       "home_team": "Western Michigan",
       "home_conference": "Mid-American",
-      "home_points": null,
+      "home_points": 23,
       "away_id": 189,
       "away_team": "Bowling Green",
       "away_conference": "Mid-American",
-      "away_points": null
+      "away_points": 10,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401859185,
@@ -22493,7 +22541,7 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T16:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": true,
       "conference_game": false,
       "attendance": null,
@@ -22502,11 +22550,11 @@
       "home_id": 2426,
       "home_team": "Navy",
       "home_conference": "American Athletic",
-      "home_points": null,
+      "home_points": 13,
       "away_id": 87,
       "away_team": "Notre Dame",
       "away_conference": "FBS Independents",
-      "away_points": null
+      "away_points": 35
     },
     {
       "id": 401861966,
@@ -22514,20 +22562,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T19:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": false,
-      "attendance": null,
+      "attendance": 20062,
       "venue_id": 3713,
       "venue": "Falcon Stadium",
       "home_id": 2005,
       "home_team": "Air Force",
       "home_conference": "Mountain West",
-      "home_points": null,
+      "home_points": 35,
       "away_id": 41,
       "away_team": "UConn",
       "away_conference": "FBS Independents",
-      "away_points": null
+      "away_points": 26,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401864531,
@@ -22535,20 +22584,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T19:30:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 15513,
       "venue_id": 3714,
       "venue": "Fargodome",
       "home_id": 2449,
       "home_team": "North Dakota State",
       "home_conference": "Mountain West",
-      "home_points": null,
+      "home_points": 31,
       "away_id": 2638,
       "away_team": "UTEP",
       "away_conference": "Mountain West",
-      "away_points": null
+      "away_points": 7,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401860910,
@@ -22556,20 +22606,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T19:30:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 15835,
       "venue_id": 3905,
       "venue": "Maverik Stadium",
       "home_id": 328,
       "home_team": "Utah State",
       "home_conference": "Pac-12",
-      "home_points": null,
+      "home_points": 31,
       "away_id": 36,
       "away_team": "Colorado State",
       "away_conference": "Pac-12",
-      "away_points": null
+      "away_points": 14,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401871059,
@@ -22577,20 +22628,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T19:30:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 16702,
       "venue_id": 3992,
       "venue": "Williams Stadium (VA)",
       "home_id": 2335,
       "home_team": "Liberty",
       "home_conference": "Conference USA",
-      "home_points": null,
+      "home_points": 49,
       "away_id": 2229,
       "away_team": "Florida International",
       "away_conference": "Conference USA",
-      "away_points": null
+      "away_points": 10,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401856734,
@@ -22598,7 +22650,7 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T19:30:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": true,
       "conference_game": true,
       "attendance": null,
@@ -22607,11 +22659,11 @@
       "home_id": 61,
       "home_team": "Georgia",
       "home_conference": "SEC",
-      "home_points": null,
+      "home_points": 27,
       "away_id": 57,
       "away_team": "Florida",
       "away_conference": "SEC",
-      "away_points": null
+      "away_points": 8
     },
     {
       "id": 401860909,
@@ -22619,20 +22671,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-10-31T23:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 19184,
       "venue_id": 7311,
       "venue": "Snapdragon Stadium",
       "home_id": 21,
       "home_team": "San Diego State",
       "home_conference": "Pac-12",
-      "home_points": null,
+      "home_points": 26,
       "away_id": 265,
       "away_team": "Washington State",
       "away_conference": "Pac-12",
-      "away_points": null
+      "away_points": 20,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401860908,
@@ -22640,20 +22693,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-11-01T02:00:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 34429,
       "venue_id": 3653,
       "venue": "Albertsons Stadium",
       "home_id": 68,
       "home_team": "Boise State",
       "home_conference": "Pac-12",
-      "home_points": null,
+      "home_points": 46,
       "away_id": 326,
       "away_team": "Texas State",
       "away_conference": "Pac-12",
-      "away_points": null
+      "away_points": 45,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401864530,
@@ -22661,20 +22715,21 @@
       "week": 9,
       "season_type": "regular",
       "start_date": "2026-11-01T02:30:00.000Z",
-      "completed": false,
+      "completed": true,
       "neutral_site": false,
       "conference_game": true,
-      "attendance": null,
+      "attendance": 22382,
       "venue_id": 6501,
       "venue": "Allegiant Stadium",
       "home_id": 2439,
       "home_team": "UNLV",
       "home_conference": "Mountain West",
-      "home_points": null,
+      "home_points": 31,
       "away_id": 2459,
       "away_team": "Northern Illinois",
       "away_conference": "Mountain West",
-      "away_points": null
+      "away_points": 24,
+      "attendance_source": "espn_summary"
     },
     {
       "id": 401866454,
@@ -28270,9 +28325,9 @@
       "team": "Auburn",
       "conference": "SEC",
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28290,9 +28345,9 @@
       "team": "UAB",
       "conference": "American Athletic",
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28300,9 +28355,9 @@
       "team": "South Alabama",
       "conference": "Sun Belt",
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28320,9 +28375,9 @@
       "team": "Arkansas",
       "conference": "SEC",
       "wins": 3,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28330,9 +28385,9 @@
       "team": "Arizona State",
       "conference": "Big 12",
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28350,9 +28405,9 @@
       "team": "Arizona",
       "conference": "Big 12",
       "wins": 6,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28369,10 +28424,10 @@
       "team_id": 16,
       "team": "Sacramento State",
       "conference": "Mid-American",
-      "wins": 1,
+      "wins": 2,
       "losses": 7,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
@@ -28399,10 +28454,10 @@
       "team_id": 21,
       "team": "San Diego State",
       "conference": "Pac-12",
-      "wins": 3,
+      "wins": 4,
       "losses": 5,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
@@ -28410,9 +28465,9 @@
       "team": "San Jos\u00e9 State",
       "conference": "Mountain West",
       "wins": 4,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
@@ -28420,9 +28475,9 @@
       "team": "Stanford",
       "conference": "ACC",
       "wins": 4,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
@@ -28430,19 +28485,19 @@
       "team": "California",
       "conference": "ACC",
       "wins": 3,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
       "team_id": 26,
       "team": "UCLA",
       "conference": "Big Ten",
-      "wins": 7,
+      "wins": 8,
       "losses": 0,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28459,10 +28514,10 @@
       "team_id": 30,
       "team": "USC",
       "conference": "Big Ten",
-      "wins": 6,
+      "wins": 7,
       "losses": 2,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
@@ -28490,19 +28545,19 @@
       "team": "Colorado State",
       "conference": "Pac-12",
       "wins": 3,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
       "team_id": 38,
       "team": "Colorado",
       "conference": "Big 12",
-      "wins": 2,
+      "wins": 3,
       "losses": 5,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28520,9 +28575,9 @@
       "team": "UConn",
       "conference": "FBS Independents",
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28559,10 +28614,10 @@
       "team_id": 48,
       "team": "Delaware",
       "conference": "Conference USA",
-      "wins": 3,
+      "wins": 4,
       "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28590,19 +28645,19 @@
       "team": "Florida State",
       "conference": "ACC",
       "wins": 3,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
       "team_id": 55,
       "team": "Jacksonville State",
       "conference": "Conference USA",
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28620,19 +28675,19 @@
       "team": "Florida",
       "conference": "SEC",
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
       "team_id": 58,
       "team": "South Florida",
       "conference": "American Athletic",
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28640,9 +28695,9 @@
       "team": "Georgia Tech",
       "conference": "ACC",
       "wins": 2,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28659,10 +28714,10 @@
       "team_id": 61,
       "team": "Georgia",
       "conference": "SEC",
-      "wins": 6,
+      "wins": 7,
       "losses": 1,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28699,10 +28754,10 @@
       "team_id": 66,
       "team": "Iowa State",
       "conference": "Big 12",
-      "wins": 3,
+      "wins": 4,
       "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28719,10 +28774,10 @@
       "team_id": 68,
       "team": "Boise State",
       "conference": "Pac-12",
-      "wins": 6,
+      "wins": 7,
       "losses": 1,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28770,9 +28825,9 @@
       "team": "Northwestern",
       "conference": "Big Ten",
       "wins": 6,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28819,10 +28874,10 @@
       "team_id": 84,
       "team": "Indiana",
       "conference": "Big Ten",
-      "wins": 7,
+      "wins": 8,
       "losses": 1,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
@@ -28839,10 +28894,10 @@
       "team_id": 87,
       "team": "Notre Dame",
       "conference": "FBS Independents",
-      "wins": 6,
+      "wins": 7,
       "losses": 1,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28889,10 +28944,10 @@
       "team_id": 97,
       "team": "Louisville",
       "conference": "ACC",
-      "wins": 4,
+      "wins": 5,
       "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28900,9 +28955,9 @@
       "team": "Western Kentucky",
       "conference": "Conference USA",
       "wins": 3,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -28930,9 +28985,9 @@
       "team": "Boston College",
       "conference": "ACC",
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29030,9 +29085,9 @@
       "team": "Maryland",
       "conference": "Big Ten",
       "wins": 2,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29109,10 +29164,10 @@
       "team_id": 130,
       "team": "Michigan",
       "conference": "Big Ten",
-      "wins": 4,
+      "wins": 5,
       "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29160,9 +29215,9 @@
       "team": "Minnesota",
       "conference": "Big Ten",
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29189,10 +29244,10 @@
       "team_id": 142,
       "team": "Missouri",
       "conference": "SEC",
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29209,10 +29264,10 @@
       "team_id": 145,
       "team": "Ole Miss",
       "conference": "SEC",
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29249,30 +29304,30 @@
       "team_id": 150,
       "team": "Duke",
       "conference": "ACC",
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
       "team_id": 151,
       "team": "East Carolina",
       "conference": "American Athletic",
-      "wins": 3,
+      "wins": 4,
       "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
       "team_id": 152,
       "team": "NC State",
       "conference": "ACC",
-      "wins": 3,
+      "wins": 4,
       "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29280,19 +29335,19 @@
       "team": "North Carolina",
       "conference": "ACC",
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
       "team_id": 154,
       "team": "Wake Forest",
       "conference": "ACC",
-      "wins": 6,
+      "wins": 7,
       "losses": 1,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29310,9 +29365,9 @@
       "team": "Nebraska",
       "conference": "Big Ten",
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29360,9 +29415,9 @@
       "team": "Rutgers",
       "conference": "Big Ten",
       "wins": 2,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29370,19 +29425,19 @@
       "team": "New Mexico State",
       "conference": "Conference USA",
       "wins": 3,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
       "team_id": 167,
       "team": "New Mexico",
       "conference": "Mountain West",
-      "wins": 6,
+      "wins": 7,
       "losses": 1,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29439,10 +29494,10 @@
       "team_id": 183,
       "team": "Syracuse",
       "conference": "ACC",
-      "wins": 3,
+      "wins": 4,
       "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29470,9 +29525,9 @@
       "team": "Bowling Green",
       "conference": "Mid-American",
       "wins": 2,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
@@ -29500,9 +29555,9 @@
       "team": "Ohio State",
       "conference": "Big Ten",
       "wins": 6,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29530,9 +29585,9 @@
       "team": "Oklahoma State",
       "conference": "Big 12",
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29560,9 +29615,9 @@
       "team": "Oklahoma",
       "conference": "SEC",
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29590,9 +29645,9 @@
       "team": "Oregon State",
       "conference": "Pac-12",
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29629,10 +29684,10 @@
       "team_id": 213,
       "team": "Penn State",
       "conference": "Big Ten",
-      "wins": 3,
+      "wins": 4,
       "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29660,9 +29715,9 @@
       "team": "Temple",
       "conference": "American Athletic",
       "wins": 2,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29679,10 +29734,10 @@
       "team_id": 221,
       "team": "Pittsburgh",
       "conference": "ACC",
-      "wins": 5,
+      "wins": 6,
       "losses": 3,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
@@ -29729,10 +29784,10 @@
       "team_id": 228,
       "team": "Clemson",
       "conference": "ACC",
-      "wins": 4,
+      "wins": 5,
       "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29759,10 +29814,10 @@
       "team_id": 235,
       "team": "Memphis",
       "conference": "American Athletic",
-      "wins": 6,
+      "wins": 7,
       "losses": 2,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
@@ -29799,10 +29854,10 @@
       "team_id": 239,
       "team": "Baylor",
       "conference": "Big 12",
-      "wins": 4,
+      "wins": 5,
       "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29869,30 +29924,30 @@
       "team_id": 249,
       "team": "North Texas",
       "conference": "American Athletic",
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
       "team_id": 251,
       "team": "Texas",
       "conference": "SEC",
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
       "team_id": 252,
       "team": "BYU",
       "conference": "Big 12",
-      "wins": 6,
+      "wins": 7,
       "losses": 1,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29909,10 +29964,10 @@
       "team_id": 254,
       "team": "Utah",
       "conference": "Big 12",
-      "wins": 7,
+      "wins": 8,
       "losses": 0,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -29930,9 +29985,9 @@
       "team": "James Madison",
       "conference": "Sun Belt",
       "wins": 7,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
@@ -29950,9 +30005,9 @@
       "team": "Virginia",
       "conference": "ACC",
       "wins": 4,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
@@ -29989,10 +30044,10 @@
       "team_id": 264,
       "team": "Washington",
       "conference": "Big Ten",
-      "wins": 4,
+      "wins": 5,
       "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -30000,9 +30055,9 @@
       "team": "Washington State",
       "conference": "Pac-12",
       "wins": 1,
-      "losses": 7,
+      "losses": 8,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
@@ -30060,19 +30115,19 @@
       "team": "Wisconsin",
       "conference": "Big Ten",
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
       "team_id": 276,
       "team": "Marshall",
       "conference": "Sun Belt",
-      "wins": 4,
+      "wins": 5,
       "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -30089,10 +30144,10 @@
       "team_id": 278,
       "team": "Fresno State",
       "conference": "Pac-12",
-      "wins": 4,
+      "wins": 5,
       "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -30129,10 +30184,10 @@
       "team_id": 290,
       "team": "Georgia Southern",
       "conference": "Sun Belt",
-      "wins": 3,
+      "wins": 4,
       "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -30170,9 +30225,9 @@
       "team": "Old Dominion",
       "conference": "Sun Belt",
       "wins": 2,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
@@ -30299,10 +30354,10 @@
       "team_id": 324,
       "team": "Coastal Carolina",
       "conference": "Sun Belt",
-      "wins": 2,
+      "wins": 3,
       "losses": 5,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -30310,19 +30365,19 @@
       "team": "Texas State",
       "conference": "Pac-12",
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
       "team_id": 328,
       "team": "Utah State",
       "conference": "Pac-12",
-      "wins": 2,
+      "wins": 3,
       "losses": 5,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -30379,10 +30434,10 @@
       "team_id": 338,
       "team": "Kennesaw State",
       "conference": "Conference USA",
-      "wins": 1,
+      "wins": 2,
       "losses": 6,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -30410,9 +30465,9 @@
       "team": "Mississippi State",
       "conference": "SEC",
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -30430,9 +30485,9 @@
       "team": "Army",
       "conference": "American Athletic",
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -30469,10 +30524,10 @@
       "team_id": 356,
       "team": "Illinois",
       "conference": "Big Ten",
-      "wins": 4,
+      "wins": 5,
       "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -30929,10 +30984,10 @@
       "team_id": 2005,
       "team": "Air Force",
       "conference": "Mountain West",
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -31060,9 +31115,9 @@
       "team": "App State",
       "conference": "Sun Belt",
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -31430,9 +31485,9 @@
       "team": "UCF",
       "conference": "Big 12",
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -31550,9 +31605,9 @@
       "team": "Cincinnati",
       "conference": "Big 12",
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -31900,9 +31955,9 @@
       "team": "Florida Atlantic",
       "conference": "American Athletic",
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -31910,9 +31965,9 @@
       "team": "Florida International",
       "conference": "Conference USA",
       "wins": 3,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -32000,9 +32055,9 @@
       "team": "Georgia State",
       "conference": "Sun Belt",
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -32189,10 +32244,10 @@
       "team_id": 2294,
       "team": "Iowa",
       "conference": "Big Ten",
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -32230,9 +32285,9 @@
       "team": "Kansas",
       "conference": "Big 12",
       "wins": 3,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -32240,9 +32295,9 @@
       "team": "Kansas State",
       "conference": "Big 12",
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -32250,9 +32305,9 @@
       "team": "Kent State",
       "conference": "Mid-American",
       "wins": 3,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
@@ -32349,10 +32404,10 @@
       "team_id": 2335,
       "team": "Liberty",
       "conference": "Conference USA",
-      "wins": 6,
+      "wins": 7,
       "losses": 1,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -32389,10 +32444,10 @@
       "team_id": 2348,
       "team": "Louisiana Tech",
       "conference": "Sun Belt",
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -32519,10 +32574,10 @@
       "team_id": 2390,
       "team": "Miami",
       "conference": "ACC",
-      "wins": 7,
+      "wins": 8,
       "losses": 0,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -32540,9 +32595,9 @@
       "team": "Middle Tennessee",
       "conference": "Conference USA",
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -32700,9 +32755,9 @@
       "team": "Navy",
       "conference": "American Athletic",
       "wins": 2,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -32720,9 +32775,9 @@
       "team": "Charlotte",
       "conference": "American Athletic",
       "wins": 1,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -32730,9 +32785,9 @@
       "team": "UL Monroe",
       "conference": "Sun Belt",
       "wins": 1,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -32749,10 +32804,10 @@
       "team_id": 2439,
       "team": "UNLV",
       "conference": "Mountain West",
-      "wins": 4,
+      "wins": 5,
       "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -32760,9 +32815,9 @@
       "team": "Nevada",
       "conference": "Mountain West",
       "wins": 3,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -32819,10 +32874,10 @@
       "team_id": 2449,
       "team": "North Dakota State",
       "conference": "Mountain West",
-      "wins": 6,
+      "wins": 7,
       "losses": 2,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
@@ -32860,9 +32915,9 @@
       "team": "Northern Illinois",
       "conference": "Mountain West",
       "wins": 0,
-      "losses": 7,
+      "losses": 8,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -32929,10 +32984,10 @@
       "team_id": 2483,
       "team": "Oregon",
       "conference": "Big Ten",
-      "wins": 4,
+      "wins": 5,
       "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -33000,9 +33055,9 @@
       "team": "Purdue",
       "conference": "Big Ten",
       "wins": 3,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -33080,9 +33135,9 @@
       "team": "Sam Houston",
       "conference": "Conference USA",
       "wins": 1,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -33190,9 +33245,9 @@
       "team": "SMU",
       "conference": "ACC",
       "wins": 6,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -33239,20 +33294,20 @@
       "team_id": 2572,
       "team": "Southern Miss",
       "conference": "Sun Belt",
-      "wins": 2,
+      "wins": 3,
       "losses": 5,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
       "team_id": 2579,
       "team": "South Carolina",
       "conference": "SEC",
-      "wins": 4,
+      "wins": 5,
       "losses": 3,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -33369,10 +33424,10 @@
       "team_id": 2623,
       "team": "Missouri State",
       "conference": "Conference USA",
-      "wins": 2,
+      "wins": 3,
       "losses": 5,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -33389,10 +33444,10 @@
       "team_id": 2628,
       "team": "TCU",
       "conference": "Big 12",
-      "wins": 3,
+      "wins": 4,
       "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -33450,9 +33505,9 @@
       "team": "UTEP",
       "conference": "Mountain West",
       "wins": 1,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -33479,10 +33534,10 @@
       "team_id": 2641,
       "team": "Texas Tech",
       "conference": "Big 12",
-      "wins": 6,
+      "wins": 7,
       "losses": 1,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -33539,10 +33594,10 @@
       "team_id": 2653,
       "team": "Troy",
       "conference": "Sun Belt",
-      "wins": 3,
+      "wins": 4,
       "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -33559,10 +33614,10 @@
       "team_id": 2655,
       "team": "Tulane",
       "conference": "American Athletic",
-      "wins": 3,
+      "wins": 4,
       "losses": 4,
       "ties": 0,
-      "games": 7
+      "games": 8
     },
     {
       "year": 2026,
@@ -33799,10 +33854,10 @@
       "team_id": 2711,
       "team": "Western Michigan",
       "conference": "Mid-American",
-      "wins": 5,
+      "wins": 6,
       "losses": 3,
       "ties": 0,
-      "games": 8
+      "games": 9
     },
     {
       "year": 2026,
@@ -36505,6 +36560,164 @@
           "team_id": 275,
           "school": "Wisconsin",
           "conference": "Big Ten"
+        }
+      ]
+    },
+    {
+      "season": 2026,
+      "season_type": "regular",
+      "week": 10,
+      "poll": "AP Top 25",
+      "ranks": [
+        {
+          "rank": 1,
+          "team_id": 2390,
+          "school": "Miami",
+          "conference": "ACC"
+        },
+        {
+          "rank": 2,
+          "team_id": 61,
+          "school": "Georgia",
+          "conference": "SEC"
+        },
+        {
+          "rank": 3,
+          "team_id": 254,
+          "school": "Utah",
+          "conference": "Big 12"
+        },
+        {
+          "rank": 4,
+          "team_id": 87,
+          "school": "Notre Dame",
+          "conference": "FBS Independents"
+        },
+        {
+          "rank": 5,
+          "team_id": 26,
+          "school": "UCLA",
+          "conference": "Big Ten"
+        },
+        {
+          "rank": 6,
+          "team_id": 84,
+          "school": "Indiana",
+          "conference": "Big Ten"
+        },
+        {
+          "rank": 7,
+          "team_id": 252,
+          "school": "BYU",
+          "conference": "Big 12"
+        },
+        {
+          "rank": 8,
+          "team_id": 96,
+          "school": "Kentucky",
+          "conference": "SEC"
+        },
+        {
+          "rank": 9,
+          "team_id": 333,
+          "school": "Alabama",
+          "conference": "SEC"
+        },
+        {
+          "rank": 10,
+          "team_id": 251,
+          "school": "Texas",
+          "conference": "SEC"
+        },
+        {
+          "rank": 11,
+          "team_id": 194,
+          "school": "Ohio State",
+          "conference": "Big Ten"
+        },
+        {
+          "rank": 12,
+          "team_id": 145,
+          "school": "Ole Miss",
+          "conference": "SEC"
+        },
+        {
+          "rank": 13,
+          "team_id": 2641,
+          "school": "Texas Tech",
+          "conference": "Big 12"
+        },
+        {
+          "rank": 14,
+          "team_id": 154,
+          "school": "Wake Forest",
+          "conference": "ACC"
+        },
+        {
+          "rank": 15,
+          "team_id": 99,
+          "school": "LSU",
+          "conference": "SEC"
+        },
+        {
+          "rank": 16,
+          "team_id": 2633,
+          "school": "Tennessee",
+          "conference": "SEC"
+        },
+        {
+          "rank": 17,
+          "team_id": 248,
+          "school": "Houston",
+          "conference": "Big 12"
+        },
+        {
+          "rank": 18,
+          "team_id": 30,
+          "school": "USC",
+          "conference": "Big Ten"
+        },
+        {
+          "rank": 19,
+          "team_id": 142,
+          "school": "Missouri",
+          "conference": "SEC"
+        },
+        {
+          "rank": 20,
+          "team_id": 68,
+          "school": "Boise State",
+          "conference": "Pac-12"
+        },
+        {
+          "rank": 21,
+          "team_id": 2294,
+          "school": "Iowa",
+          "conference": "Big Ten"
+        },
+        {
+          "rank": 22,
+          "team_id": 167,
+          "school": "New Mexico",
+          "conference": "Mountain West"
+        },
+        {
+          "rank": 23,
+          "team_id": 2579,
+          "school": "South Carolina",
+          "conference": "SEC"
+        },
+        {
+          "rank": 24,
+          "team_id": 12,
+          "school": "Arizona",
+          "conference": "Big 12"
+        },
+        {
+          "rank": 25,
+          "team_id": 57,
+          "school": "Florida",
+          "conference": "SEC"
         }
       ]
     }
