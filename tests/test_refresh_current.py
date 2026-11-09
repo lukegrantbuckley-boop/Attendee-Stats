@@ -284,8 +284,8 @@ def test_2020_stays_omitted_and_2026_cache_has_real_attendance():
     assert raw["source"] == "cfbd"
     assert raw["synthetic"] is False
     completed = [game for game in raw["games"] if game["completed"] and not game["neutral_site"]]
-    assert len(completed) == 503
-    assert sum(game["attendance"] is None for game in completed) == 3
+    assert len(completed) == 675
+    assert sum(game["attendance"] is None for game in completed) == 1
     assert sum(game["attendance"] == 0 for game in completed) == 0
     assert all(game["attendance"] is None or game["attendance"] > 0 for game in completed)
     official = [game for game in completed if game.get("attendance_source") == "official"]
@@ -351,16 +351,16 @@ def test_2020_stays_omitted_and_2026_cache_has_real_attendance():
     assert len(schools) == 138
     with_crowd = [row for row in schools.values() if row["avg_home_attendance"] is not None]
     assert len(with_crowd) == 138
-    assert schools["Western Kentucky"]["avg_home_attendance"] == (17247 + 11102) / 2
-    assert schools["Western Kentucky"]["reported_home_games"] == 2
-    assert schools["Purdue"]["avg_home_attendance"] == (49019 + 50363 + 52273 + 48559 + 50941) / 5
-    assert schools["Purdue"]["reported_home_games"] == 5
-    assert schools["Oklahoma"]["avg_home_attendance"] == (84315 + 83423 + 83218) / 3
-    assert schools["Oklahoma"]["reported_home_games"] == 3
-    assert schools["UL Monroe"]["avg_home_attendance"] == (13211 + 15326 + 20653) / 3
-    assert schools["UL Monroe"]["reported_home_games"] == 3
-    assert schools["Sam Houston"]["avg_home_attendance"] == (12182 + 7291) / 2
-    assert schools["Sam Houston"]["reported_home_games"] == 2
+    assert schools["Western Kentucky"]["avg_home_attendance"] == (17247 + 11102 + 12147) / 3
+    assert schools["Western Kentucky"]["reported_home_games"] == 3
+    assert schools["Purdue"]["avg_home_attendance"] == (49019 + 50363 + 52273 + 48559 + 50941 + 51929) / 6
+    assert schools["Purdue"]["reported_home_games"] == 6
+    assert schools["Oklahoma"]["avg_home_attendance"] == (84315 + 83423 + 83218 + 83189) / 4
+    assert schools["Oklahoma"]["reported_home_games"] == 4
+    assert schools["UL Monroe"]["avg_home_attendance"] == (13211 + 15326 + 20653 + 9086) / 4
+    assert schools["UL Monroe"]["reported_home_games"] == 4
+    assert schools["Sam Houston"]["avg_home_attendance"] == (12182 + 7291 + 8577) / 3
+    assert schools["Sam Houston"]["reported_home_games"] == 3
     tulsa = next(game for game in schools["Sam Houston"]["home_games"] if game["opponent"] == "Tulsa")
     assert tulsa["attendance"] is None
     assert tulsa["attendance_status"] == "not_reported"
