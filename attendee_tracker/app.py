@@ -9,6 +9,7 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from attendee_tracker.assemble import assemble
+from attendee_tracker.bowls import BowlsError, public_bowls
 from attendee_tracker.attendance_growth import rank_attendance_growth
 from attendee_tracker.business_news import load_business_news, safe_slug
 from attendee_tracker.campaigns import CampaignError, school_campaigns
@@ -173,6 +174,19 @@ def valuations(sort: str = Query("valuation")):
     try:
         return list_valuations(sort)
     except ValuationsError as exc:
+        return JSONResponse(
+            {"error": exc.code, "message": exc.message},
+            status_code=exc.status,
+        )
+
+
+@app.get("/api/bowls")
+def bowls(year: int | None = None):
+    """Bowl slate and the projected CFP bracket. Business figures need a source URL."""
+    selected = year if year is not None else 2026
+    try:
+        return public_bowls(selected)
+    except BowlsError as exc:
         return JSONResponse(
             {"error": exc.code, "message": exc.message},
             status_code=exc.status,

@@ -13,6 +13,7 @@ from attendee_tracker.conferences import (
     display_conference,
     tier_for,
 )
+from attendee_tracker.cfp import cfp_is_available, indexes, load_cfp, lookup_rank, public_poll, rank_note
 from attendee_tracker.normalize import latest_ap_week
 
 SAMPLE_BANNER = (
@@ -45,6 +46,14 @@ def assemble(raw: dict) -> dict:
     records_by_name = {row["team"].casefold(): row for row in records if row.get("team")}
     ap_week = latest_ap_week(rankings)
     ap_by_id, ap_by_name = _ap_indexes(ap_week)
+    season_number = raw.get("season")
+    cfp_document = None
+    if raw.get("source") == "cfbd" and not raw.get("synthetic") and isinstance(season_number, int):
+        loaded = load_cfp(season_number)
+        if cfp_is_available(loaded, season_number):
+            cfp_document = loaded
+    cfp_by_id, cfp_by_name = indexes(cfp_document)
+    poll_name = public_poll(cfp_document, season_number) if isinstance(season_number, int) else "AP"
 
     season_omitted = attendance_year_omitted(raw.get("season"))
     slugs: dict[str, int] = {}
@@ -64,6 +73,13 @@ def assemble(raw: dict) -> dict:
         rank = ap_by_id.get(team["id"])
         if rank is None:
             rank = ap_by_name.get(team["school"].casefold())
+        cfp_row = lookup_rank({"id": team["id"], "school": team["school"]}, cfp_by_id, cfp_by_name)
+        if poll_name == "CFP" and cfp_row is not None:
+            shown_rank = cfp_row.get("rank")
+        elif poll_name == "CFP":
+            shown_rank = None
+        else:
+            shown_rank = rank
         team_games = [_perspective(game, team) for game in games]
         team_games = [game for game in team_games if game is not None]
         team_games.sort(key=_game_sort)
@@ -107,6 +123,9 @@ def assemble(raw: dict) -> dict:
                 "ap_rank": rank,
                 "ap_week": ap_week["week"] if ap_week else None,
                 "ap_season_type": ap_week["season_type"] if ap_week else None,
+                "cfp_rank": cfp_row.get("rank") if cfp_row else None,
+                "public_poll": poll_name if shown_rank is not None or poll_name == "CFP" else ("AP" if rank else None),
+                "public_rank": shown_rank,
                 "home_games": home_games,
                 "reported_home_games": len(reported),
                 "missing_attendance_games": len(missing),
@@ -150,6 +169,12 @@ def assemble(raw: dict) -> dict:
             "ap_week": ap_week["week"] if ap_week else None,
             "ap_season_type": ap_week["season_type"] if ap_week else None,
             "ap_poll": "AP Top 25" if ap_week else None,
+            "public_poll": poll_name,
+            "public_week": cfp_document.get("week") if cfp_document else (ap_week["week"] if ap_week else None),
+            "public_season_type": None if cfp_document else (ap_week["season_type"] if ap_week else None),
+            "public_released_at": cfp_document.get("released_at") if cfp_document else None,
+            "public_rankings_url": cfp_document.get("official_url") if cfp_document else None,
+            "rank_note": rank_note(cfp_document, season_number) if isinstance(season_number, int) else None,
             "team_count": len(schools),
             "game_count": len(games),
             "season_partial": season_partial,
@@ -293,8 +318,9 @@ def _grouped(schools: list[dict], mode: str) -> list[dict]:
 
 def _sort_key(school: dict, mode: str) -> tuple:
     name = school["school"].casefold()
-    unranked = school["ap_rank"] is None
-    rank = school["ap_rank"] if school["ap_rank"] is not None else 10_000
+    shown = school.get("public_rank")
+    unranked = shown is None
+    rank = shown if shown is not None else 10_000
     no_record = school["win_pct"] is None
     win_value = school["win_pct"] if school["win_pct"] is not None else -1
     wins = school["wins"] if school["wins"] is not None else -1
