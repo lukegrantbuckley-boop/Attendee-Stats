@@ -33,14 +33,24 @@ let bowlsPayload = null;
 let bowlsToken = 0;
 
 const motionApi = window.Motion || null;
-const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 const countedStats = new Set();
-let cancelLift = () => {};
 let motionFromRender = false;
 let lastMotionKey = "";
 let lastShellKey = "";
 let valuationReorder = false;
+const scrollByPage = new Map();
+let lastPage = "";
+let traversing = false;
+
+// A new page opens at the top; back/forward returns to where that page was left.
+// Browsers without the Navigation API open every page at the top.
+history.scrollRestoration = "manual";
+if (window.navigation) {
+  window.navigation.addEventListener("navigate", (event) => {
+    traversing = event.navigationType === "traverse";
+  });
+}
 
 const VALUATION_CONFERENCES = [
   ["all", "All"],
@@ -117,7 +127,7 @@ function applyChrome() {
   document.title = `CFB Engagement Tracker · ${meta.season}`;
   if (meta.banner) {
     banner.hidden = false;
-    banner.replaceChildren(
+    fill(banner,
       h("strong", { text: "Sample data. " }),
       document.createTextNode(meta.banner)
     );
@@ -132,6 +142,10 @@ function render() {
   destroyCharts();
   const route = currentRoute();
   setNav(route.name === "school" ? "home" : route.name);
+  const page = route.name === "school" ? `school:${route.slug}` : route.name;
+  const pageChanged = lastPage && page !== lastPage;
+  if (pageChanged) scrollByPage.set(lastPage, window.scrollY);
+  lastPage = page;
   const shellKey = motionShellKey(route);
   const motionKey = motionViewKey(route);
   const shellChanged = shellKey !== lastShellKey;
@@ -149,6 +163,7 @@ function render() {
   } finally {
     motionFromRender = false;
   }
+  if (pageChanged) window.scrollTo({ top: traversing ? scrollByPage.get(page) || 0 : 0, behavior: "instant" });
   if (shellChanged) motionSwap(view);
   else if (viewChanged) {
     motionSwap(document.getElementById("school-body"));
@@ -156,7 +171,6 @@ function render() {
   }
   if (shellChanged || viewChanged || route.name === "home") motionLists(view, !(shellChanged || viewChanged));
   motionCounts(view);
-  motionHover();
   view.focus({ preventScroll: true });
 }
 
@@ -189,8 +203,11 @@ function currentRoute() {
 
 function setNav(name) {
   document.querySelectorAll("[data-nav]").forEach((link) => {
-    if (link.dataset.nav === name) link.setAttribute("aria-current", "page");
-    else link.removeAttribute("aria-current");
+    if (link.dataset.nav === name) {
+      link.setAttribute("aria-current", "page");
+      // On phones the tab strip scrolls sideways; keep the current tab in view.
+      link.parentElement.scrollLeft = link.offsetLeft - 16;
+    } else link.removeAttribute("aria-current");
   });
 }
 
@@ -247,8 +264,9 @@ function renderHome() {
     });
   });
 
-  view.replaceChildren(
-    h("p", { class: "lede", text: "Home crowds for every FBS program, grouped by conference." }),
+  fill(view,
+    kicker("Schools"),
+    h("h1", { class: "lede", text: "Home crowds for every FBS program, grouped by conference." }),
     h("p", { class: "sublede", text: `${intro} Each card pins the season average and the last home game. A dash means that figure is not in the feed.` }),
     h("div", { class: "toolbar" }, [
       h("input", {
@@ -293,7 +311,6 @@ function renderHome() {
   if (!motionFromRender) {
     motionLists(view, true);
     motionCounts(view);
-    motionHover();
   }
 }
 
@@ -392,7 +409,7 @@ function lastHomeMeta(school) {
 function renderSchool(slug, pageView, campaignYear) {
   const school = schoolsBySlug[slug];
   if (!school) {
-    view.replaceChildren(
+    fill(view,
       h("a", { class: "back", href: "#/", text: "All schools" }),
       h("div", { class: "error" }, [
         h("h2", { text: "School not in this cache" }),
@@ -426,7 +443,7 @@ function renderSchool(slug, pageView, campaignYear) {
     h("div", { id: "school-body", "aria-live": "polite" }),
     businessNewsSection(slug),
   ];
-  view.replaceChildren(...nodes);
+  fill(view, ...nodes);
   if (!revenueBySlug.has(slug)) ensureRevenue(slug);
   if (filters.span === 1) {
     fillSeasonBody(school, endYear);
@@ -492,7 +509,7 @@ function renderRevenue(school, slug) {
   ];
   if (!data) {
     nodes.push(h("p", { class: "loading", text: "Loading football revenue…" }));
-    view.replaceChildren(...nodes);
+    fill(view, ...nodes);
     ensureRevenue(slug);
     return;
   }
@@ -509,7 +526,7 @@ function renderRevenue(school, slug) {
       h("div", { class: "table-wrap" }, [revenueTable(data.years || [])]),
     ])
   );
-  view.replaceChildren(...nodes);
+  fill(view, ...nodes);
   drawRevenueChart(school, data);
 }
 
@@ -534,7 +551,7 @@ function schoolViewToggle(slug, pageView) {
 
 function renderCampaigns(school, slug, year) {
   const selected = year === 2025 ? 2025 : 2026;
-  view.replaceChildren(
+  fill(view,
     h("a", { class: "back", href: "#/", text: "All schools" }),
     schoolViewToggle(slug, "campaigns"),
     schoolIdentity(school),
@@ -982,7 +999,7 @@ function renderBusinessNews(node, body) {
   const list = items.length
     ? h("ul", { class: "news-list" }, items.map(newsRow))
     : h("p", { text: body.note || "No recent athletics-business headlines turned up for this program." });
-  node.replaceChildren(
+  fill(node,
     list,
     h("p", {
       class: "muted news-attr",
@@ -1068,7 +1085,7 @@ function fillSeasonBody(school, seasonYear) {
   const body = document.getElementById("school-body");
   if (!body) return;
   const covid = isCovidOmitted(school) || year === 2020;
-  body.replaceChildren(
+  fill(body,
     h("section", { class: "panel" }, [
       h("h3", { text: "Home attendance by opponent" }),
       h("p", { class: "muted", text: covid
@@ -1133,7 +1150,7 @@ function renderHistory(school, history) {
   const reported = reportedSeasons(history.school.seasons);
   const delta = reported.length >= 2 ? attendanceDelta(reported) : null;
   const plottable = rows.some((row) => historyAverage(row) != null);
-  node.replaceChildren(
+  fill(node,
     h("section", { class: "panel" }, [
       h("h3", { text: "Average home attendance by season" }),
       h("p", { class: "muted", text: historyChartIntro(history) }),
@@ -1316,8 +1333,9 @@ function drawHistoryChart(school, rows) {
 function renderAnalysis() {
   const analysis = payload.analysis;
   const meta = payload.meta;
-  view.replaceChildren(
-    h("p", { class: "lede", text: "Does a weaker record come with a thinner crowd?" }),
+  fill(view,
+    kicker("Analysis"),
+    h("h1", { class: "lede", text: "Does a weaker record come with a thinner crowd?" }),
     h("p", { class: "sublede", text: analysis.relationship }),
     meta.synthetic
       ? h("p", { class: "muted", text: "These figures are computed from the sample fixture. They are not a finding about the 2026 season." })
@@ -1518,7 +1536,7 @@ function renderLoyalty(node, seasonBody, year) {
   const covid = seasonIsCovid(year, seasonBody);
   const loyalty = seasonBody.analysis ? seasonBody.analysis.loyalty : null;
   const partial = !covid && Boolean(seasonBody.meta && seasonBody.meta.season_partial);
-  node.replaceChildren(
+  fill(node,
     loyaltyIntro(loyalty, year, covid),
     h("div", { class: "loyalty-grid" }, [
       loyaltyPanel(
@@ -1652,7 +1670,7 @@ function renderGrowth(node, growth, yearFrom, yearTo) {
     ? "No qualifying school declined. These are the smallest growth rates in the window, still ordered by the rate rather than by crowd size."
     : "The steepest drops in average home attendance. A negative rate means the reported crowd got smaller. This is not the softest-fill list.";
   const empty = !growing.length && !falling.length;
-  node.replaceChildren(
+  fill(node,
     h("p", { class: "sublede", text: data.methodology || "Attendance growth uses reported home averages only." }),
     empty
       ? h("section", { class: "panel" }, [
@@ -1974,8 +1992,9 @@ function renderValuations() {
     return;
   }
   const token = ++valuationsToken;
-  view.replaceChildren(
-    h("p", { class: "lede", text: "What each Power football program is worth." }),
+  fill(view,
+    kicker("Valuations"),
+    h("h1", { class: "lede", text: "What each Power football program is worth." }),
     h("p", { class: "loading", text: "Loading valuations…" })
   );
   loadValuations(token);
@@ -2020,8 +2039,9 @@ function paintValuations() {
     ? "Sorted by estimated football roster cost. Movement arrows stay with the valuation sort, where they compare The Athletic's July 2025 ranks."
     : "Sorted by The Athletic's July 2026 valuation. Arrows show how many spots a school moved from their July 2025 ranking.";
 
-  view.replaceChildren(
-    h("p", { class: "lede", text: "What each Power football program is worth." }),
+  fill(view,
+    kicker("Valuations"),
+    h("h1", { class: "lede", text: "What each Power football program is worth." }),
     h("p", { class: "sublede", text: sublede }),
     h("div", { class: "toolbar val-toolbar" }, [
       segment("Sort", [
@@ -2050,14 +2070,12 @@ function paintValuations() {
   if (reorder) {
     if (previous && previous.size) flipValuationRows(previous);
     motionCounts(view);
-    motionHover();
     return;
   }
   if (!motionFromRender) {
     motionSwap(view);
     motionLists(view, false);
     motionCounts(view);
-    motionHover();
   }
 }
 
@@ -2068,8 +2086,9 @@ function renderMarketing() {
     return;
   }
   const token = ++marketingToken;
-  view.replaceChildren(
-    h("p", { class: "lede", text: "Winning teams that still do not fill the building, and the smaller schools that do." }),
+  fill(view,
+    kicker("Marketing Approaches"),
+    h("h1", { class: "lede", text: "Winning teams that still do not fill the building, and the smaller schools that do." }),
     h("p", { class: "loading", text: `Loading the ${marketingYear} marketing lists…` })
   );
   loadMarketing(marketingYear, token);
@@ -2107,8 +2126,9 @@ function paintMarketing(data) {
   const partial = data.season_partial
     ? `${data.year} is still in progress, so the record and the fill can move.`
     : `${data.year} is a complete season.`;
-  view.replaceChildren(
-    h("p", { class: "lede", text: "Winning teams that still do not fill the building, and the smaller schools that do." }),
+  fill(view,
+    kicker("Marketing Approaches"),
+    h("h1", { class: "lede", text: "Winning teams that still do not fill the building, and the smaller schools that do." }),
     h("p", { class: "sublede", text: data.threshold && data.threshold.summary ? data.threshold.summary : "" }),
     h("div", { class: "range-bar" }, [
       segment("Marketing season", years.map((year) => [year, marketingYearLabel(year, data)]), marketingYear, (value) => {
@@ -2135,7 +2155,6 @@ function paintMarketing(data) {
     motionSwap(view);
     motionLists(view, false);
     motionCounts(view);
-    motionHover();
   }
 }
 
@@ -2508,8 +2527,8 @@ function stat(value, label) {
   return h("div", { class: "stat" }, [h("b", { text: value }), h("span", { text: label })]);
 }
 
-const PLATE_LIGHT = [255, 253, 248];
-const PLATE_INK = [28, 25, 21];
+const PLATE_LIGHT = [255, 255, 255];
+const PLATE_INK = [17, 20, 24];
 const logoPlates = new Map();
 const logoPlateLoads = new Map();
 
@@ -2876,7 +2895,8 @@ async function loadBowls(token) {
 function paintBowls(data) {
   const bracket = data.bracket;
   const nodes = [
-    h("p", { class: "lede", text: "Bowl Games" }),
+    kicker("Postseason"),
+    h("h1", { class: "lede", text: "Bowl Games" }),
     h("p", { class: "sublede", text: "The bracket is computed from the latest CFP rankings. The cards below use ESPN’s weekly bowl projections until official matchups replace them on Selection Day." }),
     data.status_note ? h("p", { class: "muted", text: data.status_note }) : null,
     bracket ? bracketPanel(data) : h("p", { text: "The projected bracket is not in this cache." }),
@@ -2890,12 +2910,11 @@ function paintBowls(data) {
     explainerPanel(data.explainers && data.explainers.money),
     h("div", { class: "bowl-grid" }, (data.games || []).map(bowlCard)),
   ].filter((node) => node != null);
-  view.replaceChildren(...nodes);
+  fill(view, ...nodes);
   if (!motionFromRender) {
     motionSwap(view);
     motionLists(view, false);
     motionCounts(view);
-    motionHover();
   }
 }
 
@@ -3368,34 +3387,11 @@ function staggerNodes(nodes, withOpacity) {
   });
 }
 
-function motionHover() {
-  cancelLift();
-  cancelLift = () => {};
-  if (!view || reduceMotion() || !motionApi || !finePointer.matches) return;
-  const nodes = view.querySelectorAll(".card, .bowl-card, .loyal-row, .approach-card, .val-row, .outlier, .campaign");
-  if (!nodes.length) return;
-  cancelLift = motionApi.hover(nodes, (element) => {
-    motionApi.animate(element, { transform: "translateY(-2px)" }, {
-      type: "spring",
-      bounce: 0,
-      visualDuration: 0.18,
-    });
-    return () => {
-      motionApi.animate(element, { transform: "translateY(0px)" }, {
-        type: "spring",
-        bounce: 0,
-        visualDuration: 0.2,
-      });
-    };
-  });
-}
-
 function afterPartial(node) {
   if (motionFromRender || !node) return;
   motionSwap(node);
   motionLists(node, false);
   motionCounts(node);
-  motionHover();
 }
 
 function applyCount(props, spec) {
@@ -3514,6 +3510,14 @@ function flipValuationRows(previous) {
     }
   }
   if (fresh.length) staggerNodes(fresh, true);
+}
+
+function fill(node, ...children) {
+  node.replaceChildren(...children.filter((child) => child != null));
+}
+
+function kicker(text) {
+  return h("p", { class: "kicker", "aria-hidden": "true", text });
 }
 
 function h(tag, props, children) {
