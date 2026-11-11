@@ -1,0 +1,3609 @@
+{
+  "season": 2026,
+  "label": "2026-27",
+  "selection_day": "2026-12-06",
+  "official_matchups": false,
+  "projection": {
+    "source": "ESPN",
+    "authors": [
+      "Kyle Bonagura",
+      "Mark Schlabach"
+    ],
+    "date": "2026-11-09",
+    "url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+    "week_label": "Week 10",
+    "newer_week_note": "Checked Nov. 11, 2026. No later ESPN Bonagura and Schlabach bowl-projection story was found. The Week 10 story, published Nov. 9, 2026, is the latest."
+  },
+  "schedule_sources": [
+    "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+    "https://fbschedules.com/college-football-bowl-schedule/",
+    "https://collegefootballplayoff.com/news/2026/2/3/2627-2728-bowls",
+    "https://www.ncaa.com/news/football/article/2026-08-11/how-college-football-playoff-works-schedule-selections-rankings-byes-and-more"
+  ],
+  "omitted": [
+    {
+      "name": "Cricket Celebration Bowl presented by Toyota",
+      "division": "FCS",
+      "date": "2026-12-12",
+      "time_et": "12:00 p.m. ET",
+      "tv": "ABC",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "tie_ins": "MEAC vs. SWAC",
+      "reason": "FCS game. It is not part of the FBS bowl slate on this tab.",
+      "source_urls": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/",
+        "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+      ]
+    }
+  ],
+  "unassigned_quarterfinal_projections": {
+    "note": "ESPN's Nov. 9, 2026 projections named three Jan. 1 quarterfinals and said each could be the Cotton, Rose, or Peach bowl. Those teams are not placed on a bowl card.",
+    "date": "2026-11-09",
+    "url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+    "projections": [
+      {
+        "analyst": "Kyle Bonagura",
+        "teams": [
+          "Miami",
+          "Georgia"
+        ],
+        "window": "12:00 p.m. ET"
+      },
+      {
+        "analyst": "Mark Schlabach",
+        "teams": [
+          "Indiana",
+          "Georgia"
+        ],
+        "window": "12:00 p.m. ET"
+      },
+      {
+        "analyst": "Kyle Bonagura",
+        "teams": [
+          "Notre Dame",
+          "Utah"
+        ],
+        "window": "4:00 p.m. ET"
+      },
+      {
+        "analyst": "Mark Schlabach",
+        "teams": [
+          "Tennessee",
+          "Utah"
+        ],
+        "window": "4:00 p.m. ET"
+      },
+      {
+        "analyst": "Kyle Bonagura",
+        "teams": [
+          "UCLA",
+          "Indiana"
+        ],
+        "window": "8:00 p.m. ET"
+      },
+      {
+        "analyst": "Mark Schlabach",
+        "teams": [
+          "Miami",
+          "Notre Dame"
+        ],
+        "window": "8:00 p.m. ET"
+      }
+    ]
+  },
+  "explainers": {
+    "bracket": {
+      "title": "How the bracket works",
+      "text": "The 2026-27 College Football Playoff takes 12 teams. The ACC, Big Ten, Big 12, and SEC champions are automatic. Until those games are played, this projection uses the highest-ranked team in each of those conferences. One more automatic bid goes to the highest-ranked team from the American, Conference USA, MAC, Mountain West, Pac-12, or Sun Belt, whether or not it won its conference. Notre Dame is automatic if it is in the top 12, and the field then takes six at-large teams. Otherwise it takes seven. Automatic qualifiers ranked outside the top 12 are seeded at the bottom, in rank order. The four highest-ranked teams in the field are seeds 1\u20134 and get a first-round bye. They do not have to be conference champions. The first round is on the higher seed's campus: 5 vs. 12, 6 vs. 11, 7 vs. 10, and 8 vs. 9. Quarterfinals are not reseeded. The winner of 8/9 plays 1, the winner of 5/12 plays 4, the winner of 7/10 plays 2, and the winner of 6/11 plays 3. Seeds 1\u20133 pick the quarterfinal sites, and the semifinal that follows a win, on Selection Day, Dec. 6, 2026. This page does not assign those bowls.",
+      "source_urls": [
+        "https://www.ncaa.com/news/football/article/2026-08-11/how-college-football-playoff-works-schedule-selections-rankings-byes-and-more",
+        "https://collegefootballplayoff.com/sports/2026/8/9/bracket-place-holder",
+        "https://collegefootballplayoff.com/news/2026/2/3/2627-2728-bowls"
+      ]
+    },
+    "selection": {
+      "title": "How bowl selection works",
+      "text": "A team needs six wins to be bowl-eligible. The College Football Playoff field is filled first. Conferences then fill the remaining games through their tie-ins and selection order, and open spots can be filled at large. If bowls still need teams after the six-win pool is used, a 5-7 team can fill a spot. Those 5-7 teams had been taken in order of the multiyear Academic Progress Rate. In May 2026 the NCAA Division I Football Bowl Subdivision Oversight Committee voted to adopt a proposal that lets the conference choose a 5-7 team with a multiyear APR of at least 930 instead. ESPN reported the same committee vote.",
+      "source_urls": [
+        "https://apnews.com/article/ncaa-college-football-bowls-6d1818a7c2a5f95db349d1b3a2fb2d69",
+        "https://www.espn.com/college-football/story/_/id/48713433/proposal-seeks-flexibility-5-7-teams-fill-bowl-games",
+        "https://www.ncaa.com/news/football/article/2026-08-11/how-college-football-playoff-works-schedule-selections-rankings-byes-and-more"
+      ]
+    },
+    "money": {
+      "title": "Payouts and the CFP pool",
+      "text": "Bowl and CFP money is paid to conferences, not directly to the teams. For 2026-27, CFP revenue shares other than expenses are not finalized. Each conference whose team plays in the CFP receives a $3.18 million expense stipend per round. The 2025-26 schedule, labeled that way on the CFP cards, was $300,000 per school that met the APR standard, $4 million for each CFP team and another $4 million for each team that reached a quarterfinal, $6 million for each team that reached a semifinal and another $6 million for each team in the championship game, and a $3 million expense stipend per conference per round.",
+      "source_urls": [
+        "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution",
+        "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+      ]
+    }
+  },
+  "games": [
+    {
+      "id": "salute-to-veterans",
+      "name": "IS4S Salute to Veterans Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-15",
+      "time_et": "5:30 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Cramton Bowl",
+      "city": "Montgomery, Ala.",
+      "tie_ins": "Conference USA, MAC, or Sun Belt",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Nebraska",
+            "Miami (Ohio)"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Buffalo",
+            "Louisiana"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "IS4S",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "frisco-football-classic",
+      "name": "Frisco Football Classic",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-15",
+      "time_et": "9:00 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Ford Center at The Star",
+      "city": "Frisco, Texas",
+      "tie_ins": "Conference USA vs. Sun Belt",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Illinois",
+            "Louisiana"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "East Carolina",
+            "Texas State"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": null,
+          "since_year": null,
+          "note": "No title sponsor is named on the NCAA.com or FBSchedules listings.",
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "san-juan",
+      "name": "TransPerfect San Juan Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-16",
+      "time_et": null,
+      "tv": null,
+      "venue": "Hiram Bithorn Stadium",
+      "city": "San Juan, Puerto Rico",
+      "tie_ins": "ACC vs. Sun Belt",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Pittsburgh",
+            "Marshall"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "FIU",
+            "Appalachian State"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "TransPerfect",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      },
+      "time_note": "NCAA.com and FBSchedules list the time and TV as TBA. ESPN's Nov. 9, 2026 projections mentioned 7:30 p.m. ET with the network still TBD. That time is not treated as the official listing."
+    },
+    {
+      "id": "boca-raton",
+      "name": "Boca Raton Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-18",
+      "time_et": "11:00 a.m. ET",
+      "tv": "ESPN",
+      "venue": "Flagler Credit Union Stadium",
+      "city": "Boca Raton, Fla.",
+      "tie_ins": "American, Conference USA, MAC, Mountain West, or Sun Belt",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Liberty",
+            "Tulsa"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "James Madison",
+            "Western Michigan"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": null,
+          "since_year": null,
+          "note": "No title sponsor is named on the NCAA.com or FBSchedules listings.",
+          "source_urls": [
+            "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+            "https://fbschedules.com/college-football-bowl-schedule/"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "gasparilla",
+      "name": "Union Home Mortgage Gasparilla Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-18",
+      "time_et": "2:30 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Raymond James Stadium",
+      "city": "Tampa, Fla.",
+      "tie_ins": "SEC vs. American",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Auburn",
+            "South Florida"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Florida",
+            "South Florida"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Union Home Mortgage",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "cfp-first-1",
+      "name": "CFP First Round",
+      "division": "fbs",
+      "cfp_round": "first",
+      "date": "2026-12-18",
+      "time_et": "8:00 p.m. ET",
+      "tv": "ESPN",
+      "venue": null,
+      "city": null,
+      "tie_ins": "Higher seed hosts",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/",
+        "https://www.ncaa.com/news/football/article/2026-08-11/how-college-football-playoff-works-schedule-selections-rankings-byes-and-more"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": true,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Boise State",
+            "Texas"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Boise State",
+            "Texas"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": [
+        {
+          "school": "Boise State",
+          "status": "Projected",
+          "analysts": [
+            "Kyle Bonagura",
+            "Mark Schlabach"
+          ]
+        },
+        {
+          "school": "Texas",
+          "status": "Projected",
+          "analysts": [
+            "Kyle Bonagura",
+            "Mark Schlabach"
+          ]
+        }
+      ],
+      "business": {
+        "title_sponsor": {
+          "name": null,
+          "since_year": null,
+          "note": "The first round is a campus CFP game, not a sponsored bowl.",
+          "source_urls": [
+            "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": "2026-27",
+          "note": "2026-27 CFP revenue shares are not finalized. The official 2026-27 figure is a $3.18 million expense stipend per conference for each round that conference's team plays. Other shares are paid after the 2027 national championship. Figures below labeled 2025-26 are that year's distribution, not the 2026-27 payout. Money is paid to conferences.",
+          "expense_stipend_per_conference_per_round": 3180000,
+          "expense_stipend_year": "2026-27",
+          "distribution_2025_26": {
+            "label": "2025-26",
+            "apr_payment": 300000,
+            "per_cfp_team": 4000000,
+            "per_quarterfinal_advance": 4000000,
+            "per_semifinal_advance": 6000000,
+            "per_championship_advance": 6000000,
+            "expense_stipend_per_conference_per_round": 3000000,
+            "source_urls": [
+              "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution"
+            ]
+          },
+          "source_urls": [
+            "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution",
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      },
+      "venue_note": "Campus of the higher seed, or another site that program designates. The stadium is not assigned."
+    },
+    {
+      "id": "cfp-first-2",
+      "name": "CFP First Round",
+      "division": "fbs",
+      "cfp_round": "first",
+      "date": "2026-12-19",
+      "time_et": "12:00 p.m. ET",
+      "tv": "ABC/ESPN",
+      "venue": null,
+      "city": null,
+      "tie_ins": "Higher seed hosts",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/",
+        "https://www.ncaa.com/news/football/article/2026-08-11/how-college-football-playoff-works-schedule-selections-rankings-byes-and-more"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Texas Tech",
+            "UCLA"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Texas Tech",
+            "Miami"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": null,
+          "since_year": null,
+          "note": "The first round is a campus CFP game, not a sponsored bowl.",
+          "source_urls": [
+            "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": "2026-27",
+          "note": "2026-27 CFP revenue shares are not finalized. The official 2026-27 figure is a $3.18 million expense stipend per conference for each round that conference's team plays. Other shares are paid after the 2027 national championship. Figures below labeled 2025-26 are that year's distribution, not the 2026-27 payout. Money is paid to conferences.",
+          "expense_stipend_per_conference_per_round": 3180000,
+          "expense_stipend_year": "2026-27",
+          "distribution_2025_26": {
+            "label": "2025-26",
+            "apr_payment": 300000,
+            "per_cfp_team": 4000000,
+            "per_quarterfinal_advance": 4000000,
+            "per_semifinal_advance": 6000000,
+            "per_championship_advance": 6000000,
+            "expense_stipend_per_conference_per_round": 3000000,
+            "source_urls": [
+              "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution"
+            ]
+          },
+          "source_urls": [
+            "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution",
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      },
+      "venue_note": "Campus of the higher seed, or another site that program designates. The stadium is not assigned."
+    },
+    {
+      "id": "cfp-first-3",
+      "name": "CFP First Round",
+      "division": "fbs",
+      "cfp_round": "first",
+      "date": "2026-12-19",
+      "time_et": "3:30 p.m. ET",
+      "tv": "TNT/truTV/HBO Max",
+      "venue": null,
+      "city": null,
+      "tie_ins": "Higher seed hosts",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/",
+        "https://www.ncaa.com/news/football/article/2026-08-11/how-college-football-playoff-works-schedule-selections-rankings-byes-and-more"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "BYU",
+            "Notre Dame"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Wake Forest",
+            "Tennessee"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": null,
+          "since_year": null,
+          "note": "The first round is a campus CFP game, not a sponsored bowl.",
+          "source_urls": [
+            "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": "2026-27",
+          "note": "2026-27 CFP revenue shares are not finalized. The official 2026-27 figure is a $3.18 million expense stipend per conference for each round that conference's team plays. Other shares are paid after the 2027 national championship. Figures below labeled 2025-26 are that year's distribution, not the 2026-27 payout. Money is paid to conferences.",
+          "expense_stipend_per_conference_per_round": 3180000,
+          "expense_stipend_year": "2026-27",
+          "distribution_2025_26": {
+            "label": "2025-26",
+            "apr_payment": 300000,
+            "per_cfp_team": 4000000,
+            "per_quarterfinal_advance": 4000000,
+            "per_semifinal_advance": 6000000,
+            "per_championship_advance": 6000000,
+            "expense_stipend_per_conference_per_round": 3000000,
+            "source_urls": [
+              "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution"
+            ]
+          },
+          "source_urls": [
+            "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution",
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      },
+      "venue_note": "Campus of the higher seed, or another site that program designates. The stadium is not assigned."
+    },
+    {
+      "id": "cfp-first-4",
+      "name": "CFP First Round",
+      "division": "fbs",
+      "cfp_round": "first",
+      "date": "2026-12-19",
+      "time_et": "7:30 p.m. ET",
+      "tv": "TNT/truTV/HBO Max",
+      "venue": null,
+      "city": null,
+      "tie_ins": "Higher seed hosts",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/",
+        "https://www.ncaa.com/news/football/article/2026-08-11/how-college-football-playoff-works-schedule-selections-rankings-byes-and-more"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Tennessee",
+            "Miami"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Indiana",
+            "Alabama"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": null,
+          "since_year": null,
+          "note": "The first round is a campus CFP game, not a sponsored bowl.",
+          "source_urls": [
+            "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": "2026-27",
+          "note": "2026-27 CFP revenue shares are not finalized. The official 2026-27 figure is a $3.18 million expense stipend per conference for each round that conference's team plays. Other shares are paid after the 2027 national championship. Figures below labeled 2025-26 are that year's distribution, not the 2026-27 payout. Money is paid to conferences.",
+          "expense_stipend_per_conference_per_round": 3180000,
+          "expense_stipend_year": "2026-27",
+          "distribution_2025_26": {
+            "label": "2025-26",
+            "apr_payment": 300000,
+            "per_cfp_team": 4000000,
+            "per_quarterfinal_advance": 4000000,
+            "per_semifinal_advance": 6000000,
+            "per_championship_advance": 6000000,
+            "expense_stipend_per_conference_per_round": 3000000,
+            "source_urls": [
+              "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution"
+            ]
+          },
+          "source_urls": [
+            "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution",
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      },
+      "venue_note": "Campus of the higher seed, or another site that program designates. The stadium is not assigned."
+    },
+    {
+      "id": "myrtle-beach",
+      "name": "Myrtle Beach Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-21",
+      "time_et": "11:00 a.m. ET",
+      "tv": "ESPN",
+      "venue": "Brooks Stadium",
+      "city": "Conway, S.C.",
+      "tie_ins": "Conference USA, MAC, or Sun Belt",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Minnesota",
+            "Georgia Southern"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "UMass",
+            "Marshall"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": null,
+          "since_year": null,
+          "note": "No title sponsor is named on the NCAA.com or FBSchedules listings.",
+          "source_urls": [
+            "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+            "https://fbschedules.com/college-football-bowl-schedule/"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "famous-idaho-potato",
+      "name": "Famous Idaho Potato Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-21",
+      "time_et": "2:30 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Albertsons Stadium",
+      "city": "Boise, Idaho",
+      "tie_ins": "MAC, Mountain West, Pac-12, or Sun Belt",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Western Michigan",
+            "UNLV"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Toledo",
+            "North Dakota State"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Famous Idaho Potato",
+          "since_year": null,
+          "note": "The bowl site does not give a start year for the current title.",
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.famousidahopotatobowl.com/giving-back/"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": "over $1 million annually",
+          "year": null,
+          "author": null,
+          "geography": "Boise and surrounding communities",
+          "includes": "The bowl's own site states an annual impact. It does not name a study author, a study year, or a split between the game and other events.",
+          "source_urls": [
+            "https://www.famousidahopotatobowl.com/giving-back/"
+          ]
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "puerto-rico",
+      "name": "Puerto Rico Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-22",
+      "time_et": "1:30 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Juan Ram\u00f3n Loubriel Stadium",
+      "city": "Bayam\u00f3n, Puerto Rico",
+      "tie_ins": "MAC vs. American, Conference USA, Mountain West, or Sun Belt",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "UMass",
+            "Georgia State"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "FAU",
+            "Delaware"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": null,
+          "since_year": null,
+          "note": "No title sponsor is named on the NCAA.com or FBSchedules listings.",
+          "source_urls": [
+            "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+            "https://fbschedules.com/college-football-bowl-schedule/"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "cure",
+      "name": "StaffDNA Cure Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-22",
+      "time_et": "5:00 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Acrisure Bounce House",
+      "city": "Orlando, Fla.",
+      "tie_ins": "American, Conference USA, MAC, or Sun Belt",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Ohio",
+            "James Madison"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Georgia Southern",
+            "Middle Tennessee"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "StaffDNA",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      },
+      "venue_note": "NCAA.com's schedule, updated Nov. 10, 2026, and ESPN's Nov. 9, 2026 projections both list Acrisure Bounce House. FBSchedules.com still lists Camping World Stadium. This card follows the later NCAA.com listing."
+    },
+    {
+      "id": "independence",
+      "name": "Radiance Technologies Independence Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-22",
+      "time_et": "8:30 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Independence Stadium",
+      "city": "Shreveport, La.",
+      "tie_ins": "Big 12 vs. Conference USA",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Washington",
+            "West Virginia"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Cincinnati",
+            "Oregon State"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Radiance Technologies",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "new-orleans",
+      "name": "New Orleans Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-23",
+      "time_et": "2:00 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Caesars Superdome",
+      "city": "New Orleans",
+      "tie_ins": "Conference USA vs. Sun Belt",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Jacksonville State",
+            "Appalachian State"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Jacksonville State",
+            "Louisiana Tech"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": null,
+          "since_year": null,
+          "note": "No title sponsor is named on the NCAA.com or FBSchedules listings.",
+          "source_urls": [
+            "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+            "https://fbschedules.com/college-football-bowl-schedule/"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "armed-forces",
+      "name": "Lockheed Martin Armed Forces Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-23",
+      "time_et": "5:30 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Amon G. Carter Stadium",
+      "city": "Fort Worth, Texas",
+      "tie_ins": "Big 12 vs. American, Mountain West, or Sun Belt",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Middle Tennessee",
+            "Central Michigan"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "West Virginia",
+            "Nebraska"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Lockheed Martin",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "poinsettia",
+      "name": "SDCCU Poinsettia Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-23",
+      "time_et": "7:30 p.m. ET",
+      "tv": "The CW",
+      "venue": "Snapdragon Stadium",
+      "city": "San Diego",
+      "tie_ins": "Pac-12 vs. ACC, Big Ten, or Big 12",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Fresno State",
+            "Arizona State"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "San Diego State",
+            "Arizona State"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "San Diego County Credit Union",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "frisco",
+      "name": "Frisco Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-23",
+      "time_et": "9:00 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Ford Center at The Star",
+      "city": "Frisco, Texas",
+      "tie_ins": "American, Conference USA, MAC, Mountain West, or Sun Belt",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Buffalo",
+            "Memphis"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "North Texas",
+            "New Mexico"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": null,
+          "since_year": null,
+          "note": "No title sponsor is named on the NCAA.com or FBSchedules listings.",
+          "source_urls": [
+            "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+            "https://fbschedules.com/college-football-bowl-schedule/"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "new-mexico",
+      "name": "Isleta New Mexico Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-24",
+      "time_et": "2:30 p.m. ET",
+      "tv": "ESPN",
+      "venue": "University Stadium",
+      "city": "Albuquerque, N.M.",
+      "tie_ins": "Mountain West vs. American, Conference USA, MAC, or Sun Belt",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Wyoming",
+            "UTSA"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "UNLV",
+            "Tulsa"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Isleta",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "hawaii",
+      "name": "Sheraton Hawai'i Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-24",
+      "time_et": "7:00 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Clarence T.C. Ching Athletics Complex",
+      "city": "Honolulu",
+      "tie_ins": "American vs. Mountain West",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Texas State",
+            "North Dakota State"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Air Force",
+            "Fresno State"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Sheraton",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "pinstripe",
+      "name": "Bad Boy Mowers Pinstripe Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-26",
+      "time_et": "12:00 p.m. ET",
+      "tv": "ABC",
+      "venue": "Yankee Stadium",
+      "city": "Bronx, N.Y.",
+      "tie_ins": "ACC or Notre Dame vs. Big Ten",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Duke",
+            "Northwestern"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Pittsburgh",
+            "Illinois"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Bad Boy Mowers",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "fenway",
+      "name": "Wasabi Fenway Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-26",
+      "time_et": "2:00 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Fenway Park",
+      "city": "Boston",
+      "tie_ins": "ACC or Notre Dame vs. American",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "North Carolina",
+            "East Carolina"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Florida State",
+            "Memphis"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Wasabi",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "dukes-mayo",
+      "name": "Duke's Mayo Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-26",
+      "time_et": "3:30 p.m. ET",
+      "tv": "ABC",
+      "venue": "Bank of America Stadium",
+      "city": "Charlotte, N.C.",
+      "tie_ins": "ACC or Notre Dame vs. SEC",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Clemson",
+            "Penn State"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Duke",
+            "Penn State"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Duke's Mayo",
+          "since_year": 2020,
+          "note": "Title sponsor since 2020, from the Charlotte Sports Foundation.",
+          "source_urls": [
+            "https://charlottesports.org/dukes-mayo-and-charlotte-sports-foundation-extend-dukes-mayo-bowl-and-dukes-mayo-classic-sponsorship/",
+            "https://fbschedules.com/college-football-bowl-schedule/"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": "over $92 million",
+          "year": "since 2021",
+          "author": null,
+          "geography": "Charlotte region",
+          "includes": "Cumulative estimated impact of Duke's Mayo sponsored football games since 2021, covering both the Duke's Mayo Bowl and the Duke's Mayo Classic. Not a single bowl's one-year impact. No study author is named.",
+          "source_urls": [
+            "https://charlottesports.org/dukes-mayo-and-charlotte-sports-foundation-extend-dukes-mayo-bowl-and-dukes-mayo-classic-sponsorship/"
+          ]
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "68-ventures",
+      "name": "68 Ventures Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-26",
+      "time_et": "5:30 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Hancock Whitney Stadium",
+      "city": "Mobile, Ala.",
+      "tie_ins": "Conference USA, MAC, or Sun Belt",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Louisiana Tech",
+            "Air Force"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Georgia State",
+            "Miami (Ohio)"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "68 Ventures",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "cactus",
+      "name": "Cactus Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-26",
+      "time_et": "7:30 p.m. ET",
+      "tv": "ABC",
+      "venue": "Mountain America Stadium",
+      "city": "Tempe, Ariz.",
+      "tie_ins": "Big 12 vs. Big Ten",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Michigan",
+            "Cincinnati"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Central Florida",
+            "Northwestern"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": null,
+          "since_year": null,
+          "note": "No title sponsor is named on the NCAA.com or FBSchedules listings.",
+          "source_urls": [
+            "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+            "https://fbschedules.com/college-football-bowl-schedule/"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "military",
+      "name": "Freedom Mortgage Military Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-28",
+      "time_et": "2:00 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Navy-Marine Corps Memorial Stadium",
+      "city": "Annapolis, Md.",
+      "tie_ins": "ACC or Notre Dame vs. American",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Virginia",
+            "Army"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "North Carolina",
+            "UTSA"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Freedom Mortgage",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "holiday",
+      "name": "Holiday Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-28",
+      "time_et": "5:00 p.m. ET",
+      "tv": "The CW",
+      "venue": "Snapdragon Stadium",
+      "city": "San Diego",
+      "tie_ins": "ACC vs. Pac-12",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Louisville",
+            "Oregon State"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Louisville",
+            "USC"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Trust & Will",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      },
+      "name_note": "NCAA.com and FBSchedules list this game as the Holiday Bowl. ESPN's Nov. 9, 2026 projections call it the Trust & Will Holiday Bowl."
+    },
+    {
+      "id": "birmingham",
+      "name": "JLab Birmingham Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-29",
+      "time_et": "2:00 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Protective Stadium",
+      "city": "Birmingham, Ala.",
+      "tie_ins": "SEC vs. American",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Mississippi State",
+            "Florida Atlantic"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Liberty",
+            "UAB"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "JLab",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "pop-tarts",
+      "name": "Pop-Tarts Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-29",
+      "time_et": "5:30 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Camping World Stadium",
+      "city": "Orlando, Fla.",
+      "tie_ins": "ACC or Notre Dame vs. Big 12",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Wake Forest",
+            "Oklahoma State"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "SMU",
+            "Houston"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Pop-Tarts",
+          "since_year": null,
+          "note": "Sportico reported in December 2024 that Pop-Tarts had extended the name through at least the 2025 game. A start year is not stated in that report. ESPN's Nov. 9, 2026 projections still use the Pop-Tarts name. Sportico's Florida Citrus Sports revenue figure is organization-wide and is not a Pop-Tarts Bowl payout, so it is not shown.",
+          "source_urls": [
+            "https://www.sportico.com/business/sponsorship/2024/pop-tarts-bowl-naming-rights-extension-kellanova-1234821775/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+            "https://fbschedules.com/college-football-bowl-schedule/"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "alamo",
+      "name": "Valero Alamo Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-29",
+      "time_et": "9:00 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Alamodome",
+      "city": "San Antonio",
+      "tie_ins": "Big 12 vs. Pac-12",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Houston",
+            "Oregon"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "BYU",
+            "Oregon"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Valero",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "gator",
+      "name": "TaxSlayer Gator Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-30",
+      "time_et": "11:30 a.m. ET",
+      "tv": "ESPN",
+      "venue": "EverBank Stadium",
+      "city": "Jacksonville, Fla.",
+      "tie_ins": "SEC vs. ACC or Notre Dame",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "SMU",
+            "Florida"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Virginia Tech",
+            "LSU"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "TaxSlayer",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "music-city",
+      "name": "Liberty Mutual Music City Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-30",
+      "time_et": "3:00 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Nissan Stadium",
+      "city": "Nashville, Tenn.",
+      "tie_ins": "SEC vs. Big Ten",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Iowa",
+            "Kentucky"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Wisconsin",
+            "South Carolina"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Liberty Mutual",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "fiesta",
+      "name": "Vrbo Fiesta Bowl",
+      "division": "fbs",
+      "cfp_round": "quarterfinal",
+      "date": "2026-12-30",
+      "time_et": "7:30 p.m. ET",
+      "tv": "TNT/truTV/HBO Max",
+      "venue": "State Farm Stadium",
+      "city": "Glendale, Ariz.",
+      "tie_ins": "CFP quarterfinal",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/",
+        "https://www.ncaa.com/news/football/article/2026-08-11/how-college-football-playoff-works-schedule-selections-rankings-byes-and-more",
+        "https://collegefootballplayoff.com/news/2026/2/3/2627-2728-bowls"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Texas",
+            "Alabama"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Texas",
+            "UCLA"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Vrbo",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": "2026-27",
+          "note": "2026-27 CFP revenue shares are not finalized. The official 2026-27 figure is a $3.18 million expense stipend per conference for each round that conference's team plays. Other shares are paid after the 2027 national championship. Figures below labeled 2025-26 are that year's distribution, not the 2026-27 payout. Money is paid to conferences.",
+          "expense_stipend_per_conference_per_round": 3180000,
+          "expense_stipend_year": "2026-27",
+          "distribution_2025_26": {
+            "label": "2025-26",
+            "apr_payment": 300000,
+            "per_cfp_team": 4000000,
+            "per_quarterfinal_advance": 4000000,
+            "per_semifinal_advance": 6000000,
+            "per_championship_advance": 6000000,
+            "expense_stipend_per_conference_per_round": 3000000,
+            "source_urls": [
+              "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution"
+            ]
+          },
+          "source_urls": [
+            "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution",
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      },
+      "site_note": "ESPN projected teams into this bowl on Nov. 9. Which quarterfinal is played here is chosen by seeds 1\u20133 on Dec. 6. This card does not treat that projection as the official assignment."
+    },
+    {
+      "id": "reliaquest",
+      "name": "ReliaQuest Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-31",
+      "time_et": "12:00 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Raymond James Stadium",
+      "city": "Tampa, Fla.",
+      "tie_ins": "SEC vs. Big Ten",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Wisconsin",
+            "Ole Miss"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Ohio State",
+            "Ole Miss"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "ReliaQuest",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "sun",
+      "name": "Old El Paso Sun Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-31",
+      "time_et": "2:00 p.m. ET",
+      "tv": "CBS",
+      "venue": "Sun Bowl Stadium",
+      "city": "El Paso, Texas",
+      "tie_ins": "ACC or Notre Dame vs. Pac-12",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Virginia Tech",
+            "Arizona"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Clemson",
+            "Washington"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Old El Paso",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      },
+      "tv_note": "NCAA.com lists CBS. FBSchedules lists CBS/Paramount+."
+    },
+    {
+      "id": "las-vegas",
+      "name": "Las Vegas Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-31",
+      "time_et": "3:45 p.m. ET",
+      "tv": "ESPN",
+      "venue": "Allegiant Stadium",
+      "city": "Las Vegas",
+      "tie_ins": "SEC vs. ACC, Big Ten, or Big 12",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "USC",
+            "Oklahoma"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Arizona",
+            "Missouri"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": null,
+          "since_year": null,
+          "note": "No title sponsor is named on the NCAA.com or FBSchedules listings.",
+          "source_urls": [
+            "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+            "https://fbschedules.com/college-football-bowl-schedule/"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "texas",
+      "name": "Kinder's Texas Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2026-12-31",
+      "time_et": "7:30 p.m. ET",
+      "tv": "ESPN",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "tie_ins": "Big 12 vs. SEC",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Baylor",
+            "Missouri"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Baylor",
+            "Oklahoma"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Kinder's",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      },
+      "venue_note": "NCAA.com lists NRG Stadium. FBSchedules and ESPN's Nov. 9, 2026 projections still say Reliant Stadium, the building's former name."
+    },
+    {
+      "id": "cotton",
+      "name": "Goodyear Cotton Bowl",
+      "division": "fbs",
+      "cfp_round": "quarterfinal",
+      "date": "2027-01-01",
+      "time_et": null,
+      "tv": null,
+      "venue": "AT&T Stadium",
+      "city": "Arlington, Texas",
+      "tie_ins": "CFP quarterfinal",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/",
+        "https://www.ncaa.com/news/football/article/2026-08-11/how-college-football-playoff-works-schedule-selections-rankings-byes-and-more",
+        "https://collegefootballplayoff.com/news/2026/2/3/2627-2728-bowls"
+      ],
+      "official_teams": null,
+      "projection_source": null,
+      "projection_date": null,
+      "projection_url": null,
+      "projection_agreement": null,
+      "projections": [],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Goodyear",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": "2026-27",
+          "note": "2026-27 CFP revenue shares are not finalized. The official 2026-27 figure is a $3.18 million expense stipend per conference for each round that conference's team plays. Other shares are paid after the 2027 national championship. Figures below labeled 2025-26 are that year's distribution, not the 2026-27 payout. Money is paid to conferences.",
+          "expense_stipend_per_conference_per_round": 3180000,
+          "expense_stipend_year": "2026-27",
+          "distribution_2025_26": {
+            "label": "2025-26",
+            "apr_payment": 300000,
+            "per_cfp_team": 4000000,
+            "per_quarterfinal_advance": 4000000,
+            "per_semifinal_advance": 6000000,
+            "per_championship_advance": 6000000,
+            "expense_stipend_per_conference_per_round": 3000000,
+            "source_urls": [
+              "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution"
+            ]
+          },
+          "source_urls": [
+            "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution",
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      },
+      "time_note": "Kickoff window is assigned on Selection Day, Dec. 6, 2026. The open windows that day are 12:00 p.m. ET on TNT/truTV/HBO Max, 4:00 p.m. ET on ABC, and 8:00 p.m. ET on ESPN. This card does not assign one.",
+      "site_note": "Seeds 1\u20133 choose this quarterfinal site on Dec. 6. ESPN's Nov. 9 projections named Jan. 1 quarterfinal matchups without assigning them to the Cotton, Peach, or Rose bowls."
+    },
+    {
+      "id": "peach",
+      "name": "Chick-fil-A Peach Bowl",
+      "division": "fbs",
+      "cfp_round": "quarterfinal",
+      "date": "2027-01-01",
+      "time_et": null,
+      "tv": null,
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "tie_ins": "CFP quarterfinal",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/",
+        "https://www.ncaa.com/news/football/article/2026-08-11/how-college-football-playoff-works-schedule-selections-rankings-byes-and-more",
+        "https://collegefootballplayoff.com/news/2026/2/3/2627-2728-bowls"
+      ],
+      "official_teams": null,
+      "projection_source": null,
+      "projection_date": null,
+      "projection_url": null,
+      "projection_agreement": null,
+      "projections": [],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Chick-fil-A",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": "2026-27",
+          "note": "2026-27 CFP revenue shares are not finalized. The official 2026-27 figure is a $3.18 million expense stipend per conference for each round that conference's team plays. Other shares are paid after the 2027 national championship. Figures below labeled 2025-26 are that year's distribution, not the 2026-27 payout. Money is paid to conferences.",
+          "expense_stipend_per_conference_per_round": 3180000,
+          "expense_stipend_year": "2026-27",
+          "distribution_2025_26": {
+            "label": "2025-26",
+            "apr_payment": 300000,
+            "per_cfp_team": 4000000,
+            "per_quarterfinal_advance": 4000000,
+            "per_semifinal_advance": 6000000,
+            "per_championship_advance": 6000000,
+            "expense_stipend_per_conference_per_round": 3000000,
+            "source_urls": [
+              "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution"
+            ]
+          },
+          "source_urls": [
+            "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution",
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      },
+      "time_note": "Kickoff window is assigned on Selection Day, Dec. 6, 2026. The open windows that day are 12:00 p.m. ET on TNT/truTV/HBO Max, 4:00 p.m. ET on ABC, and 8:00 p.m. ET on ESPN. This card does not assign one.",
+      "site_note": "Seeds 1\u20133 choose this quarterfinal site on Dec. 6. ESPN's Nov. 9 projections named Jan. 1 quarterfinal matchups without assigning them to the Cotton, Peach, or Rose bowls."
+    },
+    {
+      "id": "rose",
+      "name": "Rose Bowl",
+      "division": "fbs",
+      "cfp_round": "quarterfinal",
+      "date": "2027-01-01",
+      "time_et": null,
+      "tv": null,
+      "venue": "Rose Bowl",
+      "city": "Pasadena, Calif.",
+      "tie_ins": "CFP quarterfinal",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/",
+        "https://www.ncaa.com/news/football/article/2026-08-11/how-college-football-playoff-works-schedule-selections-rankings-byes-and-more",
+        "https://collegefootballplayoff.com/news/2026/2/3/2627-2728-bowls"
+      ],
+      "official_teams": null,
+      "projection_source": null,
+      "projection_date": null,
+      "projection_url": null,
+      "projection_agreement": null,
+      "projections": [],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Prudential",
+          "since_year": null,
+          "note": "ESPN's Nov. 9, 2026 projections still present the game as the Rose Bowl Game presented by Prudential. A sponsorship term that covers the Jan. 1, 2027 game was not confirmed on the Tournament of Roses economic-impact page.",
+          "source_urls": [
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": "2026-27",
+          "note": "2026-27 CFP revenue shares are not finalized. The official 2026-27 figure is a $3.18 million expense stipend per conference for each round that conference's team plays. Other shares are paid after the 2027 national championship. Figures below labeled 2025-26 are that year's distribution, not the 2026-27 payout. Money is paid to conferences.",
+          "expense_stipend_per_conference_per_round": 3180000,
+          "expense_stipend_year": "2026-27",
+          "distribution_2025_26": {
+            "label": "2025-26",
+            "apr_payment": 300000,
+            "per_cfp_team": 4000000,
+            "per_quarterfinal_advance": 4000000,
+            "per_semifinal_advance": 6000000,
+            "per_championship_advance": 6000000,
+            "expense_stipend_per_conference_per_round": 3000000,
+            "source_urls": [
+              "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution"
+            ]
+          },
+          "source_urls": [
+            "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution",
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": 245000000,
+          "amount_text": "$245 million",
+          "year": 2024,
+          "author": "Enigma Research Corporation",
+          "geography": "greater Los Angeles area",
+          "includes": "The 2024 Rose Parade and Rose Bowl Game together. Direct spending by attendees, parade and game participants, and the Pasadena Tournament of Roses. Not the game alone.",
+          "source_urls": [
+            "https://tournamentofroses.com/2024-economic-impact-report/"
+          ]
+        },
+        "attendance": null
+      },
+      "time_note": "Kickoff window is assigned on Selection Day, Dec. 6, 2026. The open windows that day are 12:00 p.m. ET on TNT/truTV/HBO Max, 4:00 p.m. ET on ABC, and 8:00 p.m. ET on ESPN. This card does not assign one.",
+      "site_note": "Seeds 1\u20133 choose this quarterfinal site on Dec. 6. No teams are placed in the Rose Bowl on this card."
+    },
+    {
+      "id": "citrus",
+      "name": "Citrus Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2027-01-02",
+      "time_et": "12:00 p.m. ET",
+      "tv": "ABC",
+      "venue": "Camping World Stadium",
+      "city": "Orlando, Fla.",
+      "tie_ins": "SEC vs. Big Ten",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Ohio State",
+            "LSU"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Iowa",
+            "Kentucky"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": null,
+          "since_year": null,
+          "note": "NCAA.com and FBSchedules list this game as the Citrus Bowl and do not name a title sponsor.",
+          "source_urls": [
+            "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+            "https://fbschedules.com/college-football-bowl-schedule/"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "first-responder",
+      "name": "SERVPRO First Responder Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2027-01-02",
+      "time_et": "3:30 p.m. ET",
+      "tv": "ABC",
+      "venue": "Gerald J. Ford Stadium",
+      "city": "Dallas",
+      "tie_ins": "American, ACC, or Big 12",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Florida State",
+            "North Texas"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Minnesota",
+            "Army"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "SERVPRO",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "arizona",
+      "name": "Snoop Dogg Arizona Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2027-01-02",
+      "time_et": "4:30 p.m. ET",
+      "tv": "The CW",
+      "venue": "Casino del Sol Stadium",
+      "city": "Tucson, Ariz.",
+      "tie_ins": "MAC vs. Mountain West",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Toledo",
+            "New Mexico"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Ohio",
+            "Wyoming"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Snoop Dogg",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+            "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "liberty",
+      "name": "AutoZone Liberty Bowl",
+      "division": "fbs",
+      "cfp_round": null,
+      "date": "2027-01-02",
+      "time_et": "7:30 p.m. ET",
+      "tv": "ABC",
+      "venue": "Simmons Bank Liberty Stadium",
+      "city": "Memphis, Tenn.",
+      "tie_ins": "Big 12 vs. SEC",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "UCF",
+            "South Carolina"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Oklahoma State",
+            "Auburn"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "AutoZone",
+          "since_year": null,
+          "note": null,
+          "source_urls": [
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": null,
+          "note": "Per-team and total payout: Unknown. Published bowl payouts are paid to conferences, which distribute them to schools. A team does not receive the check directly.",
+          "source_urls": [
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      }
+    },
+    {
+      "id": "orange",
+      "name": "Capital One Orange Bowl",
+      "division": "fbs",
+      "cfp_round": "semifinal",
+      "date": "2027-01-14",
+      "time_et": "7:30 p.m. ET",
+      "tv": "TNT/truTV/HBO Max",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens, Fla.",
+      "tie_ins": "CFP semifinal",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/",
+        "https://www.ncaa.com/news/football/article/2026-08-11/how-college-football-playoff-works-schedule-selections-rankings-byes-and-more",
+        "https://collegefootballplayoff.com/news/2026/2/3/2627-2728-bowls"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Alabama",
+            "Georgia"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Notre Dame",
+            "Utah"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Capital One",
+          "since_year": null,
+          "note": "The Orange Bowl's site uses the Capital One name. A start year is not on the economic-impact page cited here.",
+          "source_urls": [
+            "https://www.orangebowl.org/orange-bowl-delivers-286-million-economic-boost-to-south-florida/",
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": "2026-27",
+          "note": "2026-27 CFP revenue shares are not finalized. The official 2026-27 figure is a $3.18 million expense stipend per conference for each round that conference's team plays. Other shares are paid after the 2027 national championship. Figures below labeled 2025-26 are that year's distribution, not the 2026-27 payout. Money is paid to conferences.",
+          "expense_stipend_per_conference_per_round": 3180000,
+          "expense_stipend_year": "2026-27",
+          "distribution_2025_26": {
+            "label": "2025-26",
+            "apr_payment": 300000,
+            "per_cfp_team": 4000000,
+            "per_quarterfinal_advance": 4000000,
+            "per_semifinal_advance": 6000000,
+            "per_championship_advance": 6000000,
+            "expense_stipend_per_conference_per_round": 3000000,
+            "source_urls": [
+              "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution"
+            ]
+          },
+          "source_urls": [
+            "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution",
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": 286300000,
+          "amount_text": "$286.3 million",
+          "media_value": 110700000,
+          "media_value_text": "$110.7 million added media exposure value",
+          "economic_output": 175600000,
+          "year": "2024-25",
+          "author": "Rockport Analytics",
+          "geography": "South Florida",
+          "includes": "The 2024-25 Orange Bowl Festival, including the CFP semifinal. The $286.3 million total adds media exposure value to $175.6 million in economic output. It is not a game-day figure alone.",
+          "source_urls": [
+            "https://www.orangebowl.org/orange-bowl-delivers-286-million-economic-boost-to-south-florida/"
+          ]
+        },
+        "attendance": null
+      },
+      "site_note": "ESPN projected teams into this bowl on Nov. 9. Which semifinal is played here is chosen by seeds 1\u20133 on Dec. 6. This card does not treat that projection as the official assignment."
+    },
+    {
+      "id": "sugar",
+      "name": "Allstate Sugar Bowl",
+      "division": "fbs",
+      "cfp_round": "semifinal",
+      "date": "2027-01-15",
+      "time_et": "7:30 p.m. ET",
+      "tv": "ABC/ESPN",
+      "venue": "Caesars Superdome",
+      "city": "New Orleans",
+      "tie_ins": "CFP semifinal",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/",
+        "https://www.ncaa.com/news/football/article/2026-08-11/how-college-football-playoff-works-schedule-selections-rankings-byes-and-more",
+        "https://collegefootballplayoff.com/news/2026/2/3/2627-2728-bowls"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": false,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Indiana",
+            "Utah"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Texas",
+            "Georgia"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": null,
+      "business": {
+        "title_sponsor": {
+          "name": "Allstate",
+          "since_year": null,
+          "note": "The bowl's site uses the Allstate name. A start year is not on the economic-impact page cited here.",
+          "source_urls": [
+            "https://allstatesugarbowl.org/news/2024/2/29/economic-impact.aspx",
+            "https://fbschedules.com/college-football-bowl-schedule/",
+            "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": "2026-27",
+          "note": "2026-27 CFP revenue shares are not finalized. The official 2026-27 figure is a $3.18 million expense stipend per conference for each round that conference's team plays. Other shares are paid after the 2027 national championship. Figures below labeled 2025-26 are that year's distribution, not the 2026-27 payout. Money is paid to conferences.",
+          "expense_stipend_per_conference_per_round": 3180000,
+          "expense_stipend_year": "2026-27",
+          "distribution_2025_26": {
+            "label": "2025-26",
+            "apr_payment": 300000,
+            "per_cfp_team": 4000000,
+            "per_quarterfinal_advance": 4000000,
+            "per_semifinal_advance": 6000000,
+            "per_championship_advance": 6000000,
+            "expense_stipend_per_conference_per_round": 3000000,
+            "source_urls": [
+              "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution"
+            ]
+          },
+          "source_urls": [
+            "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution",
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": 389450000,
+          "amount_text": "$389.45 million",
+          "year": 2023,
+          "author": "Timothy P. Ryan, Ph.D.",
+          "geography": "New Orleans and Louisiana",
+          "includes": "The bowl's activities for the year, including the Jan. 1 football game, the Sugar Bowl Country Kickoff, and the organization's other events. Not the game alone.",
+          "source_urls": [
+            "https://allstatesugarbowl.org/news/2024/2/29/economic-impact.aspx"
+          ]
+        },
+        "attendance": null
+      },
+      "site_note": "ESPN projected teams into this bowl on Nov. 9. Which semifinal is played here is chosen by seeds 1\u20133 on Dec. 6. This card does not treat that projection as the official assignment."
+    },
+    {
+      "id": "cfp-title",
+      "name": "CFP National Championship",
+      "division": "fbs",
+      "cfp_round": "championship",
+      "date": "2027-01-25",
+      "time_et": "7:30 p.m. ET",
+      "tv": "ABC",
+      "venue": "Allegiant Stadium",
+      "city": "Las Vegas",
+      "tie_ins": "Semifinal winners",
+      "schedule_sources": [
+        "https://www.ncaa.com/news/football/article/2026-10-31/2026-27-college-football-bowl-game-schedule-scores-tv-channels-times",
+        "https://fbschedules.com/college-football-bowl-schedule/",
+        "https://www.ncaa.com/news/football/article/2026-08-11/how-college-football-playoff-works-schedule-selections-rankings-byes-and-more"
+      ],
+      "official_teams": null,
+      "projection_source": "ESPN, Kyle Bonagura and Mark Schlabach, Week 10",
+      "projection_date": "2026-11-09",
+      "projection_url": "https://www.espn.com/college-football/story/_/id/50423390/2026-week-10-college-football-playoff-bowl-projections",
+      "projection_agreement": true,
+      "projections": [
+        {
+          "analyst": "Kyle Bonagura",
+          "teams": [
+            "Utah",
+            "Georgia"
+          ],
+          "status": "Projected"
+        },
+        {
+          "analyst": "Mark Schlabach",
+          "teams": [
+            "Utah",
+            "Georgia"
+          ],
+          "status": "Projected"
+        }
+      ],
+      "projected_teams": [
+        {
+          "school": "Utah",
+          "status": "Projected",
+          "analysts": [
+            "Kyle Bonagura",
+            "Mark Schlabach"
+          ]
+        },
+        {
+          "school": "Georgia",
+          "status": "Projected",
+          "analysts": [
+            "Kyle Bonagura",
+            "Mark Schlabach"
+          ]
+        }
+      ],
+      "business": {
+        "title_sponsor": {
+          "name": null,
+          "since_year": null,
+          "note": "The championship game has no title sponsor in the NCAA.com or CFP listings used here.",
+          "source_urls": [
+            "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution"
+          ]
+        },
+        "payout": {
+          "per_team": null,
+          "total": null,
+          "year": "2026-27",
+          "note": "2026-27 CFP revenue shares are not finalized. The official 2026-27 figure is a $3.18 million expense stipend per conference for each round that conference's team plays. Other shares are paid after the 2027 national championship. Figures below labeled 2025-26 are that year's distribution, not the 2026-27 payout. Money is paid to conferences.",
+          "expense_stipend_per_conference_per_round": 3180000,
+          "expense_stipend_year": "2026-27",
+          "distribution_2025_26": {
+            "label": "2025-26",
+            "apr_payment": 300000,
+            "per_cfp_team": 4000000,
+            "per_quarterfinal_advance": 4000000,
+            "per_semifinal_advance": 6000000,
+            "per_championship_advance": 6000000,
+            "expense_stipend_per_conference_per_round": 3000000,
+            "source_urls": [
+              "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution"
+            ]
+          },
+          "source_urls": [
+            "https://collegefootballplayoff.com/sports/2017/9/20/revenue-distribution",
+            "https://brobible.com/sports/article/college-football-oldest-bowl-games-payouts/"
+          ]
+        },
+        "economic_impact": {
+          "amount": null,
+          "amount_text": null,
+          "year": null,
+          "author": null,
+          "geography": null,
+          "includes": null,
+          "source_urls": []
+        },
+        "attendance": null
+      },
+      "tv_note": "NCAA.com lists ABC. FBSchedules lists ABC/ESPN."
+    }
+  ]
+}

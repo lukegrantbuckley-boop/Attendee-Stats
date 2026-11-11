@@ -255,6 +255,7 @@ def test_index_puts_marketing_approaches_after_valuations():
     html = TestClient(app).get("/").text
     nav = html.split("<nav", 1)[1].split("</nav>", 1)[0]
     assert nav.index(">Valuations<") < nav.index(">Marketing Approaches<")
+    assert nav.index(">Marketing Approaches<") < nav.index(">Bowl Games<")
     assert 'href="#/marketing"' in nav
     assert 'data-nav="marketing"' in nav
     assert nav.index('href="#/valuations"') < nav.index('href="#/marketing"')

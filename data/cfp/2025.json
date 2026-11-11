@@ -1,0 +1,1639 @@
+{
+  "season": 2025,
+  "poll_type": "cfp",
+  "poll_id": 21,
+  "poll_name": "Playoff Committee Rankings",
+  "source": "espn",
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+  "first_release": "2025-11-04",
+  "released_at": "2025-12-07T08:00:00Z",
+  "week": 16,
+  "official_url": "https://collegefootballplayoff.com/news/2025/12/7/cfp-rankings",
+  "teams": [
+    {
+      "rank": 1,
+      "previous": 2,
+      "record": "13-0",
+      "conference": "Big Ten",
+      "team_id": 84,
+      "espn_team_id": 84,
+      "school": "Indiana"
+    },
+    {
+      "rank": 2,
+      "previous": 1,
+      "record": "12-1",
+      "conference": "Big Ten",
+      "team_id": 194,
+      "espn_team_id": 194,
+      "school": "Ohio State"
+    },
+    {
+      "rank": 3,
+      "previous": 3,
+      "record": "12-1",
+      "conference": "SEC",
+      "team_id": 61,
+      "espn_team_id": 61,
+      "school": "Georgia"
+    },
+    {
+      "rank": 4,
+      "previous": 4,
+      "record": "12-1",
+      "conference": "Big 12",
+      "team_id": 2641,
+      "espn_team_id": 2641,
+      "school": "Texas Tech"
+    },
+    {
+      "rank": 5,
+      "previous": 5,
+      "record": "11-1",
+      "conference": "Big Ten",
+      "team_id": 2483,
+      "espn_team_id": 2483,
+      "school": "Oregon"
+    },
+    {
+      "rank": 6,
+      "previous": 6,
+      "record": "11-1",
+      "conference": "SEC",
+      "team_id": 145,
+      "espn_team_id": 145,
+      "school": "Ole Miss"
+    },
+    {
+      "rank": 7,
+      "previous": 7,
+      "record": "11-1",
+      "conference": "SEC",
+      "team_id": 245,
+      "espn_team_id": 245,
+      "school": "Texas A&M"
+    },
+    {
+      "rank": 8,
+      "previous": 8,
+      "record": "10-2",
+      "conference": "SEC",
+      "team_id": 201,
+      "espn_team_id": 201,
+      "school": "Oklahoma"
+    },
+    {
+      "rank": 9,
+      "previous": 9,
+      "record": "10-3",
+      "conference": "SEC",
+      "team_id": 333,
+      "espn_team_id": 333,
+      "school": "Alabama"
+    },
+    {
+      "rank": 10,
+      "previous": 12,
+      "record": "10-2",
+      "conference": "ACC",
+      "team_id": 2390,
+      "espn_team_id": 2390,
+      "school": "Miami"
+    },
+    {
+      "rank": 11,
+      "previous": 10,
+      "record": "10-2",
+      "conference": "FBS Independents",
+      "team_id": 87,
+      "espn_team_id": 87,
+      "school": "Notre Dame"
+    },
+    {
+      "rank": 12,
+      "previous": 11,
+      "record": "11-2",
+      "conference": "Big 12",
+      "team_id": 252,
+      "espn_team_id": 252,
+      "school": "BYU"
+    },
+    {
+      "rank": 13,
+      "previous": 13,
+      "record": "9-3",
+      "conference": "SEC",
+      "team_id": 251,
+      "espn_team_id": 251,
+      "school": "Texas"
+    },
+    {
+      "rank": 14,
+      "previous": 14,
+      "record": "10-2",
+      "conference": "SEC",
+      "team_id": 238,
+      "espn_team_id": 238,
+      "school": "Vanderbilt"
+    },
+    {
+      "rank": 15,
+      "previous": 15,
+      "record": "10-2",
+      "conference": "Big 12",
+      "team_id": 254,
+      "espn_team_id": 254,
+      "school": "Utah"
+    },
+    {
+      "rank": 16,
+      "previous": 16,
+      "record": "9-3",
+      "conference": "Big Ten",
+      "team_id": 30,
+      "espn_team_id": 30,
+      "school": "USC"
+    },
+    {
+      "rank": 17,
+      "previous": 18,
+      "record": "9-3",
+      "conference": "Big 12",
+      "team_id": 12,
+      "espn_team_id": 12,
+      "school": "Arizona"
+    },
+    {
+      "rank": 18,
+      "previous": 19,
+      "record": "9-3",
+      "conference": "Big Ten",
+      "team_id": 130,
+      "espn_team_id": 130,
+      "school": "Michigan"
+    },
+    {
+      "rank": 19,
+      "previous": 17,
+      "record": "10-3",
+      "conference": "ACC",
+      "team_id": 258,
+      "espn_team_id": 258,
+      "school": "Virginia"
+    },
+    {
+      "rank": 20,
+      "previous": 20,
+      "record": "11-2",
+      "conference": "American Athletic",
+      "team_id": 2655,
+      "espn_team_id": 2655,
+      "school": "Tulane"
+    },
+    {
+      "rank": 21,
+      "previous": 21,
+      "record": "9-3",
+      "conference": "Big 12",
+      "team_id": 248,
+      "espn_team_id": 248,
+      "school": "Houston"
+    },
+    {
+      "rank": 22,
+      "previous": 22,
+      "record": "9-3",
+      "conference": "ACC",
+      "team_id": 59,
+      "espn_team_id": 59,
+      "school": "Georgia Tech"
+    },
+    {
+      "rank": 23,
+      "previous": 23,
+      "record": "8-4",
+      "conference": "Big Ten",
+      "team_id": 2294,
+      "espn_team_id": 2294,
+      "school": "Iowa"
+    },
+    {
+      "rank": 24,
+      "previous": 25,
+      "record": "12-1",
+      "conference": "Sun Belt",
+      "team_id": 256,
+      "espn_team_id": 256,
+      "school": "James Madison"
+    },
+    {
+      "rank": 25,
+      "previous": 24,
+      "record": "11-2",
+      "conference": "American Athletic",
+      "team_id": 249,
+      "espn_team_id": 249,
+      "school": "North Texas"
+    }
+  ],
+  "snapshots": [
+    {
+      "released_at": "2025-11-04T08:00:00Z",
+      "week": 11,
+      "official_url": null,
+      "headline": "2025 NCAA Football Rankings - CFP Rankings Week 11",
+      "teams": [
+        {
+          "rank": 1,
+          "previous": null,
+          "record": "8-0",
+          "conference": "Big Ten",
+          "team_id": 194,
+          "espn_team_id": 194,
+          "school": "Ohio State"
+        },
+        {
+          "rank": 2,
+          "previous": null,
+          "record": "9-0",
+          "conference": "Big Ten",
+          "team_id": 84,
+          "espn_team_id": 84,
+          "school": "Indiana"
+        },
+        {
+          "rank": 3,
+          "previous": null,
+          "record": "8-0",
+          "conference": "SEC",
+          "team_id": 245,
+          "espn_team_id": 245,
+          "school": "Texas A&M"
+        },
+        {
+          "rank": 4,
+          "previous": null,
+          "record": "7-1",
+          "conference": "SEC",
+          "team_id": 333,
+          "espn_team_id": 333,
+          "school": "Alabama"
+        },
+        {
+          "rank": 5,
+          "previous": null,
+          "record": "7-1",
+          "conference": "SEC",
+          "team_id": 61,
+          "espn_team_id": 61,
+          "school": "Georgia"
+        },
+        {
+          "rank": 6,
+          "previous": null,
+          "record": "8-1",
+          "conference": "SEC",
+          "team_id": 145,
+          "espn_team_id": 145,
+          "school": "Ole Miss"
+        },
+        {
+          "rank": 7,
+          "previous": null,
+          "record": "8-0",
+          "conference": "Big 12",
+          "team_id": 252,
+          "espn_team_id": 252,
+          "school": "BYU"
+        },
+        {
+          "rank": 8,
+          "previous": null,
+          "record": "8-1",
+          "conference": "Big 12",
+          "team_id": 2641,
+          "espn_team_id": 2641,
+          "school": "Texas Tech"
+        },
+        {
+          "rank": 9,
+          "previous": null,
+          "record": "7-1",
+          "conference": "Big Ten",
+          "team_id": 2483,
+          "espn_team_id": 2483,
+          "school": "Oregon"
+        },
+        {
+          "rank": 10,
+          "previous": null,
+          "record": "6-2",
+          "conference": "FBS Independents",
+          "team_id": 87,
+          "espn_team_id": 87,
+          "school": "Notre Dame"
+        },
+        {
+          "rank": 11,
+          "previous": null,
+          "record": "7-2",
+          "conference": "SEC",
+          "team_id": 251,
+          "espn_team_id": 251,
+          "school": "Texas"
+        },
+        {
+          "rank": 12,
+          "previous": null,
+          "record": "7-2",
+          "conference": "SEC",
+          "team_id": 201,
+          "espn_team_id": 201,
+          "school": "Oklahoma"
+        },
+        {
+          "rank": 13,
+          "previous": null,
+          "record": "7-2",
+          "conference": "Big 12",
+          "team_id": 254,
+          "espn_team_id": 254,
+          "school": "Utah"
+        },
+        {
+          "rank": 14,
+          "previous": null,
+          "record": "8-1",
+          "conference": "ACC",
+          "team_id": 258,
+          "espn_team_id": 258,
+          "school": "Virginia"
+        },
+        {
+          "rank": 15,
+          "previous": null,
+          "record": "7-1",
+          "conference": "ACC",
+          "team_id": 97,
+          "espn_team_id": 97,
+          "school": "Louisville"
+        },
+        {
+          "rank": 16,
+          "previous": null,
+          "record": "7-2",
+          "conference": "SEC",
+          "team_id": 238,
+          "espn_team_id": 238,
+          "school": "Vanderbilt"
+        },
+        {
+          "rank": 17,
+          "previous": null,
+          "record": "8-1",
+          "conference": "ACC",
+          "team_id": 59,
+          "espn_team_id": 59,
+          "school": "Georgia Tech"
+        },
+        {
+          "rank": 18,
+          "previous": null,
+          "record": "6-2",
+          "conference": "ACC",
+          "team_id": 2390,
+          "espn_team_id": 2390,
+          "school": "Miami"
+        },
+        {
+          "rank": 19,
+          "previous": null,
+          "record": "6-2",
+          "conference": "Big Ten",
+          "team_id": 30,
+          "espn_team_id": 30,
+          "school": "USC"
+        },
+        {
+          "rank": 20,
+          "previous": null,
+          "record": "6-2",
+          "conference": "Big Ten",
+          "team_id": 2294,
+          "espn_team_id": 2294,
+          "school": "Iowa"
+        },
+        {
+          "rank": 21,
+          "previous": null,
+          "record": "7-2",
+          "conference": "Big Ten",
+          "team_id": 130,
+          "espn_team_id": 130,
+          "school": "Michigan"
+        },
+        {
+          "rank": 22,
+          "previous": null,
+          "record": "6-2",
+          "conference": "SEC",
+          "team_id": 142,
+          "espn_team_id": 142,
+          "school": "Missouri"
+        },
+        {
+          "rank": 23,
+          "previous": null,
+          "record": "6-2",
+          "conference": "Big Ten",
+          "team_id": 264,
+          "espn_team_id": 264,
+          "school": "Washington"
+        },
+        {
+          "rank": 24,
+          "previous": null,
+          "record": "7-2",
+          "conference": "ACC",
+          "team_id": 221,
+          "espn_team_id": 221,
+          "school": "Pittsburgh"
+        },
+        {
+          "rank": 25,
+          "previous": null,
+          "record": "6-3",
+          "conference": "SEC",
+          "team_id": 2633,
+          "espn_team_id": 2633,
+          "school": "Tennessee"
+        }
+      ]
+    },
+    {
+      "released_at": "2025-11-11T08:00:00Z",
+      "week": 12,
+      "official_url": null,
+      "headline": "2025 NCAA Football Rankings - CFP Rankings Week 12",
+      "teams": [
+        {
+          "rank": 1,
+          "previous": 1,
+          "record": "9-0",
+          "conference": "Big Ten",
+          "team_id": 194,
+          "espn_team_id": 194,
+          "school": "Ohio State"
+        },
+        {
+          "rank": 2,
+          "previous": 2,
+          "record": "10-0",
+          "conference": "Big Ten",
+          "team_id": 84,
+          "espn_team_id": 84,
+          "school": "Indiana"
+        },
+        {
+          "rank": 3,
+          "previous": 3,
+          "record": "9-0",
+          "conference": "SEC",
+          "team_id": 245,
+          "espn_team_id": 245,
+          "school": "Texas A&M"
+        },
+        {
+          "rank": 4,
+          "previous": 4,
+          "record": "8-1",
+          "conference": "SEC",
+          "team_id": 333,
+          "espn_team_id": 333,
+          "school": "Alabama"
+        },
+        {
+          "rank": 5,
+          "previous": 5,
+          "record": "8-1",
+          "conference": "SEC",
+          "team_id": 61,
+          "espn_team_id": 61,
+          "school": "Georgia"
+        },
+        {
+          "rank": 6,
+          "previous": 8,
+          "record": "9-1",
+          "conference": "Big 12",
+          "team_id": 2641,
+          "espn_team_id": 2641,
+          "school": "Texas Tech"
+        },
+        {
+          "rank": 7,
+          "previous": 6,
+          "record": "9-1",
+          "conference": "SEC",
+          "team_id": 145,
+          "espn_team_id": 145,
+          "school": "Ole Miss"
+        },
+        {
+          "rank": 8,
+          "previous": 9,
+          "record": "8-1",
+          "conference": "Big Ten",
+          "team_id": 2483,
+          "espn_team_id": 2483,
+          "school": "Oregon"
+        },
+        {
+          "rank": 9,
+          "previous": 10,
+          "record": "7-2",
+          "conference": "FBS Independents",
+          "team_id": 87,
+          "espn_team_id": 87,
+          "school": "Notre Dame"
+        },
+        {
+          "rank": 10,
+          "previous": 11,
+          "record": "7-2",
+          "conference": "SEC",
+          "team_id": 251,
+          "espn_team_id": 251,
+          "school": "Texas"
+        },
+        {
+          "rank": 11,
+          "previous": 12,
+          "record": "7-2",
+          "conference": "SEC",
+          "team_id": 201,
+          "espn_team_id": 201,
+          "school": "Oklahoma"
+        },
+        {
+          "rank": 12,
+          "previous": 7,
+          "record": "8-1",
+          "conference": "Big 12",
+          "team_id": 252,
+          "espn_team_id": 252,
+          "school": "BYU"
+        },
+        {
+          "rank": 13,
+          "previous": 13,
+          "record": "7-2",
+          "conference": "Big 12",
+          "team_id": 254,
+          "espn_team_id": 254,
+          "school": "Utah"
+        },
+        {
+          "rank": 14,
+          "previous": 16,
+          "record": "8-2",
+          "conference": "SEC",
+          "team_id": 238,
+          "espn_team_id": 238,
+          "school": "Vanderbilt"
+        },
+        {
+          "rank": 15,
+          "previous": 18,
+          "record": "7-2",
+          "conference": "ACC",
+          "team_id": 2390,
+          "espn_team_id": 2390,
+          "school": "Miami"
+        },
+        {
+          "rank": 16,
+          "previous": 17,
+          "record": "8-1",
+          "conference": "ACC",
+          "team_id": 59,
+          "espn_team_id": 59,
+          "school": "Georgia Tech"
+        },
+        {
+          "rank": 17,
+          "previous": 19,
+          "record": "7-2",
+          "conference": "Big Ten",
+          "team_id": 30,
+          "espn_team_id": 30,
+          "school": "USC"
+        },
+        {
+          "rank": 18,
+          "previous": 21,
+          "record": "7-2",
+          "conference": "Big Ten",
+          "team_id": 130,
+          "espn_team_id": 130,
+          "school": "Michigan"
+        },
+        {
+          "rank": 19,
+          "previous": 14,
+          "record": "8-2",
+          "conference": "ACC",
+          "team_id": 258,
+          "espn_team_id": 258,
+          "school": "Virginia"
+        },
+        {
+          "rank": 20,
+          "previous": 15,
+          "record": "7-2",
+          "conference": "ACC",
+          "team_id": 97,
+          "espn_team_id": 97,
+          "school": "Louisville"
+        },
+        {
+          "rank": 21,
+          "previous": 20,
+          "record": "6-3",
+          "conference": "Big Ten",
+          "team_id": 2294,
+          "espn_team_id": 2294,
+          "school": "Iowa"
+        },
+        {
+          "rank": 22,
+          "previous": 24,
+          "record": "7-2",
+          "conference": "ACC",
+          "team_id": 221,
+          "espn_team_id": 221,
+          "school": "Pittsburgh"
+        },
+        {
+          "rank": 23,
+          "previous": 25,
+          "record": "6-3",
+          "conference": "SEC",
+          "team_id": 2633,
+          "espn_team_id": 2633,
+          "school": "Tennessee"
+        },
+        {
+          "rank": 24,
+          "previous": null,
+          "record": "7-2",
+          "conference": "American Athletic",
+          "team_id": 58,
+          "espn_team_id": 58,
+          "school": "South Florida"
+        },
+        {
+          "rank": 25,
+          "previous": null,
+          "record": "7-2",
+          "conference": "Big 12",
+          "team_id": 2132,
+          "espn_team_id": 2132,
+          "school": "Cincinnati"
+        }
+      ]
+    },
+    {
+      "released_at": "2025-11-18T08:00:00Z",
+      "week": 13,
+      "official_url": null,
+      "headline": "2025 NCAA Football Rankings - CFP Rankings Week 13",
+      "teams": [
+        {
+          "rank": 1,
+          "previous": 1,
+          "record": "10-0",
+          "conference": "Big Ten",
+          "team_id": 194,
+          "espn_team_id": 194,
+          "school": "Ohio State"
+        },
+        {
+          "rank": 2,
+          "previous": 2,
+          "record": "11-0",
+          "conference": "Big Ten",
+          "team_id": 84,
+          "espn_team_id": 84,
+          "school": "Indiana"
+        },
+        {
+          "rank": 3,
+          "previous": 3,
+          "record": "10-0",
+          "conference": "SEC",
+          "team_id": 245,
+          "espn_team_id": 245,
+          "school": "Texas A&M"
+        },
+        {
+          "rank": 4,
+          "previous": 5,
+          "record": "9-1",
+          "conference": "SEC",
+          "team_id": 61,
+          "espn_team_id": 61,
+          "school": "Georgia"
+        },
+        {
+          "rank": 5,
+          "previous": 6,
+          "record": "10-1",
+          "conference": "Big 12",
+          "team_id": 2641,
+          "espn_team_id": 2641,
+          "school": "Texas Tech"
+        },
+        {
+          "rank": 6,
+          "previous": 7,
+          "record": "10-1",
+          "conference": "SEC",
+          "team_id": 145,
+          "espn_team_id": 145,
+          "school": "Ole Miss"
+        },
+        {
+          "rank": 7,
+          "previous": 8,
+          "record": "9-1",
+          "conference": "Big Ten",
+          "team_id": 2483,
+          "espn_team_id": 2483,
+          "school": "Oregon"
+        },
+        {
+          "rank": 8,
+          "previous": 11,
+          "record": "8-2",
+          "conference": "SEC",
+          "team_id": 201,
+          "espn_team_id": 201,
+          "school": "Oklahoma"
+        },
+        {
+          "rank": 9,
+          "previous": 9,
+          "record": "8-2",
+          "conference": "FBS Independents",
+          "team_id": 87,
+          "espn_team_id": 87,
+          "school": "Notre Dame"
+        },
+        {
+          "rank": 10,
+          "previous": 4,
+          "record": "8-2",
+          "conference": "SEC",
+          "team_id": 333,
+          "espn_team_id": 333,
+          "school": "Alabama"
+        },
+        {
+          "rank": 11,
+          "previous": 12,
+          "record": "9-1",
+          "conference": "Big 12",
+          "team_id": 252,
+          "espn_team_id": 252,
+          "school": "BYU"
+        },
+        {
+          "rank": 12,
+          "previous": 13,
+          "record": "8-2",
+          "conference": "Big 12",
+          "team_id": 254,
+          "espn_team_id": 254,
+          "school": "Utah"
+        },
+        {
+          "rank": 13,
+          "previous": 15,
+          "record": "8-2",
+          "conference": "ACC",
+          "team_id": 2390,
+          "espn_team_id": 2390,
+          "school": "Miami"
+        },
+        {
+          "rank": 14,
+          "previous": 14,
+          "record": "8-2",
+          "conference": "SEC",
+          "team_id": 238,
+          "espn_team_id": 238,
+          "school": "Vanderbilt"
+        },
+        {
+          "rank": 15,
+          "previous": 17,
+          "record": "8-2",
+          "conference": "Big Ten",
+          "team_id": 30,
+          "espn_team_id": 30,
+          "school": "USC"
+        },
+        {
+          "rank": 16,
+          "previous": 16,
+          "record": "9-1",
+          "conference": "ACC",
+          "team_id": 59,
+          "espn_team_id": 59,
+          "school": "Georgia Tech"
+        },
+        {
+          "rank": 17,
+          "previous": 10,
+          "record": "7-3",
+          "conference": "SEC",
+          "team_id": 251,
+          "espn_team_id": 251,
+          "school": "Texas"
+        },
+        {
+          "rank": 18,
+          "previous": 18,
+          "record": "8-2",
+          "conference": "Big Ten",
+          "team_id": 130,
+          "espn_team_id": 130,
+          "school": "Michigan"
+        },
+        {
+          "rank": 19,
+          "previous": 19,
+          "record": "9-2",
+          "conference": "ACC",
+          "team_id": 258,
+          "espn_team_id": 258,
+          "school": "Virginia"
+        },
+        {
+          "rank": 20,
+          "previous": 23,
+          "record": "7-3",
+          "conference": "SEC",
+          "team_id": 2633,
+          "espn_team_id": 2633,
+          "school": "Tennessee"
+        },
+        {
+          "rank": 21,
+          "previous": null,
+          "record": "7-3",
+          "conference": "Big Ten",
+          "team_id": 356,
+          "espn_team_id": 356,
+          "school": "Illinois"
+        },
+        {
+          "rank": 22,
+          "previous": null,
+          "record": "7-3",
+          "conference": "SEC",
+          "team_id": 142,
+          "espn_team_id": 142,
+          "school": "Missouri"
+        },
+        {
+          "rank": 23,
+          "previous": null,
+          "record": "8-2",
+          "conference": "Big 12",
+          "team_id": 248,
+          "espn_team_id": 248,
+          "school": "Houston"
+        },
+        {
+          "rank": 24,
+          "previous": null,
+          "record": "8-2",
+          "conference": "American Athletic",
+          "team_id": 2655,
+          "espn_team_id": 2655,
+          "school": "Tulane"
+        },
+        {
+          "rank": 25,
+          "previous": null,
+          "record": "7-3",
+          "conference": "Big 12",
+          "team_id": 9,
+          "espn_team_id": 9,
+          "school": "Arizona State"
+        }
+      ]
+    },
+    {
+      "released_at": "2025-11-25T08:00:00Z",
+      "week": 14,
+      "official_url": null,
+      "headline": "2025 NCAA Football Rankings - CFP Rankings Week 14",
+      "teams": [
+        {
+          "rank": 1,
+          "previous": 1,
+          "record": "11-0",
+          "conference": "Big Ten",
+          "team_id": 194,
+          "espn_team_id": 194,
+          "school": "Ohio State"
+        },
+        {
+          "rank": 2,
+          "previous": 2,
+          "record": "11-0",
+          "conference": "Big Ten",
+          "team_id": 84,
+          "espn_team_id": 84,
+          "school": "Indiana"
+        },
+        {
+          "rank": 3,
+          "previous": 3,
+          "record": "11-0",
+          "conference": "SEC",
+          "team_id": 245,
+          "espn_team_id": 245,
+          "school": "Texas A&M"
+        },
+        {
+          "rank": 4,
+          "previous": 4,
+          "record": "10-1",
+          "conference": "SEC",
+          "team_id": 61,
+          "espn_team_id": 61,
+          "school": "Georgia"
+        },
+        {
+          "rank": 5,
+          "previous": 5,
+          "record": "10-1",
+          "conference": "Big 12",
+          "team_id": 2641,
+          "espn_team_id": 2641,
+          "school": "Texas Tech"
+        },
+        {
+          "rank": 6,
+          "previous": 7,
+          "record": "10-1",
+          "conference": "Big Ten",
+          "team_id": 2483,
+          "espn_team_id": 2483,
+          "school": "Oregon"
+        },
+        {
+          "rank": 7,
+          "previous": 6,
+          "record": "10-1",
+          "conference": "SEC",
+          "team_id": 145,
+          "espn_team_id": 145,
+          "school": "Ole Miss"
+        },
+        {
+          "rank": 8,
+          "previous": 8,
+          "record": "9-2",
+          "conference": "SEC",
+          "team_id": 201,
+          "espn_team_id": 201,
+          "school": "Oklahoma"
+        },
+        {
+          "rank": 9,
+          "previous": 9,
+          "record": "9-2",
+          "conference": "FBS Independents",
+          "team_id": 87,
+          "espn_team_id": 87,
+          "school": "Notre Dame"
+        },
+        {
+          "rank": 10,
+          "previous": 10,
+          "record": "9-2",
+          "conference": "SEC",
+          "team_id": 333,
+          "espn_team_id": 333,
+          "school": "Alabama"
+        },
+        {
+          "rank": 11,
+          "previous": 11,
+          "record": "10-1",
+          "conference": "Big 12",
+          "team_id": 252,
+          "espn_team_id": 252,
+          "school": "BYU"
+        },
+        {
+          "rank": 12,
+          "previous": 13,
+          "record": "9-2",
+          "conference": "ACC",
+          "team_id": 2390,
+          "espn_team_id": 2390,
+          "school": "Miami"
+        },
+        {
+          "rank": 13,
+          "previous": 12,
+          "record": "9-2",
+          "conference": "Big 12",
+          "team_id": 254,
+          "espn_team_id": 254,
+          "school": "Utah"
+        },
+        {
+          "rank": 14,
+          "previous": 14,
+          "record": "9-2",
+          "conference": "SEC",
+          "team_id": 238,
+          "espn_team_id": 238,
+          "school": "Vanderbilt"
+        },
+        {
+          "rank": 15,
+          "previous": 18,
+          "record": "9-2",
+          "conference": "Big Ten",
+          "team_id": 130,
+          "espn_team_id": 130,
+          "school": "Michigan"
+        },
+        {
+          "rank": 16,
+          "previous": 17,
+          "record": "8-3",
+          "conference": "SEC",
+          "team_id": 251,
+          "espn_team_id": 251,
+          "school": "Texas"
+        },
+        {
+          "rank": 17,
+          "previous": 15,
+          "record": "8-3",
+          "conference": "Big Ten",
+          "team_id": 30,
+          "espn_team_id": 30,
+          "school": "USC"
+        },
+        {
+          "rank": 18,
+          "previous": 19,
+          "record": "9-2",
+          "conference": "ACC",
+          "team_id": 258,
+          "espn_team_id": 258,
+          "school": "Virginia"
+        },
+        {
+          "rank": 19,
+          "previous": 20,
+          "record": "8-3",
+          "conference": "SEC",
+          "team_id": 2633,
+          "espn_team_id": 2633,
+          "school": "Tennessee"
+        },
+        {
+          "rank": 20,
+          "previous": 25,
+          "record": "8-3",
+          "conference": "Big 12",
+          "team_id": 9,
+          "espn_team_id": 9,
+          "school": "Arizona State"
+        },
+        {
+          "rank": 21,
+          "previous": null,
+          "record": "8-3",
+          "conference": "ACC",
+          "team_id": 2567,
+          "espn_team_id": 2567,
+          "school": "SMU"
+        },
+        {
+          "rank": 22,
+          "previous": null,
+          "record": "8-3",
+          "conference": "ACC",
+          "team_id": 221,
+          "espn_team_id": 221,
+          "school": "Pittsburgh"
+        },
+        {
+          "rank": 23,
+          "previous": 16,
+          "record": "9-2",
+          "conference": "ACC",
+          "team_id": 59,
+          "espn_team_id": 59,
+          "school": "Georgia Tech"
+        },
+        {
+          "rank": 24,
+          "previous": 24,
+          "record": "9-2",
+          "conference": "American Athletic",
+          "team_id": 2655,
+          "espn_team_id": 2655,
+          "school": "Tulane"
+        },
+        {
+          "rank": 25,
+          "previous": null,
+          "record": "8-3",
+          "conference": "Big 12",
+          "team_id": 12,
+          "espn_team_id": 12,
+          "school": "Arizona"
+        }
+      ]
+    },
+    {
+      "released_at": "2025-12-02T08:00:00Z",
+      "week": 15,
+      "official_url": null,
+      "headline": "2025 NCAA Football Rankings - CFP Rankings Week 15",
+      "teams": [
+        {
+          "rank": 1,
+          "previous": 1,
+          "record": "12-0",
+          "conference": "Big Ten",
+          "team_id": 194,
+          "espn_team_id": 194,
+          "school": "Ohio State"
+        },
+        {
+          "rank": 2,
+          "previous": 2,
+          "record": "12-0",
+          "conference": "Big Ten",
+          "team_id": 84,
+          "espn_team_id": 84,
+          "school": "Indiana"
+        },
+        {
+          "rank": 3,
+          "previous": 4,
+          "record": "11-1",
+          "conference": "SEC",
+          "team_id": 61,
+          "espn_team_id": 61,
+          "school": "Georgia"
+        },
+        {
+          "rank": 4,
+          "previous": 5,
+          "record": "11-1",
+          "conference": "Big 12",
+          "team_id": 2641,
+          "espn_team_id": 2641,
+          "school": "Texas Tech"
+        },
+        {
+          "rank": 5,
+          "previous": 6,
+          "record": "11-1",
+          "conference": "Big Ten",
+          "team_id": 2483,
+          "espn_team_id": 2483,
+          "school": "Oregon"
+        },
+        {
+          "rank": 6,
+          "previous": 7,
+          "record": "11-1",
+          "conference": "SEC",
+          "team_id": 145,
+          "espn_team_id": 145,
+          "school": "Ole Miss"
+        },
+        {
+          "rank": 7,
+          "previous": 3,
+          "record": "11-1",
+          "conference": "SEC",
+          "team_id": 245,
+          "espn_team_id": 245,
+          "school": "Texas A&M"
+        },
+        {
+          "rank": 8,
+          "previous": 8,
+          "record": "10-2",
+          "conference": "SEC",
+          "team_id": 201,
+          "espn_team_id": 201,
+          "school": "Oklahoma"
+        },
+        {
+          "rank": 9,
+          "previous": 10,
+          "record": "10-2",
+          "conference": "SEC",
+          "team_id": 333,
+          "espn_team_id": 333,
+          "school": "Alabama"
+        },
+        {
+          "rank": 10,
+          "previous": 9,
+          "record": "10-2",
+          "conference": "FBS Independents",
+          "team_id": 87,
+          "espn_team_id": 87,
+          "school": "Notre Dame"
+        },
+        {
+          "rank": 11,
+          "previous": 11,
+          "record": "11-1",
+          "conference": "Big 12",
+          "team_id": 252,
+          "espn_team_id": 252,
+          "school": "BYU"
+        },
+        {
+          "rank": 12,
+          "previous": 12,
+          "record": "10-2",
+          "conference": "ACC",
+          "team_id": 2390,
+          "espn_team_id": 2390,
+          "school": "Miami"
+        },
+        {
+          "rank": 13,
+          "previous": 16,
+          "record": "9-3",
+          "conference": "SEC",
+          "team_id": 251,
+          "espn_team_id": 251,
+          "school": "Texas"
+        },
+        {
+          "rank": 14,
+          "previous": 14,
+          "record": "10-2",
+          "conference": "SEC",
+          "team_id": 238,
+          "espn_team_id": 238,
+          "school": "Vanderbilt"
+        },
+        {
+          "rank": 15,
+          "previous": 13,
+          "record": "10-2",
+          "conference": "Big 12",
+          "team_id": 254,
+          "espn_team_id": 254,
+          "school": "Utah"
+        },
+        {
+          "rank": 16,
+          "previous": 17,
+          "record": "9-3",
+          "conference": "Big Ten",
+          "team_id": 30,
+          "espn_team_id": 30,
+          "school": "USC"
+        },
+        {
+          "rank": 17,
+          "previous": 18,
+          "record": "10-2",
+          "conference": "ACC",
+          "team_id": 258,
+          "espn_team_id": 258,
+          "school": "Virginia"
+        },
+        {
+          "rank": 18,
+          "previous": 25,
+          "record": "9-3",
+          "conference": "Big 12",
+          "team_id": 12,
+          "espn_team_id": 12,
+          "school": "Arizona"
+        },
+        {
+          "rank": 19,
+          "previous": 15,
+          "record": "9-3",
+          "conference": "Big Ten",
+          "team_id": 130,
+          "espn_team_id": 130,
+          "school": "Michigan"
+        },
+        {
+          "rank": 20,
+          "previous": 24,
+          "record": "10-2",
+          "conference": "American Athletic",
+          "team_id": 2655,
+          "espn_team_id": 2655,
+          "school": "Tulane"
+        },
+        {
+          "rank": 21,
+          "previous": null,
+          "record": "9-3",
+          "conference": "Big 12",
+          "team_id": 248,
+          "espn_team_id": 248,
+          "school": "Houston"
+        },
+        {
+          "rank": 22,
+          "previous": 23,
+          "record": "9-3",
+          "conference": "ACC",
+          "team_id": 59,
+          "espn_team_id": 59,
+          "school": "Georgia Tech"
+        },
+        {
+          "rank": 23,
+          "previous": null,
+          "record": "8-4",
+          "conference": "Big Ten",
+          "team_id": 2294,
+          "espn_team_id": 2294,
+          "school": "Iowa"
+        },
+        {
+          "rank": 24,
+          "previous": null,
+          "record": "11-1",
+          "conference": "American Athletic",
+          "team_id": 249,
+          "espn_team_id": 249,
+          "school": "North Texas"
+        },
+        {
+          "rank": 25,
+          "previous": null,
+          "record": "11-1",
+          "conference": "Sun Belt",
+          "team_id": 256,
+          "espn_team_id": 256,
+          "school": "James Madison"
+        }
+      ]
+    },
+    {
+      "released_at": "2025-12-07T08:00:00Z",
+      "week": 16,
+      "official_url": "https://collegefootballplayoff.com/news/2025/12/7/cfp-rankings",
+      "headline": "2025 NCAA Football Rankings - CFP Rankings Week 16",
+      "teams": [
+        {
+          "rank": 1,
+          "previous": 2,
+          "record": "13-0",
+          "conference": "Big Ten",
+          "team_id": 84,
+          "espn_team_id": 84,
+          "school": "Indiana"
+        },
+        {
+          "rank": 2,
+          "previous": 1,
+          "record": "12-1",
+          "conference": "Big Ten",
+          "team_id": 194,
+          "espn_team_id": 194,
+          "school": "Ohio State"
+        },
+        {
+          "rank": 3,
+          "previous": 3,
+          "record": "12-1",
+          "conference": "SEC",
+          "team_id": 61,
+          "espn_team_id": 61,
+          "school": "Georgia"
+        },
+        {
+          "rank": 4,
+          "previous": 4,
+          "record": "12-1",
+          "conference": "Big 12",
+          "team_id": 2641,
+          "espn_team_id": 2641,
+          "school": "Texas Tech"
+        },
+        {
+          "rank": 5,
+          "previous": 5,
+          "record": "11-1",
+          "conference": "Big Ten",
+          "team_id": 2483,
+          "espn_team_id": 2483,
+          "school": "Oregon"
+        },
+        {
+          "rank": 6,
+          "previous": 6,
+          "record": "11-1",
+          "conference": "SEC",
+          "team_id": 145,
+          "espn_team_id": 145,
+          "school": "Ole Miss"
+        },
+        {
+          "rank": 7,
+          "previous": 7,
+          "record": "11-1",
+          "conference": "SEC",
+          "team_id": 245,
+          "espn_team_id": 245,
+          "school": "Texas A&M"
+        },
+        {
+          "rank": 8,
+          "previous": 8,
+          "record": "10-2",
+          "conference": "SEC",
+          "team_id": 201,
+          "espn_team_id": 201,
+          "school": "Oklahoma"
+        },
+        {
+          "rank": 9,
+          "previous": 9,
+          "record": "10-3",
+          "conference": "SEC",
+          "team_id": 333,
+          "espn_team_id": 333,
+          "school": "Alabama"
+        },
+        {
+          "rank": 10,
+          "previous": 12,
+          "record": "10-2",
+          "conference": "ACC",
+          "team_id": 2390,
+          "espn_team_id": 2390,
+          "school": "Miami"
+        },
+        {
+          "rank": 11,
+          "previous": 10,
+          "record": "10-2",
+          "conference": "FBS Independents",
+          "team_id": 87,
+          "espn_team_id": 87,
+          "school": "Notre Dame"
+        },
+        {
+          "rank": 12,
+          "previous": 11,
+          "record": "11-2",
+          "conference": "Big 12",
+          "team_id": 252,
+          "espn_team_id": 252,
+          "school": "BYU"
+        },
+        {
+          "rank": 13,
+          "previous": 13,
+          "record": "9-3",
+          "conference": "SEC",
+          "team_id": 251,
+          "espn_team_id": 251,
+          "school": "Texas"
+        },
+        {
+          "rank": 14,
+          "previous": 14,
+          "record": "10-2",
+          "conference": "SEC",
+          "team_id": 238,
+          "espn_team_id": 238,
+          "school": "Vanderbilt"
+        },
+        {
+          "rank": 15,
+          "previous": 15,
+          "record": "10-2",
+          "conference": "Big 12",
+          "team_id": 254,
+          "espn_team_id": 254,
+          "school": "Utah"
+        },
+        {
+          "rank": 16,
+          "previous": 16,
+          "record": "9-3",
+          "conference": "Big Ten",
+          "team_id": 30,
+          "espn_team_id": 30,
+          "school": "USC"
+        },
+        {
+          "rank": 17,
+          "previous": 18,
+          "record": "9-3",
+          "conference": "Big 12",
+          "team_id": 12,
+          "espn_team_id": 12,
+          "school": "Arizona"
+        },
+        {
+          "rank": 18,
+          "previous": 19,
+          "record": "9-3",
+          "conference": "Big Ten",
+          "team_id": 130,
+          "espn_team_id": 130,
+          "school": "Michigan"
+        },
+        {
+          "rank": 19,
+          "previous": 17,
+          "record": "10-3",
+          "conference": "ACC",
+          "team_id": 258,
+          "espn_team_id": 258,
+          "school": "Virginia"
+        },
+        {
+          "rank": 20,
+          "previous": 20,
+          "record": "11-2",
+          "conference": "American Athletic",
+          "team_id": 2655,
+          "espn_team_id": 2655,
+          "school": "Tulane"
+        },
+        {
+          "rank": 21,
+          "previous": 21,
+          "record": "9-3",
+          "conference": "Big 12",
+          "team_id": 248,
+          "espn_team_id": 248,
+          "school": "Houston"
+        },
+        {
+          "rank": 22,
+          "previous": 22,
+          "record": "9-3",
+          "conference": "ACC",
+          "team_id": 59,
+          "espn_team_id": 59,
+          "school": "Georgia Tech"
+        },
+        {
+          "rank": 23,
+          "previous": 23,
+          "record": "8-4",
+          "conference": "Big Ten",
+          "team_id": 2294,
+          "espn_team_id": 2294,
+          "school": "Iowa"
+        },
+        {
+          "rank": 24,
+          "previous": 25,
+          "record": "12-1",
+          "conference": "Sun Belt",
+          "team_id": 256,
+          "espn_team_id": 256,
+          "school": "James Madison"
+        },
+        {
+          "rank": 25,
+          "previous": 24,
+          "record": "11-2",
+          "conference": "American Athletic",
+          "team_id": 249,
+          "espn_team_id": 249,
+          "school": "North Texas"
+        }
+      ]
+    }
+  ]
+}

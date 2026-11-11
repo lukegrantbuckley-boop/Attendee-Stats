@@ -1,0 +1,449 @@
+{
+  "season": 2026,
+  "label": "Projected",
+  "status": "projected",
+  "selection_day": "2026-12-06",
+  "as_of": "2026-11-10T08:00:00Z",
+  "notre_dame_auto": true,
+  "at_large_spots": 6,
+  "field_size": 12,
+  "missing_automatic_bids": [],
+  "seeds": [
+    {
+      "school": "Georgia",
+      "rank": 1,
+      "conference": "SEC",
+      "record": "8-1",
+      "team_id": 61,
+      "bid": "SEC auto",
+      "seed": 1,
+      "bye": true
+    },
+    {
+      "school": "Utah",
+      "rank": 2,
+      "conference": "Big 12",
+      "record": "9-0",
+      "team_id": 254,
+      "bid": "Big 12 auto",
+      "seed": 2,
+      "bye": true
+    },
+    {
+      "school": "Alabama",
+      "rank": 3,
+      "conference": "SEC",
+      "record": "7-2",
+      "team_id": 333,
+      "bid": "at-large",
+      "seed": 3,
+      "bye": true
+    },
+    {
+      "school": "UCLA",
+      "rank": 4,
+      "conference": "Big Ten",
+      "record": "9-0",
+      "team_id": 26,
+      "bid": "Big Ten auto",
+      "seed": 4,
+      "bye": true
+    },
+    {
+      "school": "Notre Dame",
+      "rank": 5,
+      "conference": "FBS Independents",
+      "record": "8-1",
+      "team_id": 87,
+      "bid": "Notre Dame auto",
+      "seed": 5,
+      "bye": false
+    },
+    {
+      "school": "Texas",
+      "rank": 6,
+      "conference": "SEC",
+      "record": "7-2",
+      "team_id": 251,
+      "bid": "at-large",
+      "seed": 6,
+      "bye": false
+    },
+    {
+      "school": "Miami",
+      "rank": 7,
+      "conference": "ACC",
+      "record": "8-1",
+      "team_id": 2390,
+      "bid": "ACC auto",
+      "seed": 7,
+      "bye": false
+    },
+    {
+      "school": "Tennessee",
+      "rank": 8,
+      "conference": "SEC",
+      "record": "7-2",
+      "team_id": 2633,
+      "bid": "at-large",
+      "seed": 8,
+      "bye": false
+    },
+    {
+      "school": "Indiana",
+      "rank": 9,
+      "conference": "Big Ten",
+      "record": "8-1",
+      "team_id": 84,
+      "bid": "at-large",
+      "seed": 9,
+      "bye": false
+    },
+    {
+      "school": "BYU",
+      "rank": 10,
+      "conference": "Big 12",
+      "record": "7-2",
+      "team_id": 252,
+      "bid": "at-large",
+      "seed": 10,
+      "bye": false
+    },
+    {
+      "school": "Kentucky",
+      "rank": 11,
+      "conference": "SEC",
+      "record": "7-2",
+      "team_id": 96,
+      "bid": "at-large",
+      "seed": 11,
+      "bye": false
+    },
+    {
+      "school": "Boise State",
+      "rank": 24,
+      "conference": "Pac-12",
+      "record": "8-1",
+      "team_id": 68,
+      "bid": "Group of 6 auto",
+      "seed": 12,
+      "bye": false
+    }
+  ],
+  "byes": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "first_round": [
+    {
+      "higher_seed": 5,
+      "lower_seed": 12,
+      "home": {
+        "seed": 5,
+        "school": "Notre Dame",
+        "rank": 5,
+        "conference": "FBS Independents",
+        "record": "8-1",
+        "team_id": 87,
+        "bid": "Notre Dame auto"
+      },
+      "away": {
+        "seed": 12,
+        "school": "Boise State",
+        "rank": 24,
+        "conference": "Pac-12",
+        "record": "8-1",
+        "team_id": 68,
+        "bid": "Group of 6 auto"
+      },
+      "site": "Campus of the higher seed",
+      "date": "2026-12-18",
+      "time_et": "8:00 p.m.",
+      "tv": "ESPN"
+    },
+    {
+      "higher_seed": 6,
+      "lower_seed": 11,
+      "home": {
+        "seed": 6,
+        "school": "Texas",
+        "rank": 6,
+        "conference": "SEC",
+        "record": "7-2",
+        "team_id": 251,
+        "bid": "at-large"
+      },
+      "away": {
+        "seed": 11,
+        "school": "Kentucky",
+        "rank": 11,
+        "conference": "SEC",
+        "record": "7-2",
+        "team_id": 96,
+        "bid": "at-large"
+      },
+      "site": "Campus of the higher seed",
+      "date": "2026-12-19",
+      "time_et": "12:00 p.m.",
+      "tv": "ABC/ESPN"
+    },
+    {
+      "higher_seed": 7,
+      "lower_seed": 10,
+      "home": {
+        "seed": 7,
+        "school": "Miami",
+        "rank": 7,
+        "conference": "ACC",
+        "record": "8-1",
+        "team_id": 2390,
+        "bid": "ACC auto"
+      },
+      "away": {
+        "seed": 10,
+        "school": "BYU",
+        "rank": 10,
+        "conference": "Big 12",
+        "record": "7-2",
+        "team_id": 252,
+        "bid": "at-large"
+      },
+      "site": "Campus of the higher seed",
+      "date": "2026-12-19",
+      "time_et": "3:30 p.m.",
+      "tv": "TNT/truTV/HBO Max"
+    },
+    {
+      "higher_seed": 8,
+      "lower_seed": 9,
+      "home": {
+        "seed": 8,
+        "school": "Tennessee",
+        "rank": 8,
+        "conference": "SEC",
+        "record": "7-2",
+        "team_id": 2633,
+        "bid": "at-large"
+      },
+      "away": {
+        "seed": 9,
+        "school": "Indiana",
+        "rank": 9,
+        "conference": "Big Ten",
+        "record": "8-1",
+        "team_id": 84,
+        "bid": "at-large"
+      },
+      "site": "Campus of the higher seed",
+      "date": "2026-12-19",
+      "time_et": "7:30 p.m.",
+      "tv": "TNT/truTV/HBO Max"
+    }
+  ],
+  "quarterfinals": [
+    {
+      "bye_seed": 1,
+      "bye": {
+        "seed": 1,
+        "school": "Georgia",
+        "rank": 1,
+        "conference": "SEC",
+        "record": "8-1",
+        "team_id": 61,
+        "bid": "SEC auto"
+      },
+      "opponent": "Winner of 8 vs 9",
+      "first_round_seeds": [
+        8,
+        9
+      ],
+      "site": "Chosen by seeds 1\u20133 on Dec 6"
+    },
+    {
+      "bye_seed": 4,
+      "bye": {
+        "seed": 4,
+        "school": "UCLA",
+        "rank": 4,
+        "conference": "Big Ten",
+        "record": "9-0",
+        "team_id": 26,
+        "bid": "Big Ten auto"
+      },
+      "opponent": "Winner of 5 vs 12",
+      "first_round_seeds": [
+        5,
+        12
+      ],
+      "site": "Chosen by seeds 1\u20133 on Dec 6"
+    },
+    {
+      "bye_seed": 2,
+      "bye": {
+        "seed": 2,
+        "school": "Utah",
+        "rank": 2,
+        "conference": "Big 12",
+        "record": "9-0",
+        "team_id": 254,
+        "bid": "Big 12 auto"
+      },
+      "opponent": "Winner of 7 vs 10",
+      "first_round_seeds": [
+        7,
+        10
+      ],
+      "site": "Chosen by seeds 1\u20133 on Dec 6"
+    },
+    {
+      "bye_seed": 3,
+      "bye": {
+        "seed": 3,
+        "school": "Alabama",
+        "rank": 3,
+        "conference": "SEC",
+        "record": "7-2",
+        "team_id": 333,
+        "bid": "at-large"
+      },
+      "opponent": "Winner of 6 vs 11",
+      "first_round_seeds": [
+        6,
+        11
+      ],
+      "site": "Chosen by seeds 1\u20133 on Dec 6"
+    }
+  ],
+  "quarterfinal_sites": {
+    "assignment": "Chosen by seeds 1\u20133 on Dec 6",
+    "bowls": [
+      {
+        "bowl": "Vrbo Fiesta Bowl",
+        "date": "2026-12-30",
+        "time_et": "7:30 p.m.",
+        "tv": "TNT/truTV/HBO Max",
+        "venue": "State Farm Stadium",
+        "city": "Glendale, Ariz."
+      },
+      {
+        "bowl": "Goodyear Cotton Bowl",
+        "date": "2027-01-01",
+        "time_et": null,
+        "tv": null,
+        "venue": "AT&T Stadium",
+        "city": "Arlington, Texas"
+      },
+      {
+        "bowl": "Chick-fil-A Peach Bowl",
+        "date": "2027-01-01",
+        "time_et": null,
+        "tv": null,
+        "venue": "Mercedes-Benz Stadium",
+        "city": "Atlanta"
+      },
+      {
+        "bowl": "Rose Bowl",
+        "date": "2027-01-01",
+        "time_et": null,
+        "tv": null,
+        "venue": "Rose Bowl",
+        "city": "Pasadena, Calif."
+      }
+    ]
+  },
+  "semifinals": [
+    {
+      "game": "Semifinal 1",
+      "teams": "Winner of 1 vs 8/9 against winner of 4 vs 5/12",
+      "site": "Chosen by seeds 1\u20133 on Dec 6"
+    },
+    {
+      "game": "Semifinal 2",
+      "teams": "Winner of 2 vs 7/10 against winner of 3 vs 6/11",
+      "site": "Chosen by seeds 1\u20133 on Dec 6"
+    }
+  ],
+  "semifinal_sites": {
+    "assignment": "Chosen by seeds 1\u20133 on Dec 6",
+    "bowls": [
+      {
+        "bowl": "Capital One Orange Bowl",
+        "date": "2027-01-14",
+        "time_et": "7:30 p.m.",
+        "tv": "TNT/truTV/HBO Max",
+        "venue": "Hard Rock Stadium",
+        "city": "Miami Gardens, Fla."
+      },
+      {
+        "bowl": "Allstate Sugar Bowl",
+        "date": "2027-01-15",
+        "time_et": "7:30 p.m.",
+        "tv": "ABC/ESPN",
+        "venue": "Caesars Superdome",
+        "city": "New Orleans"
+      }
+    ]
+  },
+  "championship": {
+    "date": "2027-01-25",
+    "time_et": "7:30 p.m.",
+    "tv": "ABC",
+    "venue": "Allegiant Stadium",
+    "city": "Las Vegas",
+    "site": "Allegiant Stadium, Las Vegas"
+  },
+  "first_four_out": [
+    {
+      "school": "Texas Tech",
+      "rank": 12,
+      "conference": "Big 12",
+      "record": "8-1",
+      "team_id": 2641
+    },
+    {
+      "school": "Wake Forest",
+      "rank": 13,
+      "conference": "ACC",
+      "record": "8-1",
+      "team_id": 154
+    },
+    {
+      "school": "Houston",
+      "rank": 14,
+      "conference": "Big 12",
+      "record": "7-2",
+      "team_id": 248
+    },
+    {
+      "school": "Iowa",
+      "rank": 15,
+      "conference": "Big Ten",
+      "record": "7-2",
+      "team_id": 2294
+    }
+  ],
+  "rules": {
+    "no_reseeding": true,
+    "byes_are_top_ranked_teams": true,
+    "byes_require_conference_champions": false,
+    "first_round": [
+      "5 vs 12",
+      "6 vs 11",
+      "7 vs 10",
+      "8 vs 9"
+    ],
+    "quarterfinals": [
+      "1 vs winner of 8/9",
+      "4 vs winner of 5/12",
+      "2 vs winner of 7/10",
+      "3 vs winner of 6/11"
+    ]
+  },
+  "source": "cfp_rankings",
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+  "official_rankings_url": "https://collegefootballplayoff.com/news/2026/11/10/rankings",
+  "week": 11,
+  "note": "Projected from the latest CFP rankings. Conference champions are the highest-ranked team in each Power conference. Quarterfinal and semifinal bowl sites are chosen by seeds 1\u20133 on Dec. 6 and are not assigned here."
+}

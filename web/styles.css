@@ -1028,6 +1028,81 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   .val-money strong { font-size: 1.02rem; }
 }
 
+#public-rank-note:empty { display: none; }
+
+.bowl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.bowl-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.bowl-card h3 {
+  font-family: var(--serif);
+  font-weight: 560;
+  letter-spacing: -0.02em;
+  font-size: 1.28rem;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.bowl-card p { margin: 0; }
+
+.bowl-teams { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+
+.bowl-slot-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+.bowl-slot {
+  background: var(--paper);
+  border-radius: 12px;
+  padding: 8px 10px;
+  min-width: 0;
+}
+
+.bowl-slot strong { display: block; }
+.bowl-slot span {
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.bowl-business { margin-top: 4px; }
+.bowl-business summary { cursor: pointer; font-weight: 600; }
+.bowl-business p { margin: 8px 0 0; }
+
+.bracket-round {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+  margin: 8px 0 14px;
+}
+
+.bracket-game {
+  background: var(--paper);
+  border-radius: 14px;
+  padding: 10px 12px;
+}
+
+.bracket-game strong { display: block; }
+.bracket-game p { margin: 4px 0 0; }
+
+.out-list { margin: 8px 0 0; padding-left: 1.2rem; }
+.out-list li { margin: 4px 0; }
+
+.source-links { display: flex; flex-wrap: wrap; gap: 8px 14px; }
+.source-links a { color: var(--accent); }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }

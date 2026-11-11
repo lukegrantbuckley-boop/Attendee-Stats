@@ -84,12 +84,15 @@ def main(argv: list[str] | None = None) -> None:
         api_key(),
         on_call=lambda endpoint, status, call_year: append_quota(endpoint, status, call_year),
     )
+    from attendee_tracker.refresh_cfp import refresh_from_current_season
+
     try:
         calls = refresh_season(
             year=year,
             force=args.force,
             min_interval_hours=args.min_interval_hours,
             client=client,
+            refresh_rankings=refresh_from_current_season,
         )
     except MissingApiKey:
         print(MISSING_KEY_MESSAGE, file=sys.stderr)
@@ -113,6 +116,7 @@ def refresh_season(
     client,
     get_json: Callable[[str], dict] | None = None,
     sleep: Callable[[float], None] | None = None,
+    refresh_rankings: Callable[[int], None] | None = None,
 ) -> int:
     """Re-pull CFBD, then fill null attendance. Returns the CFBD call count.
 
@@ -143,6 +147,8 @@ def refresh_season(
         else:
             print("No completed home games were missing attendance. ESPN was not called.")
     _persist_overrides(year)
+    if refresh_rankings is not None:
+        refresh_rankings(year)
     written = load_live(year)
     if isinstance(written, dict):
         print_fill_summary(written)

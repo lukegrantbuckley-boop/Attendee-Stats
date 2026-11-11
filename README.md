@@ -1,6 +1,6 @@
 # CFB Engagement Tracker
 
-College football home attendance for every FBS program, grouped by conference. Phase 1 covers Power 4 and Group of 5 schools: logos, stadium capacity, season record, the latest AP Top 25, a home-attendance chart by opponent, and a computed look at how record lines up with the crowd. Ticket prices are not in this version.
+College football home attendance for every FBS program, grouped by conference. Phase 1 covers Power 4 and Group of 5 schools: logos, stadium capacity, season record, the CFP rankings once the selection committee has released them (the AP Top 25 stays in the cache and is shown only before that release), a home-attendance chart by opponent, and a computed look at how record lines up with the crowd. Ticket prices are not in this version.
 
 This repository is a portfolio site. Season snapshots in `data/live/` (2016 through 2026) are committed, so the public site serves those caches with no College Football Data API key. Attendance figures are the numbers already stored in those files. The app does not invent a crowd.
 
@@ -17,7 +17,7 @@ If a requested season has no `data/live/{year}.json`, the site falls back to the
 | Piece | Where it runs | Role |
 | --- | --- | --- |
 | `python -m attendee_tracker.ingest` | Your machine, or a daily cron | Calls CFBD, writes a JSON cache under `data/` |
-| `python -m attendee_tracker.refresh_current` | Your machine, or the current-season cron | Re-pulls the current season from CFBD, then fills null attendance from ESPN summaries |
+| `python -m attendee_tracker.refresh_current` | Your machine, or the current-season cron | Re-pulls the current season from CFBD, fills null attendance from ESPN summaries, then updates the CFP rankings |
 | `attendee_tracker` (FastAPI) | Local Python process, or the free Render web service | Reads that cache, builds conference lists, charts data, and the analysis |
 | `web/` | Browser | HTML, CSS, and JavaScript. Chart.js draws the graphs. No frontend build step |
 
@@ -86,6 +86,15 @@ python -m attendee_tracker.refresh_current --force
 
 It uses the same 18-hour freshness window as ingest unless you pass `--force`. ESPN is consulted only for completed non-neutral home games whose CFBD attendance is null: the FBS scoreboard, then each summary's `gameInfo.attendance`. A number CFBD already has is kept. If ESPN has no figure, the game stays null. Nothing is invented. A filled game records `attendance_source` of `espn_summary`. A CFBD crowd is recorded as `cfbd`. The command requires `CFBD_API_KEY`, writes `data/live/{year}.json`, and will not commit `.env` or the key.
 
+The same command then refreshes the CFP rankings from ESPN into `data/cfp/{year}.json` and, for 2026, rewrites the projected bracket. That fetch does not need the CFBD key. Tuesday nights can run it on its own:
+
+```bash
+python -m attendee_tracker.refresh_cfp
+python -m attendee_tracker.refresh_cfp --year 2026
+```
+
+ESPN is the source. CFBD's committee poll is used only when ESPN has no CFP ranking for that season. A ranking counts only when its date is on or after the first Tuesday in November. Before that, the site keeps showing the AP Top 25. AP rows stay in `data/live`.
+
 Approved corrections for a bad ESPN zero live in `data/attendance_overrides.json`, with the source URL on each published crowd. `refresh_current` merges that file after the ESPN fill, and the site merges it again whenever it reads `data/live`. A later refresh that writes ESPN's 0 back is replaced by the override. A null attendance in that file means the game is not reported: it is left out of averages, fill percentage, and rankings, the same as any other missing crowd. Overrides apply only to the games listed there. They do not estimate a crowd, they do not change any other game, and 2020 is not in the file.
 
 2020 remains in the cache and remains omitted from averages, growth, Last 5, Last 10, and the loyal and soft lists.
@@ -138,7 +147,7 @@ python -m attendee_tracker.sample_data
 
 Schools are grouped by the conference on `/teams/fbs?year=`. SEC, Big Ten, Big 12, and ACC are Power 4. Every other FBS conference, including independents, is Group of 5 / other FBS. There is no Power 4 flag in CFBD.
 
-Inside a conference the default order is the latest AP Top 25, with unranked schools after ranked schools, then season record. The Record control sorts by win percentage instead. Cards show the logo, name, W-L (and ties when the record has them), and stadium max capacity.
+Inside a conference the default order is the latest CFP ranking once that poll is out for the season, with unranked schools after ranked schools, then season record. Before the committee's first release, the order is the latest AP Top 25. The Record control sorts by win percentage instead. Cards show the logo, name, W-L (and ties when the record has them), and stadium max capacity.
 
 Each card also pins two figures for the season on screen:
 
@@ -170,6 +179,8 @@ The dollars are not computed here. Valuations are The Athletic's July 28, 2026 h
 Each school page has a **Campaigns** tab after Home Attendance and Revenue. It lists football marketing and fan-engagement items for 2025 or 2026. The default season is 2026. The files are `data/campaigns/2025.json` and `data/campaigns/2026.json`, keyed by school slug. A school with no review says "Not yet reviewed". A reviewed school with nothing in that season says "No football campaigns found for" that season and the last checked date. Theme nights are labeled Announced. Descriptions are written for this site. Article text is not copied. `python scripts/campaigns_refresh.py --since 7d` appends new items and updates `checked_at`.
 
 **Marketing Approaches** sits on the tab after Valuations. It uses the same capacity-versus-record line as Analysis. A team is listed when its fill is at least 1.25 residual standard deviations off that line. The first section is winning records (win percentage above .500) that sit below the line. Each card has a slot for a strategy note from `data/marketing_approaches.json`, keyed by school slug. An empty note shows "Luke's take: coming soon". The second section, What Has Worked, is Group of 5 and other non-Power 4 schools at .500 or worse that sit above the line. Promotions in `data/what_has_worked.json` are published items with a source URL and date. A school with nothing stored says "No documented promotion found". The default year is 2025, the last complete season. 2026 is on the same control because the rest of the site can already switch between the current season and the last one. 2020 is not offered. NFL and shared pro stadiums stay out of the fit.
+
+**Bowl Games** sits on the tab directly after Marketing Approaches. The top is a projected 12-team CFP bracket from the latest committee rankings, labeled Projected until Selection Day (Dec. 6, 2026). Quarterfinal and semifinal sites stay “Chosen by seeds 1–3 on Dec 6.” Below that, one card per 2026–27 FBS bowl, including the CFP games. The Cricket Celebration Bowl is marked FCS and left off the card grid. Team slots are the latest ESPN Bonagura and Schlabach projections until official matchups are stored. Business figures are null when a source was not found. `/api/bowls` reads `data/bowls/2026.json` and `data/cfp/2026_projected_bracket.json`.
 
 ## Deploy on Render (free)
 

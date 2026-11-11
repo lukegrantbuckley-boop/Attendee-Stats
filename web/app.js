@@ -3,7 +3,8 @@
    Power valuations load from /api/valuations.
    Marketing approaches load from /api/marketing.
    Football revenue loads from /api/revenue/{slug} when a school page opens.
-   Football campaigns load from /api/campaigns/{slug}?year= when that tab is open. */
+   Football campaigns load from /api/campaigns/{slug}?year= when that tab is open.
+   Bowl games and the projected CFP bracket load from /api/bowls. */
 
 const view = document.querySelector("#view");
 const banner = document.querySelector("#banner");
@@ -28,6 +29,8 @@ const revenueBySlug = new Map();
 const revenueInflight = new Set();
 const campaignsByKey = new Map();
 let campaignToken = 0;
+let bowlsPayload = null;
+let bowlsToken = 0;
 
 const motionApi = window.Motion || null;
 const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
@@ -76,11 +79,39 @@ async function boot() {
   }
 }
 
+function pollLabel(meta) {
+  if (meta.public_poll === "CFP") {
+    const week = meta.public_week ? `week ${meta.public_week}` : "latest release";
+    return `CFP rankings, ${week}`;
+  }
+  if (meta.ap_week) {
+    return `AP Top 25, week ${meta.ap_week}${meta.ap_season_type === "postseason" ? " postseason" : ""}`;
+  }
+  return meta.rank_note || "AP poll not in this cache";
+}
+
+function publicRankLabel(school) {
+  if (!school) return null;
+  if (school.public_poll === "CFP") {
+    return school.public_rank != null ? `CFP ${school.public_rank}` : null;
+  }
+  const rank = school.public_rank != null ? school.public_rank : school.ap_rank;
+  return rank != null ? `AP ${rank}` : null;
+}
+
+function rankPill(school, withId) {
+  const label = publicRankLabel(school);
+  const props = {
+    class: label ? "pill rank" : "pill unranked",
+    text: label || "Unranked",
+  };
+  if (withId) props.id = "public-rank-pill";
+  return h("span", props);
+}
+
 function applyChrome() {
   const meta = payload.meta;
-  const poll = meta.ap_week
-    ? `AP Top 25, week ${meta.ap_week}${meta.ap_season_type === "postseason" ? " postseason" : ""}`
-    : "AP poll not in this cache";
+  const poll = pollLabel(meta);
   const source = meta.synthetic ? "Sample data" : "College Football Data";
   seasonLabel.textContent = `${meta.season} season · ${poll} · ${source}`;
   document.title = `CFB Engagement Tracker · ${meta.season}`;
@@ -112,6 +143,7 @@ function render() {
     if (route.name === "analysis") renderAnalysis();
     else if (route.name === "valuations") renderValuations();
     else if (route.name === "marketing") renderMarketing();
+    else if (route.name === "bowls") renderBowls();
     else if (route.name === "school") renderSchool(route.slug, route.view, route.year);
     else renderHome();
   } finally {
@@ -133,6 +165,7 @@ function currentRoute() {
   if (hash === "/analysis") return { name: "analysis" };
   if (hash === "/valuations") return { name: "valuations" };
   if (hash === "/marketing") return { name: "marketing" };
+  if (hash === "/bowls") return { name: "bowls" };
   const match = hash.match(/^\/schools\/([^/]+)/);
   if (match) {
     const rest = hash.slice(match[0].length).replace(/\/+$/, "");
@@ -176,9 +209,10 @@ function renderHome() {
     })
     .filter((section) => section.schools.length);
 
+  const rankName = meta.public_poll === "CFP" ? "CFP" : "AP";
   const intro = filters.sort === "record"
-    ? "Sorted by season record. Ties break toward the latest AP rank, and unranked schools follow ranked schools when the record is the same."
-    : "Sorted by the latest AP Top 25. Unranked schools follow the ranked ones. Record breaks ties.";
+    ? `Sorted by season record. Ties break toward the latest ${rankName} rank, and unranked schools follow ranked schools when the record is the same.`
+    : `Sorted by the latest ${rankName === "CFP" ? "CFP rankings" : "AP Top 25"}. Unranked schools follow the ranked ones. Record breaks ties.`;
 
   const tierSeen = new Set();
   const blocks = [];
@@ -243,7 +277,7 @@ function renderHome() {
         render();
       }),
       segment("Sort", [
-        ["ap", "AP rank"],
+        ["ap", meta.public_poll === "CFP" ? "CFP rank" : "AP rank"],
         ["record", "Record"],
       ], filters.sort, (value) => {
         filters.sort = value;
@@ -264,9 +298,7 @@ function renderHome() {
 }
 
 function schoolCard(school) {
-  const rank = school.ap_rank
-    ? h("span", { class: "pill rank", text: `AP ${school.ap_rank}` })
-    : h("span", { class: "pill unranked", text: "Unranked" });
+  const rank = rankPill(school);
   const missing = school.missing_attendance_games
     ? h("span", { class: "pill warn", text: `${school.missing_attendance_games} attendance missing` })
     : null;
@@ -422,13 +454,14 @@ function schoolIdentity(school) {
         h("div", { class: "pills" }, [
           h("span", { class: "pill", text: school.record || "Record unavailable" }),
           school.pro_shared_stadium ? h("span", { class: "pill pro", text: "NFL stadium" }) : null,
-          school.ap_rank
-            ? h("span", { class: "pill rank", text: `AP ${school.ap_rank}` })
-            : h("span", { class: "pill unranked", text: "Unranked" }),
+          filters.span === RANGE_LAST
+            ? h("span", { id: "public-rank-pill", class: "pill quiet", text: "Rank" })
+            : rankPill(school, true),
           school.recent_record
             ? h("span", { class: "pill quiet", text: `Last ${school.recent_form.games}: ${school.recent_record}` })
             : null,
         ]),
+        h("p", { id: "public-rank-note", class: "muted", text: filters.span === RANGE_LAST ? "" : (payload.meta.rank_note || "") }),
         h("p", { class: "capacity", text: stadiumLine(school) }),
         school.pro_shared_stadium
           ? h("p", { class: "pro-note", text: school.pro_stadium_note || "NFL stadium. Official capacity fill is not compared with on-campus stadiums." })
@@ -991,6 +1024,14 @@ async function loadPriorSeason(school, year, token) {
     renderHistoryError(`${school.school} is not in the ${year} cache. Attendance was not fabricated.`);
     return;
   }
+  const rankNode = document.getElementById("public-rank-pill");
+  if (rankNode) {
+    const label = publicRankLabel(prior);
+    rankNode.className = label ? "pill rank" : "pill unranked";
+    rankNode.textContent = label || "Unranked";
+  }
+  const rankNote = document.getElementById("public-rank-note");
+  if (rankNote) rankNote.textContent = (seasonBody.meta && seasonBody.meta.rank_note) || "";
   const pins = document.getElementById("season-pins");
   if (pins) {
     pins.replaceChildren(attendancePins(prior, year));
@@ -2799,6 +2840,370 @@ function reduceMotion() {
   return reduceMotionQuery.matches;
 }
 
+function renderBowls() {
+  if (bowlsPayload) {
+    paintBowls(bowlsPayload);
+    return;
+  }
+  const token = ++bowlsToken;
+  view.replaceChildren(h("p", { class: "loading", text: "Loading bowl games…" }));
+  loadBowls(token);
+}
+
+async function loadBowls(token) {
+  try {
+    const response = await fetch("/api/bowls");
+    const body = await response.json();
+    if (token !== bowlsToken) return;
+    if (!response.ok || body.error) {
+      view.replaceChildren(h("div", { class: "error" }, [
+        h("h2", { text: "Bowl games are not available" }),
+        h("p", { text: body.message || "The bowl file could not be loaded. Matchups were not invented." }),
+      ]));
+      return;
+    }
+    bowlsPayload = body;
+    if (currentRoute().name === "bowls") paintBowls(body);
+  } catch (_error) {
+    if (token !== bowlsToken) return;
+    view.replaceChildren(h("div", { class: "error" }, [
+      h("h2", { text: "Bowl games are not available" }),
+      h("p", { text: "The bowl file could not be loaded." }),
+    ]));
+  }
+}
+
+function paintBowls(data) {
+  const bracket = data.bracket;
+  const nodes = [
+    h("p", { class: "lede", text: "Bowl Games" }),
+    h("p", { class: "sublede", text: "The bracket is computed from the latest CFP rankings. The cards below use ESPN’s weekly bowl projections until official matchups replace them on Selection Day." }),
+    data.status_note ? h("p", { class: "muted", text: data.status_note }) : null,
+    bracket ? bracketPanel(data) : h("p", { text: "The projected bracket is not in this cache." }),
+    explainerPanel(data.explainers && data.explainers.bracket),
+    bracket ? firstFourOut(bracket) : null,
+    unassignedQuarterfinals(data.unassigned_quarterfinal_projections),
+    h("h2", { text: "The 2026–27 slate" }),
+    projectionNote(data.projection),
+    omittedNote(data.omitted),
+    explainerPanel(data.explainers && data.explainers.selection),
+    explainerPanel(data.explainers && data.explainers.money),
+    h("div", { class: "bowl-grid" }, (data.games || []).map(bowlCard)),
+  ].filter((node) => node != null);
+  view.replaceChildren(...nodes);
+  if (!motionFromRender) {
+    motionSwap(view);
+    motionLists(view, false);
+    motionCounts(view);
+    motionHover();
+  }
+}
+
+function bracketPanel(data) {
+  const bracket = data.bracket;
+  const byes = (bracket.seeds || []).filter((seed) => seed.bye);
+  return h("section", { class: "panel" }, [
+    h("div", { class: "pills" }, [
+      h("span", { class: "pill rank", text: data.label || bracket.label || "Projected" }),
+      bracket.as_of ? h("span", { class: "pill quiet", text: `As of ${formatNewsDate(bracket.as_of)}` }) : null,
+    ]),
+    h("h2", { text: "College Football Playoff" }),
+    h("p", { class: "muted", text: bracket.note || "" }),
+    h("h3", { text: "Seeds 1–4, first-round bye" }),
+    h("div", { class: "bracket-round" }, byes.map(seedLine)),
+    h("h3", { text: "First round" }),
+    h("p", { class: "muted", text: "On campus. The higher seed hosts. Quarterfinals are not reseeded." }),
+    h("div", { class: "bracket-round" }, (bracket.first_round || []).map(firstRoundLine)),
+    h("h3", { text: "Quarterfinals" }),
+    h("p", { class: "muted", text: "Bowl sites: Chosen by seeds 1–3 on Dec 6." }),
+    h("div", { class: "bracket-round" }, (bracket.quarterfinals || []).map(quarterLine)),
+    sitePool(bracket.quarterfinal_sites),
+    h("h3", { text: "Semifinals" }),
+    h("p", { class: "muted", text: "Bowl sites: Chosen by seeds 1–3 on Dec 6." }),
+    h("div", { class: "bracket-round" }, (bracket.semifinals || []).map((game) => h("article", { class: "bracket-game" }, [
+      h("strong", { text: game.teams || game.game }),
+      h("p", { text: game.site || "Chosen by seeds 1–3 on Dec 6" }),
+    ]))),
+    sitePool(bracket.semifinal_sites),
+    h("h3", { text: "National championship" }),
+    championshipLine(bracket.championship),
+  ]);
+}
+
+function seedLine(seed) {
+  return h("article", { class: "bracket-game" }, [
+    h("strong", { text: `${seed.seed}. ${seed.school}` }),
+    h("p", { text: [seed.record, seed.conference, seed.bid].filter(Boolean).join(" · ") }),
+  ]);
+}
+
+function firstRoundLine(game) {
+  const home = game.home ? `${game.home.seed} ${game.home.school}` : `Seed ${game.higher_seed}`;
+  const away = game.away ? `${game.away.seed} ${game.away.school}` : `Seed ${game.lower_seed}`;
+  const when = [formatNewsDate(game.date), game.time_et, game.tv].filter(Boolean).join(" · ");
+  return h("article", { class: "bracket-game" }, [
+    h("strong", { text: `${home} vs ${away}` }),
+    h("p", { text: when }),
+    h("p", { class: "muted", text: game.site || "Campus of the higher seed" }),
+  ]);
+}
+
+function quarterLine(game) {
+  const bye = game.bye ? `${game.bye.seed} ${game.bye.school}` : `Seed ${game.bye_seed}`;
+  return h("article", { class: "bracket-game" }, [
+    h("strong", { text: `${bye} vs ${game.opponent}` }),
+    h("p", { text: game.site || "Chosen by seeds 1–3 on Dec 6" }),
+  ]);
+}
+
+function sitePool(pool) {
+  if (!pool || !pool.bowls) return null;
+  const names = pool.bowls.map((bowl) => {
+    const when = [formatNewsDate(bowl.date), bowl.time_et, bowl.venue, bowl.city].filter(Boolean).join(", ");
+    return when ? `${bowl.bowl} (${when})` : bowl.bowl;
+  });
+  return h("p", { class: "muted", text: `Host bowls, not yet assigned: ${names.join("; ")}.` });
+}
+
+function championshipLine(game) {
+  if (!game) return null;
+  const when = [formatNewsDate(game.date), game.time_et, game.tv].filter(Boolean).join(" · ");
+  return h("article", { class: "bracket-game" }, [
+    h("strong", { text: game.site || "Allegiant Stadium, Las Vegas" }),
+    h("p", { text: when }),
+  ]);
+}
+
+function firstFourOut(bracket) {
+  const teams = bracket.first_four_out || [];
+  if (!teams.length) return null;
+  return h("section", { class: "panel" }, [
+    h("h3", { text: "First four out" }),
+    h("p", { class: "muted", text: "The next teams in the CFP rankings who are not in this projected field." }),
+    h("ol", { class: "out-list" }, teams.map((team) => h("li", {
+      text: `${team.school} · CFP ${team.rank}${team.record ? ` · ${team.record}` : ""}`,
+    }))),
+  ]);
+}
+
+function unassignedQuarterfinals(block) {
+  if (!block || !Array.isArray(block.projections) || !block.projections.length) return null;
+  return h("section", { class: "panel" }, [
+    h("h3", { text: "ESPN quarterfinals without a bowl" }),
+    h("p", { class: "muted", text: block.note || "" }),
+    h("ul", { class: "out-list" }, block.projections.map((row) => h("li", {
+      text: `${row.analyst}: ${row.teams.join(" vs ")}${row.window ? ` · ${row.window}` : ""}`,
+    }))),
+    block.url ? h("p", {}, [h("a", { href: block.url, target: "_blank", rel: "noopener noreferrer", text: "ESPN projection" })]) : null,
+  ]);
+}
+
+function explainerPanel(explainer) {
+  if (!explainer || !explainer.text) return null;
+  const links = (explainer.source_urls || []).map((url) => h("a", {
+    href: url,
+    target: "_blank",
+    rel: "noopener noreferrer",
+    text: linkLabel(url),
+  }));
+  return h("section", { class: "panel" }, [
+    h("h3", { text: explainer.title || "Notes" }),
+    h("p", { text: explainer.text }),
+    links.length ? h("p", { class: "source-links" }, links) : null,
+  ]);
+}
+
+function projectionNote(projection) {
+  if (!projection) return null;
+  const authors = (projection.authors || []).join(" and ");
+  return h("p", { class: "muted", text: `${projection.newer_week_note || ""} Team slots are ${authors ? `${authors}, ` : ""}${projection.week_label || "the latest ESPN projection"}, ${formatNewsDate(projection.date)}. Each team is marked Projected.` });
+}
+
+function omittedNote(omitted) {
+  const rows = omitted || [];
+  if (!rows.length) return null;
+  return h("p", { class: "muted", text: rows.map((row) => `${row.name} is ${row.division || "omitted"}. ${row.reason || ""}`).join(" ") });
+}
+
+function bowlCard(game) {
+  const when = [formatNewsDate(game.date), game.time_et, game.tv].filter(Boolean).join(" · ");
+  const place = [game.venue, game.city].filter(Boolean).join(", ") || "Site not assigned";
+  return h("article", { class: "bowl-card" }, [
+    h("div", { class: "pills" }, [
+      game.cfp_round ? h("span", { class: "pill rank", text: cfpRoundLabel(game.cfp_round) }) : h("span", { class: "pill quiet", text: "Bowl" }),
+      h("span", { class: "pill quiet", text: "FBS" }),
+    ]),
+    h("h3", { text: game.name }),
+    h("p", { text: when || game.time_note || "Time TBA" }),
+    h("p", { text: place }),
+    game.venue_note ? h("p", { class: "muted", text: game.venue_note }) : null,
+    game.time_note ? h("p", { class: "muted", text: game.time_note }) : null,
+    game.tv_note ? h("p", { class: "muted", text: game.tv_note }) : null,
+    game.name_note ? h("p", { class: "muted", text: game.name_note }) : null,
+    game.site_note ? h("p", { class: "muted", text: game.site_note }) : null,
+    h("p", { class: "muted", text: `Tie-in: ${game.tie_ins || "Unknown"}` }),
+    teamSlots(game),
+    businessDetails(game),
+  ]);
+}
+
+function cfpRoundLabel(round) {
+  if (round === "first") return "CFP first round";
+  if (round === "quarterfinal") return "CFP quarterfinal";
+  if (round === "semifinal") return "CFP semifinal";
+  if (round === "championship") return "CFP championship";
+  return "CFP";
+}
+
+function teamSlots(game) {
+  if (game.projection_agreement && Array.isArray(game.projected_teams) && game.projected_teams.length) {
+    return h("div", { class: "bowl-teams" }, [
+      h("div", { class: "bowl-slot-row" }, game.projected_teams.map(teamSlot)),
+      projectionCredit(game),
+    ]);
+  }
+  const rows = game.projections || [];
+  if (!rows.length) {
+    return h("div", { class: "bowl-teams" }, [
+      h("p", { text: "TBD" }),
+      h("p", { class: "muted", text: "No projected teams in the latest ESPN file." }),
+    ]);
+  }
+  return h("div", { class: "bowl-teams" }, [
+    ...rows.map((row) => h("div", {}, [
+      h("p", { class: "muted", text: row.analyst }),
+      h("div", { class: "bowl-slot-row" }, (row.teams || []).map((school) => teamSlot({ school, status: row.status || "Projected" }))),
+    ])),
+    projectionCredit(game),
+  ]);
+}
+
+function teamSlot(team) {
+  return h("div", { class: "bowl-slot" }, [
+    h("strong", { text: team.school || "TBD" }),
+    h("span", { text: team.status || "Projected" }),
+  ]);
+}
+
+function projectionCredit(game) {
+  if (!game.projection_url) return null;
+  const when = game.projection_date ? formatNewsDate(game.projection_date) : "";
+  return h("p", { class: "source-links" }, [
+    h("a", {
+      href: game.projection_url,
+      target: "_blank",
+      rel: "noopener noreferrer",
+      text: `ESPN projection${when ? `, ${when}` : ""}`,
+    }),
+  ]);
+}
+
+function businessDetails(game) {
+  const business = game.business || {};
+  const sponsor = business.title_sponsor || {};
+  const payout = business.payout || {};
+  const impact = business.economic_impact || {};
+  const prior = payout.distribution_2025_26;
+  const links = sourceLinks(business);
+  return h("details", { class: "bowl-business" }, [
+    h("summary", { text: "Business" }),
+    h("p", {}, [
+      h("strong", { text: "Title sponsor. " }),
+      document.createTextNode(sponsor.name || "Unknown"),
+      document.createTextNode(sponsor.since_year ? ` since ${sponsor.since_year}` : sponsor.name ? ". Start year unknown." : ""),
+    ]),
+    sponsor.note ? h("p", { class: "muted", text: sponsor.note }) : null,
+    h("p", {}, [
+      h("strong", { text: "Payout. " }),
+      document.createTextNode(payoutLine(payout)),
+    ]),
+    payout.note ? h("p", { class: "muted", text: payout.note }) : null,
+    prior ? h("p", { class: "muted", text: priorLine(prior) }) : null,
+    h("p", {}, [
+      h("strong", { text: "Economic impact. " }),
+      document.createTextNode(impactLine(impact)),
+    ]),
+    impact.includes ? h("p", { class: "muted", text: impact.includes }) : null,
+    h("p", {}, [
+      h("strong", { text: "Attendance. " }),
+      document.createTextNode(business.attendance && business.attendance.text ? business.attendance.text : "Unknown"),
+    ]),
+    links.length ? h("p", { class: "source-links" }, links) : null,
+  ]);
+}
+
+function payoutLine(payout) {
+  const parts = [];
+  if (payout.per_team != null) parts.push(`${formatDollars(payout.per_team)} per team`);
+  else parts.push("Per team unknown");
+  if (payout.total != null) parts.push(`${formatDollars(payout.total)} total`);
+  if (payout.expense_stipend_per_conference_per_round != null) {
+    parts.push(`${formatDollars(payout.expense_stipend_per_conference_per_round)} expense stipend per conference per round (${payout.expense_stipend_year || "year unknown"})`);
+  }
+  return parts.join(". ") + ".";
+}
+
+function priorLine(prior) {
+  return `2025-26 distribution, not the 2026-27 payout: ${formatDollars(prior.apr_payment)} APR payment per qualifying school; ${formatDollars(prior.per_cfp_team)} per CFP team; ${formatDollars(prior.per_quarterfinal_advance)} more for a quarterfinal; ${formatDollars(prior.per_semifinal_advance)} for a semifinal; ${formatDollars(prior.per_championship_advance)} for the championship game; ${formatDollars(prior.expense_stipend_per_conference_per_round)} expense stipend per conference per round.`;
+}
+
+function impactLine(impact) {
+  if (impact.amount_text) {
+    const bits = [impact.amount_text];
+    if (impact.year) bits.push(String(impact.year));
+    if (impact.author) bits.push(impact.author);
+    if (impact.geography) bits.push(impact.geography);
+    return bits.join(" · ");
+  }
+  if (impact.amount == null) return "Unknown";
+  const bits = [formatDollars(impact.amount)];
+  if (impact.year) bits.push(String(impact.year));
+  if (impact.author) bits.push(impact.author);
+  if (impact.geography) bits.push(impact.geography);
+  return bits.join(" · ");
+}
+
+function sourceLinks(business) {
+  const seen = new Set();
+  const urls = [];
+  const collect = (node) => {
+    if (!node || typeof node !== "object") return;
+    const list = node.source_urls;
+    if (Array.isArray(list)) {
+      list.forEach((url) => {
+        if (typeof url === "string" && url.startsWith("http") && !seen.has(url)) {
+          seen.add(url);
+          urls.push(url);
+        }
+      });
+    }
+    Object.values(node).forEach((value) => {
+      if (value && typeof value === "object") collect(value);
+    });
+  };
+  collect(business);
+  return urls.map((url) => h("a", { href: url, target: "_blank", rel: "noopener noreferrer", text: linkLabel(url) }));
+}
+
+function linkLabel(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch (_error) {
+    return "Source";
+  }
+}
+
+function formatDollars(value) {
+  if (value == null || Number.isNaN(Number(value))) return "Unknown";
+  const number = Number(value);
+  if (Math.abs(number) >= 1000000) {
+    const millions = number / 1000000;
+    const text = Number.isInteger(millions) ? String(millions) : String(Math.round(millions * 100) / 100);
+    return `$${text} million`;
+  }
+  return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(number);
+}
+
 function motionShellKey(route) {
   if (route.name === "school") return `school:${route.slug}:${route.view || "attendance"}`;
   if (route.name === "marketing") return `marketing:${marketingYear}`;
@@ -2823,11 +3228,11 @@ function motionSwap(node) {
 
 function motionLists(root, withOpacity) {
   if (!root || reduceMotion() || !motionApi) return;
-  const cards = root.querySelectorAll(".grid > .card");
+  const cards = root.querySelectorAll(".grid > .card, .bowl-grid > .bowl-card");
   if (cards.length) staggerNodes(cards, withOpacity);
-  const lists = root.querySelectorAll(".loyal-list, .approach-grid, .outlier-grid, .val-board, .campaign-list");
+  const lists = root.querySelectorAll(".loyal-list, .approach-grid, .outlier-grid, .val-board, .campaign-list, .bracket-round");
   for (let i = 0; i < lists.length; i += 1) {
-    const kids = lists[i].querySelectorAll(":scope > .loyal-row, :scope > .approach-card, :scope > .outlier, :scope > .val-row, :scope > .campaign");
+    const kids = lists[i].querySelectorAll(":scope > .loyal-row, :scope > .approach-card, :scope > .outlier, :scope > .val-row, :scope > .campaign, :scope > .bracket-game");
     if (kids.length) staggerNodes(kids, withOpacity);
   }
   const bodies = root.querySelectorAll(".table-wrap:not(.fit-table) > table > tbody");
@@ -2868,7 +3273,7 @@ function motionHover() {
   cancelLift();
   cancelLift = () => {};
   if (!view || reduceMotion() || !motionApi || !finePointer.matches) return;
-  const nodes = view.querySelectorAll(".card, .loyal-row, .approach-card, .val-row, .outlier, .campaign");
+  const nodes = view.querySelectorAll(".card, .bowl-card, .loyal-row, .approach-card, .val-row, .outlier, .campaign, .bracket-game");
   if (!nodes.length) return;
   cancelLift = motionApi.hover(nodes, (element) => {
     motionApi.animate(element, { transform: "translateY(-2px)" }, {
