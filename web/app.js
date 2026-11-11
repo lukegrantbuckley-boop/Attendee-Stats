@@ -2901,77 +2901,171 @@ function paintBowls(data) {
 
 function bracketPanel(data) {
   const bracket = data.bracket;
-  const byes = (bracket.seeds || []).filter((seed) => seed.bye);
-  return h("section", { class: "panel" }, [
+  const projected = (data.label || bracket.label || "Projected") !== "Official";
+  return h("section", { class: "panel cfp-panel" }, [
     h("div", { class: "pills" }, [
       h("span", { class: "pill rank", text: data.label || bracket.label || "Projected" }),
       bracket.as_of ? h("span", { class: "pill quiet", text: `As of ${formatNewsDate(bracket.as_of)}` }) : null,
     ]),
     h("h2", { text: "College Football Playoff" }),
     h("p", { class: "muted", text: bracket.note || "" }),
-    h("h3", { text: "Seeds 1–4, first-round bye" }),
-    h("div", { class: "bracket-round" }, byes.map(seedLine)),
-    h("h3", { text: "First round" }),
-    h("p", { class: "muted", text: "On campus. The higher seed hosts. Quarterfinals are not reseeded." }),
-    h("div", { class: "bracket-round" }, (bracket.first_round || []).map(firstRoundLine)),
-    h("h3", { text: "Quarterfinals" }),
-    h("p", { class: "muted", text: "Bowl sites: Chosen by seeds 1–3 on Dec 6." }),
-    h("div", { class: "bracket-round" }, (bracket.quarterfinals || []).map(quarterLine)),
-    sitePool(bracket.quarterfinal_sites),
-    h("h3", { text: "Semifinals" }),
-    h("p", { class: "muted", text: "Bowl sites: Chosen by seeds 1–3 on Dec 6." }),
-    h("div", { class: "bracket-round" }, (bracket.semifinals || []).map((game) => h("article", { class: "bracket-game" }, [
-      h("strong", { text: game.teams || game.game }),
-      h("p", { text: game.site || "Chosen by seeds 1–3 on Dec 6" }),
-    ]))),
-    sitePool(bracket.semifinal_sites),
-    h("h3", { text: "National championship" }),
-    championshipLine(bracket.championship),
+    h("div", { class: "cfp-scroll" }, [
+      h("p", { class: "cfp-scroll-hint", text: "Swipe to follow the bracket." }),
+      h("div", { class: "cfp-heads", "aria-hidden": "true" }, [
+        h("span", { text: "First round" }),
+        h("span", {}),
+        h("span", { text: "Quarterfinals" }),
+        h("span", {}),
+        h("span", { text: "Semifinals" }),
+        h("span", {}),
+        h("span", { text: "Championship" }),
+      ]),
+      cfpBoard(bracket, projected),
+    ]),
+    h("p", { class: "muted cfp-hosts", text: hostLine(bracket) }),
   ]);
 }
 
-function seedLine(seed) {
-  return h("article", { class: "bracket-game" }, [
-    h("strong", { text: `${seed.seed}. ${seed.school}` }),
-    h("p", { text: [seed.record, seed.conference, seed.bid].filter(Boolean).join(" · ") }),
-  ]);
-}
-
-function firstRoundLine(game) {
-  const home = game.home ? `${game.home.seed} ${game.home.school}` : `Seed ${game.higher_seed}`;
-  const away = game.away ? `${game.away.seed} ${game.away.school}` : `Seed ${game.lower_seed}`;
-  const when = [formatNewsDate(game.date), game.time_et, game.tv].filter(Boolean).join(" · ");
-  return h("article", { class: "bracket-game" }, [
-    h("strong", { text: `${home} vs ${away}` }),
-    h("p", { text: when }),
-    h("p", { class: "muted", text: game.site || "Campus of the higher seed" }),
-  ]);
-}
-
-function quarterLine(game) {
-  const bye = game.bye ? `${game.bye.seed} ${game.bye.school}` : `Seed ${game.bye_seed}`;
-  return h("article", { class: "bracket-game" }, [
-    h("strong", { text: `${bye} vs ${game.opponent}` }),
-    h("p", { text: game.site || "Chosen by seeds 1–3 on Dec 6" }),
-  ]);
-}
-
-function sitePool(pool) {
-  if (!pool || !pool.bowls) return null;
-  const names = pool.bowls.map((bowl) => {
-    const when = [formatNewsDate(bowl.date), bowl.time_et, bowl.venue, bowl.city].filter(Boolean).join(", ");
-    return when ? `${bowl.bowl} (${when})` : bowl.bowl;
+function cfpBoard(bracket, projected) {
+  const first = {};
+  (bracket.first_round || []).forEach((game) => {
+    first[game.higher_seed] = game;
   });
-  return h("p", { class: "muted", text: `Host bowls, not yet assigned: ${names.join("; ")}.` });
+  const quarters = {};
+  (bracket.quarterfinals || []).forEach((game) => {
+    quarters[game.bye_seed] = game;
+  });
+  const semis = bracket.semifinals || [];
+  const tree = [
+    { row: 1, fr: 8, bye: 1, semi: 0 },
+    { row: 2, fr: 5, bye: 4, semi: 0 },
+    { row: 3, fr: 7, bye: 2, semi: 1 },
+    { row: 4, fr: 6, bye: 3, semi: 1 },
+  ];
+  const nodes = [];
+  tree.forEach((pod) => {
+    nodes.push(placed(firstRoundMatch(first[pod.fr], projected), 1, pod.row));
+    nodes.push(placed(h("div", { class: "cfp-link", "aria-hidden": "true" }), 2, pod.row));
+    nodes.push(placed(quarterMatch(quarters[pod.bye], pod.fr, projected), 3, pod.row));
+  });
+  nodes.push(mergeJoin(4, 1));
+  nodes.push(placed(semiMatch(semis[0], "1 vs 8/9", "4 vs 5/12", projected), 5, 1, 2));
+  nodes.push(mergeJoin(4, 3));
+  nodes.push(placed(semiMatch(semis[1], "2 vs 7/10", "3 vs 6/11", projected), 5, 3, 2));
+  nodes.push(mergeJoin(6, 1, 4));
+  nodes.push(placed(titleMatch(bracket.championship, projected), 7, 1, 4));
+  return h("div", {
+    class: "cfp-board",
+    role: "group",
+    "aria-label": "Projected College Football Playoff bracket",
+  }, nodes);
 }
 
-function championshipLine(game) {
-  if (!game) return null;
-  const when = [formatNewsDate(game.date), game.time_et, game.tv].filter(Boolean).join(" · ");
-  return h("article", { class: "bracket-game" }, [
-    h("strong", { text: game.site || "Allegiant Stadium, Las Vegas" }),
-    h("p", { text: when }),
+function placed(node, column, row, span) {
+  const cell = node.classList && node.classList.contains("cfp-match")
+    ? h("div", { class: "cfp-cell" }, [node])
+    : node;
+  cell.style.gridColumn = String(column);
+  cell.style.gridRow = span > 1 ? `${row} / span ${span}` : String(row);
+  return cell;
+}
+
+function mergeJoin(column, row, span) {
+  return placed(h("div", { class: "cfp-join", "aria-hidden": "true" }, [
+    h("span", { class: "cfp-elbow cfp-elbow-top" }),
+    h("span", { class: "cfp-elbow cfp-elbow-bot" }),
+  ]), column, row, span || 2);
+}
+
+function firstRoundMatch(game, projected) {
+  const home = game && game.home;
+  const away = game && game.away;
+  const when = game ? [shortBracketDate(game.date), game.time_et].filter(Boolean).join(" · ") : "";
+  const site = [game && game.tv, (game && game.site) || "Campus of the higher seed"].filter(Boolean).join(" · ");
+  return cfpMatch([cfpSlot(home), cfpSlot(away)], when, site, projected);
+}
+
+function quarterMatch(game, higherSeed, projected) {
+  const pair = game && Array.isArray(game.first_round_seeds) ? game.first_round_seeds.join(" vs ") : `${higherSeed}`;
+  return cfpMatch(
+    [cfpSlot(game && game.bye), cfpWinnerSlot(pair)],
+    "",
+    (game && game.site) || "Chosen by seeds 1–3 on Dec 6",
+    projected
+  );
+}
+
+function semiMatch(game, top, bottom, projected) {
+  return cfpMatch(
+    [cfpWinnerSlot(top), cfpWinnerSlot(bottom)],
+    "",
+    (game && game.site) || "Chosen by seeds 1–3 on Dec 6",
+    projected
+  );
+}
+
+function titleMatch(game, projected) {
+  const when = game ? [shortBracketDate(game.date), game.time_et].filter(Boolean).join(" · ") : "";
+  const place = game ? [game.venue, game.city].filter(Boolean).join(", ") : "Allegiant Stadium, Las Vegas";
+  const site = [game && game.tv, place || (game && game.site) || "Allegiant Stadium, Las Vegas"].filter(Boolean).join(" · ");
+  return cfpMatch(
+    [cfpWinnerSlot("1 vs 4"), cfpWinnerSlot("2 vs 3")],
+    when,
+    site,
+    projected
+  );
+}
+
+function cfpMatch(slots, when, site, projected) {
+  return h("article", { class: "cfp-match" }, [
+    h("div", { class: "cfp-slots" }, slots),
+    h("p", { class: "cfp-meta" }, [
+      h("span", { class: "cfp-when" }, [
+        projected ? h("span", { class: "cfp-projected", text: "Projected" }) : null,
+        when ? document.createTextNode(`${projected ? " · " : ""}${when}`) : null,
+      ]),
+      site ? h("span", { class: "cfp-site", text: site }) : null,
+    ]),
   ]);
+}
+
+function cfpSlot(team) {
+  if (!team) {
+    return h("div", { class: "cfp-slot cfp-slot-open" }, [
+      h("span", { class: "cfp-seed", text: "—" }),
+      h("span", { class: "cfp-name", text: "TBD" }),
+      h("span", { class: "cfp-rec", text: "" }),
+    ]);
+  }
+  return h("div", { class: "cfp-slot" }, [
+    h("span", { class: "cfp-seed", text: String(team.seed) }),
+    h("span", { class: "cfp-name", text: team.school || "TBD" }),
+    h("span", { class: "cfp-rec", text: team.record || "" }),
+  ]);
+}
+
+function cfpWinnerSlot(label) {
+  return h("div", { class: "cfp-slot cfp-slot-open" }, [
+    h("span", { class: "cfp-seed", text: "W" }),
+    h("span", { class: "cfp-name", text: label }),
+    h("span", { class: "cfp-rec", text: "Winner" }),
+  ]);
+}
+
+function shortBracketDate(iso) {
+  return formatNewsDate(iso).replace(/, \d{4}$/, "");
+}
+
+function hostLine(bracket) {
+  const assignment = (bracket.quarterfinals && bracket.quarterfinals[0] && bracket.quarterfinals[0].site)
+    || "Chosen by seeds 1–3 on Dec 6";
+  const names = (pool) => ((pool && pool.bowls) || []).map((bowl) => bowl.bowl).filter(Boolean);
+  const quarters = names(bracket.quarterfinal_sites);
+  const semis = names(bracket.semifinal_sites);
+  const bits = [`Quarterfinal and semifinal sites: ${assignment}.`];
+  if (quarters.length) bits.push(`Quarterfinal hosts not yet assigned: ${quarters.join(", ")}.`);
+  if (semis.length) bits.push(`Semifinal hosts not yet assigned: ${semis.join(", ")}.`);
+  return bits.join(" ");
 }
 
 function firstFourOut(bracket) {
@@ -3230,10 +3324,15 @@ function motionLists(root, withOpacity) {
   if (!root || reduceMotion() || !motionApi) return;
   const cards = root.querySelectorAll(".grid > .card, .bowl-grid > .bowl-card");
   if (cards.length) staggerNodes(cards, withOpacity);
-  const lists = root.querySelectorAll(".loyal-list, .approach-grid, .outlier-grid, .val-board, .campaign-list, .bracket-round");
+  const lists = root.querySelectorAll(".loyal-list, .approach-grid, .outlier-grid, .val-board, .campaign-list");
   for (let i = 0; i < lists.length; i += 1) {
-    const kids = lists[i].querySelectorAll(":scope > .loyal-row, :scope > .approach-card, :scope > .outlier, :scope > .val-row, :scope > .campaign, :scope > .bracket-game");
+    const kids = lists[i].querySelectorAll(":scope > .loyal-row, :scope > .approach-card, :scope > .outlier, :scope > .val-row, :scope > .campaign");
     if (kids.length) staggerNodes(kids, withOpacity);
+  }
+  const boards = root.querySelectorAll(".cfp-board");
+  for (let i = 0; i < boards.length; i += 1) {
+    const matches = boards[i].querySelectorAll(".cfp-match");
+    if (matches.length) staggerNodes(matches, withOpacity);
   }
   const bodies = root.querySelectorAll(".table-wrap:not(.fit-table) > table > tbody");
   for (let i = 0; i < bodies.length; i += 1) {
@@ -3273,7 +3372,7 @@ function motionHover() {
   cancelLift();
   cancelLift = () => {};
   if (!view || reduceMotion() || !motionApi || !finePointer.matches) return;
-  const nodes = view.querySelectorAll(".card, .bowl-card, .loyal-row, .approach-card, .val-row, .outlier, .campaign, .bracket-game");
+  const nodes = view.querySelectorAll(".card, .bowl-card, .loyal-row, .approach-card, .val-row, .outlier, .campaign");
   if (!nodes.length) return;
   cancelLift = motionApi.hover(nodes, (element) => {
     motionApi.animate(element, { transform: "translateY(-2px)" }, {
