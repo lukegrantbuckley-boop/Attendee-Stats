@@ -2366,7 +2366,6 @@ function valuationRow(row, index, sort) {
   ];
   const props = {
     class: "val-row",
-    style: `--rail:${logoSchool.color}`,
     "data-school": row.school || "",
   };
   if (known && known.slug) {
