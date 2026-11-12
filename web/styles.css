@@ -13,6 +13,9 @@
   --accent-ink: #b93f00;
   --up: #0e7c4a;
   --down: #b3261e;
+  /* The fit's two flags. Unlike --up/--down, this blue and red pair passes the colorblind check on --paper. */
+  --above: #1f5fa8;
+  --below: #b3261e;
   --r: 4px;
   --header-h: 56px;
   --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
@@ -332,7 +335,7 @@ button, input { font: inherit; color: inherit; }
 .card:hover { border-color: var(--ink-soft); }
 
 /* Team color runs along the top edge of each tile. */
-.card::before {
+.card::before, .approach-card::before {
   content: "";
   position: absolute;
   left: -1px;
@@ -540,7 +543,7 @@ button, input { font: inherit; color: inherit; }
   border-bottom: 1px solid var(--line);
 }
 
-.news-list a:hover strong {
+.news-list a:hover strong, .loyal-row:hover .loyal-name strong, .outlier:hover strong, a.approach-id:hover h3 {
   text-decoration: underline;
   text-decoration-color: var(--accent);
   text-decoration-thickness: 2px;
@@ -629,21 +632,18 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .loyalty-grid .panel { margin-bottom: 0; }
 .loyalty-grid + .panel { margin-top: 16px; }
 
-.loyal-list { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+/* Ranked lists read as a ruled leaderboard, not a stack of boxes. */
+.loyal-list { display: flex; flex-direction: column; margin-top: 12px; border-top: 1px solid var(--line); }
 
 .loyal-row {
   display: grid;
   grid-template-columns: 28px 42px minmax(0, 1fr) auto;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
   text-decoration: none;
-  padding: 8px;
-  border-radius: var(--r);
-  background: var(--paper);
-  border: 1px solid var(--line);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
 }
-
-.loyal-row:hover { border-color: var(--ink); }
 
 .loyal-row .mark { width: 42px; height: 42px; border-radius: var(--r); font-size: 0.72rem; }
 
@@ -651,7 +651,8 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 .loyal-rank {
   font-family: var(--display);
-  font-size: 1.15rem;
+  font-size: 1.3rem;
+  font-weight: 600;
   text-align: center;
   color: var(--ink-soft);
 }
@@ -718,26 +719,17 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   margin-top: 14px;
 }
 
+/* Same build as the school tiles: white card, team color across the top edge. */
 .approach-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 16px 16px 16px 18px;
-  background: var(--paper);
+  gap: 14px;
+  padding: 18px 16px 16px;
+  background: var(--card);
   border: 1px solid var(--line);
-  border-radius: var(--r);
+  border-radius: 0 0 var(--r) var(--r);
   min-width: 0;
-}
-
-.approach-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 16px;
-  bottom: 16px;
-  width: 4px;
-  background: var(--rail, var(--ink));
 }
 
 .approach-id {
@@ -754,10 +746,11 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .approach-id h3 {
   margin: 0;
   font-family: var(--display);
-  font-weight: 600;
-  font-size: 1.35rem;
+  font-weight: 700;
+  font-size: 1.45rem;
   letter-spacing: 0;
-  line-height: 1.1;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .approach-id p {
@@ -766,18 +759,13 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   font-size: 0.82rem;
 }
 
-.approach-pins { margin-top: 0; }
+.approach-pins { margin-top: 0; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
-.take, .promo {
+/* The take and each promotion sit under a hairline inside the card, not in a box of their own. */
+.take, .promo, .promo-missing {
   margin: 0;
-  padding: 12px;
-  border-radius: var(--r);
-  background: var(--card);
-}
-
-.take.is-empty {
-  border: 1px dashed var(--line);
-  background: transparent;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--line);
 }
 
 .take-k {
@@ -793,7 +781,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 .take.is-empty p { margin: 4px 0 0; color: var(--ink-soft); }
 
-.promo-list { display: flex; flex-direction: column; gap: 8px; }
+.promo-list { display: flex; flex-direction: column; gap: 12px; }
 
 .promo-source {
   margin: 8px 0 0;
@@ -809,33 +797,55 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 .promo-source a:hover { text-decoration: underline; }
 
-.promo-missing {
-  margin: 0;
-  padding: 12px;
-  border-radius: var(--r);
-  border: 1px dashed var(--line);
-  color: var(--ink-soft);
-}
+.promo-missing { color: var(--ink-soft); }
 
+/* Outliers are a grid of notes under hairlines; the flag label carries the scatter's color and triangle. */
 .outlier-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0 28px;
 }
 
 .outlier {
   display: block;
   text-decoration: none;
-  border-radius: var(--r);
-  padding: 14px;
-  background: var(--paper);
-  border: 1px solid var(--line);
+  padding: 12px 0 20px;
+  border-top: 1px solid var(--line-strong);
 }
 
-.outlier.high { border-color: #fdba74; }
-.outlier.low { border-color: #99f6e4; }
+.outlier strong {
+  font-family: var(--display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
 
-.outlier strong { font-family: var(--display); font-size: 1.25rem; font-weight: 600; }
+.outlier p { margin: 6px 0 0; font-size: 0.92rem; }
+
+.outlier p:first-of-type {
+  margin-top: 2px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.outlier.high p:first-of-type, .flag-high { color: var(--above); }
+.outlier.low p:first-of-type, .flag-low { color: var(--below); }
+
+.outlier p:first-of-type::before, .flag-high::before, .flag-low::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 7px;
+  margin-right: 6px;
+  vertical-align: 1px;
+  background: currentColor;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.outlier.low p:first-of-type::before, .flag-low::before { clip-path: polygon(0 0, 100% 0, 50% 100%); }
 
 .method p { margin: 0 0 10px; max-width: 78ch; }
 
@@ -1037,8 +1047,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 .error h2 { font-family: var(--display); margin-top: 0; }
 
-.flag-high { color: #9a3412; font-weight: 600; }
-.flag-low { color: #0f766e; font-weight: 600; }
+.flag-high, .flag-low { font-weight: 600; white-space: nowrap; }
 
 /* School views (Home Attendance, Revenue, Campaigns) are underlined tabs under the masthead. */
 .view-toggle {
@@ -1168,8 +1177,6 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   .range-bar .segment button { flex: 1 1 auto; }
   .loyalty-grid { grid-template-columns: 1fr; }
   .approach-grid { grid-template-columns: 1fr; }
-  .approach-pins { grid-template-columns: 1fr 1fr; }
-  .approach-pins .pin:last-child { grid-column: 1 / -1; }
   .val-head { display: none; }
   .val-row {
     grid-template-columns: 3.5rem 40px minmax(0, 1fr);
