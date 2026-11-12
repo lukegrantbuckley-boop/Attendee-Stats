@@ -1915,10 +1915,12 @@ function drawScatter(analysis) {
     const bucket = groups[point.kind] ? point.kind : "other";
     groups[bucket].push(pointToXY(point));
   });
+  // Gray context, then the two flags in --above / --below (the pair passes the colorblind check on --paper).
+  // The triangles point the way each flagged team sits against the line, so the flags never rely on color alone.
   const datasets = [
-    scatterSet("Teams in the fit", groups.other, "#1e3a5f"),
-    scatterSet("Draws above the record", groups.draws_above_record, "#c2410c"),
-    scatterSet("Soft crowd for the record", groups.soft_crowd_for_record, "#0f766e"),
+    scatterSet("Teams in the fit", groups.other, "#8b9097", "circle", 0, 4.5),
+    scatterSet("Draws above the record", groups.draws_above_record, "#1f5fa8", "triangle", 0, 7),
+    scatterSet("Soft crowd for the record", groups.soft_crowd_for_record, "#b3261e", "triangle", 180, 7),
   ];
   if (analysis.line) {
     datasets.push({
@@ -1928,8 +1930,10 @@ function drawScatter(analysis) {
         { x: analysis.line.x1 * 100, y: analysis.line.y1 * 100 },
         { x: analysis.line.x2 * 100, y: analysis.line.y2 * 100 },
       ],
-      borderColor: "#9a3412",
+      borderColor: "#111418",
+      borderWidth: 1.5,
       borderDash: [6, 4],
+      pointStyle: "line",
       pointRadius: 0,
       tension: 0,
     });
@@ -1949,6 +1953,7 @@ function drawScatter(analysis) {
         if (item && item.slug) location.hash = `#/schools/${encodeURIComponent(item.slug)}`;
       },
       plugins: {
+        legend: { align: "start", labels: { usePointStyle: true, boxWidth: 10, boxHeight: 10, padding: 18 } },
         tooltip: {
           callbacks: {
             label(context) {
@@ -1960,8 +1965,9 @@ function drawScatter(analysis) {
         },
       },
       scales: {
-        x: { title: { display: true, text: "Season win percentage" }, min: xScale.min, max: xScale.max, ticks: { callback: (value) => `${value}%` } },
-        y: { title: { display: true, text: "Average capacity filled" }, min: yScale.min, max: yScale.max, ticks: { callback: (value) => `${value}%` } },
+        // includeBounds: false keeps the padded axis ends (e.g. -3% or 110.07%) from printing as ticks.
+        x: { title: { display: true, text: "Season win percentage" }, min: xScale.min, max: xScale.max, ticks: { includeBounds: false, callback: (value) => `${value}%` } },
+        y: { title: { display: true, text: "Average capacity filled" }, min: yScale.min, max: yScale.max, border: { display: false }, ticks: { includeBounds: false, callback: (value) => `${value}%` } },
       },
     },
   });
@@ -1989,13 +1995,19 @@ function scatterDomain(values, floor, ceiling) {
   return { min, max };
 }
 
-function scatterSet(label, points, color) {
+function scatterSet(label, points, color, pointStyle, rotation, radius) {
   return {
     type: "scatter",
     label,
     data: points,
     backgroundColor: color,
-    pointRadius: label === "Teams in the fit" ? 5 : 7,
+    pointStyle,
+    pointRotation: rotation,
+    pointBorderColor: "#f6f6f3",
+    pointBorderWidth: 1.5,
+    pointRadius: radius,
+    pointHoverRadius: radius + 2,
+    pointHitRadius: 6,
   };
 }
 
