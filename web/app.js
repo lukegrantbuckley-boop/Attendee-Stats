@@ -244,8 +244,8 @@ function renderHome() {
 
   const rankName = meta.public_poll === "CFP" ? "CFP" : "AP";
   const intro = filters.sort === "record"
-    ? `Sorted by season record. Ties break toward the latest ${rankName} rank, and unranked schools follow ranked schools when the record is the same.`
-    : `Sorted by the latest ${rankName === "CFP" ? "CFP rankings" : "AP Top 25"}. Unranked schools follow the ranked ones. Record breaks ties.`;
+    ? `Sorted by season record, then ${rankName} ranking.`
+    : `Sorted by ${rankName} ranking, then record.`;
 
   const tierSeen = new Set();
   const blocks = [];
@@ -283,7 +283,7 @@ function renderHome() {
   fill(view,
     kicker("Schools"),
     h("h1", { class: "lede", text: "Home crowds for every FBS program, grouped by conference." }),
-    h("p", { class: "sublede", text: `${intro} Each card pins the season average and the last home game. A dash means that figure is not in the feed.` }),
+    h("p", { class: "sublede", text: `${intro} A dash means no reported figure.` }),
     h("div", { class: "toolbar" }, [
       h("input", {
         class: "search",
@@ -1014,12 +1014,10 @@ function renderBusinessNews(node, body) {
   const list = items.length
     ? h("ul", { class: "news-list" }, items.map(newsRow))
     : h("p", { text: body.note || "No recent athletics-business headlines turned up for this program." });
+  // The API's full attribution (licensing fine print) stays in body.attribution; visitors get the short credit.
   fill(node,
     list,
-    h("p", {
-      class: "muted news-attr",
-      text: body.attribution || "Headlines, publisher, and date only, with a link to the original story. This portfolio app aggregates public feeds and does not copy article text. Google News RSS is a prototype source, not a commercial redistribution license.",
-    })
+    h("p", { class: "muted news-attr", text: "Headlines via Google News. Each one links to the original story." })
   );
 }
 
@@ -1103,9 +1101,9 @@ function fillSeasonBody(school, seasonYear) {
   fill(body,
     h("section", { class: "panel" }, [
       h("h3", { text: "Home attendance by opponent" }),
-      h("p", { class: "muted", text: covid
-        ? "2020 is omitted as the COVID season. The season average is not shown. Game rows stay in the cache and are not averaged. Missing values are not drawn as zero."
-        : "Non-neutral home games only. A gap is a game with no reported attendance, or a game that has not been played. Missing values are not drawn as zero." }),
+      covid
+        ? h("p", { class: "muted", text: "2020 is omitted as the COVID season. The season average is not shown. Game rows stay in the cache and are not averaged. Missing values are not drawn as zero." })
+        : null,
       h("div", { class: "chart-wrap" }, [h("canvas", { id: "attendance-chart" })]),
       gaps.length
         ? h("ul", { class: "badge-list" }, gaps.map((game) => h("li", {}, [
@@ -1121,7 +1119,6 @@ function fillSeasonBody(school, seasonYear) {
       games.length
         ? h("div", { class: "table-wrap" }, [gameTable(games)])
         : h("p", { text: "No on-campus home games are in this cache." }),
-      h("p", { class: "muted", text: "Capacity percentage uses that game's venue capacity. If the venue has none and the game is at the school's own stadium, the home stadium capacity is used. Another venue never inherits that number." }),
     ])
   );
   drawAttendanceChart(school, games);
@@ -1357,18 +1354,9 @@ function renderAnalysis() {
     meta.synthetic
       ? h("p", { class: "muted", text: "These figures are computed from the sample fixture. They are not a finding about the 2026 season." })
       : null,
-    h("div", { class: "stats" }, [
-      stat(formatStat(analysis.pearson_r), "Pearson r, win % vs capacity %"),
-      stat(String(analysis.n_teams), "Teams in the fit"),
-      stat(formatStat(analysis.recent_form_pearson_r), `Recent form r (last ${analysis.methodology.recent_form_window})`),
-      stat(formatStat(analysis.pregame.pearson_r), `Pregame form r (${analysis.pregame.n_games} games)`),
-    ]),
     analysis.slope_capacity_points_per_10_win_points
       ? h("p", { text: analysis.slope_capacity_points_per_10_win_points })
       : null,
-    h("p", { class: "muted", text: analysis.raw_attendance_pearson_r == null
-      ? "Raw attendance correlation is not estimated."
-      : `Secondary check against raw crowd size: Pearson r ${formatStat(analysis.raw_attendance_pearson_r)} across ${analysis.raw_attendance_n} teams. Stadium size dominates that number, so capacity percentage stays the primary measure.` }),
     loyaltySection(),
     proStadiumSection(analysis),
     growthSection(meta.season),
@@ -1379,16 +1367,24 @@ function renderAnalysis() {
         ? h("div", { class: "outlier-grid" }, analysis.outliers.map(outlierCard))
         : h("p", { text: analysis.outlier_note }),
     ]),
-    h("section", { class: "panel method" }, [
-      h("h3", { text: "Methodology" }),
-      ...analysis.methodology.paragraphs.map((paragraph) => h("p", { text: paragraph })),
-      h("p", { class: "muted", text: analysis.pregame.note }),
-    ]),
     h("section", { class: "panel" }, [
       h("h3", { text: "Teams in the fit" }),
       analysis.points.length
         ? h("div", { class: "fit-table table-wrap" }, [fitTable(analysis.points)])
         : h("p", { text: "No teams qualified for the fit." }),
+    ]),
+    howItWorks("How this is calculated", [
+      h("div", { class: "stats" }, [
+        stat(formatStat(analysis.pearson_r), "Pearson r, win % vs capacity %"),
+        stat(String(analysis.n_teams), "Teams in the fit"),
+        stat(formatStat(analysis.recent_form_pearson_r), `Recent form r (last ${analysis.methodology.recent_form_window})`),
+        stat(formatStat(analysis.pregame.pearson_r), `Pregame form r (${analysis.pregame.n_games} games)`),
+      ]),
+      h("p", { class: "muted", text: analysis.raw_attendance_pearson_r == null
+        ? "Raw attendance correlation is not estimated."
+        : `Secondary check against raw crowd size: Pearson r ${formatStat(analysis.raw_attendance_pearson_r)} across ${analysis.raw_attendance_n} teams. Stadium size dominates that number, so capacity percentage stays the primary measure.` }),
+      ...analysis.methodology.paragraphs.map((paragraph) => h("p", { text: paragraph })),
+      h("p", { class: "muted", text: analysis.pregame.note }),
       analysis.omitted.length
         ? h("p", { class: "muted", text: `${analysis.n_omitted} teams were left out. ${omittedSummary(analysis.omitted)}` })
         : null,
@@ -1688,7 +1684,6 @@ function renderGrowth(node, growth, yearFrom, yearTo) {
     : "The steepest drops in average home attendance. A negative rate means the reported crowd got smaller. This is not the softest-fill list.";
   const empty = !growing.length && !falling.length;
   fill(node,
-    h("p", { class: "sublede", text: data.methodology || "Attendance growth uses reported home averages only." }),
     empty
       ? h("section", { class: "panel" }, [
           h("h3", { text: "Attendance growth" }),
@@ -1702,7 +1697,8 @@ function renderGrowth(node, growth, yearFrom, yearTo) {
             growing
           ),
           growthPanel(fallingTitle.toLowerCase().replace(/\s+/g, "-"), fallingTitle, fallingBlurb, falling),
-        ])
+        ]),
+    data.methodology ? howItWorks("How growth is calculated", [h("p", { text: data.methodology })]) : null
   );
   afterPartial(node);
 }
@@ -2164,7 +2160,6 @@ function paintMarketing(data) {
   fill(view,
     kicker("Marketing Approaches"),
     h("h1", { class: "lede", text: "Winning teams that still do not fill the building, and the smaller schools that do." }),
-    h("p", { class: "sublede", text: data.threshold && data.threshold.summary ? data.threshold.summary : "" }),
     h("div", { class: "range-bar" }, [
       segment("Marketing season", years.map((year) => [year, marketingYearLabel(year, data)]), marketingYear, (value) => {
         marketingYear = value;
@@ -2172,17 +2167,20 @@ function paintMarketing(data) {
       }),
       h("p", { class: "muted range-hint", text: partial }),
     ]),
-    h("div", { class: "stats" }, [
-      stat(String(data.year), data.season_partial ? "Season, in progress" : "Season"),
-      stat(String(data.n_teams ?? "—"), "Teams in the fit"),
-      stat(formatStat(data.pearson_r), "Pearson r, win % vs fill"),
-    ]),
     h("div", { class: "jumps", role: "navigation", "aria-label": "On this page" }, [
       jumpButton("Marketing Approaches", "marketing-approaches"),
       jumpButton("What Has Worked", "what-has-worked"),
     ]),
     marketingSection(data, approaches),
-    workedSection(data, worked)
+    workedSection(data, worked),
+    howItWorks("How this is calculated", [
+      h("div", { class: "stats" }, [
+        stat(String(data.year), data.season_partial ? "Season, in progress" : "Season"),
+        stat(String(data.n_teams ?? "—"), "Teams in the fit"),
+        stat(formatStat(data.pearson_r), "Pearson r, win % vs fill"),
+      ]),
+      data.threshold && data.threshold.summary ? h("p", { text: data.threshold.summary }) : null,
+    ])
   );
   lastShellKey = `marketing:${marketingYear}`;
   lastMotionKey = lastShellKey;
@@ -2214,7 +2212,7 @@ function marketingYearLabel(year, data) {
 function marketingSection(data, approaches) {
   return h("section", { class: "panel approach-section", id: "marketing-approaches" }, [
     h("h2", { text: "Marketing Approaches" }),
-    h("p", { class: "tier-note", text: "These teams won more games than they lost and still filled meaningfully less of the stadium than the fitted line expects. The note under each card is yours to write in data/marketing_approaches.json." }),
+    h("p", { class: "tier-note", text: "These teams won more games than they lost and still filled meaningfully less of the stadium than the fitted line expects." }),
     approaches.length
       ? h("div", { class: "approach-grid" }, approaches.map((row) => approachCard(row, data)))
       : h("p", { text: `No winning team sits below the line in ${data.year}.` }),
@@ -2939,7 +2937,6 @@ function paintBowls(data) {
     unassignedQuarterfinals(data.unassigned_quarterfinal_projections),
     h("h2", { text: "The 2026–27 slate" }),
     projectionNote(data.projection),
-    omittedNote(data.omitted),
     explainerPanel(data.explainers && data.explainers.selection),
     explainerPanel(data.explainers && data.explainers.money),
     h("div", { class: "bowl-grid" }, (data.games || []).map(bowlCard)),
@@ -3135,8 +3132,7 @@ function firstFourOut(bracket) {
 
 function unassignedQuarterfinals(block) {
   if (!block || !Array.isArray(block.projections) || !block.projections.length) return null;
-  return h("section", { class: "panel" }, [
-    h("h3", { text: "ESPN quarterfinals without a bowl" }),
+  return howItWorks("ESPN quarterfinals without a bowl", [
     h("p", { class: "muted", text: block.note || "" }),
     h("ul", { class: "out-list" }, block.projections.map((row) => h("li", {
       text: `${row.analyst}: ${row.teams.join(" vs ")}${row.window ? ` · ${row.window}` : ""}`,
@@ -3153,8 +3149,7 @@ function explainerPanel(explainer) {
     rel: "noopener noreferrer",
     text: linkLabel(url),
   }));
-  return h("section", { class: "panel" }, [
-    h("h3", { text: explainer.title || "Notes" }),
+  return howItWorks(explainer.title || "Notes", [
     h("p", { text: explainer.text }),
     links.length ? h("p", { class: "source-links" }, links) : null,
   ]);
@@ -3164,12 +3159,6 @@ function projectionNote(projection) {
   if (!projection) return null;
   const authors = (projection.authors || []).join(" and ");
   return h("p", { class: "muted", text: `${projection.newer_week_note || ""} Team slots are ${authors ? `${authors}, ` : ""}${projection.week_label || "the latest ESPN projection"}, ${formatNewsDate(projection.date)}. Each team is marked Projected.` });
-}
-
-function omittedNote(omitted) {
-  const rows = omitted || [];
-  if (!rows.length) return null;
-  return h("p", { class: "muted", text: rows.map((row) => `${row.name} is ${row.division || "omitted"}. ${row.reason || ""}`).join(" ") });
 }
 
 function bowlCard(game) {
@@ -3552,6 +3541,11 @@ function fill(node, ...children) {
 
 function kicker(text) {
   return h("p", { class: "kicker", "aria-hidden": "true", text });
+}
+
+// Technical detail stays one click away instead of in the reading path.
+function howItWorks(title, children) {
+  return h("details", { class: "how" }, [h("summary", { text: title }), ...children]);
 }
 
 function h(tag, props, children) {
