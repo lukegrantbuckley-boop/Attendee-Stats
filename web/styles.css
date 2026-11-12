@@ -883,10 +883,10 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 .val-count { margin: 0 0 10px; }
 
+/* The valuation board reads like a ruled standings table, not a stack of boxes. */
 .val-board {
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 
 .val-head,
@@ -898,7 +898,8 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 }
 
 .val-head {
-  padding: 0 14px 2px;
+  padding: 0 4px 6px;
+  border-bottom: 2px solid var(--ink);
   color: var(--ink-soft);
   font-size: 0.72rem;
   font-weight: 600;
@@ -910,26 +911,13 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .val-head span:nth-child(5) { text-align: right; }
 
 .val-row {
-  position: relative;
-  padding: 11px 14px;
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: var(--r);
+  padding: 11px 4px;
+  border-bottom: 1px solid var(--line);
   text-decoration: none;
   color: inherit;
 }
 
-.val-row::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 12px;
-  bottom: 12px;
-  width: 3px;
-  background: var(--rail, transparent);
-}
-
-.val-row:hover { border-color: var(--ink); }
+a.val-row:hover { background: var(--paper-deep); }
 
 .val-row .mark {
   width: 44px;
@@ -1181,7 +1169,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   .val-row {
     grid-template-columns: 3.5rem 40px minmax(0, 1fr);
     row-gap: 1px;
-    padding: 10px 12px;
+    padding: 10px 0;
   }
   .val-rank { grid-column: 1; grid-row: 1 / span 3; }
   .val-row .mark { grid-column: 2; grid-row: 1 / span 3; align-self: center; }
@@ -1226,31 +1214,36 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 .bowl-card h3 {
   font-family: var(--display);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0;
-  font-size: 1.28rem;
-  line-height: 1.15;
-  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin: 2px 0 2px;
 }
 
 .bowl-card p { margin: 0; }
 
-.bowl-teams { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
-
-.bowl-slot-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-
-.bowl-slot {
-  background: var(--paper);
-  border-radius: var(--r);
-  padding: 8px 10px;
-  min-width: 0;
+/* Projected teams sit under one hairline, not in gray boxes inside the card. */
+.bowl-teams {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line-strong);
 }
+
+.bowl-slot-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+
+.bowl-slot { min-width: 0; }
 
 .bowl-slot strong { display: block; }
 .bowl-slot span {
   color: var(--ink-soft);
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -1306,8 +1299,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .cfp-match {
   width: 100%;
   background: var(--card);
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--ink);
+  border: 1px solid var(--line-strong);
   border-radius: var(--r);
   min-height: 108px;
   display: flex;
