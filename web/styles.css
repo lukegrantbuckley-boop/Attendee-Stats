@@ -270,7 +270,7 @@ button, input { font: inherit; color: inherit; }
 
 #view:focus { outline: none; }
 
-.conference h3 {
+.conference > h3 {
   display: flex;
   justify-content: space-between;
   gap: 12px;
@@ -285,7 +285,7 @@ button, input { font: inherit; color: inherit; }
   text-transform: uppercase;
 }
 
-.conference h3 span {
+.conference > h3 span {
   font-family: var(--sans);
   font-size: 0.82rem;
   color: var(--ink-soft);
@@ -301,18 +301,33 @@ button, input { font: inherit; color: inherit; }
 }
 
 .card {
-  display: grid;
-  grid-template-columns: 58px minmax(0, 1fr);
-  gap: 12px;
-  padding: 16px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 14px;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 0 0 var(--r) var(--r);
   text-decoration: none;
-  min-height: 148px;
   position: relative;
   transition: border-color 0.15s;
 }
+
+.card-head {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card .mark { width: 48px; height: 48px; font-size: 0.8rem; }
+
+.card .mascot { margin-bottom: 0; }
+
+.card .capacity { margin-bottom: 14px; color: var(--ink-soft); font-size: 0.85rem; }
+
+/* Numbers sit on the tile floor so every tile in a row lines them up. */
+.card .pins { margin-top: auto; }
 
 .card:hover { border-color: var(--ink-soft); }
 
@@ -464,16 +479,34 @@ button, input { font: inherit; color: inherit; }
   font-weight: 600;
 }
 
+/* School masthead: the team color runs across the top, like the tiles on the Schools page. */
 .school-head {
   display: flex;
-  gap: 16px;
-  align-items: center;
-  margin-bottom: 18px;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-top: 20px;
+  border-top: 6px solid var(--rail, var(--ink));
 }
 
-.school-head .mark { width: 84px; height: 84px; border-radius: var(--r); font-size: 1.3rem; }
+.school-head > div:last-child { flex: 1 1 auto; min-width: 0; }
 
-.school-head h2 { font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 700; line-height: 0.95; text-transform: uppercase; }
+.school-head .mark { width: 96px; height: 96px; border-radius: var(--r); font-size: 1.4rem; }
+
+.school-conf {
+  margin: 0 0 4px;
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.school-head h2 { margin-bottom: 10px; font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 700; line-height: 0.95; text-transform: uppercase; }
+
+.school-head .pins { max-width: 440px; margin-top: 14px; }
+
+.school-head .pin strong { font-size: 2.2rem; }
 
 /* Sections sit on the page under a heavy rule instead of inside boxes. */
 .panel {
@@ -492,32 +525,33 @@ button, input { font: inherit; color: inherit; }
   text-transform: uppercase;
 }
 
+/* Headlines read as a ruled list, not a stack of boxes. */
 .news-list {
   list-style: none;
   margin: 12px 0 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  border-top: 1px solid var(--line);
 }
 
 .news-list a {
   display: block;
   text-decoration: none;
-  padding: 10px 12px;
-  border-radius: var(--r);
-  background: var(--paper);
-  border: 1px solid var(--line);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
 }
 
-.news-list a:hover { border-color: var(--ink); }
+.news-list a:hover strong {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
 
 .news-list strong {
   display: block;
-  font-family: var(--display);
   font-weight: 600;
-  font-size: 1.05rem;
-  line-height: 1.25;
+  font-size: 1rem;
+  line-height: 1.35;
 }
 
 .news-list span {
@@ -533,7 +567,19 @@ button, input { font: inherit; color: inherit; }
 
 .badge-list { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
 
-.table-wrap { overflow-x: auto; }
+/* overflow-y: hidden stops the collapsed table border from adding a 2px vertical scrollbar. */
+.table-wrap { overflow-x: auto; overflow-y: hidden; }
+
+/* In tables a status is plain text; only a missing figure keeps its warning chip. */
+td .pill {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+td .pill.warn { padding: 3px 8px; background: #fef3c7; color: #92400e; }
 
 table { width: 100%; border-collapse: collapse; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
 
@@ -994,24 +1040,64 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .flag-high { color: #9a3412; font-weight: 600; }
 .flag-low { color: #0f766e; font-weight: 600; }
 
-.view-toggle { margin: 0 0 14px; }
+/* School views (Home Attendance, Revenue, Campaigns) are underlined tabs under the masthead. */
+.view-toggle {
+  margin: 0 0 24px;
+  border-bottom: 1px solid var(--line-strong);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
 
-.campaign-list { display: flex; flex-direction: column; gap: 10px; }
+.view-toggle .segment {
+  display: flex;
+  gap: 28px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  overflow: visible;
+}
+
+.view-toggle .segment button {
+  flex: 0 0 auto;
+  min-height: 46px;
+  padding: 0 1px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: none;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.view-toggle .segment button + button { border-left: 0; }
+
+.view-toggle .segment button:hover { background: none; color: var(--ink); }
+
+.view-toggle .segment button[aria-pressed="true"] {
+  background: none;
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+.campaign-list { border-top: 1px solid var(--line); }
+
+/* The tab strip already rules off this section, so it skips the heavy panel rule. */
+#football-campaigns { padding-top: 0; border-top: 0; }
 
 .campaign {
-  border: 1px solid var(--line);
-  background: var(--paper);
-  border-radius: var(--r);
-  padding: 14px 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .campaign h3 {
   margin: 0;
-  font-family: var(--display);
+  font-family: var(--sans);
   font-weight: 600;
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   letter-spacing: 0;
-  line-height: 1.1;
+  line-height: 1.3;
+  text-transform: none;
 }
 
 .campaign p { margin: 8px 0 0; }
@@ -1051,7 +1137,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 .rev-covid { margin-left: 8px; }
 
-.rev-covid-row { background: rgba(92, 86, 76, 0.05); }
+.rev-covid-row { background: var(--paper-deep); }
 
 .rev-footnotes p { margin: 10px 0 0; max-width: 78ch; }
 
@@ -1071,8 +1157,12 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   .header-season { padding: 6px 16px; }
   #view { padding-top: 24px; }
   .chart-wrap { height: 300px; }
-  .view-toggle .segment { width: 100%; }
-  .view-toggle .segment button { flex: 1 1 auto; text-align: center; }
+  .school-head { gap: 14px; }
+  .school-head .mark { width: 60px; height: 60px; font-size: 1rem; }
+  .school-head .pin strong { font-size: 1.8rem; }
+  .view-toggle .segment { gap: 22px; }
+  /* Phone tables scroll sideways instead of breaking dates and scores over lines. */
+  .table-wrap th, .table-wrap td { white-space: nowrap; }
   .rev-stats { grid-template-columns: 1fr; }
   .range-bar .segment { width: 100%; }
   .range-bar .segment button { flex: 1 1 auto; }

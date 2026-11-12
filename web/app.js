@@ -69,6 +69,22 @@ const RANGE_OPTIONS = [
   [10, "Last 10 seasons"],
 ];
 
+// One chart look on every page: Plex type, muted axis text, hairline grid, ink tooltips.
+// The hex values mirror the --ink-soft, --line, --line-strong and --ink tokens in styles.css.
+if (window.Chart) {
+  Object.assign(Chart.defaults, { color: "#5b616b", borderColor: "#e1e2dd" });
+  Object.assign(Chart.defaults.font, { family: '"IBM Plex Sans", "Segoe UI", system-ui, sans-serif', size: 12 });
+  Chart.defaults.scale.border.color = "#b9bbb5";
+  Object.assign(Chart.defaults.plugins.tooltip, {
+    backgroundColor: "#111418",
+    padding: 10,
+    cornerRadius: 2,
+    displayColors: false,
+    titleFont: { weight: "600" },
+  });
+}
+const compactNumber = new Intl.NumberFormat("en-US", { notation: "compact" });
+
 document.addEventListener("DOMContentLoaded", boot);
 window.addEventListener("hashchange", render);
 
@@ -324,19 +340,21 @@ function schoolCard(school) {
     href: `#/schools/${encodeURIComponent(school.slug)}`,
     style: `--rail:${school.color}`,
   }, [
-    mark(school, 58),
-    h("div", {}, [
-      h("h3", { text: school.school }),
-      h("p", { class: "mascot", text: [school.mascot, school.conference].filter(Boolean).join(" · ") }),
-      h("div", { class: "pills" }, [
-        h("span", { class: "pill", text: school.record || "Record unavailable" }),
-        rank,
-        school.pro_shared_stadium ? h("span", { class: "pill pro", text: "NFL stadium" }) : null,
-        missing,
+    h("div", { class: "card-head" }, [
+      mark(school, 48),
+      h("div", {}, [
+        h("h3", { text: school.school }),
+        h("p", { class: "mascot", text: [school.mascot, school.conference].filter(Boolean).join(" · ") }),
       ]),
-      h("p", { class: "capacity", text: capacityLine(school) }),
-      attendancePins(school),
     ]),
+    h("div", { class: "pills" }, [
+      h("span", { class: "pill", text: school.record || "Record unavailable" }),
+      rank,
+      school.pro_shared_stadium ? h("span", { class: "pill pro", text: "NFL stadium" }) : null,
+      missing,
+    ]),
+    h("p", { class: "capacity", text: capacityLine(school) }),
+    attendancePins(school),
   ]);
 }
 
@@ -431,8 +449,8 @@ function renderSchool(slug, pageView, campaignYear) {
   const endYear = Number(payload.meta.season);
   const nodes = [
     h("a", { class: "back", href: "#/", text: "All schools" }),
-    schoolViewToggle(slug, "attendance"),
     schoolIdentity(school),
+    schoolViewToggle(slug, "attendance"),
     h("div", { class: "range-bar" }, [
       segment("Attendance range", RANGE_OPTIONS, filters.span, (value) => {
         filters.span = value === RANGE_LAST ? RANGE_LAST : Number(value);
@@ -463,10 +481,10 @@ function renderSchool(slug, pageView, campaignYear) {
 }
 
 function schoolIdentity(school) {
-  return h("div", { class: "school-head" }, [
+  return h("div", { class: "school-head", style: `--rail:${school.color}` }, [
       mark(school, 84),
       h("div", {}, [
-        h("p", { class: "muted", text: `${school.conference} · ${school.tier}` }),
+        h("p", { class: "school-conf", text: `${school.conference} · ${school.tier}` }),
         h("h2", { text: school.school }),
         h("div", { class: "pills" }, [
           h("span", { class: "pill", text: school.record || "Record unavailable" }),
@@ -504,8 +522,8 @@ function renderRevenue(school, slug) {
   const data = revenueBySlug.get(slug);
   const nodes = [
     h("a", { class: "back", href: "#/", text: "All schools" }),
-    schoolViewToggle(slug, "revenue"),
     schoolIdentity(school),
+    schoolViewToggle(slug, "revenue"),
   ];
   if (!data) {
     nodes.push(h("p", { class: "loading", text: "Loading football revenue…" }));
@@ -553,8 +571,8 @@ function renderCampaigns(school, slug, year) {
   const selected = year === 2025 ? 2025 : 2026;
   fill(view,
     h("a", { class: "back", href: "#/", text: "All schools" }),
-    schoolViewToggle(slug, "campaigns"),
     schoolIdentity(school),
+    schoolViewToggle(slug, "campaigns"),
     h("section", { class: "panel", id: "football-campaigns" }, [
       h("div", { class: "range-bar" }, [
         segment("Campaign season", [[2026, "2026"], [2025, "2025"]], selected, (value) => {
@@ -679,9 +697,9 @@ function mountSchoolViewToggle(slug, pageView) {
     existing.replaceWith(next);
     return;
   }
-  const back = view.querySelector(".back");
-  if (!back) return;
-  back.insertAdjacentElement("afterend", next);
+  const head = view.querySelector(".school-head");
+  if (!head) return;
+  head.insertAdjacentElement("afterend", next);
 }
 
 function revenueStats(data) {
@@ -803,7 +821,7 @@ function drawRevenueChart(school, data) {
     canvas.replaceWith(h("p", { text: "No reported football revenue to plot." }));
     return;
   }
-  const color = school.color || "#1e3a5f";
+  const color = school.color || "#111418";
   const chart = new Chart(canvas, {
     type: "bar",
     data: {
@@ -811,11 +829,10 @@ function drawRevenueChart(school, data) {
       datasets: [{
         label: "Football revenue",
         data: rows.map((row) => (row.revenue_usd == null ? null : row.revenue_usd)),
-        backgroundColor: rows.map((row) => (row.covid ? "#c4b8a5" : color)),
-        borderColor: rows.map((row) => (row.covid ? "#5c564c" : color)),
-        borderWidth: rows.map((row) => (row.covid ? 1.5 : 0)),
-        borderRadius: 6,
-        maxBarThickness: 48,
+        // The COVID year is drawn in neutral gray: shown, but set apart from the comparable years.
+        backgroundColor: rows.map((row) => (row.covid ? "#b9bbb5" : color)),
+        borderRadius: 4,
+        maxBarThickness: 28,
       }],
     },
     options: {
@@ -855,14 +872,12 @@ function drawRevenueChart(school, data) {
       scales: {
         y: {
           beginAtZero: true,
+          border: { display: false },
           ticks: { callback: (value) => formatRevenueAxis(value) },
         },
         x: {
-          ticks: {
-            autoSkip: false,
-            maxRotation: 0,
-            color: (context) => (rows[context.index] && rows[context.index].covid ? "#9a3412" : "#5c564c"),
-          },
+          grid: { display: false },
+          ticks: { autoSkip: false, maxRotation: 0 },
         },
       },
     },
@@ -903,7 +918,7 @@ function formatRevenueAxis(value) {
   const abs = Math.abs(number);
   if (abs >= 1000000) {
     const millions = number / 1000000;
-    const digits = abs >= 100000000 ? 0 : 1;
+    const digits = abs >= 100000000 || Number.isInteger(millions) ? 0 : 1;
     return `$${millions.toFixed(digits)}M`;
   }
   return formatDollars(number);
@@ -1291,9 +1306,9 @@ function drawHistoryChart(school, rows) {
       datasets: [{
         label: "Average home attendance",
         data: rows.map((row) => historyAverage(row)),
-        backgroundColor: school.color || "#1e3a5f",
-        borderRadius: 6,
-        maxBarThickness: 56,
+        backgroundColor: school.color || "#111418",
+        borderRadius: 4,
+        maxBarThickness: 36,
       }],
     },
     options: {
@@ -1322,8 +1337,10 @@ function drawHistoryChart(school, rows) {
       scales: {
         y: {
           beginAtZero: true,
-          ticks: { callback: (value) => formatInt(value) },
+          border: { display: false },
+          ticks: { callback: (value) => compactNumber.format(value) },
         },
+        x: { grid: { display: false } },
       },
     },
   });
@@ -1835,16 +1852,21 @@ function drawAttendanceChart(school, games) {
   const chart = new Chart(canvas, {
     type: "line",
     data: {
-      labels: games.map((game) => game.label),
+      // "Wk 1 · Opponent" sets on two lines so the axis can stay level.
+      labels: games.map((game) => String(game.label || "").split(" · ")),
       datasets: [{
         label: "Attendance",
         data: games.map((game) => (game.attendance_status === "reported" ? game.attendance : null)),
         borderColor: school.color,
         backgroundColor: school.color,
+        borderWidth: 2,
         pointBackgroundColor: school.color,
+        pointBorderColor: "#f6f6f3",
+        pointBorderWidth: 2,
         pointRadius: 5,
+        pointHoverRadius: 7,
         spanGaps: false,
-        tension: 0.15,
+        tension: 0,
       }],
     },
     options: {
@@ -1867,9 +1889,10 @@ function drawAttendanceChart(school, games) {
       scales: {
         y: {
           beginAtZero: true,
-          ticks: { callback: (value) => formatInt(value) },
+          border: { display: false },
+          ticks: { callback: (value) => compactNumber.format(value) },
         },
-        x: { ticks: { maxRotation: 50, minRotation: 30, autoSkip: false } },
+        x: { grid: { display: false }, ticks: { maxRotation: 50, autoSkip: false } },
       },
     },
   });
