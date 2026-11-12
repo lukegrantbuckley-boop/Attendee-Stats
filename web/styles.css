@@ -847,7 +847,44 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 .outlier.low p:first-of-type::before, .flag-low::before { clip-path: polygon(0 0, 100% 0, 50% 100%); }
 
-.method p { margin: 0 0 10px; max-width: 78ch; }
+/* "How this is calculated": closed by default, a ruled row with a chevron. */
+.how { margin: 0 0 32px; border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); }
+
+.how > summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+}
+
+.how > summary::-webkit-details-marker { display: none; }
+
+.how > summary::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin: 0 4px 4px auto;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.how[open] > summary::after { margin-bottom: -4px; transform: rotate(-135deg); }
+
+.how > summary:hover { color: var(--accent-ink); }
+
+.how > :not(summary) { max-width: 78ch; }
+
+.how p { margin: 0 0 12px; }
+
+.how .stats { max-width: none; margin-top: 4px; }
+
+/* Back-to-back sections share one rule. */
+.how:has(+ .how) { margin-bottom: 0; }
+.how + .how { border-top: 0; }
 
 .fit-table { max-height: 460px; overflow: auto; }
 
